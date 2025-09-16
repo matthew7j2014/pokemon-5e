@@ -3510,7 +3510,7 @@ const pokemonDatabase = {
     // 82
     'Magneton': {
         hp: 55, ac: 16, str: 13, dex: 15, con: 17, int: 8, wis: 12, cha: 8,
-        speed: 30, type1: 'electric', type2: 'steel', size: 'Small', sr: 2, hitDie: 'd10',
+        speed: 30, type1: 'electric', type2: 'steel', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/magneton.png',
         learnset: [
             { level: 1, move: 'Magnet Bomb' },
@@ -3559,7 +3559,7 @@ const pokemonDatabase = {
     // 83
     "Farfetch'd": {
         hp: 25, ac: 14, str: 14, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
-        speed: 25, type1: 'normal', type2: 'flying', size: 'Tiny', sr: 1, hitDie: 'd8',
+        speed: 25, type1: 'normal', type2: 'flying', size: 'Tiny', sr: 3, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/farfetchd.png',
         learnset: [
             { level: 1, move: 'Fury Cutter' },
@@ -3606,7 +3606,7 @@ const pokemonDatabase = {
     // 84
     'Doduo': {
         hp: 17, ac: 12, str: 10, dex: 15, con: 12, int: 6, wis: 10, cha: 10,
-        speed: 35, type1: 'normal', type2: 'flying', size: 'Small', sr: 1, hitDie: 'd6',
+        speed: 35, type1: 'normal', type2: 'flying', size: 'Small', sr: 0.25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/doduo.png',
         learnset: [
             { level: 1, move: 'Growl' },
@@ -3651,7 +3651,7 @@ const pokemonDatabase = {
     // 85
     'Dodrio': {
         hp: 64, ac: 15, str: 16, dex: 19, con: 13, int: 6, wis: 12, cha: 10,
-        speed: 40, type1: 'normal', type2: 'flying', size: 'Medium', sr: 3, hitDie: 'd10',
+        speed: 40, type1: 'normal', type2: 'flying', size: 'Medium', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/dodrio.png',
         learnset: [
             { level: 1, move: 'Growl' },
@@ -3697,7 +3697,7 @@ const pokemonDatabase = {
     // 86
     'Seel': {
         hp: 17, ac: 14, str: 13, dex: 11, con: 12, int: 6, wis: 10, cha: 10,
-        speed: 10, type1: 'water', type2: '', size: 'Small', sr: 1, hitDie: 'd6',
+        speed: 10, type1: 'water', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/seel.png',
         learnset: [
             { level: 1, move: 'Headbutt' },
@@ -3744,7 +3744,7 @@ const pokemonDatabase = {
     // 87
     'Dewgong': {
         hp: 72, ac: 16, str: 17, dex: 16, con: 14, int: 6, wis: 12, cha: 12,
-        speed: 15, type1: 'water', type2: 'ice', size: 'Large', sr: 3, hitDie: 'd12',
+        speed: 15, type1: 'water', type2: 'ice', size: 'Large', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/dewgong.png',
         learnset: [
             { level: 1, move: 'Growl' },
@@ -3792,7 +3792,7 @@ const pokemonDatabase = {
     // 88
     'Grimer': {
         hp: 19, ac: 12, str: 14, dex: 9, con: 16, int: 6, wis: 10, cha: 8,
-        speed: 15, type1: 'poison', type2: '', size: 'Small', sr: 1, hitDie: 'd6',
+        speed: 15, type1: 'poison', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/grimer.png',
         learnset: [
             { level: 1, move: 'Poison Gas' },
@@ -3837,7 +3837,7 @@ const pokemonDatabase = {
     // 89
     'Muk': {
         hp: 80, ac: 16, str: 17, dex: 13, con: 20, int: 6, wis: 12, cha: 8,
-        speed: 20, type1: 'poison', type2: '', size: 'Medium', sr: 3, hitDie: 'd12',
+        speed: 20, type1: 'poison', type2: '', size: 'Medium', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/muk.png',
         learnset: [
             { level: 1, move: 'Harden' },
@@ -3883,7 +3883,7 @@ const pokemonDatabase = {
     // 90
     'Shellder': {
         hp: 18, ac: 14, str: 12, dex: 10, con: 14, int: 6, wis: 10, cha: 10,
-        speed: 5, type1: 'water', type2: '', size: 'Tiny', sr: 1, hitDie: 'd6',
+        speed: 5, type1: 'water', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/shellder.png',
         learnset: [
             { level: 1, move: 'Tackle' },
@@ -3929,7 +3929,7 @@ const pokemonDatabase = {
     // 91
     'Cloyster': {
         hp: 55, ac: 18, str: 15, dex: 12, con: 16, int: 6, wis: 12, cha: 10,
-        speed: 5, type1: 'water', type2: 'ice', size: 'Medium', sr: 3, hitDie: 'd12',
+        speed: 5, type1: 'water', type2: 'ice', size: 'Medium', sr: 8, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/cloyster.png',
         learnset: [
             { level: 1, move: 'Aurora Beam' },
@@ -3968,7 +3968,7 @@ const pokemonDatabase = {
     // 92
     'Gastly': {
         hp: 16, ac: 12, str: 9, dex: 13, con: 11, int: 6, wis: 14, cha: 10,
-        speed: 25, type1: 'ghost', type2: 'poison', size: 'Small', sr: 1, hitDie: 'd6',
+        speed: 25, type1: 'ghost', type2: 'poison', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/gastly.png',
         learnset: [
             { level: 1, move: 'Hypnosis' },
@@ -4004,7 +4004,7 @@ const pokemonDatabase = {
     // 93
     'Haunter': {
         hp: 45, ac: 14, str: 12, dex: 15, con: 13, int: 6, wis: 15, cha: 10,
-        speed: 30, type1: 'ghost', type2: 'poison', size: 'Medium', sr: 2, hitDie: 'd10',
+        speed: 30, type1: 'ghost', type2: 'poison', size: 'Medium', sr: 5, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/haunter.png',
         learnset: [
             { level: 1, move: 'Hypnosis' },
@@ -4041,7 +4041,7 @@ const pokemonDatabase = {
     // 94
     'Gengar': {
         hp: 102, ac: 15, str: 14, dex: 18, con: 14, int: 8, wis: 16, cha: 10,
-        speed: 35, type1: 'ghost', type2: 'poison', size: 'Medium', sr: 4, hitDie: 'd12',
+        speed: 35, type1: 'ghost', type2: 'poison', size: 'Medium', sr: 12, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/gengar.png',
         learnset: [
             { level: 1, move: 'Hypnosis' },
@@ -4130,7 +4130,7 @@ const pokemonDatabase = {
     // 96
     'Drowzee': {
         hp: 17, ac: 14, str: 13, dex: 10, con: 12, int: 6, wis: 14, cha: 8,
-        speed: 25, type1: 'psychic', type2: '', size: 'Small', sr: 1, hitDie: 'd6',
+        speed: 25, type1: 'psychic', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/drowzee.png',
         learnset: [
             { level: 1, move: 'Hypnosis' },
@@ -4175,7 +4175,7 @@ const pokemonDatabase = {
     // 97
     'Hypno': {
         hp: 45, ac: 16, str: 14, dex: 15, con: 13, int: 8, wis: 16, cha: 8,
-        speed: 30, type1: 'psychic', type2: '', size: 'Medium', sr: 2, hitDie: 'd12',
+        speed: 30, type1: 'psychic', type2: '', size: 'Medium', sr: 8, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/hypno.png',
         learnset: [
             { level: 1, move: 'Confusion' },
@@ -4266,7 +4266,7 @@ const pokemonDatabase = {
     // 99
     'Kingler': { 
         hp: 50, ac: 16, str: 17, dex: 15, con: 15, int: 6, wis: 12, cha: 8,
-        speed: 30, type1: 'water', type2: '', size: 'Medium', sr: 2, hitDie: 'd10',
+        speed: 30, type1: 'water', type2: '', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kingler.png',
         learnset: [
             { level: 1, move: 'Bubble' },
@@ -4311,7 +4311,7 @@ const pokemonDatabase = {
     // 100
     'Voltorb': { 
         hp: 17, ac: 14, str: 12, dex: 14, con: 12, int: 6, wis: 10, cha: 8,
-        speed: 25, type1: 'electric', type2: '', size: 'Tiny', sr: 1, hitDie: 'd6',
+        speed: 25, type1: 'electric', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/voltorb.png',
         learnset: [
             { level: 1, move: 'Charge' },
@@ -4357,7 +4357,7 @@ const pokemonDatabase = {
     // 101
     'Electrode': {
         hp: 50, ac: 17, str: 14, dex: 17, con: 15, int: 6, wis: 12, cha: 8,
-        speed: 40, type1: 'electric', type2: '', size: 'Small', sr: 2, hitDie: 'd10',
+        speed: 40, type1: 'electric', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/electrode.png',
         learnset: [
             { level: 1, move: 'Charge' },
@@ -4404,7 +4404,7 @@ const pokemonDatabase = {
     // 102
     'Exeggcute': {
         hp: 19, ac: 14, str: 13, dex: 12, con: 12, int: 6, wis: 10, cha: 10,
-        speed: 20, type1: 'grass', type2: 'psychic', size: 'Tiny', sr: 1, hitDie: 'd8',
+        speed: 20, type1: 'grass', type2: 'psychic', size: 'Tiny', sr: 0.5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/exeggcute.png',
         learnset: [
             { level: 1, move: 'Barrage' },
@@ -4444,7 +4444,7 @@ const pokemonDatabase = {
     // 103
     'Exeggutor': {
         hp: 56, ac: 15, str: 16, dex: 14, con: 14, int: 6, wis: 14, cha: 10,
-        speed: 30, type1: 'grass', type2: 'psychic', size: 'Large', sr: 3, hitDie: 'd10',
+        speed: 30, type1: 'grass', type2: 'psychic', size: 'Large', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/exeggutor.png',
         learnset: [
             { level: 1, move: 'Barrage' },
@@ -4478,7 +4478,7 @@ const pokemonDatabase = {
     // 104
     'Cubone': { 
         hp: 17, ac: 14, str: 12, dex: 11, con: 12, int: 6, wis: 10, cha: 12,
-        speed: 30, type1: 'ground', type2: '', size: 'Tiny', sr: 1, hitDie: 'd6',
+        speed: 30, type1: 'ground', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/cubone.png',
         learnset: [
             { level: 1, move: 'Growl' },
