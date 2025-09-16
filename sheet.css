@@ -1,14 +1,2830 @@
-.sheet-container {
-  font-family: sans-serif;
-  padding: 10px;
-  max-width: 600px;
+/* COMPLETE CSS FOR ROLL20 CHARACTER SHEET - D&D Style Layout */
+
+/* Tab System - Controls visibility of trainer vs pokemon sections */
+input[name="attr_CharType"][value="1"]:checked ~ .sheet-pokemon-section {
+    display: none;
 }
 
-.sheet-container label {
-  display: block;
-  margin: 6px 0;
+input[name="attr_CharType"][value="0"]:checked ~ .sheet-trainer-section {
+    display: none;
 }
 
-h1, h2 {
-  border-bottom: 1px solid #ccc;
+/* Character Type Toggle */
+h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Top Character Info Section */
+.sheet-top-info {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sheet-character-header {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.sheet-character-header h4 {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(121, 255, 248);
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.sheet-header-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: end;
+}
+
+.sheet-header-row .sheet-info-field {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sheet-header-row .sheet-info-field label {
+    font-size: 8px;
+    font-weight: bold;
+    color: #3B3F58 !important;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.sheet-header-row .sheet-info-field input {
+    padding: 6px 8px;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    font-size: 11px;
+    background: white;
+    min-height: 25px;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+}
+
+/* Combat Stats in Middle Column - Horizontal Row */
+.sheet-combat-stats-section {
+    padding: 10px;
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    background: white;
+}
+
+.sheet-combat-row-horizontal {
+    display: flex;
+    gap: 8px;
+}
+
+.sheet-combat-row-horizontal .sheet-combat-stat {
+    flex: 1;
+    text-align: center;
+}
+
+.sheet-combat-row-horizontal .sheet-combat-stat label {
+    font-size: 8px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.sheet-combat-row-horizontal .sheet-combat-stat input {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    padding: 3px;
+    box-sizing: border-box;
+    min-height: 25px;
+}
+
+.sheet-combat-row-horizontal .sheet-hp-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.sheet-combat-row-horizontal .sheet-hp-section input {
+    width: 35px;
+    height: 25px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.sheet-combat-row-horizontal .sheet-hp-section span {
+    font-weight: bold;
+    font-size: 12px;
+    color: #3B3F58;
+}
+
+/* Main Layout Container */
+.sheet-main-layout {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Three Column Layout */
+.sheet-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 0; /* Allow columns to shrink */
+}
+
+.sheet-column-narrow {
+    flex: 0 0;
+    min-width: 140px; /* Minimum before collapsing */
+}
+
+.sheet-column-wide {
+    flex: 1.2;
+    min-width: 200px; /* Minimum before collapsing */
+}
+
+/* Stats Column (Left) */
+.sheet-stats-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.sheet-stats-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: #3B3F58;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sheet-stat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: white;
+}
+
+.sheet-stat-name {
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3B3F58;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.sheet-stat-score {
+    width: 45px;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.sheet-stat-modifier {
+    width: 35px;
+    height: 22px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    background: #3B3F58;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.sheet-saving-throw {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 8px;
+}
+
+.sheet-saving-throw input[type="checkbox"] {
+    transform: scale(0.7);
+}
+
+.sheet-saving-throw button {
+    background: #f0f0f0;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-size: 8px;
+    cursor: pointer;
+    min-width: 25px;
+}
+
+.sheet-saving-throw button:hover {
+    background: #e0e0e0;
+}
+
+/* Skills and Proficiency Column (Middle) */
+.sheet-skills-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+    min-width: 250px;
+}
+
+.sheet-inventory-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+    flex: .6;
+    min-width: 140px;
+}
+
+/* Middle Container for Combat + Details */
+.sheet-middle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sheet-proficiency-section {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: white;
+}
+
+.sheet-proficiency-section label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #3B3F58 !important;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sheet-proficiency-section input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+}
+
+.sheet-skills-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sheet-inventory-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sheet-skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5px;
+    margin: 2px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 10px;
+}
+
+.sheet-skill-item:hover {
+    background: #f0f0f0;
+}
+
+.sheet-skill-prof {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.sheet-skill-name {
+    flex: 1;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.sheet-skill-stat {
+    font-style: italic;
+    color: #666;
+    margin-right: 8px;
+    font-size: 9px;
+}
+
+.sheet-skill-button {
+    background: #f0f0f0;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 9px;
+    cursor: pointer;
+    min-width: 25px;
+}
+
+.sheet-skill-button:hover {
+    background: #e0e0e0;
+}
+
+/* Info Column (Right) */
+.sheet-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sheet-info-row {
+    display: flex;
+    gap: 10px;
+}
+
+.sheet-info-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* Allow shrinking */
+}
+
+.sheet-info-field label {
+    font-size: 9px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.sheet-info-field input,
+.sheet-info-field select {
+    padding: 4px 6px;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    font-size: 11px;
+    background: white;
+    min-height: 25px;
+    width: 100%;
+}
+
+.sheet-info-field input:focus,
+.sheet-info-field select:focus {
+    border-color: #D2691E;
+    outline: none;
+    box-shadow: 0 0 3px rgba(139, 69, 19, 0.3);
+}
+
+/* Combat Stats */
+.sheet-combat-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.sheet-combat-stat {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    background: white;
+}
+
+.sheet-combat-stat label {
+    font-size: 8px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.sheet-combat-stat input {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.sheet-hp-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sheet-hp-section input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+}
+
+.sheet-hp-section span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #3B3F58;
+}
+
+/* Features Section */
+.sheet-features-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+}
+
+.sheet-features-container h4 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.sheet-feature-box {
+    margin-bottom: 10px;
+}
+
+.sheet-feature-box label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #3B3F58 !important;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.sheet-feature-box textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 6px;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    font-size: 10px;
+    background: white;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.sheet-feature-box textarea:focus {
+    border-color: #D2691E;
+    outline: none;
+    box-shadow: 0 0 3px rgba(139, 69, 19, 0.3);
+}
+
+/* Bottom Sections */
+.sheet-bottom-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.sheet-section {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+}
+
+.sheet-section h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Badges */
+.sheet-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.sheet-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px;
+    background: white;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+}
+
+.sheet-badge-item input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* Pokemon Party */
+.sheet-pokemon-party {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.sheet-pokemon-party input {
+    padding: 8px;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 11px;
+    background: white;
+}
+
+/* Inventory */
+.sheet-inventory-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.sheet-inventory-section h4 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3B3F58;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sheet-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    margin: 3px 0;
+    background: white;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+.sheet-item-row label {
+    flex: 1;
+    font-weight: 500;
+    color: #3B3F58 !important;
+}
+
+.sheet-item-row input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 10px;
+}
+
+.sheet-money-section {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.sheet-money-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: white;
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+}
+
+.sheet-money-row label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3B3F58 !important;
+    text-transform: uppercase;
+}
+
+.sheet-money-row input {
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+/* Other Items */
+.sheet-other-items {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+.sheet-other-items label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #3B3F58 !important;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sheet-other-items textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 6px;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    font-size: 10px;
+    background: white;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Notes Section */
+.sheet-notes textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    font-size: 11px;
+    background: white;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Pokemon Section (same styling structure) */
+.sheet-pokemon-section {
+    /* Uses same structure as trainer section */
+}
+
+/* Pokemon Features Card System */
+.sheet-features-cards-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+}
+
+.sheet-features-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sheet-features-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sheet-add-feature-btn {
+    background: #3B3F58;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.sheet-add-feature-btn:hover {
+    background: #484a58;
+}
+
+.sheet-feature-card {
+    border: 1px solid #3B3F58;
+    border-radius: 6px;
+    background: white;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Feature container styling */
+.sheet-feature-container {
+    position: relative;
+}
+
+/* Hide inactive feature containers */
+.sheet-feature-container input[name="attr_feature_slot_1_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_feature_slot_2_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_feature_slot_3_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+/* Collapse functionality - hide content when collapsed (now scoped to individual containers) */
+.sheet-feature-container input[name="attr_feature_1_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_feature_2_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_feature_3_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+/* Rotate the collapse icon when collapsed (now scoped to individual containers) */
+.sheet-feature-container input[name="attr_feature_1_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+.sheet-feature-container input[name="attr_feature_2_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+.sheet-feature-container input[name="attr_feature_3_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+/* Hide the control inputs */
+.sheet-feature-container input[name*="feature_slot"][name*="active"],
+.sheet-feature-container input[name*="feature"][name*="collapsed"] {
+    display: none;
+}
+
+.sheet-feature-header {
+    background: #3B3F58;
+    color: white;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.sheet-feature-header:hover {
+    background: #484a58;
+}
+
+.sheet-feature-title {
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.sheet-feature-title input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 2px 4px;
+    margin: 0;
+    border-radius: 2px;
+}
+
+.sheet-feature-title input::placeholder {
+    color: #cccccc;
+}
+
+.sheet-feature-title input:focus {
+    outline: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sheet-feature-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.sheet-collapse-btn,
+.sheet-delete-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: all 0.2s;
+    min-width: 20px;
+    text-align: center;
+}
+
+.sheet-collapse-btn span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.sheet-collapse-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sheet-delete-btn:hover {
+    background: #dc3545;
+}
+
+.sheet-feature-content {
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.sheet-feature-text {
+    width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 10px;
+    background: #fafafa;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.sheet-feature-text:focus {
+    border-color: #3B3F58;
+    outline: none;
+    background: white;
+    box-shadow: 0 0 3px rgba(139, 69, 19, 0.3);
+}
+
+.sheet-no-features {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+    font-size: 11px;
+}
+
+/* Hide the collapse state input */
+input[name="attr_feature_collapsed"] {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .sheet-features-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .sheet-feature-header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .sheet-feature-title {
+        flex: 1 1 100%;
+        margin-bottom: 4px;
+        margin-right: 0;
+    }
+
+    .sheet-feature-controls {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .sheet-main-layout {
+        flex-direction: column;
+    }
+    
+    .sheet-column-narrow {
+        flex: 1;
+    }
+    
+    .sheet-stats-container .sheet-stat-block {
+        display: inline-block;
+        margin: 5px;
+        width: calc(33.333% - 10px);
+    }
+    
+    .sheet-header-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .sheet-header-row .sheet-info-field {
+        min-width: 120px;
+    }
+    
+    .sheet-header-row .sheet-info-field:nth-child(1) {
+        flex: 0 1 180px;
+        min-width: 180px;
+    }
+    
+    .sheet-header-row .sheet-info-field:nth-child(2),
+    .sheet-header-row .sheet-info-field:nth-child(3) {
+        flex: 0 1 80px;
+        min-width: 80px;
+    }
+    
+    .sheet-header-row .sheet-info-field:nth-child(4) {
+        flex: 0 1 160px;
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sheet-badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sheet-pokemon-party {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sheet-inventory-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sheet-combat-row-horizontal {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .sheet-header-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sheet-header-row .sheet-info-field {
+        flex: 0 1 200px;
+        min-width: 200px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sheet-badges-grid,
+    .sheet-pokemon-party {
+        grid-template-columns: 1fr;
+    }
+    
+    .sheet-info-row {
+        flex-direction: column;
+    }
+    
+    .sheet-header-row .sheet-info-field {
+        min-width: 180px;
+    }
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* Remove number input spinners/arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Print Styles */
+@media print {
+    .sheet-section {
+        break-inside: avoid;
+        border: 2px solid #000;
+        margin: 10px 0;
+    }
+    
+    button {
+        display: none;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+}
+
+/* Compact Move System */
+.sheet-move-container {
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    background: white;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.sheet-move-name {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+    flex: 1;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.sheet-move-name::placeholder {
+    color: #cccccc;
+}
+
+.sheet-move-name:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.sheet-move-quick-stats {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.sheet-move-stat-label {
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.sheet-move-stat-input {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    width: 35px;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.sheet-move-stat-input-wide {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    width: 50px; /* Wider for "STR, DEX" text */
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.sheet-move-stat-input-wide::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.sheet-move-stat-input-wide:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sheet-move-stat-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.sheet-move-stat-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sheet-move-stats-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.sheet-move-stat-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.sheet-move-stat-group label {
+    font-size: 8px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.sheet-move-stat-group input,
+.sheet-move-stat-group select {
+    padding: 3px 4px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 9px;
+    background: white;
+    min-width: 0;
+    width: 100%;
+}
+
+.sheet-move-stat-group input:focus,
+.sheet-move-stat-group select:focus {
+    border-color: #3B3F58;
+    outline: none;
+    box-shadow: 0 0 2px rgba(139, 69, 19, 0.3);
+}
+
+.sheet-move-description-compact {
+    margin-top: 6px;
+}
+
+.sheet-move-description-compact label {
+    font-size: 8px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    line-height: 1;
+}
+
+.sheet-move-description-compact textarea {
+    width: 100%;
+    height: 100%;
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 9px;
+    background: white;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: 1.3;
+}
+
+.sheet-move-description-compact textarea:focus {
+    border-color: #3B3F58;
+    outline: none;
+    box-shadow: 0 0 2px rgba(139, 69, 19, 0.3);
+}
+
+.sheet-move-description-compact textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .sheet-move-header {
+        flex-direction: column;
+        gap: 6px;
+        align-items: stretch;
+    }
+    
+    .sheet-move-quick-stats {
+        justify-content: center;
+    }
+    
+    .sheet-move-stats-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+.sheet-moves-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sheet-suggest-moves-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.sheet-suggest-moves-btn:hover {
+    background: #45a049;
+}
+
+.sheet-move-name {
+    margin-right: 10px;
+}
+
+.sheet-move-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.sheet-move-roll-btn {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.sheet-move-roll-btn:hover {
+    background: #1976D2;
+}
+
+.sheet-forget-move-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sheet-forget-move-btn:hover {
+    background: #d32f2f;
+}
+
+.sheet-debug-section {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ffffcc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sheet-debug-section button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Suggest Moves Button - Transparent with brown outline */
+.sheet-suggest-moves-btn {
+    background: transparent;
+    color: #3B3F58;
+    border: 2px solid #3B3F58;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    min-width: 120px;
+    font-family: inherit;
+}
+
+.sheet-suggest-moves-btn:hover {
+    background: #3B3F58;
+    color: white;
+    border-color: #3B3F58;
+}
+
+.sheet-suggest-moves-btn:active {
+    background: #484a58;
+    color: white;
+}
+
+/* Improved visibility for PP and STAT values in move headers */
+.sheet-move-stat-input {
+    background: rgba(255, 255, 255, 0.9); /* More opaque white background */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #333; /* Dark text instead of white */
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    width: 35px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.sheet-move-stat-input-wide {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-weight: bold;
+    font-size: 9px; /* Reduced font size */
+    text-align: center;
+    width: 40px; /* Further reduced width */
+    padding: 2px; /* Minimal padding */
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.sheet-move-stat-input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-weight: bold;
+    font-size: 9px; /* Reduced font size */
+    text-align: center;
+    width: 30px; /* Further reduced width */
+    padding: 2px; /* Minimal padding */
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.sheet-move-stat-input-wide::placeholder {
+    color: #666; /* Darker placeholder text */
+    font-weight: normal;
+}
+
+.sheet-move-stat-input-wide:focus {
+    outline: none;
+    border-color: white;
+    background: white;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+
+.sheet-move-stat-input::placeholder {
+    color: #666; /* Darker placeholder text */
+    font-weight: normal;
+}
+
+.sheet-move-stat-input:focus {
+    outline: none;
+    border-color: white;
+    background: white;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+
+.sheet-move-name {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    flex: 1;
+    padding: 3px 6px;
+    border-radius: 3px;
+    min-width: 80px; /* Set minimum width */
+}
+
+/* Also improve the quick stats container spacing */
+.sheet-move-quick-stats {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Reduced gap */
+    flex-shrink: 0;
+    justify-content: flex-end; /* Align to right */
+    padding-left: 4px; /* Add left padding for breathing room */
+}
+.sheet-move-stat-label {
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white; /* Keep white but make sure it's explicit */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5); /* Add text shadow for better readability */
+}
+.sheet-move-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Make sure move action buttons align properly */
+.sheet-move-actions .sheet-move-roll-btn {
+    flex: 0 1 auto;
+}
+
+.sheet-move-actions .sheet-forget-move-btn {
+    flex: 0 0 auto;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+    .sheet-move-actions {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .sheet-move-roll-btn,
+    .sheet-forget-move-btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+.sheet-skill-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  position: relative; /* Add this */
+}
+
+.sheet-skill-toggle input[type="radio"] {
+  position: relative; /* Change from absolute to relative */
+  opacity: 0;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sheet-skill-toggle .sheet-toggle-label {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  border-radius: 50%;
+  background: #eee;
+  color: #888;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid #bbb;
+  margin-left: -1.5em; /* Move the label back over the radio button */
+  margin-right: 2px;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  z-index: 0; /* Put labels behind radio buttons */
+}
+
+/* Target by radio button value instead of position */
+.sheet-skill-toggle input[type="radio"][value="none"]:checked + .sheet-toggle-label {
+  background: #888;
+  color: #fff;
+  border-color: #666;
+}
+
+.sheet-skill-toggle input[type="radio"][value="proficient"]:checked + .sheet-toggle-label {
+  background: #2196f3;
+  color: #fff;
+  border-color: #1976d2;
+}
+
+.sheet-skill-toggle input[type="radio"][value="expertise"]:checked + .sheet-toggle-label {
+  background: #ff9800;
+  color: #fff;
+  border-color: #f57c00;
+}
+
+.sheet-stats-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 10px;
+}
+
+.sheet-stats-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: #3B3F58;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* MODIFIED: Horizontal Layout for Stat Blocks */
+.sheet-stats-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.sheet-stat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: white;
+    flex: 1; /* Equal width distribution */
+    min-width: 50px; /* Minimum width before wrapping */
+}
+
+.sheet-stat-name {
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3B3F58;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.sheet-stat-score {
+    width: 45px;
+    height: 28px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #3B3F58;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.sheet-stat-modifier {
+    width: 35px;
+    height: 22px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    background: #3B3F58;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.sheet-saving-throw {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 8px;
+}
+
+.sheet-saving-throw input[type="checkbox"] {
+    transform: scale(0.7);
+}
+
+.sheet-saving-throw button {
+    background: #f0f0f0;
+    border: 1px solid #3B3F58;
+    border-radius: 3px;
+    padding: 1px 4px;
+    font-size: 8px;
+    cursor: pointer;
+    min-width: 25px;
+}
+
+.sheet-saving-throw button:hover {
+    background: #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sheet-stats-row {
+        gap: 8px;
+    }
+    
+    .sheet-stat-block {
+        min-width: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sheet-stats-row {
+        gap: 6px;
+    }
+    
+    .sheet-stat-block {
+        min-width: 80px;
+        padding: 6px;
+    }
+    
+    .sheet-stat-score {
+        width: 40px;
+        height: 25px;
+        font-size: 12px;
+    }
+    
+    .sheet-stat-modifier {
+        width: 30px;
+        height: 20px;
+        font-size: 10px;
+    }
+}
+
+/* Very small screens - stack in pairs */
+@media (max-width: 480px) {
+    .sheet-stats-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+    }
+}
+
+/* Extra small screens - single column */
+@media (max-width: 360px) {
+    .sheet-stats-row {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .sheet-stat-block {
+        min-width: auto;
+    }
+}
+
+/* Top Character Info Section */
+.sheet-top-info {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sheet-character-header {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.sheet-character-header h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Single row layout */
+.sheet-header-row {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Base field styling */
+.sheet-info-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sheet-info-field label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    padding: 0;
+}
+
+/* Character name - special styling */
+.sheet-name-field {
+    flex: 1;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.sheet-name-field input {
+    padding: 12px 16px;
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    font-size: 16px;
+    background: white;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.sheet-name-field input:focus {
+    border-color: #D2691E;
+    outline: none;
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
+}
+
+/* Compact stat fields */
+.sheet-stat-field {
+    position: relative;
+}
+
+.sheet-stat-field input {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    font-size: 16px;
+    background: white;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.sheet-stat-field input:focus {
+    border-color: #D2691E;
+    outline: none;
+    box-shadow: 0 0 6px rgba(139, 69, 19, 0.3);
+}
+
+/* Special HP field with fraction layout */
+.sheet-hp-field {
+    position: relative;
+}
+
+.sheet-hp-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    background: white;
+    padding: 8px 12px;
+}
+
+.sheet-hp-container input {
+    width: 45px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 0;
+}
+
+.sheet-hp-container input:focus {
+    outline: none;
+    background: rgba(139, 69, 19, 0.1);
+    border-radius: 3px;
+}
+
+.sheet-hp-separator {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3B3F58;
+}
+
+.sheet-hp-field:focus-within .sheet-hp-container {
+    border-color: #D2691E;
+    box-shadow: 0 0 6px rgba(139, 69, 19, 0.3);
+}
+
+/* Speed field - slightly wider */
+.sheet-speed-field input {
+    width: 60px;
+}
+
+/* Visual separator between sections */
+.sheet-separator {
+    width: 2px;
+    height: 40px;
+    background: #3B3F58;
+    opacity: 0.3;
+    border-radius: 1px;
+    margin: 0 10px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .sheet-header-row {
+        gap: 15px;
+    }
+    
+    .sheet-separator {
+        display: none;
+    }
+    
+    .sheet-name-field {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 700px) {
+    .sheet-header-row {
+        gap: 12px;
+        justify-content: space-around;
+    }
+    
+    .sheet-stat-field input,
+    .sheet-speed-field input {
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
+    }
+    
+    .sheet-hp-container {
+        padding: 6px 10px;
+    }
+    
+    .sheet-hp-container input {
+        width: 40px;
+        font-size: 14px;
+    }
+    
+    .sheet-name-field input {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sheet-header-row {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .sheet-name-field {
+        order: -1;
+        min-width: 250px;
+    }
+    
+    .sheet-stats-row {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Hover effects for better UX */
+.sheet-stat-field input:hover,
+.sheet-speed-field input:hover,
+.sheet-name-field input:hover {
+    border-color: #484a58;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+.sheet-hp-container:hover {
+    border-color: #484a58;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+.sheet-character-info h4 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Pokemon Type Selects */
+.sheet-info-row {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+}
+
+.sheet-info-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.sheet-info-field label {
+    font-size: 9px;
+    font-weight: bold;
+    color: #3B3F58 !important;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.sheet-info-field select,
+.sheet-info-field input {
+    padding: 8px 10px;
+    border: 2px solid #3B3F58;
+    border-radius: 4px;
+    font-size: 11px;
+    background: white;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.sheet-info-field select:focus,
+.sheet-info-field input:focus {
+    border-color: #D2691E;
+    outline: none;
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+    transform: translateY(-1px);
+}
+
+.sheet-info-field select:hover,
+.sheet-info-field input:hover {
+    border-color: #484a58;
+    transform: translateY(-1px);
+}
+
+/* Loyalty Section */
+.sheet-info-row .sheet-info-field:has(select[name="attr_pokemon_loyalty"]) {
+    flex: 1.2;
+}
+
+.sheet-info-row .sheet-info-field:has(input[name="attr_pokemon_loyalty_value"]) {
+    flex: 0.8;
+}
+
+.sheet-info-field input[name="attr_pokemon_loyalty_value"] {
+    background: #f0f8ff;
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.sheet-info-field label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 10px;
+    padding: 8px 12px;
+    background: white;
+    border: 2px solid #3B3F58;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.sheet-info-field label:has(input[type="checkbox"]):hover {
+    background: #F0F2F8 ;
+    border-color: #484a58;
+    transform: translateY(-1px);
+}
+
+.sheet-info-field input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #4CAF50;
+}
+
+.sheet-info-field input[type="checkbox"]:checked + span,
+.sheet-info-field label:has(input[type="checkbox"]:checked) {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+/* Initiative Button */
+.sheet-info-row:has(button[name="roll_initiative"]) {
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+button[name="roll_initiative"] {
+    background: transparent;
+    color: #3B3F58;
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+button[name="roll_initiative"]:hover {
+    background: #3B3F58;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
+}
+
+button[name="roll_initiative"]:active {
+    background: #484a58;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.3);
+}
+
+/* Type-specific styling for Pokemon types */
+.sheet-info-field select[name="attr_pokemon_type1"],
+.sheet-info-field select[name="attr_pokemon_type2"] {
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.sheet-info-field select[name="attr_pokemon_type1"]:focus,
+.sheet-info-field select[name="attr_pokemon_type2"]:focus {
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .sheet-info-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .sheet-info-field {
+        flex: 1;
+    }
+    
+    .sheet-info-field label:has(input[type="checkbox"]) {
+        padding: 10px;
+        font-size: 11px;
+    }
+    
+    button[name="roll_initiative"] {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sheet-character-info {
+        padding: 12px;
+    }
+    
+    .sheet-info-field select,
+    .sheet-info-field input {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Fix for checkbox areas - make smaller and remove borders */
+.sheet-info-field label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Back to center */
+    gap: 6px; /* Reduced from 8px */
+    font-size: 9px; /* Reduced from 10px */
+    padding: 4px 6px; /* Reduced from 8px 12px */
+    background: transparent; /* Changed from white */
+    border: none; /* Removed border */
+    border-radius: 0; /* Removed border radius */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center; /* Back to center */
+    margin-bottom: 6px; /* Reduced spacing */
+}
+
+.sheet-info-field label:has(input[type="checkbox"]):hover {
+    background: rgba(139, 69, 19, 0.05); /* Very subtle hover effect */
+    border: none; /* Ensure no border on hover */
+    transform: none; /* Remove transform effect */
+}
+
+.sheet-info-field input[type="checkbox"] {
+    width: 14px; /* Reduced from 16px */
+    height: 14px; /* Reduced from 16px */
+    margin: 0;
+    cursor: pointer;
+    accent-color: #3B3F58;
+    flex-shrink: 0; /* Prevent checkbox from shrinking */
+}
+
+.sheet-info-field input[type="checkbox"]:checked + span,
+.sheet-info-field label:has(input[type="checkbox"]:checked) {
+    background: rgba(232, 245, 232, 0.3); /* More subtle checked state */
+    border: none; /* Remove border */
+    color: #2e7d32;
+}
+
+/* Fix dropdown cutoff issue by ensuring proper z-index and overflow */
+.sheet-info-field select {
+    padding: 8px 10px;
+    border: 2px solid #3B3F58;
+    border-radius: 4px;
+    font-size: 11px;
+    background: white;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.2s ease;
+    height: 100%;
+    position: relative; /* Add positioning context */
+    z-index: 10; /* Ensure dropdowns appear above other elements */
+}
+
+/* Ensure the container allows overflow for dropdowns */
+.sheet-character-info {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+    overflow: visible;
+    position: relative;
+    padding-bottom: 0;
+}
+
+.sheet-moves-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+    overflow: visible;
+    position: relative;
+    padding-bottom: 0;
+}
+
+.sheet-info-row {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+    overflow: visible; /* Allow overflow for dropdowns */
+    position: relative; /* Add positioning context */
+}
+
+.sheet-info-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    position: relative; /* Add positioning context */
+    overflow: visible; /* Allow overflow */
+}
+
+/* Specific fixes for Pokemon type dropdowns */
+.sheet-info-field select[name="attr_pokemon_type1"],
+.sheet-info-field select[name="attr_pokemon_type2"] {
+    font-family: inherit;
+    font-weight: bold;
+    z-index: 15; /* Higher z-index for type dropdowns */
+}
+
+/* Ensure loyalty dropdown also has proper z-index */
+.sheet-info-field select[name="attr_pokemon_loyalty"] {
+    z-index: 12;
+}
+
+/* Make sure the middle container doesn't clip dropdowns */
+.sheet-middle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: visible; /* Allow overflow for dropdowns */
+}
+
+/* Ensure main layout doesn't clip */
+.sheet-main-layout {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    overflow: visible; /* Allow overflow */
+}
+
+.sheet-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 0;
+    overflow: visible; /* Allow overflow */
+}
+
+/* Pokemon Moves Container - Enhanced */
+.sheet-moves-container {
+    border: 2px solid #3B3F58;
+    border-radius: 8px;
+    background: #F0F2F8 ;
+    padding: 15px;
+}
+
+.sheet-moves-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sheet-moves-header h4 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Move Cards - Redesigned for better visual hierarchy */
+.sheet-move-container {
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    background: white;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.sheet-move-container:hover {
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Move Header - Cleaner layout */
+.sheet-move-header {
+    background: linear-gradient(135deg, #3B3F58 0%, #484a58 100%);
+    color: white;
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+}
+
+.sheet-move-name {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sheet-move-name::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
+.sheet-move-name:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* PP Section - Badge style */
+.sheet-move-quick-stats {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    white-space: nowrap;
+}
+
+.sheet-move-stat-label {
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.9;
+}
+
+.sheet-move-stat-input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    width: 40px;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.sheet-move-stat-input:focus {
+    outline: none;
+    border-color: white;
+    background: white;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+
+/* Move Details - Better organization */
+.sheet-move-details {
+    background: #fafafa;
+    padding: 10px;
+}
+
+/* Stats Row - Card-based layout */
+.sheet-move-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.sheet-move-stat-group {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.sheet-move-stat-group:hover {
+    border-color: #3B3F58;
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+}
+
+.sheet-move-stat-group label {
+    font-size: 8px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.sheet-move-stat-group input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.sheet-move-stat-group input:focus {
+    outline: none;
+    background: rgba(139, 69, 19, 0.05);
+    border-radius: 2px;
+}
+
+/* Description - Enhanced styling */
+.sheet-move-description-compact {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.sheet-move-description-compact label {
+    font-size: 9px;
+    font-weight: bold;
+    color: #3B3F58;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.sheet-move-description-compact textarea {
+    width: 100%;
+    min-height: 60px;
+    border: none;
+    background: transparent;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #333;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.sheet-move-description-compact textarea:focus {
+    outline: none;
+    background: rgba(139, 69, 19, 0.02);
+}
+
+.sheet-move-description-compact textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Action Buttons - Improved styling */
+.sheet-move-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-move-roll-btn {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.sheet-move-roll-btn:hover {
+    background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+.sheet-move-roll-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+}
+
+.sheet-forget-move-btn {
+    background: transparent;
+    border: 1px solid #f44336;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sheet-forget-move-btn:hover {
+    background: #f44336;
+    color: white;
+    border-color: #f44336;
+    transform: translateY(-1px);
+}
+
+/* Empty state styling */
+.sheet-move-container:has(.sheet-move-name[value=""]) {
+    border-style: dashed;
+    border-color: #ccc;
+    background: #f9f9f9;
+}
+
+.sheet-move-container:has(.sheet-move-name[value=""]) .sheet-move-header {
+    background: #e0e0e0;
+    color: #666;
+}
+
+/* Type-based color coding for move types */
+.sheet-move-stat-group:has(input[name*="_type"][value*="Fire"]) {
+    border-left: 4px solid #FF5722;
+}
+
+.sheet-move-stat-group:has(input[name*="_type"][value*="Water"]) {
+    border-left: 4px solid #2196F3;
+}
+
+.sheet-move-stat-group:has(input[name*="_type"][value*="Grass"]) {
+    border-left: 4px solid #4CAF50;
+}
+
+.sheet-move-stat-group:has(input[name*="_type"][value*="Electric"]) {
+    border-left: 4px solid #FFEB3B;
+}
+
+.sheet-move-stat-group:has(input[name*="_type"][value*="Psychic"]) {
+    border-left: 4px solid #E91E63;
+}
+
+.sheet-move-stat-group:has(input[name*="_type"][value*="Fighting"]) {
+    border-left: 4px solid #795548;
+}
+
+.sheet-move-stat-group:has(input[name*="_type"][value*="Poison"]) {
+    border-left: 4px solid #9C27B0;
+}
+
+.sheet-move-stat-group:has(input[name*="_type"][value*="Normal"]) {
+    border-left: 4px solid #9E9E9E;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .sheet-move-header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .sheet-move-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sheet-move-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .sheet-move-roll-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .sheet-move-stats-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Move 1 collapse system */
+.sheet-move-container input[name="attr_pokemon_move1_collapsed"] {
+    display: none;
+}
+
+/* Hide move details when collapsed */
+.sheet-move-container input[name="attr_pokemon_move1_collapsed"][value="1"] ~ .sheet-move-details {
+    display: none;
+}
+
+/* Rotate the collapse icon when collapsed */
+.sheet-move-container input[name="attr_pokemon_move1_collapsed"][value="1"] ~ .sheet-move-header .sheet-move-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+/* Details button styling */
+.sheet-move-collapse-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+}
+
+.sheet-move-collapse-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.sheet-move-collapse-btn span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 10px;
+}
+
+/* Existing move container styling - ensure it works with collapse */
+.sheet-move-container {
+    border: 2px solid #3B3F58;
+    border-radius: 6px;
+    background: white;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.sheet-move-header {
+    background: linear-gradient(135deg, #3B3F58 0%, #484a58 100%);
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.sheet-move-name {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border-radius: 4px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.sheet-move-quick-stats {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    white-space: nowrap;
+}
+
+.sheet-move-stat-label {
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.9;
+}
+
+.sheet-move-stat-input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    width: 40px;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.sheet-move-details {
+    background: #fafafa;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Move 2 collapse system */
+.sheet-move-container input[name="attr_pokemon_move2_collapsed"] {
+    display: none;
+}
+
+/* Hide move details when collapsed */
+.sheet-move-container input[name="attr_pokemon_move2_collapsed"][value="1"] ~ .sheet-move-details {
+    display: none;
+}
+
+/* Rotate the collapse icon when collapsed */
+.sheet-move-container input[name="attr_pokemon_move2_collapsed"][value="1"] ~ .sheet-move-header .sheet-move-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+/* Move 3 collapse system */
+.sheet-move-container input[name="attr_pokemon_move3_collapsed"] {
+    display: none;
+}
+
+/* Hide move details when collapsed */
+.sheet-move-container input[name="attr_pokemon_move3_collapsed"][value="1"] ~ .sheet-move-details {
+    display: none;
+}
+
+/* Rotate the collapse icon when collapsed */
+.sheet-move-container input[name="attr_pokemon_move3_collapsed"][value="1"] ~ .sheet-move-header .sheet-move-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+/* Move 4 collapse system */
+.sheet-move-container input[name="attr_pokemon_move4_collapsed"] {
+    display: none;
+}
+
+/* Hide move details when collapsed */
+.sheet-move-container input[name="attr_pokemon_move4_collapsed"][value="1"] ~ .sheet-move-details {
+    display: none;
+}
+
+/* Rotate the collapse icon when collapsed */
+.sheet-move-container input[name="attr_pokemon_move4_collapsed"][value="1"] ~ .sheet-move-header .sheet-move-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+/* Add these CSS rules to your existing CSS file */
+
+/* Always visible action buttons section */
+.sheet-move-details-always {
+    background: #fafafa;
+    padding: 10px;
+    border-top: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.sheet-move-details-always .sheet-move-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sheet-move-details-always .sheet-move-roll-btn {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.sheet-move-details-always .sheet-move-roll-btn:hover {
+    background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+.sheet-move-details-always .sheet-forget-move-btn {
+    background: transparent;
+    border: 1px solid #f44336;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sheet-move-details-always .sheet-forget-move-btn:hover {
+    background: #f44336;
+    color: white;
+    border-color: #f44336;
+    transform: translateY(-1px);
+}
+
+/* Details button styling */
+.sheet-move-collapse-btn {
+    background: transparent;
+    color: #3B3F58;
+    border: 1px solid #3B3F58;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+}
+
+.sheet-move-collapse-btn:hover {
+    background: #3B3F58;
+    color: white;
+}
+
+.sheet-move-collapse-btn span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 10px;
 }
