@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pokedex-5e.herokuapp.com)",
+      "WebFetch(domain:poke5e.app)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

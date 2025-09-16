@@ -145,8 +145,18 @@ const pokemonDatabase = {
         learnset: [
             { level: 1, move: 'Tackle' },
             { level: 1, move: 'Growl' },
+            { level: 2, move: 'Vine Whip' },
             { level: 2, move: 'Leech Seed' },
-            { level: 2, move: 'Vine Whip' }
+            { level: 6, move: 'Poison Powder' },
+            { level: 6, move: 'Sleep Powder' },
+            { level: 6, move: 'Take Down' },
+            { level: 6, move: 'Razor Leaf' },
+            { level: 10, move: 'Sweet Scent' },
+            { level: 10, move: 'Growth' },
+            { level: 10, move: 'Double-Edge' },
+            { level: 14, move: 'Worry Seed' },
+            { level: 14, move: 'Synthesis' },
+            { level: 18, move: 'Seed Bomb' }
         ],
         features: [
             {
@@ -173,7 +183,14 @@ const pokemonDatabase = {
             { level: 1, move: 'Vine Whip' },
             { level: 6, move: 'Poison Powder' },
             { level: 6, move: 'Sleep Powder' },
-            { level: 6, move: 'Take Down' }
+            { level: 6, move: 'Take Down' },
+            { level: 10, move: 'Razor Leaf' },
+            { level: 10, move: 'Sweet Scent' },
+            { level: 14, move: 'Growth' },
+            { level: 14, move: 'Double-Edge' },
+            { level: 14, move: 'Worry Seed' },
+            { level: 18, move: 'Synthesis' },
+            { level: 18, move: 'Solar Beam' }
         ],
         features: [
             {
@@ -198,12 +215,31 @@ const pokemonDatabase = {
             { level: 1, move: 'Growl' },
             { level: 1, move: 'Leech Seed' },
             { level: 1, move: 'Vine Whip' },
-            { level: 7, move: 'Leech Seed' },
-            { level: 13, move: 'Vine Whip' },
-            { level: 22, move: 'Poison Powder' },
-            { level: 30, move: 'Razor Leaf' },
-            { level: 32, move: 'Petal Dance' }
-        ]
+            { level: 1, move: 'Petal Dance' },
+            { level: 1, move: 'Poison Powder' },
+            { level: 1, move: 'Sleep Powder' },
+            { level: 1, move: 'Take Down' },
+            { level: 1, move: 'Razor Leaf' },
+            { level: 1, move: 'Sweet Scent' },
+            { level: 14, move: 'Growth' },
+            { level: 14, move: 'Double-Edge' },
+            { level: 14, move: 'Worry Seed' },
+            { level: 18, move: 'Synthesis' },
+            { level: 18, move: 'Solar Beam' },
+            { level: 18, move: 'Petal Blizzard' }
+        ],
+        features: [
+            {
+                name: "Overgrow",
+                description: "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health."
+            },
+            {
+                name: "Chlorophyll (Hidden)",
+                description: "This Pokémon's speed is doubled in harsh sunlight."
+            }
+        ],
+        skillProficiencies: ['athletics', 'nature'],
+        saveProficiencies: ['strength', 'constitution']
     },
     // 4
     'Charmander': { 
@@ -211,10 +247,18 @@ const pokemonDatabase = {
         speed: 30, type1: 'fire', type2: '', size: 'Small', sr: .5,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/charmander.png',
         learnset: [
-            { level: 1, move: 'Scratch' },
             { level: 1, move: 'Growl' },
+            { level: 1, move: 'Scratch' },
             { level: 2, move: 'Ember' },
-            { level: 2, move: 'Smokescreen' }
+            { level: 2, move: 'Smokescreen' },
+            { level: 6, move: 'Dragon Rage' },
+            { level: 6, move: 'Scary Face' },
+            { level: 10, move: 'Fire Fang' },
+            { level: 10, move: 'Slash' },
+            { level: 14, move: 'Flame Burst' },
+            { level: 14, move: 'Flamethrower' },
+            { level: 18, move: 'Fire Spin' },
+            { level: 18, move: 'Inferno' }
         ],
         features: [
             {
@@ -235,11 +279,18 @@ const pokemonDatabase = {
         speed: 30, type1: 'fire', type2: '', size: 'Medium', sr: 5,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/charmeleon.png',
         learnset: [
-            { level: 1, move: 'Scratch' },
             { level: 1, move: 'Growl' },
+            { level: 1, move: 'Scratch' },
             { level: 1, move: 'Ember' },
             { level: 1, move: 'Smokescreen' },
-            { level: 6, move: 'Dragon Rage' }
+            { level: 6, move: 'Dragon Rage' },
+            { level: 10, move: 'Scary Face' },
+            { level: 14, move: 'Fire Fang' },
+            { level: 14, move: 'Flame Burst' },
+            { level: 14, move: 'Slash' },
+            { level: 18, move: 'Flamethrower' },
+            { level: 18, move: 'Fire Spin' },
+            { level: 18, move: 'Inferno' }
         ],
         features: [
             {
@@ -260,16 +311,37 @@ const pokemonDatabase = {
         speed: 40, type1: 'fire', type2: 'flying', size: 'Large', sr: 13,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/charizard.png',
         learnset: [
-            { level: 1, move: 'Scratch' },
             { level: 1, move: 'Growl' },
+            { level: 1, move: 'Air Slash' },
+            { level: 1, move: 'Scratch' },
             { level: 1, move: 'Ember' },
+            { level: 1, move: 'Dragon Claw' },
+            { level: 1, move: 'Shadow Claw' },
+            { level: 1, move: 'Wing Attack' },
             { level: 1, move: 'Smokescreen' },
-            { level: 7, move: 'Ember' },
-            { level: 13, move: 'Smokescreen' },
-            { level: 20, move: 'Rage' },
-            { level: 27, move: 'Scary Face' },
-            { level: 36, move: 'Wing Attack' }
-        ]
+            { level: 1, move: 'Dragon Rage' },
+            { level: 1, move: 'Scary Face' },
+            { level: 14, move: 'Fire Fang' },
+            { level: 14, move: 'Flame Burst' },
+            { level: 14, move: 'Slash' },
+            { level: 18, move: 'Flamethrower' },
+            { level: 18, move: 'Fire Spin' },
+            { level: 18, move: 'Heat Wave' },
+            { level: 18, move: 'Inferno' },
+            { level: 18, move: 'Flare Blitz' }
+        ],
+        features: [
+            {
+                name: "Blaze",
+                description: "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health."
+            },
+            {
+                name: "Solar Power (Hidden)",
+                description: "Damage rolls for this Pokémon get an additional +2 during harsh sunlight."
+            }
+        ],
+        skillProficiencies: ['acrobatics'],
+        saveProficiencies: ['dexterity', 'strength']
     },
     // 7
     'Squirtle': { 
@@ -279,8 +351,19 @@ const pokemonDatabase = {
         learnset: [
             { level: 1, move: 'Tackle' },
             { level: 1, move: 'Tail Whip' },
-            { level: 2, move: 'Withdrawe' },
-            { level: 2, move: 'Water Gun' }
+            { level: 2, move: 'Water Gun' },
+            { level: 2, move: 'Withdraw' },
+            { level: 6, move: 'Bubble' },
+            { level: 6, move: 'Bite' },
+            { level: 6, move: 'Rapid Spin' },
+            { level: 10, move: 'Protect' },
+            { level: 10, move: 'Water Pulse' },
+            { level: 10, move: 'Wave Crash' },
+            { level: 14, move: 'Aqua Tail' },
+            { level: 14, move: 'Skull Bash' },
+            { level: 14, move: 'Iron Defense' },
+            { level: 18, move: 'Rain Dance' },
+            { level: 18, move: 'Hydro Pump' }
         ],
         features: [
             {
@@ -306,7 +389,16 @@ const pokemonDatabase = {
             { level: 1, move: 'Water Gun' },
             { level: 1, move: 'Withdraw' },
             { level: 6, move: 'Bubble' },
-            { level: 6, move: 'Bite' }
+            { level: 6, move: 'Bite' },
+            { level: 10, move: 'Rapid Spin' },
+            { level: 10, move: 'Protect' },
+            { level: 14, move: 'Water Pulse' },
+            { level: 14, move: 'Aqua Tail' },
+            { level: 14, move: 'Skull Bash' },
+            { level: 14, move: 'Wave Crash' },
+            { level: 18, move: 'Iron Defense' },
+            { level: 18, move: 'Rain Dance' },
+            { level: 18, move: 'Hydro Pump' }
         ],
         features: [
             {
@@ -328,15 +420,34 @@ const pokemonDatabase = {
         image: 'https://img.pokemondb.net/sprites/black-white/normal/blastoise.png',
         learnset: [
             { level: 1, move: 'Tackle' },
+            { level: 1, move: 'Flash Cannon' },
             { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Bubble' },
             { level: 1, move: 'Water Gun' },
-            { level: 8, move: 'Bubble' },
-            { level: 15, move: 'Water Gun' },
-            { level: 24, move: 'Bite' },
-            { level: 31, move: 'Withdraw' },
-            { level: 36, move: 'Hydro Pump' }
-        ]
+            { level: 1, move: 'Withdraw' },
+            { level: 1, move: 'Bubble' },
+            { level: 1, move: 'Bite' },
+            { level: 1, move: 'Rapid Spin' },
+            { level: 1, move: 'Protect' },
+            { level: 14, move: 'Water Pulse' },
+            { level: 14, move: 'Aqua Tail' },
+            { level: 14, move: 'Skull Bash' },
+            { level: 14, move: 'Wave Crash' },
+            { level: 18, move: 'Iron Defense' },
+            { level: 18, move: 'Rain Dance' },
+            { level: 18, move: 'Hydro Pump' }
+        ],
+        features: [
+            {
+                name: "Torrent",
+                description: "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health."
+            },
+            {
+                name: "Rain Dish (Hidden)",
+                description: "In rainy conditions, this Pokémon heals for an amount of HP equal to its proficiency bonus at the end of each of its turns."
+            }
+        ],
+        skillProficiencies: ['survival'],
+        saveProficiencies: ['constitution', 'strength']
     },
     // 10
     'Caterpie': { 
@@ -1035,14 +1146,35 @@ const pokemonDatabase = {
         speed: 35, type1: 'poison', type2: 'flying', size: 'Large', sr: 7,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/golbat.png',
         learnset: [
+            { level: 1, move: 'Absorb' },
+            { level: 1, move: 'Astonish' },
+            { level: 1, move: 'Bite' },
             { level: 1, move: 'Screech' },
-            { level: 1, move: 'Leech Life' },
             { level: 1, move: 'Supersonic' },
-            { level: 6, move: 'Supersonic' },
-            { level: 12, move: 'Astonish' },
-            { level: 21, move: 'Bite' },
-            { level: 32, move: 'Wing Attack' }
-        ]
+            { level: 6, move: 'Wing Attack' },
+            { level: 6, move: 'Confuse Ray' },
+            { level: 6, move: 'Air Cutter' },
+            { level: 10, move: 'Swift' },
+            { level: 10, move: 'Poison Fang' },
+            { level: 14, move: 'Mean Look' },
+            { level: 14, move: 'Leech Life' },
+            { level: 18, move: 'Haze' },
+            { level: 18, move: 'Venoshock' },
+            { level: 18, move: 'Air Slash' },
+            { level: 18, move: 'Quick Guard' }
+        ],
+        features: [
+            {
+                name: "Inner Focus",
+                description: "This Pokémon is immune to flinching."
+            },
+            {
+                name: "Infiltrator (Hidden)",
+                description: "This Pokémon bypasses Light Screen, Reflect, Substitute, Mist, Safeguard, and Aurora Veil."
+            }
+        ],
+        skillProficiencies: ['stealth'],
+        saveProficiencies: ['dexterity', 'constitution']
     },
     // 43
     'Oddish': { 
