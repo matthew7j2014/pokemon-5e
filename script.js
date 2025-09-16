@@ -169,7 +169,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics', 'nature'],
-        saveProficiencies: ['strength']
+        saveProficiencies: ['strength'],
+        vulnerabilities: ['fire', 'flying', 'ice', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['water', 'electric', 'grass', 'fighting', 'fairy'],
+        doubleResistances: [],
+        immunities: []
     },
     // 2
     'Ivysaur': { 
@@ -203,7 +208,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics', 'nature'],
-        saveProficiencies: ['strength']
+        saveProficiencies: ['strength'],
+        vulnerabilities: ['fire', 'flying', 'ice', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['water', 'electric', 'grass', 'fighting', 'fairy'],
+        doubleResistances: [],
+        immunities: []
     },
     // 3
     'Venusaur': { 
@@ -239,7 +249,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics', 'nature'],
-        saveProficiencies: ['strength', 'constitution']
+        saveProficiencies: ['strength', 'constitution'],
+        vulnerabilities: ['fire', 'flying', 'ice', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['water', 'electric', 'grass', 'fighting', 'fairy'],
+        doubleResistances: [],
+        immunities: []
     },
     // 4
     'Charmander': { 
@@ -271,7 +286,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['water', 'ground', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'grass', 'ice', 'bug', 'steel', 'fairy'],
+        doubleResistances: [],
+        immunities: []
     },
     // 5
     'Charmeleon': { 
@@ -303,7 +323,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['water', 'ground', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'grass', 'ice', 'bug', 'steel', 'fairy'],
+        doubleResistances: [],
+        immunities: []
     },
     // 6
     'Charizard': { 
@@ -341,7 +366,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity', 'strength']
+        saveProficiencies: ['dexterity', 'strength'],
+        vulnerabilities: ['water', 'electric'],
+        doubleVulnerabilities: ['rock'],
+        resistances: ['fire', 'grass', 'fighting', 'bug', 'steel'],
+        doubleResistances: [],
+        immunities: ['ground']
     },
     // 7
     'Squirtle': { 
@@ -376,7 +406,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['survival'],
-        saveProficiencies: ['constitution']
+        saveProficiencies: ['constitution'],
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'water', 'ice', 'steel'],
+        doubleResistances: [],
+        immunities: []
     },
     // 8
     'Wartortle': { 
@@ -411,7 +446,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['survival'],
-        saveProficiencies: ['constitution']
+        saveProficiencies: ['constitution'],
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'water', 'ice', 'steel'],
+        doubleResistances: [],
+        immunities: []
     },
     // 9
     'Blastoise': { 
@@ -447,7 +487,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['survival'],
-        saveProficiencies: ['constitution', 'strength']
+        saveProficiencies: ['constitution', 'strength'],
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'water', 'ice', 'steel'],
+        doubleResistances: [],
+        immunities: []
     },
     // 10
     'Caterpie': { 
@@ -456,8 +501,8 @@ const pokemonDatabase = {
         image: 'https://img.pokemondb.net/sprites/black-white/normal/caterpie.png',
         hitDie: 'd6',
         learnset: [
-            { level: 1, move: 'Tackle' },
             { level: 1, move: 'String Shot' },
+            { level: 1, move: 'Tackle' },
             { level: 2, move: 'Bug Bite' }
         ],
         features: [
@@ -471,7 +516,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: [],
-        saveProficiencies: []
+        saveProficiencies: [],
+        vulnerabilities: ['fire', 'flying', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['grass', 'fighting', 'ground'],
+        doubleResistances: [],
+        immunities: []
     },
     // 11
     'Metapod': { 
@@ -480,24 +530,65 @@ const pokemonDatabase = {
         image: 'https://img.pokemondb.net/sprites/black-white/normal/metapod.png',
         learnset: [
             { level: 1, move: 'Harden' }
-        ]
+        ],
+        features: [
+            {
+                name: "Shed Skin",
+                description: "Once per long rest, this Pokémon can automatically recover from one status condition at the end of its turn."
+            }
+        ],
+        skillProficiencies: [],
+        saveProficiencies: [],
+        vulnerabilities: ['fire', 'flying', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['grass', 'fighting', 'ground'],
+        doubleResistances: [],
+        immunities: []
     },
     // 12
     'Butterfree': { 
         hp: 13, ac: 12, str: 9, dex: 14, con: 10, int: 16, wis: 16, cha: 12,
         speed: 30, type1: 'bug', type2: 'flying', size: 'Medium', sr: 6,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/butterfree.png',
+        hitDie: 'd10',
         learnset: [
             { level: 1, move: 'Confusion' },
-            { level: 12, move: 'Confusion' },
-            { level: 15, move: 'Poison Powder' },
-            { level: 16, move: 'Stun Spore' },
-            { level: 17, move: 'Sleep Powder' },
-            { level: 21, move: 'Supersonic' }
-        ]
+            { level: 1, move: 'Gust' },
+            { level: 6, move: 'Poison Powder' },
+            { level: 6, move: 'Sleep Powder' },
+            { level: 6, move: 'Stun Spore' },
+            { level: 6, move: 'Psybeam' },
+            { level: 10, move: 'Silver Wind' },
+            { level: 10, move: 'Supersonic' },
+            { level: 10, move: 'Safeguard' },
+            { level: 14, move: 'Whirlwind' },
+            { level: 14, move: 'Bug Buzz' },
+            { level: 14, move: 'Rage Powder' },
+            { level: 18, move: 'Captivate' },
+            { level: 18, move: 'Tailwind' },
+            { level: 18, move: 'Air Slash' },
+            { level: 18, move: 'Quiver Dance' }
+        ],
+        features: [
+            {
+                name: "Compound Eyes",
+                description: "This Pokémon has advantage on Investigation checks and Perception checks that rely on sight."
+            },
+            {
+                name: "Tinted Lens (Hidden)",
+                description: "When this Pokémon uses a move that is not very effective, it deals normal damage instead."
+            }
+        ],
+        skillProficiencies: ['nature'],
+        saveProficiencies: ['wisdom'],
+        vulnerabilities: ['fire', 'electric', 'ice', 'flying'],
+        doubleVulnerabilities: ['rock'],
+        resistances: ['bug'],
+        doubleResistances: ['grass', 'fighting'],
+        immunities: ['ground']
     },
     // 13
-    'Weedle': { 
+    'Weedle': {
         hp: 17, ac: 11, str: 9, dex: 10, con: 12, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'bug', type2: 'poison', size: 'Small', sr: .125,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/weedle.png',
@@ -518,33 +609,77 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: [],
-        saveProficiencies: []
+        saveProficiencies: [],
+        vulnerabilities: ['fire', 'flying', 'psychic', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'poison', 'fairy'],
+        doubleResistances: ['grass', 'fighting'],
+        immunities: []
     },
     // 14
-    'Kakuna': { 
+    'Kakuna': {
         hp: 10, ac: 17, str: 4, dex: 6, con: 10, int: 6, wis: 10, cha: 6,
         speed: 10, type1: 'bug', type2: 'poison', size: 'Small', sr: 1,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kakuna.png',
+        hitDie: 'd8',
         learnset: [
             { level: 1, move: 'Harden' }
-        ]
+        ],
+        features: [
+            {
+                name: "Shed Skin",
+                description: "This Pokémon can end one condition affecting it at the end of each of its turns (save for unconscious)."
+            }
+        ],
+        skillProficiencies: [],
+        saveProficiencies: [],
+        vulnerabilities: ['fire', 'flying', 'psychic', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'poison', 'fairy'],
+        doubleResistances: ['grass', 'fighting'],
+        immunities: []
     },
     // 15
-    'Beedrill': { 
+    'Beedrill': {
         hp: 13, ac: 11, str: 16, dex: 15, con: 8, int: 9, wis: 16, cha: 9,
         speed: 35, type1: 'bug', type2: 'poison', size: 'Medium', sr: 6,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/beedrill.png',
+        hitDie: 'd10',
         learnset: [
             { level: 1, move: 'Fury Attack' },
-            { level: 12, move: 'Fury Attack' },
-            { level: 16, move: 'Focus Energy' },
-            { level: 20, move: 'Twineedle' },
-            { level: 25, move: 'Rage' },
-            { level: 30, move: 'Pin Missile' }
-        ]
+            { level: 1, move: 'Twineedle' },
+            { level: 6, move: 'Rage' },
+            { level: 6, move: 'Pursuit' },
+            { level: 10, move: 'Focus Energy' },
+            { level: 10, move: 'Venoshock' },
+            { level: 10, move: 'Assurance' },
+            { level: 14, move: 'Toxic Spikes' },
+            { level: 14, move: 'Pin Missile' },
+            { level: 14, move: 'Poison Jab' },
+            { level: 18, move: 'Agility' },
+            { level: 18, move: 'Endeavor' },
+            { level: 18, move: 'Fell Stinger' }
+        ],
+        features: [
+            {
+                name: "Swarm",
+                description: "When this Pokémon has less than 1/3 of its hit points, the damage of its Bug-type moves is increased by 50%."
+            },
+            {
+                name: "Sniper (Hidden)",
+                description: "When this Pokémon scores a critical hit, it deals triple damage instead of double damage."
+            }
+        ],
+        skillProficiencies: ['acrobatics', 'intimidation'],
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['fire', 'flying', 'psychic', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'poison', 'fairy'],
+        doubleResistances: ['grass', 'fighting'],
+        immunities: []
     },
     // 16
-    'Pidgey': { 
+    'Pidgey': {
         hp: 16, ac: 12, str: 10, dex: 12, con: 10, int: 6, wis: 10, cha: 10,
         speed: 25, type1: 'normal', type2: 'flying', size: 'Small', sr: .25,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pidgey.png',
@@ -552,7 +687,18 @@ const pokemonDatabase = {
         learnset: [
             { level: 1, move: 'Tackle' },
             { level: 2, move: 'Sand Attack' },
-            { level: 2, move: 'Gust' }
+            { level: 2, move: 'Gust' },
+            { level: 6, move: 'Quick Attack' },
+            { level: 6, move: 'Whirlwind' },
+            { level: 10, move: 'Twister' },
+            { level: 10, move: 'Feather Dance' },
+            { level: 14, move: 'Agility' },
+            { level: 14, move: 'Wing Attack' },
+            { level: 14, move: 'Roost' },
+            { level: 18, move: 'Tailwind' },
+            { level: 18, move: 'Mirror Move' },
+            { level: 18, move: 'Air Slash' },
+            { level: 18, move: 'Hurricane' }
         ],
         features: [
             {
@@ -569,19 +715,34 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ["perception"],
-        saveProficiencies: ["dexterity"]
+        saveProficiencies: ["dexterity"],
+        vulnerabilities: ['electric', 'ice', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['grass', 'bug'],
+        doubleResistances: [],
+        immunities: ['ground', 'ghost']
     },
     // 17
-    'Pidgeotto': { 
+    'Pidgeotto': {
         hp: 40, ac: 13, str: 13, dex: 14, con: 10, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'normal', type2: 'flying', size: 'Medium', sr: 3,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pidgeotto.png',
+        hitDie: 'd8',
         learnset: [
             { level: 1, move: 'Tackle' },
             { level: 1, move: 'Sand Attack' },
             { level: 1, move: 'Gust' },
             { level: 6, move: 'Quick Attack' },
-            { level: 6, move: 'Whirlwind' }
+            { level: 6, move: 'Whirlwind' },
+            { level: 10, move: 'Twister' },
+            { level: 10, move: 'Feather Dance' },
+            { level: 14, move: 'Agility' },
+            { level: 14, move: 'Wing Attack' },
+            { level: 14, move: 'Roost' },
+            { level: 18, move: 'Tailwind' },
+            { level: 18, move: 'Mirror Move' },
+            { level: 18, move: 'Air Slash' },
+            { level: 18, move: 'Hurricane' }
         ],
         features: [
             {
@@ -598,28 +759,59 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ["perception"],
-        saveProficiencies: ["dexterity"]
+        saveProficiencies: ["dexterity"],
+        vulnerabilities: ['electric', 'ice', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['grass', 'bug'],
+        doubleResistances: [],
+        immunities: ['ground', 'ghost']
     },
     // 18
-    'Pidgeot': { 
+    'Pidgeot': {
         hp: 16, ac: 15, str: 16, dex: 17, con: 15, int: 12, wis: 14, cha: 12,
         speed: 40, type1: 'normal', type2: 'flying', size: 'Large', sr: 10,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pidgeot.png',
+        hitDie: 'd12',
         learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Sand Attack' },
             { level: 1, move: 'Gust' },
             { level: 1, move: 'Quick Attack' },
-            { level: 5, move: 'Sand Attack' },
-            { level: 9, move: 'Gust' },
-            { level: 15, move: 'Quick Attack' },
-            { level: 21, move: 'Whirlwind' },
-            { level: 31, move: 'Wing Attack' },
-            { level: 36, move: 'Hurricane' }
-        ]
+            { level: 1, move: 'Sand Attack' },
+            { level: 1, move: 'Tackle' },
+            { level: 1, move: 'Whirlwind' },
+            { level: 10, move: 'Twister' },
+            { level: 10, move: 'Feather Dance' },
+            { level: 14, move: 'Agility' },
+            { level: 14, move: 'Wing Attack' },
+            { level: 18, move: 'Roost' },
+            { level: 18, move: 'Tailwind' },
+            { level: 18, move: 'Mirror Move' },
+            { level: 18, move: 'Air Slash' },
+            { level: 18, move: 'Hurricane' }
+        ],
+        features: [
+            {
+                name: "Keen Eye",
+                description: "This Pokémon ignores disadvantage when it relates to sight."
+            },
+            {
+                name: "Tangled Feet",
+                description: "Attacks against this Pokémon have disadvantage when it is confused."
+            },
+            {
+                name: "Big Pecks (Hidden)",
+                description: "This Pokémon's AC cannot be reduced by an opponent's moves."
+            }
+        ],
+        skillProficiencies: ["perception", "intimidation"],
+        saveProficiencies: ["dexterity", "wisdom"],
+        vulnerabilities: ['electric', 'ice', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['grass', 'bug'],
+        doubleResistances: [],
+        immunities: ['ground', 'ghost']
     },
     // 19
-    'Rattata': { 
+    'Rattata': {
         hp: 16, ac: 12, str: 10, dex: 14, con: 11, int: 6, wis: 10, cha: 8,
         speed: 30, type1: 'normal', type2: '', size: 'Small', sr: .25,
         image: 'https://files.d20.io/images/443835565/s67sf201PBNpnE3YrModQg/original.png',
@@ -629,7 +821,15 @@ const pokemonDatabase = {
             { level: 1, move: 'Tail Whip' },
             { level: 2, move: 'Quick Attack' },
             { level: 2, move: 'Focus Energy' },
-            { level: 2, move: 'Bite' }
+            { level: 2, move: 'Bite' },
+            { level: 6, move: 'Pursuit' },
+            { level: 6, move: 'Hyper Fang' },
+            { level: 6, move: 'Assurance' },
+            { level: 10, move: 'Crunch' },
+            { level: 10, move: 'Sucker Punch' },
+            { level: 14, move: 'Super Fang' },
+            { level: 14, move: 'Double-Edge' },
+            { level: 14, move: 'Endeavor' }
         ],
         features: [
             {
@@ -642,23 +842,35 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['stealth', 'perception'],
-        saveProficiencies: ['dexterity']
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost']
     },
     // 20
-    'Raticate': { 
+    'Raticate': {
         hp: 45, ac: 15, str: 15, dex: 15, con: 13, int: 6, wis: 12, cha: 8,
         speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 5,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/raticate.png',
+        hitDie: 'd10',
         learnset: [
+            { level: 1, move: 'Quick Attack' },
             { level: 1, move: 'Tackle' },
             { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Quick Attack' },
+            { level: 1, move: 'Focus Energy' },
             { level: 1, move: 'Scary Face' },
             { level: 1, move: 'Swords Dance' },
-            { level: 1, move: 'Focus Energy' },
             { level: 1, move: 'Bite' },
             { level: 6, move: 'Pursuit' },
-            { level: 6, move: 'Assurance' }
+            { level: 6, move: 'Assurance' },
+            { level: 10, move: 'Hyper Fang' },
+            { level: 10, move: 'Crunch' },
+            { level: 14, move: 'Sucker Punch' },
+            { level: 14, move: 'Super Fang' },
+            { level: 18, move: 'Double-Edge' },
+            { level: 18, move: 'Endeavor' }
         ],
         features: [
             {
@@ -670,14 +882,20 @@ const pokemonDatabase = {
                 description: "When you score a critical hit, you may immediately gain an additional action on your turn. If this action is used to make an attack, you have disadvantage on the roll. You may only ever have one additional action per round."
             }
         ],
-        skillProficiencies: ['stealth', 'perception'],
-        saveProficiencies: ['dexterity']
+        skillProficiencies: ['stealth', 'perception', 'intimidation'],
+        saveProficiencies: ['dexterity', 'strength'],
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost']
     },
     // 21
-    'Spearow': { 
+    'Spearow': {
         hp: 16, ac: 12, str: 10, dex: 14, con: 10, int: 6, wis: 10, cha: 10,
         speed: 25, type1: 'normal', type2: 'flying', size: 'Small', sr: .25,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/spearow.png',
+        hitDie: 'd6',
         learnset: [
             { level: 1, move: 'Growl' },
             { level: 1, move: 'Peck' },
@@ -685,7 +903,12 @@ const pokemonDatabase = {
             { level: 2, move: 'Pursuit' },
             { level: 2, move: 'Fury Attack' },
             { level: 6, move: 'Aerial Ace' },
-            { level: 6, move: 'Mirror Move' }
+            { level: 6, move: 'Mirror Move' },
+            { level: 10, move: 'Assurance' },
+            { level: 10, move: 'Agility' },
+            { level: 14, move: 'Focus Energy' },
+            { level: 14, move: 'Roost' },
+            { level: 18, move: 'Drill Peck' }
         ],
         features: [
             {
@@ -694,27 +917,56 @@ const pokemonDatabase = {
             },
             {
                 name: "Sniper (Hidden)",
-                description: "On a critical hit made by this Pokémon, triple the dice roll instead of doubling it."
+                description: "When this Pokémon scores a critical hit, it deals triple damage instead of double damage."
             }
         ],
         skillProficiencies: ['perception'],
-        saveProficiencies: ['dexterity']
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['electric', 'ice', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['grass', 'bug'],
+        doubleResistances: [],
+        immunities: ['ground', 'ghost']
     },
     // 22
-    'Fearow': { 
+    'Fearow': {
         hp: 13, ac: 13, str: 18, dex: 18, con: 13, int: 11, wis: 11, cha: 11,
         speed: 40, type1: 'normal', type2: 'flying', size: 'Large', sr: 5,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/fearow.png',
+        hitDie: 'd8',
         learnset: [
-            { level: 1, move: 'Peck' },
             { level: 1, move: 'Growl' },
             { level: 1, move: 'Leer' },
-            { level: 7, move: 'Leer' },
-            { level: 13, move: 'Fury Attack' },
-            { level: 26, move: 'Pursuit' },
-            { level: 32, move: 'Mirror Move' },
-            { level: 40, move: 'Drill Peck' }
-        ]
+            { level: 1, move: 'Peck' },
+            { level: 1, move: 'Pluck' },
+            { level: 1, move: 'Pursuit' },
+            { level: 6, move: 'Fury Attack' },
+            { level: 6, move: 'Aerial Ace' },
+            { level: 6, move: 'Mirror Move' },
+            { level: 10, move: 'Assurance' },
+            { level: 10, move: 'Agility' },
+            { level: 14, move: 'Focus Energy' },
+            { level: 18, move: 'Roost' },
+            { level: 18, move: 'Drill Peck' },
+            { level: 18, move: 'Drill Run' }
+        ],
+        features: [
+            {
+                name: "Keen Eye",
+                description: "This Pokémon ignores disadvantage when it relates to sight."
+            },
+            {
+                name: "Sniper (Hidden)",
+                description: "When this Pokémon scores a critical hit, it deals triple damage instead of double damage."
+            }
+        ],
+        skillProficiencies: ['perception', 'intimidation'],
+        saveProficiencies: ['dexterity', 'strength'],
+        vulnerabilities: ['electric', 'ice', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['grass', 'bug'],
+        doubleResistances: [],
+        immunities: ['ground', 'ghost']
     },
     // 23
     'Ekans': { 
