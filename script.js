@@ -5424,326 +5424,879 @@ const pokemonDatabase = {
         immunities: []
     },
     // 126
-    'Magmar': { 
-        hp: 13, ac: 13, str: 19, dex: 18, con: 13, int: 18, wis: 16, cha: 16,
-        speed: 40, type1: 'fire', type2: '', size: 'Large', sr: 9,
+    'Magmar': {
+        hp: 68, ac: 15, str: 15, dex: 18, con: 15, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'fire', type2: '', size: 'Small', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/magmar.png',
+        vulnerabilities: ['ground', 'rock', 'water'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fairy', 'fire', 'grass', 'ice', 'steel'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Flame Body",
+                description: "The flames from this Pokémon's body shine dim light in a 15 ft radius. On a 10, the attacker is burned."
+            },
+            {
+                name: "Vital Spirit (Hidden)",
+                description: "This Pokémon cannot be put to sleep."
+            }
+        ],
+        skillProficiencies: ['athletics'],
+        saveProficiencies: ['constitution'],
         learnset: [
             { level: 1, move: 'Ember' },
             { level: 1, move: 'Leer' },
-            { level: 7, move: 'Ember' },
-            { level: 13, move: 'Smokescreen' },
-            { level: 19, move: 'Smog' },
-            { level: 25, move: 'Fire Punch' }
+            { level: 1, move: 'Smog' },
+            { level: 1, move: 'Smokescreen' },
+            { level: 6, move: 'Feint Attack' },
+            { level: 6, move: 'Fire Spin' },
+            { level: 6, move: 'Clear Smog' },
+            { level: 10, move: 'Flame Burst' },
+            { level: 10, move: 'Confuse Ray' },
+            { level: 14, move: 'Fire Punch' },
+            { level: 14, move: 'Sunny Day' },
+            { level: 18, move: 'Lava Plume' },
+            { level: 18, move: 'Flamethrower' },
+            { level: 18, move: 'Fire Blast' }
         ]
     },
     // 127
-    'Pinsir': { 
-        hp: 13, ac: 18, str: 23, dex: 16, con: 10, int: 11, wis: 14, cha: 11,
-        speed: 35, type1: 'bug', type2: '', size: 'Large', sr: 9,
+    'Pinsir': {
+        hp: 60, ac: 16, str: 18, dex: 15, con: 15, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'bug', type2: '', size: 'Small', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pinsir.png',
+        vulnerabilities: ['fire', 'flying', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['fighting', 'grass', 'ground'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Hyper Cutter",
+                description: "Attack or damage bonuses cannot be decreased by an opponent's moves."
+            },
+            {
+                name: "Mold Breaker",
+                description: "Moves ignore any abilities that would lessen their effect."
+            },
+            {
+                name: "Moxie (Hidden)",
+                description: "Upon causing an opponent to faint, may immediately take another action."
+            }
+        ],
+        skillProficiencies: ['athletics'],
+        saveProficiencies: ['constitution'],
         learnset: [
-            { level: 1, move: 'Vice Grip' },
             { level: 1, move: 'Focus Energy' },
-            { level: 7, move: 'Bind' },
-            { level: 13, move: 'Seismic Toss' },
-            { level: 19, move: 'Harden' },
-            { level: 25, move: 'Slash' }
+            { level: 1, move: 'Vice Grip' },
+            { level: 1, move: 'Bind' },
+            { level: 1, move: 'Seismic Toss' },
+            { level: 1, move: 'Harden' },
+            { level: 6, move: 'Revenge' },
+            { level: 6, move: 'Vital Throw' },
+            { level: 10, move: 'Double Hit' },
+            { level: 10, move: 'Brick Break' },
+            { level: 14, move: 'X-Scissor' },
+            { level: 14, move: 'Submission' },
+            { level: 14, move: 'Swords Dance' },
+            { level: 18, move: 'Storm Throw' },
+            { level: 18, move: 'Thrash' },
+            { level: 18, move: 'Superpower' },
+            { level: 18, move: 'Guillotine' }
         ]
     },
     // 128
-    'Tauros': { 
-        hp: 15, ac: 19, str: 18, dex: 22, con: 19, int: 8, wis: 14, cha: 14,
-        speed: 50, type1: 'normal', type2: '', size: 'Large', sr: 10,
+    'Tauros': {
+        hp: 70, ac: 16, str: 17, dex: 18, con: 16, int: 8, wis: 10, cha: 8,
+        speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 10, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/tauros.png',
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
+        features: [
+            {
+                name: "Intimidate",
+                description: "Once per short rest, you can impose disadvantage on an enemy attack roll of your choice."
+            },
+            {
+                name: "Anger Point",
+                description: "After suffering a critical hit, this Pokémon doubles the damage dice for a single move it activates on the following turn."
+            },
+            {
+                name: "Sheer Force (Hidden)",
+                description: "When activating a move that has a chance to impose a stat change or inflict a status, this creature instead doubles its move modifier for the damage with no chance of the additional effect."
+            }
+        ],
+        skillProficiencies: ['athletics', 'intimidation'],
+        saveProficiencies: ['strength', 'constitution'],
         learnset: [
             { level: 1, move: 'Tackle' },
-            { level: 4, move: 'Tail Whip' },
-            { level: 8, move: 'Rage' },
-            { level: 13, move: 'Horn Attack' },
-            { level: 19, move: 'Scary Face' },
-            { level: 26, move: 'Pursuit' }
+            { level: 1, move: 'Tail Whip' },
+            { level: 1, move: 'Rage' },
+            { level: 1, move: 'Horn Attack' },
+            { level: 1, move: 'Scary Face' },
+            { level: 6, move: 'Pursuit' },
+            { level: 6, move: 'Rest' },
+            { level: 10, move: 'Payback' },
+            { level: 10, move: 'Raging Bull' },
+            { level: 14, move: 'Work Up' },
+            { level: 14, move: 'Zen Headbutt' },
+            { level: 14, move: 'Take Down' },
+            { level: 18, move: 'Swagger' },
+            { level: 18, move: 'Thrash' },
+            { level: 18, move: 'Giga Impact' }
         ]
     },
     // 129
-    'Magikarp': { 
-        hp: 4, ac: 12, str: 2, dex: 16, con: 10, int: 4, wis: 4, cha: 4,
-        speed: 35, type1: 'water', type2: '', size: 'Medium', sr: .25,
+    'Magikarp': {
+        hp: 17, ac: 12, str: 9, dex: 14, con: 13, int: 6, wis: 8, cha: 10,
+        speed: 5, type1: 'water', type2: '', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/magikarp.png',
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Swift Swim",
+                description: "This Pokémon's speed is doubled in rainy conditions."
+            },
+            {
+                name: "Rattled (Hidden)",
+                description: "When this Pokémon is hit by a damaging Dark, Bug, or Ghost move, it makes its next attack at advantage."
+            }
+        ],
+        skillProficiencies: [],
+        saveProficiencies: [],
         learnset: [
             { level: 1, move: 'Splash' },
-            { level: 15, move: 'Tackle' }
+            { level: 2, move: 'Tackle' },
+            { level: 6, move: 'Flail' }
         ]
     },
     // 130
-    'Gyarados': { 
-        hp: 19, ac: 15, str: 23, dex: 16, con: 15, int: 12, wis: 18, cha: 15,
-        speed: 40, type1: 'water', type2: 'flying', size: 'Huge', sr: 10,
+    'Gyarados': {
+        hp: 80, ac: 16, str: 18, dex: 16, con: 16, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'water', type2: 'flying', size: 'Huge', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/gyarados.png',
+        vulnerabilities: ['electric', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fighting', 'fire', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: ['ground'],
+        features: [
+            {
+                name: "Intimidate",
+                description: "Once per short rest, you can impose disadvantage on an enemy attack roll of your choice."
+            },
+            {
+                name: "Moxie (Hidden)",
+                description: "Upon causing an opponent to faint, this Pokémon may immediately take another action."
+            }
+        ],
+        skillProficiencies: ['athletics', 'intimidation'],
+        saveProficiencies: ['strength', 'constitution'],
         learnset: [
+            { level: 1, move: 'Bite' },
             { level: 1, move: 'Thrash' },
-            { level: 20, move: 'Bite' },
-            { level: 25, move: 'Dragon Rage' },
-            { level: 30, move: 'Leer' },
-            { level: 35, move: 'Twister' },
-            { level: 40, move: 'Hydro Pump' }
+            { level: 10, move: 'Leer' },
+            { level: 10, move: 'Twister' },
+            { level: 10, move: 'Ice Fang' },
+            { level: 14, move: 'Aqua Tail' },
+            { level: 14, move: 'Scary Face' },
+            { level: 14, move: 'Dragon Rage' },
+            { level: 14, move: 'Crunch' },
+            { level: 18, move: 'Hydro Pump' },
+            { level: 18, move: 'Dragon Dance' },
+            { level: 18, move: 'Hurricane' },
+            { level: 18, move: 'Rain Dance' },
+            { level: 18, move: 'Hyper Beam' }
         ]
     },
     // 131
-    'Lapras': { 
-        hp: 26, ac: 16, str: 16, dex: 12, con: 16, int: 16, wis: 19, cha: 16,
-        speed: 30, type1: 'water', type2: 'ice', size: 'Huge', sr: 10,
+    'Lapras': {
+        hp: 70, ac: 16, str: 17, dex: 14, con: 12, int: 10, wis: 12, cha: 14,
+        speed: 10, type1: 'water', type2: 'ice', size: 'Large', sr: 10, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/lapras.png',
+        vulnerabilities: ['electric', 'fighting', 'grass', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['ice', 'water'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Water Absorb",
+                description: "Takes no damage from water or water-type attacks. Instead, half of any water damage done is absorbed."
+            },
+            {
+                name: "Shell Armor",
+                description: "Immune to extra damage dealt by a Critical Hit."
+            },
+            {
+                name: "Hydration (Hidden)",
+                description: "Unaffected by negative status ailments in water or during rainy conditions."
+            }
+        ],
+        skillProficiencies: ['survival', 'persuasion'],
+        saveProficiencies: ['strength', 'charisma'],
         learnset: [
-            { level: 1, move: 'Water Gun' },
             { level: 1, move: 'Growl' },
-            { level: 8, move: 'Sing' },
-            { level: 15, move: 'Mist' },
-            { level: 22, move: 'Body Slam' },
-            { level: 29, move: 'Confuse Ray' }
+            { level: 1, move: 'Sing' },
+            { level: 1, move: 'Water Gun' },
+            { level: 1, move: 'Mist' },
+            { level: 1, move: 'Confuse Ray' },
+            { level: 1, move: 'Ice Shard' },
+            { level: 6, move: 'Water Pulse' },
+            { level: 6, move: 'Body Slam' },
+            { level: 6, move: 'Life Dew' },
+            { level: 10, move: 'Rain Dance' },
+            { level: 10, move: 'Perish Song' },
+            { level: 14, move: 'Ice Beam' },
+            { level: 18, move: 'Brine' },
+            { level: 18, move: 'Safeguard' },
+            { level: 18, move: 'Hydro Pump' },
+            { level: 18, move: 'Sheer Cold' }
         ]
     },
     // 132
-    'Ditto': { 
-        hp: 10, ac: 12, str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10,
-        speed: 25, type1: 'normal', type2: '', size: 'Small', sr: 3,
+    'Ditto': {
+        hp: 19, ac: 13, str: 12, dex: 12, con: 12, int: 8, wis: 12, cha: 12,
+        speed: 20, type1: 'normal', type2: '', size: 'Tiny', sr: 3, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/ditto.png',
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
+        features: [
+            {
+                name: "Limber",
+                description: "This Pokémon is immune to being paralyzed."
+            },
+            {
+                name: "Imposter (Hidden)",
+                description: "This Pokémon can use Transform as a bonus action."
+            }
+        ],
+        skillProficiencies: ['insight', 'deception'],
+        saveProficiencies: ['constitution'],
         learnset: [
             { level: 1, move: 'Transform' }
         ]
     },
     // 133
-    'Eevee': { 
+    'Eevee': {
         hp: 16, ac: 13, str: 13, dex: 13, con: 10, int: 6, wis: 10, cha: 12,
-        speed: 30, type1: 'normal', type2: '', size: 'Small', sr: .5,
+        speed: 30, type1: 'normal', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/eevee.png',
-        learnset: [
-            { level: 1, move: 'Covet' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Growl' },
-            { level: 2, move: 'Tail Whip' },
-            { level: 1, move: 'Helping Hand' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 2, move: 'Baby-Doll Eyes' },
-            { level: 2, move: 'Quick Attack' }
-        ],
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
         features: [
             {
                 name: "Run Away",
-                description: "This Pokémon cannot be the target of an attack of opportunity."
+                description: "Cannot be the target of an attack of opportunity."
             },
             {
                 name: "Adaptability",
-                description: "When this Pokémon uses a move of its own type, it may roll the damage twice and choose either total."
+                description: "When using a move of its own type, may roll damage twice and choose total."
             },
             {
                 name: "Anticipation (Hidden)",
-                description: "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move."
-            },
+                description: "When entering battle, opponent reveals if they have a move Eevee is vulnerable to."
+            }
         ],
-        skillProficiencies: ['perception', 'investigation'],
-        saveProficiencies: ['dexterity', 'charisma']
-    },
-    // 134
-    'Vaporeon': { 
-        hp: 26, ac: 13, str: 13, dex: 13, con: 12, int: 22, wis: 19, cha: 19,
-        speed: 30, type1: 'water', type2: '', size: 'Medium', sr: 8,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png',
+        skillProficiencies: ['investigation', 'perception'],
+        saveProficiencies: ['dexterity', 'charisma'],
         learnset: [
+            { level: 1, move: 'Covet' },
+            { level: 1, move: 'Growl' },
+            { level: 1, move: 'Helping Hand' },
             { level: 1, move: 'Tackle' },
             { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Sand Attack' },
+            { level: 2, move: 'Sand Attack' },
+            { level: 2, move: 'Baby-Doll Eyes' },
+            { level: 2, move: 'Quick Attack' },
+            { level: 6, move: 'Bite' },
+            { level: 6, move: 'Swift' },
+            { level: 10, move: 'Refresh' },
+            { level: 10, move: 'Take Down' },
+            { level: 14, move: 'Charm' },
+            { level: 14, move: 'Baton Pass' },
+            { level: 18, move: 'Double-Edge' },
+            { level: 18, move: 'Last Resort' },
+            { level: 18, move: 'Trump Card' }
+        ]
+    },
+    // 134
+    'Vaporeon': {
+        hp: 55, ac: 15, str: 15, dex: 15, con: 16, int: 6, wis: 12, cha: 14,
+        speed: 30, type1: 'water', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png',
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Water Absorb",
+                description: "Takes no damage from water or water-type attacks. Instead, half of any water damage done is absorbed."
+            },
+            {
+                name: "Hydration (Hidden)",
+                description: "Unaffected by negative status ailments in water or during rainy conditions."
+            }
+        ],
+        skillProficiencies: ['investigation', 'perception'],
+        saveProficiencies: ['dexterity', 'charisma'],
+        learnset: [
+            { level: 1, move: 'Helping Hand' },
+            { level: 1, move: 'Tackle' },
+            { level: 1, move: 'Tail Whip' },
             { level: 1, move: 'Water Gun' },
-            { level: 16, move: 'Water Gun' },
-            { level: 31, move: 'Aurora Beam' },
-            { level: 42, move: 'Haze' }
+            { level: 1, move: 'Sand Attack' },
+            { level: 1, move: 'Baby-Doll Eyes' },
+            { level: 6, move: 'Quick Attack' },
+            { level: 6, move: 'Water Pulse' },
+            { level: 10, move: 'Aurora Beam' },
+            { level: 10, move: 'Aqua Ring' },
+            { level: 14, move: 'Acid Armor' },
+            { level: 14, move: 'Haze' },
+            { level: 18, move: 'Muddy Water' },
+            { level: 18, move: 'Last Resort' },
+            { level: 18, move: 'Hydro Pump' }
         ]
     },
     // 135
-    'Jolteon': { 
-        hp: 13, ac: 13, str: 13, dex: 26, con: 12, int: 22, wis: 19, cha: 19,
-        speed: 65, type1: 'electric', type2: '', size: 'Medium', sr: 8,
+    'Jolteon': {
+        hp: 45, ac: 16, str: 15, dex: 18, con: 13, int: 6, wis: 12, cha: 14,
+        speed: 40, type1: 'electric', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/jolteon.png',
+        vulnerabilities: ['ground'],
+        doubleVulnerabilities: [],
+        resistances: ['electric', 'flying', 'steel'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Volt Absorb",
+                description: "Takes no damage from electricity or electric-type attacks. Instead, half of any electric damage done is absorbed."
+            },
+            {
+                name: "Quick Feet (Hidden)",
+                description: "When suffering from a negative status condition, this Pokémon's speed increases by 15 ft."
+            }
+        ],
+        skillProficiencies: ['investigation', 'perception'],
+        saveProficiencies: ['dexterity', 'charisma'],
         learnset: [
+            { level: 1, move: 'Helping Hand' },
             { level: 1, move: 'Tackle' },
             { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Sand Attack' },
             { level: 1, move: 'Thunder Shock' },
-            { level: 16, move: 'Thunder Shock' },
-            { level: 31, move: 'Pin Missile' },
-            { level: 42, move: 'Thunder' }
+            { level: 1, move: 'Sand Attack' },
+            { level: 1, move: 'Baby-Doll Eyes' },
+            { level: 6, move: 'Quick Attack' },
+            { level: 6, move: 'Double Kick' },
+            { level: 10, move: 'Thunder Fang' },
+            { level: 10, move: 'Pin Missile' },
+            { level: 14, move: 'Agility' },
+            { level: 14, move: 'Thunder Wave' },
+            { level: 18, move: 'Discharge' },
+            { level: 18, move: 'Last Resort' },
+            { level: 18, move: 'Thunder' }
         ]
     },
     // 136
-    'Flareon': { 
-        hp: 13, ac: 13, str: 26, dex: 13, con: 12, int: 22, wis: 19, cha: 19,
-        speed: 30, type1: 'fire', type2: '', size: 'Medium', sr: 8,
+    'Flareon': {
+        hp: 45, ac: 16, str: 18, dex: 15, con: 13, int: 6, wis: 12, cha: 14,
+        speed: 40, type1: 'fire', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/flareon.png',
+        vulnerabilities: ['ground', 'rock', 'water'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fairy', 'fire', 'grass', 'ice', 'steel'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Flash Fire",
+                description: "Takes no damage from fire attacks. Double STAB bonus on next fire-type move after taking fire damage."
+            },
+            {
+                name: "Guts (Hidden)",
+                description: "Not affected by burn/poison disadvantage, still takes end-of-turn damage."
+            }
+        ],
+        skillProficiencies: ['investigation', 'perception'],
+        saveProficiencies: ['dexterity', 'charisma'],
         learnset: [
+            { level: 1, move: 'Ember' },
+            { level: 1, move: 'Helping Hand' },
             { level: 1, move: 'Tackle' },
             { level: 1, move: 'Tail Whip' },
             { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Ember' },
-            { level: 16, move: 'Ember' },
-            { level: 31, move: 'Smog' },
-            { level: 42, move: 'Flamethrower' }
+            { level: 1, move: 'Baby-Doll Eyes' },
+            { level: 6, move: 'Quick Attack' },
+            { level: 6, move: 'Bite' },
+            { level: 10, move: 'Fire Fang' },
+            { level: 10, move: 'Fire Spin' },
+            { level: 14, move: 'Scary Face' },
+            { level: 18, move: 'Smog' },
+            { level: 18, move: 'Lava Plume' },
+            { level: 18, move: 'Last Resort' },
+            { level: 18, move: 'Flare Blitz' }
         ]
     },
     // 137
-    'Porygon': { 
-        hp: 13, ac: 14, str: 12, dex: 8, con: 14, int: 16, wis: 15, cha: 15,
-        speed: 20, type1: 'normal', type2: '', size: 'Medium', sr: 6,
+    'Porygon': {
+        hp: 35, ac: 14, str: 15, dex: 12, con: 16, int: 6, wis: 12, cha: 12,
+        speed: 20, type1: 'normal', type2: '', size: 'Small', sr: 6, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/porygon.png',
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
+        features: [
+            {
+                name: "Trace",
+                description: "Copies a random ability of an opponent when entering battle."
+            },
+            {
+                name: "Download",
+                description: "Choose a different damage type for one of their normal attacks (once per short rest)."
+            },
+            {
+                name: "Analytic (Hidden)",
+                description: "After this Pokémon misses an attack, its next attack is done at advantage."
+            }
+        ],
+        skillProficiencies: ['history'],
+        saveProficiencies: ['constitution'],
         learnset: [
             { level: 1, move: 'Conversion' },
-            { level: 1, move: 'Tackle' },
+            { level: 1, move: 'Conversion 2' },
             { level: 1, move: 'Sharpen' },
-            { level: 9, move: 'Psybeam' },
-            { level: 12, move: 'Agility' },
-            { level: 20, move: 'Recover' }
+            { level: 1, move: 'Tackle' },
+            { level: 1, move: 'Psybeam' },
+            { level: 6, move: 'Agility' },
+            { level: 6, move: 'Recover' },
+            { level: 10, move: 'Magnet Rise' },
+            { level: 14, move: 'Signal Beam' },
+            { level: 14, move: 'Recycle' },
+            { level: 14, move: 'Discharge' },
+            { level: 14, move: 'Lock-On' },
+            { level: 18, move: 'Tri Attack' },
+            { level: 18, move: 'Magic Coat' },
+            { level: 18, move: 'Zap Cannon' }
         ]
     },
     // 138
-    'Omanyte': { 
-        hp: 9, ac: 18, str: 8, dex: 7, con: 18, int: 18, wis: 11, cha: 11,
-        speed: 15, type1: 'rock', type2: 'water', size: 'Small', sr: 2,
+    'Omanyte': {
+        hp: 28, ac: 15, str: 14, dex: 11, con: 15, int: 6, wis: 10, cha: 10,
+        speed: 15, type1: 'rock', type2: 'water', size: 'Tiny', sr: 2, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/omanyte.png',
+        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Swift Swim",
+                description: "Speed doubled in rainy conditions."
+            },
+            {
+                name: "Shell Armor",
+                description: "Immune to critical hit extra damage."
+            },
+            {
+                name: "Weak Armor (Hidden)",
+                description: "Speed increases by 5ft when hit, AC reduced by 1."
+            }
+        ],
+        skillProficiencies: ['survival'],
+        saveProficiencies: ['constitution'],
         learnset: [
             { level: 1, move: 'Constrict' },
             { level: 1, move: 'Withdraw' },
-            { level: 13, move: 'Bite' },
-            { level: 19, move: 'Water Gun' },
-            { level: 31, move: 'Leer' },
-            { level: 37, move: 'Protect' }
+            { level: 2, move: 'Bite' },
+            { level: 2, move: 'Water Gun' },
+            { level: 6, move: 'Rollout' },
+            { level: 6, move: 'Leer' },
+            { level: 10, move: 'Mud Shot' },
+            { level: 14, move: 'Brine' },
+            { level: 14, move: 'Protect' },
+            { level: 14, move: 'Ancient Power' },
+            { level: 18, move: 'Tickle' },
+            { level: 18, move: 'Rock Blast' },
+            { level: 18, move: 'Shell Smash' },
+            { level: 18, move: 'Hydro Pump' }
         ]
     },
     // 139
-    'Omastar': { 
-        hp: 14, ac: 23, str: 12, dex: 11, con: 23, int: 22, wis: 14, cha: 14,
-        speed: 25, type1: 'rock', type2: 'water', size: 'Medium', sr: 11,
+    'Omastar': {
+        hp: 105, ac: 16, str: 17, dex: 14, con: 18, int: 6, wis: 12, cha: 10,
+        speed: 20, type1: 'rock', type2: 'water', size: 'Small', sr: 11, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/omastar.png',
+        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Swift Swim",
+                description: "Speed doubled in rain."
+            },
+            {
+                name: "Shell Armor",
+                description: "Immune to critical hit extra damage."
+            },
+            {
+                name: "Weak Armor (Hidden)",
+                description: "Speed +5 when hit, AC -1."
+            }
+        ],
+        skillProficiencies: ['survival', 'intimidation'],
+        saveProficiencies: ['constitution'],
         learnset: [
             { level: 1, move: 'Constrict' },
+            { level: 1, move: 'Spike Cannon' },
             { level: 1, move: 'Withdraw' },
             { level: 1, move: 'Bite' },
-            { level: 13, move: 'Bite' },
-            { level: 19, move: 'Water Gun' },
-            { level: 31, move: 'Leer' },
-            { level: 40, move: 'Protect' },
-            { level: 49, move: 'Spike Cannon' }
+            { level: 1, move: 'Water Gun' },
+            { level: 1, move: 'Rollout' },
+            { level: 1, move: 'Leer' },
+            { level: 10, move: 'Mud Shot' },
+            { level: 14, move: 'Brine' },
+            { level: 14, move: 'Protect' },
+            { level: 14, move: 'Ancient Power' },
+            { level: 18, move: 'Tickle' },
+            { level: 18, move: 'Rock Blast' },
+            { level: 18, move: 'Shell Smash' },
+            { level: 18, move: 'Hydro Pump' }
         ]
     },
     // 140
-    'Kabuto': { 
-        hp: 6, ac: 18, str: 16, dex: 11, con: 18, int: 11, wis: 9, cha: 9,
-        speed: 25, type1: 'rock', type2: 'water', size: 'Small', sr: 2,
+    'Kabuto': {
+        hp: 28, ac: 14, str: 14, dex: 12, con: 14, int: 6, wis: 10, cha: 10,
+        speed: 15, type1: 'rock', type2: 'water', size: 'Tiny', sr: 2, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kabuto.png',
+        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Swift Swim",
+                description: "Speed is doubled in rainy conditions."
+            },
+            {
+                name: "Battle Armor",
+                description: "Immune to extra damage dealt by a Critical Hit."
+            },
+            {
+                name: "Weak Armor (Hidden)",
+                description: "Speed increases by 5 feet, but AC reduced by 1."
+            }
+        ],
+        skillProficiencies: ['survival'],
+        saveProficiencies: ['constitution'],
         learnset: [
-            { level: 1, move: 'Scratch' },
             { level: 1, move: 'Harden' },
-            { level: 10, move: 'Absorb' },
-            { level: 19, move: 'Slash' },
-            { level: 28, move: 'Leer' },
-            { level: 37, move: 'Mega Drain' }
+            { level: 1, move: 'Scratch' },
+            { level: 2, move: 'Absorb' },
+            { level: 2, move: 'Leer' },
+            { level: 6, move: 'Mud Shot' },
+            { level: 10, move: 'Sand Attack' },
+            { level: 10, move: 'Endure' },
+            { level: 14, move: 'Aqua Jet' },
+            { level: 14, move: 'Mega Drain' },
+            { level: 18, move: 'Metal Sound' },
+            { level: 18, move: 'Ancient Power' },
+            { level: 18, move: 'Wring Out' }
         ]
     },
     // 141
-    'Kabutops': { 
-        hp: 13, ac: 20, str: 22, dex: 16, con: 13, int: 13, wis: 14, cha: 14,
-        speed: 40, type1: 'rock', type2: 'water', size: 'Large', sr: 11,
+    'Kabutops': {
+        hp: 89, ac: 16, str: 18, dex: 16, con: 15, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'rock', type2: 'water', size: 'Medium', sr: 11, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kabutops.png',
+        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Swift Swim",
+                description: "Speed is doubled in rainy conditions."
+            },
+            {
+                name: "Battle Armor",
+                description: "Immune to extra damage dealt by a Critical Hit."
+            },
+            {
+                name: "Weak Armor (Hidden)",
+                description: "Speed increases by 5 feet, but AC reduced by 1."
+            }
+        ],
+        skillProficiencies: ['survival', 'intimidation'],
+        saveProficiencies: ['constitution'],
         learnset: [
-            { level: 1, move: 'Scratch' },
+            { level: 1, move: 'Feint' },
             { level: 1, move: 'Harden' },
+            { level: 1, move: 'Leer' },
+            { level: 1, move: 'Scratch' },
+            { level: 1, move: 'Slash' },
             { level: 1, move: 'Absorb' },
-            { level: 10, move: 'Absorb' },
-            { level: 19, move: 'Slash' },
-            { level: 28, move: 'Leer' },
-            { level: 40, move: 'Mega Drain' },
-            { level: 46, move: 'Fury Cutter' }
+            { level: 1, move: 'Mud Shot' },
+            { level: 10, move: 'Sand Attack' },
+            { level: 10, move: 'Endure' },
+            { level: 14, move: 'Aqua Jet' },
+            { level: 14, move: 'Mega Drain' },
+            { level: 18, move: 'Metal Sound' },
+            { level: 18, move: 'Ancient Power' },
+            { level: 18, move: 'Wring Out' },
+            { level: 18, move: 'Night Slash' }
         ]
     },
     // 142
-    'Aerodactyl': { 
-        hp: 16, ac: 13, str: 20, dex: 26, con: 13, int: 12, wis: 15, cha: 12,
-        speed: 65, type1: 'rock', type2: 'flying', size: 'Large', sr: 13,
+    'Aerodactyl': {
+        hp: 102, ac: 16, str: 16, dex: 20, con: 16, int: 6, wis: 12, cha: 10,
+        speed: 20, type1: 'rock', type2: 'flying', size: 'Large', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/aerodactyl.png',
+        vulnerabilities: ['electric', 'ice', 'rock', 'steel', 'water'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fire', 'flying', 'normal', 'poison'],
+        doubleResistances: [],
+        immunities: ['ground'],
+        features: [
+            {
+                name: "Rock Head",
+                description: "This Pokémon takes no recoil damage."
+            },
+            {
+                name: "Pressure",
+                description: "Any move targeting this Pokémon directly reduces its PP by two."
+            },
+            {
+                name: "Unnerve (Hidden)",
+                description: "Opponents in combat cannot eat held berries."
+            }
+        ],
+        skillProficiencies: ['investigation', 'perception'],
+        saveProficiencies: ['strength', 'constitution'],
         learnset: [
+            { level: 1, move: 'Bite' },
+            { level: 1, move: 'Fire Fang' },
+            { level: 1, move: 'Ice Fang' },
+            { level: 1, move: 'Iron Head' },
+            { level: 1, move: 'Scary Face' },
+            { level: 1, move: 'Supersonic' },
+            { level: 1, move: 'Thunder Fang' },
             { level: 1, move: 'Wing Attack' },
-            { level: 8, move: 'Agility' },
-            { level: 15, move: 'Bite' },
-            { level: 22, move: 'Supersonic' },
-            { level: 29, move: 'Take Down' },
-            { level: 36, move: 'Hyper Beam' }
+            { level: 1, move: 'Roar' },
+            { level: 1, move: 'Agility' },
+            { level: 1, move: 'Ancient Power' },
+            { level: 14, move: 'Crunch' },
+            { level: 18, move: 'Take Down' },
+            { level: 18, move: 'Sky Drop' },
+            { level: 18, move: 'Hyper Beam' },
+            { level: 18, move: 'Rock Slide' },
+            { level: 18, move: 'Giga Impact' }
         ]
     },
     // 143
-    'Snorlax': { 
-        hp: 32, ac: 13, str: 22, dex: 6, con: 13, int: 13, wis: 22, cha: 22,
-        speed: 15, type1: 'normal', type2: '', size: 'Huge', sr: 14,
+    'Snorlax': {
+        hp: 132, ac: 15, str: 18, dex: 12, con: 20, int: 6, wis: 14, cha: 10,
+        speed: 20, type1: 'normal', type2: '', size: 'Large', sr: 14, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/snorlax.png',
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
+        features: [
+            {
+                name: "Immunity",
+                description: "Immune to becoming poisoned."
+            },
+            {
+                name: "Thick Fat",
+                description: "Takes half damage from Ice and Fire."
+            },
+            {
+                name: "Gluttony (Hidden)",
+                description: "Must eat held berry when below ½ HP."
+            }
+        ],
+        skillProficiencies: ['survival'],
+        saveProficiencies: ['strength', 'constitution'],
         learnset: [
             { level: 1, move: 'Tackle' },
-            { level: 8, move: 'Amnesia' },
-            { level: 15, move: 'Defense Curl' },
-            { level: 22, move: 'Belly Drum' },
-            { level: 29, move: 'Headbutt' },
-            { level: 36, move: 'Snore' }
+            { level: 1, move: 'Defense Curl' },
+            { level: 1, move: 'Amnesia' },
+            { level: 1, move: 'Lick' },
+            { level: 1, move: 'Chip Away' },
+            { level: 1, move: 'Yawn' },
+            { level: 1, move: 'Body Slam' },
+            { level: 14, move: 'Rest' },
+            { level: 14, move: 'Snore' },
+            { level: 14, move: 'Sleep Talk' },
+            { level: 14, move: 'Giga Impact' },
+            { level: 14, move: 'High Horsepower' },
+            { level: 18, move: 'Rollout' },
+            { level: 18, move: 'Block' },
+            { level: 18, move: 'Belly Drum' },
+            { level: 18, move: 'Crunch' },
+            { level: 18, move: 'Heavy Slam' }
         ]
     },
     // 144
-    'Articuno': { 
-        hp: 18, ac: 18, str: 16, dex: 16, con: 18, int: 19, wis: 22, cha: 22,
-        speed: 40, type1: 'ice', type2: 'flying', size: 'Large', sr: 15,
+    'Articuno': {
+        hp: 246, ac: 18, str: 18, dex: 16, con: 18, int: 6, wis: 14, cha: 16,
+        speed: 20, type1: 'ice', type2: 'flying', size: 'Large', sr: 15, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/articuno.png',
+        vulnerabilities: ['electric', 'fire', 'rock', 'steel'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'grass'],
+        doubleResistances: [],
+        immunities: ['ground'],
+        features: [
+            {
+                name: "Pressure",
+                description: "Any move targeting this Pokémon directly reduces its PP by two when activated."
+            },
+            {
+                name: "Snow Cloak (Hidden)",
+                description: "This Pokémon is immune to Hail damage. It's AC is increased by 2 in arctic conditions."
+            }
+        ],
+        skillProficiencies: ['arcana', 'insight', 'intimidation'],
+        saveProficiencies: ['dexterity', 'constitution'],
         learnset: [
             { level: 1, move: 'Gust' },
             { level: 1, move: 'Powder Snow' },
-            { level: 13, move: 'Mist' },
-            { level: 25, move: 'Agility' },
-            { level: 37, move: 'Mind Reader' },
-            { level: 49, move: 'Ice Beam' }
+            { level: 1, move: 'Mist' },
+            { level: 1, move: 'Ice Shard' },
+            { level: 1, move: 'Mind Reader' },
+            { level: 1, move: 'Ancient Power' },
+            { level: 1, move: 'Agility' },
+            { level: 1, move: 'Reflect' },
+            { level: 1, move: 'Snowscape' },
+            { level: 18, move: 'Hail' },
+            { level: 18, move: 'Tailwind' },
+            { level: 18, move: 'Ice Beam' },
+            { level: 18, move: 'Blizzard' },
+            { level: 18, move: 'Roost' },
+            { level: 18, move: 'Hurricane' },
+            { level: 18, move: 'Sheer Cold' },
+            { level: 18, move: 'Freeze-Dry' }
         ]
     },
     // 145
-    'Zapdos': { 
-        hp: 18, ac: 16, str: 18, dex: 18, con: 16, int: 22, wis: 18, cha: 18,
-        speed: 50, type1: 'electric', type2: 'flying', size: 'Large', sr: 15,
+    'Zapdos': {
+        hp: 232, ac: 17, str: 17, dex: 19, con: 16, int: 6, wis: 14, cha: 16,
+        speed: 20, type1: 'electric', type2: 'flying', size: 'Large', sr: 15, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/zapdos.png',
+        vulnerabilities: ['ice', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fighting', 'flying', 'grass', 'steel'],
+        doubleResistances: [],
+        immunities: ['ground'],
+        features: [
+            {
+                name: "Pressure",
+                description: "Any move targeting this Pokémon directly reduces its PP by two."
+            },
+            {
+                name: "Static (Hidden)",
+                description: "When this Pokémon is hit by a melee attack, roll a d4. On a result of 4, the attacker takes an amount of electric damage."
+            }
+        ],
+        skillProficiencies: ['arcana', 'insight', 'intimidation'],
+        saveProficiencies: ['dexterity', 'strength'],
         learnset: [
             { level: 1, move: 'Peck' },
             { level: 1, move: 'Thunder Shock' },
-            { level: 13, move: 'Thunder Wave' },
-            { level: 25, move: 'Agility' },
-            { level: 37, move: 'Detect' },
-            { level: 49, move: 'Drill Peck' }
+            { level: 1, move: 'Thunder Wave' },
+            { level: 1, move: 'Detect' },
+            { level: 1, move: 'Pluck' },
+            { level: 1, move: 'Ancient Power' },
+            { level: 1, move: 'Charge' },
+            { level: 1, move: 'Agility' },
+            { level: 18, move: 'Discharge' },
+            { level: 18, move: 'Rain Dance' },
+            { level: 18, move: 'Light Screen' },
+            { level: 18, move: 'Drill Peck' },
+            { level: 18, move: 'Thunder' },
+            { level: 18, move: 'Roost' },
+            { level: 18, move: 'Zap Cannon' },
+            { level: 18, move: 'Magnetic Flux' }
         ]
     },
     // 146
-    'Moltres': { 
-        hp: 18, ac: 18, str: 18, dex: 18, con: 16, int: 22, wis: 16, cha: 22,
-        speed: 40, type1: 'fire', type2: 'flying', size: 'Large', sr: 15,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/moltres.png',
+    'Moltres': {
+        hp: 232, ac: 16, str: 18, dex: 18, con: 16, int: 6, wis: 14, cha: 16,
+        speed: 20, type1: 'fire', type2: 'flying', size: 'Large', sr: 15, hitDie: 'd12',
+        image: 'https://img.pokemondb.net/artwork/moltres.jpg',
+        vulnerabilities: ['electric', 'rock', 'water'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fairy', 'fighting', 'fire', 'grass', 'steel'],
+        doubleResistances: [],
+        immunities: ['ground'],
+        features: [
+            {
+                name: "Pressure",
+                description: "Any move targeting this Pokémon directly reduces its PP by two."
+            },
+            {
+                name: "Flame Body",
+                description: "Flames shine dim light in a 15 ft radius. When a creature hits you with a melee attack, they must make a Constitution saving throw or be burned."
+            }
+        ],
+        skillProficiencies: [],
+        saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
         learnset: [
             { level: 1, move: 'Wing Attack' },
             { level: 1, move: 'Ember' },
-            { level: 13, move: 'Fire Spin' },
-            { level: 25, move: 'Agility' },
-            { level: 37, move: 'Endure' },
-            { level: 49, move: 'Flamethrower' }
+            { level: 1, move: 'Fire Spin' },
+            { level: 1, move: 'Agility' },
+            { level: 1, move: 'Endure' },
+            { level: 1, move: 'Ancient Power' },
+            { level: 1, move: 'Pluck' },
+            { level: 1, move: 'Flamethrower' },
+            { level: 18, move: 'Safeguard' },
+            { level: 18, move: 'Air Slash' },
+            { level: 18, move: 'Roost' },
+            { level: 18, move: 'Heat Wave' },
+            { level: 18, move: 'Solar Beam' },
+            { level: 18, move: 'Hurricane' },
+            { level: 18, move: 'Burn Up' },
+            { level: 18, move: 'Sky Attack' }
         ]
     },
     // 147
-    'Dratini': { 
+    'Dratini': {
         hp: 20, ac: 13, str: 12, dex: 12, con: 10, int: 6, wis: 10, cha: 12,
-        speed: 30, type1: 'dragon', type2: '', size: 'Large', sr: 1,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/dratini.png',
-        learnset: [
-            { level: 1, move: 'Wrap' },
-            { level: 1, move: 'Leer' },
-            { level: 2, move: 'Thunder Wave' },
-            { level: 2, move: 'Twister' }
-        ],
+        speed: 30, type1: 'dragon', type2: '', size: 'Small', sr: 1, hitDie: 'd8',
+        image: 'https://img.pokemondb.net/artwork/dratini.jpg',
+        vulnerabilities: ['dragon', 'fairy', 'ice'],
+        doubleVulnerabilities: [],
+        resistances: ['electric', 'fire', 'grass', 'water'],
+        doubleResistances: [],
+        immunities: [],
         features: [
             {
                 name: "Shed Skin",
@@ -5755,21 +6308,34 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['arcana'],
-        saveProficiencies: ['wisdom']
+        saveProficiencies: ['wisdom'],
+        learnset: [
+            { level: 1, move: 'Wrap' },
+            { level: 1, move: 'Leer' },
+            { level: 1, move: 'Thunder Wave' },
+            { level: 1, move: 'Twister' },
+            { level: 6, move: 'Dragon Rage' },
+            { level: 12, move: 'Slam' },
+            { level: 18, move: 'Agility' },
+            { level: 18, move: 'Dragon Tail' },
+            { level: 18, move: 'Aqua Tail' },
+            { level: 18, move: 'Dragon Rush' },
+            { level: 18, move: 'Safeguard' },
+            { level: 18, move: 'Dragon Dance' },
+            { level: 18, move: 'Outrage' },
+            { level: 18, move: 'Hyper Beam' }
+        ]
     },
     // 148
-    'Dragonair': { 
+    'Dragonair': {
         hp: 53, ac: 14, str: 15, dex: 15, con: 12, int: 6, wis: 12, cha: 12,
-        speed: 30, type1: 'dragon', type2: '', size: 'Medium', sr: 6,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/dragonair.png',
-        learnset: [
-            { level: 1, move: 'Wrap' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Thunder Wave' },
-            { level: 1, move: 'Twister' },
-            { level: 2, move: 'Dragon Rage' },
-            { level: 2, move: 'Slam' }
-        ],
+        speed: 30, type1: 'dragon', type2: '', size: 'Large', sr: 6, hitDie: 'd10',
+        image: 'https://img.pokemondb.net/artwork/dragonair.jpg',
+        vulnerabilities: ['dragon', 'fairy', 'ice'],
+        doubleVulnerabilities: [],
+        resistances: ['electric', 'fire', 'grass', 'water'],
+        doubleResistances: [],
+        immunities: [],
         features: [
             {
                 name: "Shed Skin",
@@ -5781,52 +6347,132 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['arcana'],
-        saveProficiencies: ['wisdom']
-    },
-    // 149
-    'Dragonite': { 
-        hp: 18, ac: 19, str: 26, dex: 16, con: 18, int: 18, wis: 18, cha: 18,
-        speed: 35, type1: 'dragon', type2: 'flying', size: 'Huge', sr: 14,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/dragonite.png',
+        saveProficiencies: ['wisdom'],
         learnset: [
             { level: 1, move: 'Wrap' },
             { level: 1, move: 'Leer' },
             { level: 1, move: 'Thunder Wave' },
             { level: 1, move: 'Twister' },
-            { level: 8, move: 'Thunder Wave' },
-            { level: 15, move: 'Twister' },
-            { level: 22, move: 'Dragon Rage' },
-            { level: 29, move: 'Slam' },
-            { level: 38, move: 'Agility' },
-            { level: 55, move: 'Wing Attack' }
+            { level: 6, move: 'Dragon Rage' },
+            { level: 12, move: 'Slam' },
+            { level: 18, move: 'Agility' },
+            { level: 18, move: 'Dragon Tail' },
+            { level: 18, move: 'Aqua Tail' },
+            { level: 18, move: 'Dragon Rush' },
+            { level: 18, move: 'Safeguard' },
+            { level: 18, move: 'Dragon Dance' },
+            { level: 18, move: 'Outrage' },
+            { level: 18, move: 'Hyper Beam' }
+        ]
+    },
+    // 149
+    'Dragonite': {
+        hp: 173, ac: 17, str: 19, dex: 18, con: 16, int: 8, wis: 14, cha: 14,
+        speed: 30, type1: 'dragon', type2: 'flying', size: 'Large', sr: 14, hitDie: 'd12',
+        image: 'https://img.pokemondb.net/artwork/dragonite.jpg',
+        vulnerabilities: ['dragon', 'fairy', 'ice', 'rock'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fighting', 'fire', 'grass', 'water'],
+        doubleResistances: [],
+        immunities: ['ground'],
+        features: [
+            {
+                name: "Inner Focus",
+                description: "This Pokémon is immune to flinching."
+            },
+            {
+                name: "Multiscale (Hidden)",
+                description: "If this Pokémon is at full health, the first damage dealt to it is halved."
+            }
+        ],
+        skillProficiencies: ['arcana', 'athletics'],
+        saveProficiencies: ['strength', 'wisdom'],
+        learnset: [
+            { level: 1, move: 'Wing Attack' },
+            { level: 1, move: 'Fire Punch' },
+            { level: 1, move: 'Thunder Punch' },
+            { level: 1, move: 'Roost' },
+            { level: 1, move: 'Wrap' },
+            { level: 1, move: 'Leer' },
+            { level: 1, move: 'Thunder Wave' },
+            { level: 1, move: 'Twister' },
+            { level: 6, move: 'Dragon Rage' },
+            { level: 12, move: 'Slam' },
+            { level: 18, move: 'Agility' },
+            { level: 18, move: 'Dragon Tail' },
+            { level: 18, move: 'Aqua Tail' },
+            { level: 18, move: 'Dragon Rush' },
+            { level: 18, move: 'Safeguard' },
+            { level: 18, move: 'Dragon Dance' },
+            { level: 18, move: 'Outrage' },
+            { level: 18, move: 'Hyper Beam' },
+            { level: 18, move: 'Hurricane' }
         ]
     },
     // 150
-    'Mewtwo': { 
-        hp: 20, ac: 18, str: 22, dex: 26, con: 18, int: 31, wis: 18, cha: 18,
-        speed: 65, type1: 'psychic', type2: '', size: 'Large', sr: 15,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/mewtwo.png',
+    'Mewtwo': {
+        hp: 486, ac: 18, str: 19, dex: 24, con: 18, int: 20, wis: 20, cha: 18,
+        speed: 30, type1: 'psychic', type2: '', size: 'Medium', sr: 15, hitDie: 'd20',
+        image: 'https://img.pokemondb.net/artwork/mewtwo.jpg',
+        vulnerabilities: ['bug', 'dark', 'ghost'],
+        doubleVulnerabilities: [],
+        resistances: ['fighting', 'psychic'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Pressure",
+                description: "Any move targeting this Pokémon directly reduces its PP by two."
+            },
+            {
+                name: "Unnerve",
+                description: "Prevents opponents from eating held berries."
+            }
+        ],
+        skillProficiencies: [],
+        saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
         learnset: [
             { level: 1, move: 'Confusion' },
             { level: 1, move: 'Disable' },
-            { level: 11, move: 'Barrier' },
+            { level: 1, move: 'Safeguard' },
+            { level: 1, move: 'Swift' },
+            { level: 11, move: 'Future Sight' },
             { level: 22, move: 'Mist' },
             { level: 33, move: 'Psychic' },
             { level: 44, move: 'Recover' }
         ]
     },
     // 151
-    'Mew': { 
-        hp: 20, ac: 18, str: 18, dex: 18, con: 18, int: 18, wis: 18, cha: 18,
-        speed: 50, type1: 'psychic', type2: '', size: 'Small', sr: 15,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/mew.png',
+    'Mew': {
+        hp: 486, ac: 18, str: 14, dex: 22, con: 18, int: 16, wis: 20, cha: 20,
+        speed: 20, type1: 'psychic', type2: '', size: 'Tiny', sr: 15, hitDie: 'd20',
+        image: 'https://img.pokemondb.net/artwork/mew.jpg',
+        vulnerabilities: ['bug', 'dark', 'ghost'],
+        doubleVulnerabilities: [],
+        resistances: ['fighting', 'psychic'],
+        doubleResistances: [],
+        immunities: [],
+        features: [
+            {
+                name: "Synchronize",
+                description: "When you are poisoned, burned, or paralyzed by another creature, that creature is also afflicted with the same condition."
+            }
+        ],
+        skillProficiencies: [],
+        saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
         learnset: [
+            { level: 1, move: 'Reflect Type' },
             { level: 1, move: 'Pound' },
             { level: 10, move: 'Transform' },
             { level: 20, move: 'Mega Punch' },
             { level: 30, move: 'Metronome' },
             { level: 40, move: 'Psychic' },
-            { level: 50, move: 'Ancient Power' }
+            { level: 50, move: 'Barrier' },
+            { level: 60, move: 'Ancient Power' },
+            { level: 70, move: 'Amnesia' },
+            { level: 80, move: 'Me First' },
+            { level: 90, move: 'Baton Pass' },
+            { level: 100, move: 'Nasty Plot' }
         ]
     }
 };
