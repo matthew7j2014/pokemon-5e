@@ -4566,58 +4566,173 @@ const pokemonDatabase = {
         immunities: ['electric']
     },
     // 106
-    'Hitmonlee': { 
-        hp: 11, ac: 11, str: 22, dex: 16, con: 11, int: 7, wis: 22, cha: 7,
-        speed: 40, type1: 'fighting', type2: '', size: 'Large', sr: 6,
+    'Hitmonlee': {
+        hp: 45, ac: 16, str: 14, dex: 16, con: 12, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/hitmonlee.png',
+        vulnerabilities: ['fairy', 'flying', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'dark', 'rock'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
             { level: 1, move: 'Double Kick' },
+            { level: 1, move: 'Revenge' },
+            { level: 1, move: 'Reversal' },
             { level: 1, move: 'Meditate' },
-            { level: 6, move: 'Rolling Kick' },
-            { level: 11, move: 'Jump Kick' },
-            { level: 16, move: 'Focus Energy' },
-            { level: 21, move: 'Hi Jump Kick' }
-        ]
+            { level: 1, move: 'Rolling Kick' },
+            { level: 6, move: 'Jump Kick' },
+            { level: 6, move: 'Brick Break' },
+            { level: 10, move: 'Focus Energy' },
+            { level: 10, move: 'Feint' },
+            { level: 10, move: 'Foresight' },
+            { level: 14, move: 'High Jump Kick' },
+            { level: 14, move: 'Mind Reader' },
+            { level: 14, move: 'Axe Kick' },
+            { level: 18, move: 'Wide Guard' },
+            { level: 18, move: 'Blaze Kick' },
+            { level: 18, move: 'Endure' },
+            { level: 18, move: 'Mega Kick' },
+            { level: 18, move: 'Close Combat' }
+        ],
+        features: [
+            {
+                name: "Limber",
+                description: "This Pokémon is immune to being paralyzed."
+            },
+            {
+                name: "Reckless",
+                description: "When attacking with moves with recoil damage, this Pokémon doubles its STAB bonus."
+            },
+            {
+                name: "Unburden (Hidden)",
+                description: "While this Pokémon is not holding an item, it gains 10 feet to its speed."
+            }
+        ],
+        skillProficiencies: ['athletics', 'acrobatics'],
+        saveProficiencies: ['strength', 'dexterity']
     },
     // 107
-    'Hitmonchan': { 
-        hp: 11, ac: 15, str: 20, dex: 15, con: 15, int: 7, wis: 22, cha: 7,
-        speed: 35, type1: 'fighting', type2: '', size: 'Large', sr: 6,
+    'Hitmonchan': {
+        hp: 45, ac: 16, str: 16, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/hitmonchan.png',
+        vulnerabilities: ['fairy', 'flying', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'dark', 'rock'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
             { level: 1, move: 'Comet Punch' },
+            { level: 1, move: 'Pursuit' },
+            { level: 1, move: 'Revenge' },
             { level: 1, move: 'Agility' },
-            { level: 7, move: 'Fire Punch' },
-            { level: 13, move: 'Ice Punch' },
-            { level: 19, move: 'Thunder Punch' },
-            { level: 25, move: 'Mega Punch' }
-        ]
+            { level: 6, move: 'Bullet Punch' },
+            { level: 6, move: 'Mach Punch' },
+            { level: 10, move: 'Feint' },
+            { level: 10, move: 'Vacuum Wave' },
+            { level: 10, move: 'Fire Punch' },
+            { level: 10, move: 'Ice Punch' },
+            { level: 10, move: 'Thunder Punch' },
+            { level: 14, move: 'Quick Guard' },
+            { level: 14, move: 'Sky Uppercut' },
+            { level: 14, move: 'Mega Punch' },
+            { level: 18, move: 'Detect' },
+            { level: 18, move: 'Focus Punch' },
+            { level: 18, move: 'Counter' },
+            { level: 18, move: 'Close Combat' }
+        ],
+        features: [
+            {
+                name: "Keen Eye",
+                description: "This Pokémon ignores disadvantage when it relates to sight."
+            },
+            {
+                name: "Iron Fist",
+                description: "When attacking with a punch-based move, may roll damage twice and choose either total."
+            },
+            {
+                name: "Inner Focus (Hidden)",
+                description: "This Pokémon is immune to flinching."
+            }
+        ],
+        skillProficiencies: ['athletics', 'acrobatics'],
+        saveProficiencies: ['strength', 'dexterity']
     },
     // 108
-    'Lickitung': { 
-        hp: 18, ac: 15, str: 11, dex: 6, con: 15, int: 12, wis: 15, cha: 12,
-        speed: 15, type1: 'normal', type2: '', size: 'Large', sr: 7,
+    'Lickitung': {
+        hp: 70, ac: 14, str: 15, dex: 12, con: 15, int: 6, wis: 10, cha: 12,
+        speed: 30, type1: 'normal', type2: '', size: 'Small', sr: 7,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/lickitung.png',
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
         learnset: [
             { level: 1, move: 'Lick' },
-            { level: 7, move: 'Supersonic' },
-            { level: 13, move: 'Defense Curl' },
-            { level: 19, move: 'Stomp' },
-            { level: 25, move: 'Wrap' },
-            { level: 31, move: 'Disable' }
-        ]
+            { level: 1, move: 'Supersonic' },
+            { level: 1, move: 'Defense Curl' },
+            { level: 6, move: 'Knock Off' },
+            { level: 6, move: 'Wrap' },
+            { level: 10, move: 'Stomp' },
+            { level: 10, move: 'Disable' },
+            { level: 14, move: 'Slam' },
+            { level: 14, move: 'Rollout' },
+            { level: 18, move: 'Chip Away' },
+            { level: 18, move: 'Me First' },
+            { level: 18, move: 'Refresh' },
+            { level: 18, move: 'Screech' },
+            { level: 18, move: 'Power Whip' },
+            { level: 18, move: 'Wring Out' }
+        ],
+        features: [
+            {
+                name: "Own Tempo",
+                description: "This Pokémon is immune to becoming confused."
+            },
+            {
+                name: "Oblivious",
+                description: "This Pokémon is immune to moves that attempt to charm or taunt it."
+            },
+            {
+                name: "Cloud Nine (Hidden)",
+                description: "While this Pokémon is in battle, weather-related abilities have no effect."
+            }
+        ],
+        skillProficiencies: ['perception'],
+        saveProficiencies: ['constitution']
     },
     // 109
-    'Koffing': { 
+    'Koffing': {
         hp: 18, ac: 14, str: 15, dex: 10, con: 14, int: 6, wis: 10, cha: 8,
-        speed: 20, type1: 'poison', type2: '', size: 'Medium', sr: .5,
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/koffing.png',
+        speed: 20, type1: 'poison', type2: '', size: 'Tiny', sr: 0.5,
         hitDie: 'd6',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/koffing.png',
+        vulnerabilities: ['ground', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fairy', 'fighting', 'grass', 'poison'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
             { level: 1, move: 'Poison Gas' },
             { level: 1, move: 'Tackle' },
             { level: 2, move: 'Smog' },
             { level: 2, move: 'Smokescreen' },
+            { level: 6, move: 'Assurance' },
+            { level: 6, move: 'Clear Smog' },
+            { level: 6, move: 'Sludge' },
+            { level: 10, move: 'Self-Destruct' },
+            { level: 10, move: 'Haze' },
+            { level: 14, move: 'Gyro Ball' },
+            { level: 14, move: 'Sludge Bomb' },
+            { level: 18, move: 'Explosion' },
+            { level: 18, move: 'Destiny Bond' },
+            { level: 18, move: 'Memento' },
+            { level: 18, move: 'Belch' }
         ],
         features: [
             {
@@ -4629,101 +4744,304 @@ const pokemonDatabase = {
         saveProficiencies: ['constitution']
     },
     // 110
-    'Weezing': { 
-        hp: 13, ac: 22, str: 18, dex: 12, con: 22, int: 16, wis: 14, cha: 16,
-        speed: 30, type1: 'poison', type2: '', size: 'Large', sr: 10,
+    'Weezing': {
+        hp: 88, ac: 16, str: 16, dex: 14, con: 18, int: 6, wis: 12, cha: 8,
+        speed: 30, type1: 'poison', type2: '', size: 'Medium', sr: 10,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/weezing.png',
+        vulnerabilities: ['ground', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fairy', 'fighting', 'grass', 'poison'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
+            { level: 1, move: 'Double Hit' },
             { level: 1, move: 'Poison Gas' },
-            { level: 1, move: 'Tackle' },
             { level: 1, move: 'Smog' },
-            { level: 9, move: 'Smog' },
-            { level: 17, move: 'Self-Destruct' },
-            { level: 25, move: 'Haze' },
-            { level: 35, move: 'Explosion' }
-        ]
+            { level: 1, move: 'Smokescreen' },
+            { level: 1, move: 'Tackle' },
+            { level: 1, move: 'Assurance' },
+            { level: 1, move: 'Clear Smog' },
+            { level: 1, move: 'Sludge' },
+            { level: 10, move: 'Self-Destruct' },
+            { level: 10, move: 'Haze' },
+            { level: 14, move: 'Gyro Ball' },
+            { level: 14, move: 'Sludge Bomb' },
+            { level: 18, move: 'Explosion' },
+            { level: 18, move: 'Destiny Bond' },
+            { level: 18, move: 'Memento' },
+            { level: 18, move: 'Belch' }
+        ],
+        features: [
+            {
+                name: "Levitate",
+                description: "This Pokémon is immune to ground moves."
+            }
+        ],
+        skillProficiencies: ['deception'],
+        saveProficiencies: ['constitution']
     },
     // 111
-    'Rhyhorn': { 
-        hp: 16, ac: 19, str: 16, dex: 6, con: 6, int: 6, wis: 6, cha: 6,
-        speed: 15, type1: 'ground', type2: 'rock', size: 'Large', sr: 3,
+    'Rhyhorn': {
+        hp: 40, ac: 13, str: 15, dex: 10, con: 14, int: 6, wis: 10, cha: 10,
+        speed: 30, type1: 'ground', type2: 'rock', size: 'Medium', sr: 3,
+        hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/rhyhorn.png',
+        vulnerabilities: ['fighting', 'grass', 'ground', 'ice', 'steel', 'water'],
+        doubleVulnerabilities: ['grass', 'water'],
+        resistances: ['fire', 'flying', 'normal', 'poison', 'rock'],
+        doubleResistances: [],
+        immunities: ['electric'],
         learnset: [
             { level: 1, move: 'Horn Attack' },
             { level: 1, move: 'Tail Whip' },
-            { level: 13, move: 'Stomp' },
-            { level: 19, move: 'Fury Attack' },
-            { level: 31, move: 'Scary Face' },
-            { level: 37, move: 'Horn Drill' }
-        ]
+            { level: 2, move: 'Fury Attack' },
+            { level: 2, move: 'Scary Face' },
+            { level: 6, move: 'Smack Down' },
+            { level: 6, move: 'Stomp' },
+            { level: 10, move: 'Bulldoze' },
+            { level: 10, move: 'Chip Away' },
+            { level: 10, move: 'Head Smash' },
+            { level: 14, move: 'Rock Blast' },
+            { level: 14, move: 'Drill Run' },
+            { level: 14, move: 'Take Down' },
+            { level: 14, move: 'Stone Edge' },
+            { level: 18, move: 'Earthquake' },
+            { level: 18, move: 'Megahorn' },
+            { level: 18, move: 'Horn Drill' },
+            { level: 18, move: 'Double Edge' }
+        ],
+        features: [
+            {
+                name: "Lightning Rod",
+                description: "This Pokémon draws electrical attacks to itself, becoming immune to Electric-type damage and gaining +1 to attack rolls when targeted by Electric moves."
+            },
+            {
+                name: "Rock Head",
+                description: "This Pokémon is immune to recoil damage from its own moves."
+            },
+            {
+                name: "Reckless (Hidden)",
+                description: "When attacking with moves with recoil damage, this Pokémon doubles its STAB bonus."
+            }
+        ],
+        skillProficiencies: ['athletics'],
+        saveProficiencies: ['strength', 'constitution']
     },
     // 112
-    'Rhydon': { 
-        hp: 20, ac: 22, str: 26, dex: 8, con: 9, int: 8, wis: 9, cha: 8,
-        speed: 20, type1: 'ground', type2: 'rock', size: 'Huge', sr: 11,
+    'Rhydon': {
+        hp: 128, ac: 15, str: 18, dex: 13, con: 17, int: 6, wis: 12, cha: 10,
+        speed: 40, type1: 'ground', type2: 'rock', size: 'Large', sr: 11,
+        hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/rhydon.png',
+        vulnerabilities: ['fighting', 'grass', 'ground', 'ice', 'steel', 'water'],
+        doubleVulnerabilities: ['grass', 'water'],
+        resistances: ['fire', 'flying', 'normal', 'poison', 'rock'],
+        doubleResistances: [],
+        immunities: ['electric'],
         learnset: [
+            { level: 1, move: 'Fury Attack' },
+            { level: 1, move: 'Hammer Arm' },
             { level: 1, move: 'Horn Attack' },
+            { level: 1, move: 'Scary Face' },
             { level: 1, move: 'Tail Whip' },
+            { level: 1, move: 'Smack Down' },
             { level: 1, move: 'Stomp' },
-            { level: 13, move: 'Stomp' },
-            { level: 19, move: 'Fury Attack' },
-            { level: 31, move: 'Scary Face' },
-            { level: 42, move: 'Horn Drill' },
-            { level: 58, move: 'Take Down' }
-        ]
+            { level: 1, move: 'Bulldoze' },
+            { level: 1, move: 'Chip Away' },
+            { level: 14, move: 'Rock Blast' },
+            { level: 14, move: 'Drill Run' },
+            { level: 14, move: 'Take Down' },
+            { level: 14, move: 'Head Smash' },
+            { level: 18, move: 'Stone Edge' },
+            { level: 18, move: 'Earthquake' },
+            { level: 18, move: 'Megahorn' },
+            { level: 18, move: 'Horn Drill' },
+            { level: 18, move: 'Double Edge' }
+        ],
+        features: [
+            {
+                name: "Lightning Rod",
+                description: "This Pokémon draws electrical attacks to itself, becoming immune to Electric-type damage and gaining +1 to attack rolls when targeted by Electric moves."
+            },
+            {
+                name: "Rock Head",
+                description: "This Pokémon is immune to recoil damage from its own moves."
+            },
+            {
+                name: "Reckless (Hidden)",
+                description: "When attacking with moves with recoil damage, this Pokémon doubles its STAB bonus."
+            }
+        ],
+        skillProficiencies: ['athletics'],
+        saveProficiencies: ['strength', 'constitution']
     },
     // 113
-    'Chansey': { 
-        hp: 50, ac: 11, str: 1, dex: 10, con: 1, int: 7, wis: 22, cha: 22,
-        speed: 25, type1: 'normal', type2: '', size: 'Medium', sr: 7,
+    'Chansey': {
+        hp: 75, ac: 13, str: 11, dex: 10, con: 18, int: 6, wis: 12, cha: 18,
+        speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 7,
+        hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/chansey.png',
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
         learnset: [
-            { level: 1, move: 'Pound' },
+            { level: 1, move: 'Defense Curl' },
             { level: 1, move: 'Growl' },
-            { level: 5, move: 'Tail Whip' },
-            { level: 9, move: 'Refresh' },
-            { level: 13, move: 'Soft-Boiled' },
-            { level: 17, move: 'Double Slap' }
-        ]
+            { level: 1, move: 'Pound' },
+            { level: 1, move: 'Tail Whip' },
+            { level: 1, move: 'Refresh' },
+            { level: 6, move: 'Double Slap' },
+            { level: 6, move: 'Soft-Boiled' },
+            { level: 6, move: 'Life Dew' },
+            { level: 10, move: 'Bestow' },
+            { level: 10, move: 'Minimize' },
+            { level: 10, move: 'Take Down' },
+            { level: 14, move: 'Sing' },
+            { level: 14, move: 'Fling' },
+            { level: 18, move: 'Heal Pulse' },
+            { level: 18, move: 'Egg Bomb' },
+            { level: 18, move: 'Light Screen' },
+            { level: 18, move: 'Healing Wish' },
+            { level: 18, move: 'Double Edge' }
+        ],
+        features: [
+            {
+                name: "Natural Cure",
+                description: "This Pokémon is cured of negative status ailments upon returning to its Pokeball."
+            },
+            {
+                name: "Serene Grace",
+                description: "The Move DC to pass a saving throw against one of this Pokémon's moves is increased by 1."
+            },
+            {
+                name: "Healer (Hidden)",
+                description: "As an action, this Pokemon may touch a creature to heal poison, burn, or paralysis."
+            }
+        ],
+        skillProficiencies: ['arcana', 'medicine'],
+        saveProficiencies: ['wisdom', 'charisma']
     },
     // 114
-    'Tangela': { 
-        hp: 13, ac: 22, str: 11, dex: 12, con: 22, int: 18, wis: 8, cha: 8,
-        speed: 30, type1: 'grass', type2: '', size: 'Medium', sr: 5,
+    'Tangela': {
+        hp: 35, ac: 15, str: 15, dex: 14, con: 15, int: 6, wis: 10, cha: 10,
+        speed: 30, type1: 'grass', type2: '', size: 'Small', sr: 5,
+        hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/tangela.png',
+        vulnerabilities: ['bug', 'fire', 'flying', 'ice', 'poison'],
+        doubleVulnerabilities: [],
+        resistances: ['electric', 'grass', 'ground', 'water'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
-            { level: 1, move: 'Ingrain' },
             { level: 1, move: 'Constrict' },
-            { level: 4, move: 'Sleep Powder' },
-            { level: 10, move: 'Absorb' },
-            { level: 13, move: 'Growth' },
-            { level: 19, move: 'Poison Powder' }
-        ]
+            { level: 1, move: 'Ingrain' },
+            { level: 1, move: 'Sleep Powder' },
+            { level: 1, move: 'Vine Whip' },
+            { level: 1, move: 'Absorb' },
+            { level: 6, move: 'Poison Powder' },
+            { level: 6, move: 'Bind' },
+            { level: 10, move: 'Growth' },
+            { level: 10, move: 'Mega Drain' },
+            { level: 14, move: 'Knock Off' },
+            { level: 14, move: 'Stun Spore' },
+            { level: 14, move: 'Natural Gift' },
+            { level: 14, move: 'Ancient Power' },
+            { level: 18, move: 'Giga Drain' },
+            { level: 18, move: 'Slam' },
+            { level: 18, move: 'Tickle' },
+            { level: 18, move: 'Wring Out' },
+            { level: 18, move: 'Power Whip' },
+            { level: 18, move: 'Grassy Terrain' }
+        ],
+        features: [
+            {
+                name: "Chlorophyll",
+                description: "This Pokémon's speed is doubled in harsh sunlight."
+            },
+            {
+                name: "Leaf Guard",
+                description: "This Pokémon does not suffer from any negative status ailments in harsh sunlight."
+            },
+            {
+                name: "Regenerator (Hidden)",
+                description: "Once per long rest, this Pokémon regains hit points equal to its level when it returns to its Pokéball."
+            }
+        ],
+        skillProficiencies: ['nature'],
+        saveProficiencies: ['constitution']
     },
     // 115
-    'Kangaskhan': { 
-        hp: 20, ac: 16, str: 19, dex: 18, con: 16, int: 8, wis: 15, cha: 15,
-        speed: 35, type1: 'normal', type2: '', size: 'Large', sr: 10,
+    'Kangaskhan': {
+        hp: 60, ac: 18, str: 19, dex: 18, con: 15, int: 6, wis: 12, cha: 8,
+        speed: 30, type1: 'normal', type2: '', size: 'Large', sr: 10,
+        hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kangaskhan.png',
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost'],
         learnset: [
             { level: 1, move: 'Comet Punch' },
-            { level: 1, move: 'Rage' },
-            { level: 7, move: 'Bite' },
-            { level: 13, move: 'Tail Whip' },
-            { level: 19, move: 'Mega Punch' },
-            { level: 25, move: 'Leer' }
-        ]
+            { level: 1, move: 'Leer' },
+            { level: 1, move: 'Fake Out' },
+            { level: 1, move: 'Tail Whip' },
+            { level: 1, move: 'Bite' },
+            { level: 1, move: 'Double Hit' },
+            { level: 10, move: 'Rage' },
+            { level: 10, move: 'Mega Punch' },
+            { level: 14, move: 'Chip Away' },
+            { level: 14, move: 'Dizzy Punch' },
+            { level: 14, move: 'Crunch' },
+            { level: 18, move: 'Endure' },
+            { level: 18, move: 'Outrage' },
+            { level: 18, move: 'Sucker Punch' },
+            { level: 18, move: 'Reversal' }
+        ],
+        features: [
+            {
+                name: "Early Bird",
+                description: "This Pokémon has advantage on rolls to wake from sleep."
+            },
+            {
+                name: "Scrappy",
+                description: "This Pokémon's Normal and Fighting type moves ignore immunities."
+            },
+            {
+                name: "Inner Focus (Hidden)",
+                description: "This Pokémon is immune to flinching."
+            }
+        ],
+        skillProficiencies: ['athletics', 'perception', 'intimidation'],
+        saveProficiencies: ['strength', 'constitution']
     },
     // 116
-    'Horsea': { 
+    'Horsea': {
         hp: 16, ac: 13, str: 11, dex: 14, con: 10, int: 6, wis: 10, cha: 12,
-        speed: 5, type1: 'water', type2: '', size: 'Small', sr: .5,
+        speed: 5, type1: 'water', type2: '', size: 'Tiny', sr: 0.5,
+        hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/horsea.png',
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
             { level: 1, move: 'Bubble' },
             { level: 2, move: 'Smokescreen' },
-            { level: 2, move: 'Leer' }
+            { level: 2, move: 'Leer' },
+            { level: 6, move: 'Water Gun' },
+            { level: 6, move: 'Twister' },
+            { level: 10, move: 'Bubble Beam' },
+            { level: 10, move: 'Focus Energy' },
+            { level: 14, move: 'Brine' },
+            { level: 14, move: 'Agility' },
+            { level: 18, move: 'Dragon Pulse' },
+            { level: 18, move: 'Dragon Dance' },
+            { level: 18, move: 'Hydro Pump' }
         ],
         features: [
             {
@@ -4743,62 +5061,167 @@ const pokemonDatabase = {
         saveProficiencies: ['dexterity']
     },
     // 117
-    'Seadra': { 
-        hp: 12, ac: 19, str: 13, dex: 16, con: 19, int: 19, wis: 9, cha: 9,
-        speed: 35, type1: 'water', type2: '', size: 'Medium', sr: 8,
+    'Seadra': {
+        hp: 64, ac: 15, str: 15, dex: 17, con: 13, int: 6, wis: 12, cha: 10,
+        speed: 35, type1: 'water', type2: '', size: 'Small', sr: 8,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/seadra.png',
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
             { level: 1, move: 'Bubble' },
-            { level: 1, move: 'Smokescreen' },
+            { level: 1, move: 'Hydro Pump' },
             { level: 1, move: 'Leer' },
-            { level: 8, move: 'Smokescreen' },
-            { level: 15, move: 'Leer' },
-            { level: 22, move: 'Water Gun' },
-            { level: 29, move: 'Agility' },
-            { level: 40, move: 'Twister' }
-        ]
+            { level: 1, move: 'Smokescreen' },
+            { level: 1, move: 'Water Gun' },
+            { level: 1, move: 'Twister' },
+            { level: 10, move: 'Bubble Beam' },
+            { level: 10, move: 'Focus Energy' },
+            { level: 14, move: 'Brine' },
+            { level: 18, move: 'Agility' },
+            { level: 18, move: 'Dragon Pulse' },
+            { level: 18, move: 'Dragon Dance' }
+        ],
+        features: [
+            {
+                name: "Poison Point",
+                description: "When this Pokémon is hit with a melee attack, roll a 1d4. On a result of 4, the attacker takes an amount of poison damage equal to this Pokémon's proficiency modifier."
+            },
+            {
+                name: "Sniper",
+                description: "On a critical hit made by this Pokémon, triple the dice roll instead of doubling it."
+            },
+            {
+                name: "Damp (Hidden)",
+                description: "This Pokémon is unaffected by Self Destruct and Explosion moves."
+            }
+        ],
+        skillProficiencies: ['acrobatics'],
+        saveProficiencies: ['dexterity']
     },
     // 118
-    'Goldeen': { 
-        hp: 9, ac: 12, str: 13, dex: 13, con: 10, int: 7, wis: 10, cha: 7,
-        speed: 30, type1: 'water', type2: '', size: 'Medium', sr: .25,
+    'Goldeen': {
+        hp: 17, ac: 13, str: 11, dex: 13, con: 12, int: 6, wis: 10, cha: 10,
+        speed: 30, type1: 'water', type2: '', size: 'Small', sr: 0.25,
+        hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/goldeen.png',
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
             { level: 1, move: 'Peck' },
             { level: 1, move: 'Tail Whip' },
-            { level: 10, move: 'Supersonic' },
-            { level: 15, move: 'Horn Attack' },
-            { level: 24, move: 'Flail' },
-            { level: 29, move: 'Fury Attack' }
-        ]
+            { level: 1, move: 'Water Sport' },
+            { level: 2, move: 'Supersonic' },
+            { level: 2, move: 'Horn Attack' },
+            { level: 6, move: 'Flail' },
+            { level: 6, move: 'Water Pulse' },
+            { level: 10, move: 'Aqua Ring' },
+            { level: 10, move: 'Fury Attack' },
+            { level: 14, move: 'Agility' },
+            { level: 14, move: 'Waterfall' },
+            { level: 18, move: 'Horn Drill' },
+            { level: 18, move: 'Soak' },
+            { level: 18, move: 'Megahorn' }
+        ],
+        features: [
+            {
+                name: "Swift Swim",
+                description: "This Pokémon's speed is doubled in rainy conditions."
+            },
+            {
+                name: "Water Veil",
+                description: "This Pokémon is immune to burning."
+            },
+            {
+                name: "Lightning Rod (Hidden)",
+                description: "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits."
+            }
+        ],
+        skillProficiencies: ['acrobatics'],
+        saveProficiencies: ['dexterity']
     },
     // 119
-    'Seaking': { 
-        hp: 16, ac: 13, str: 18, dex: 13, con: 13, int: 13, wis: 16, cha: 13,
-        speed: 35, type1: 'water', type2: '', size: 'Large', sr: 9,
+    'Seaking': {
+        hp: 72, ac: 15, str: 14, dex: 17, con: 14, int: 6, wis: 12, cha: 10,
+        speed: 35, type1: 'water', type2: '', size: 'Medium', sr: 9,
+        hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/seaking.png',
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
             { level: 1, move: 'Peck' },
+            { level: 1, move: 'Poison Jab' },
             { level: 1, move: 'Tail Whip' },
+            { level: 1, move: 'Water Sport' },
             { level: 1, move: 'Supersonic' },
-            { level: 10, move: 'Supersonic' },
-            { level: 15, move: 'Horn Attack' },
-            { level: 24, move: 'Flail' },
-            { level: 37, move: 'Fury Attack' },
-            { level: 45, move: 'Waterfall' }
-        ]
+            { level: 1, move: 'Horn Attack' },
+            { level: 1, move: 'Flail' },
+            { level: 1, move: 'Water Pulse' },
+            { level: 10, move: 'Aqua Ring' },
+            { level: 10, move: 'Fury Attack' },
+            { level: 14, move: 'Agility' },
+            { level: 14, move: 'Waterfall' },
+            { level: 18, move: 'Horn Drill' },
+            { level: 18, move: 'Soak' },
+            { level: 18, move: 'Megahorn' }
+        ],
+        features: [
+            {
+                name: "Swift Swim",
+                description: "This Pokémon's speed is doubled in rainy conditions."
+            },
+            {
+                name: "Water Veil",
+                description: "This Pokémon is immune to burning."
+            },
+            {
+                name: "Lightning Rod (Hidden)",
+                description: "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits."
+            }
+        ],
+        skillProficiencies: ['acrobatics'],
+        saveProficiencies: ['dexterity']
     },
     // 120
-    'Staryu': { 
+    'Staryu': {
         hp: 16, ac: 14, str: 10, dex: 14, con: 11, int: 6, wis: 12, cha: 10,
-        speed: 20, type1: 'water', type2: '', size: 'Small', sr: .5,
+        speed: 20, type1: 'water', type2: '', size: 'Small', sr: 0.5,
+        hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/staryu.png',
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
-            { level: 1, move: 'Tackle' },
             { level: 1, move: 'Harden' },
+            { level: 1, move: 'Tackle' },
             { level: 2, move: 'Water Gun' },
             { level: 2, move: 'Rapid Spin' },
-            { level: 2, move: 'Recover' }
+            { level: 2, move: 'Recover' },
+            { level: 6, move: 'Psywave' },
+            { level: 6, move: 'Swift' },
+            { level: 10, move: 'Bubble Beam' },
+            { level: 10, move: 'Camouflage' },
+            { level: 10, move: 'Gyro Ball' },
+            { level: 14, move: 'Brine' },
+            { level: 14, move: 'Minimize' },
+            { level: 14, move: 'Reflect Type' },
+            { level: 14, move: 'Confuse Ray' },
+            { level: 18, move: 'Power Gem' },
+            { level: 18, move: 'Psychic' },
+            { level: 18, move: 'Light Screen' },
+            { level: 18, move: 'Cosmic Power' },
+            { level: 18, move: 'Hydro Pump' }
         ],
         features: [
             {
@@ -4818,72 +5241,229 @@ const pokemonDatabase = {
         saveProficiencies: ['dexterity']
     },
     // 121
-    'Starmie': { 
-        hp: 13, ac: 16, str: 15, dex: 22, con: 16, int: 18, wis: 16, cha: 16,
-        speed: 50, type1: 'water', type2: 'psychic', size: 'Medium', sr: 9,
+    'Starmie': {
+        hp: 64, ac: 17, str: 14, dex: 17, con: 13, int: 6, wis: 14, cha: 10,
+        speed: 40, type1: 'water', type2: 'psychic', size: 'Small', sr: 9,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/starmie.png',
+        vulnerabilities: ['bug', 'dark', 'electric', 'ghost', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fighting', 'fire', 'ice', 'psychic', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
-            { level: 1, move: 'Tackle' },
+            { level: 1, move: 'Hydro Pump' },
             { level: 1, move: 'Rapid Spin' },
             { level: 1, move: 'Recover' },
-            { level: 1, move: 'Swift' }
-        ]
+            { level: 1, move: 'Spotlight' },
+            { level: 1, move: 'Swift' },
+            { level: 1, move: 'Water Gun' },
+            { level: 18, move: 'Confuse Ray' }
+        ],
+        features: [
+            {
+                name: "Illuminate",
+                description: "This Pokémon knows the Light cantrip and can cast it at will."
+            },
+            {
+                name: "Natural Cure",
+                description: "This Pokémon is cured of negative status ailments upon returning to its Pokeball."
+            },
+            {
+                name: "Analytic (Hidden)",
+                description: "After this Pokémon misses an attack, its next attack is done at advantage."
+            }
+        ],
+        skillProficiencies: ['acrobatics'],
+        saveProficiencies: ['dexterity']
     },
     // 122
-    'Mr. Mime': { 
-        hp: 8, ac: 13, str: 9, dex: 18, con: 13, int: 18, wis: 22, cha: 18,
-        speed: 35, type1: 'psychic', type2: 'fairy', size: 'Medium', sr: 9,
+    'Mr. Mime': {
+        hp: 50, ac: 17, str: 12, dex: 15, con: 8, int: 12, wis: 14, cha: 12,
+        speed: 30, type1: 'psychic', type2: 'fairy', size: 'Medium', sr: 9,
+        hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/mr-mime.png',
+        vulnerabilities: ['ghost', 'poison', 'steel'],
+        doubleVulnerabilities: [],
+        resistances: ['fighting', 'psychic'],
+        doubleResistances: [],
+        immunities: ['dragon'],
         learnset: [
             { level: 1, move: 'Barrier' },
             { level: 1, move: 'Confusion' },
-            { level: 6, move: 'Confusion' },
-            { level: 11, move: 'Light Screen' },
-            { level: 16, move: 'Reflect' },
-            { level: 21, move: 'Psybeam' }
-        ]
+            { level: 1, move: 'Guard Swap' },
+            { level: 1, move: 'Magical Leaf' },
+            { level: 1, move: 'Misty Terrain' },
+            { level: 1, move: 'Power Swap' },
+            { level: 1, move: 'Quick Guard' },
+            { level: 1, move: 'Wide Guard' },
+            { level: 1, move: 'Copycat' },
+            { level: 1, move: 'Meditate' },
+            { level: 1, move: 'Double Slap' },
+            { level: 6, move: 'Mimic' },
+            { level: 6, move: 'Psywave' },
+            { level: 6, move: 'Encore' },
+            { level: 10, move: 'Light Screen' },
+            { level: 10, move: 'Reflect' },
+            { level: 10, move: 'Psybeam' },
+            { level: 14, move: 'Substitute' },
+            { level: 14, move: 'Recycle' },
+            { level: 14, move: 'Trick' },
+            { level: 18, move: 'Psychic' },
+            { level: 18, move: 'Role Play' },
+            { level: 18, move: 'Baton Pass' },
+            { level: 18, move: 'Safeguard' }
+        ],
+        features: [
+            {
+                name: "Soundproof",
+                description: "This Pokémon is immune to sound-based moves."
+            },
+            {
+                name: "Filter",
+                description: "When hit by a move type this Pokémon is vulnerable to, it may roll a d4. On a result of 4, it does not take the additional damage."
+            },
+            {
+                name: "Technician (Hidden)",
+                description: "For damaging moves activated by this Pokémon with 15 max PP or more, they may roll the damage twice and choose either total."
+            }
+        ],
+        skillProficiencies: ['performance'],
+        saveProficiencies: ['charisma']
     },
     // 123
-    'Scyther': { 
-        hp: 14, ac: 16, str: 20, dex: 20, con: 16, int: 11, wis: 16, cha: 11,
-        speed: 45, type1: 'bug', type2: 'flying', size: 'Large', sr: 8,
+    'Scyther': {
+        hp: 58, ac: 16, str: 17, dex: 18, con: 12, int: 6, wis: 10, cha: 8,
+        speed: 35, type1: 'bug', type2: 'flying', size: 'Medium', sr: 8,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/scyther.png',
+        vulnerabilities: ['electric', 'fire', 'flying', 'ice', 'rock'],
+        doubleVulnerabilities: ['rock'],
+        resistances: ['bug'],
+        doubleResistances: ['grass', 'fighting'],
+        immunities: ['ground'],
         learnset: [
-            { level: 1, move: 'Quick Attack' },
             { level: 1, move: 'Leer' },
-            { level: 6, move: 'Focus Energy' },
-            { level: 11, move: 'Double Team' },
-            { level: 16, move: 'Slash' },
-            { level: 21, move: 'Swords Dance' }
-        ]
+            { level: 1, move: 'Quick Attack' },
+            { level: 1, move: 'Vacuum Wave' },
+            { level: 1, move: 'Focus Energy' },
+            { level: 1, move: 'Pursuit' },
+            { level: 6, move: 'False Swipe' },
+            { level: 6, move: 'Agility' },
+            { level: 6, move: 'Wing Attack' },
+            { level: 10, move: 'Fury Cutter' },
+            { level: 10, move: 'Slash' },
+            { level: 14, move: 'Razor Wind' },
+            { level: 14, move: 'Double Team' },
+            { level: 18, move: 'X-Scissor' },
+            { level: 18, move: 'Night Slash' },
+            { level: 18, move: 'Double Hit' },
+            { level: 18, move: 'Air Slash' },
+            { level: 18, move: 'Swords Dance' },
+            { level: 18, move: 'Feint' }
+        ],
+        features: [
+            {
+                name: "Swarm",
+                description: "Doubles its STAB bonus when it has 25% or less of its maximum health."
+            },
+            {
+                name: "Technician",
+                description: "For damaging moves activated by this Pokémon, they may roll damage twice and choose either total."
+            },
+            {
+                name: "Steadfast (Hidden)",
+                description: "Once per long rest, when failing a saving throw against a negative condition, can choose to pass instead."
+            }
+        ],
+        skillProficiencies: ['acrobatics'],
+        saveProficiencies: ['dexterity']
     },
     // 124
-    'Jynx': { 
-        hp: 13, ac: 7, str: 10, dex: 19, con: 7, int: 22, wis: 19, cha: 19,
-        speed: 35, type1: 'ice', type2: 'psychic', size: 'Large', sr: 8,
+    'Jynx': {
+        hp: 67, ac: 15, str: 12, dex: 16, con: 14, int: 8, wis: 16, cha: 16,
+        speed: 30, type1: 'ice', type2: 'psychic', size: 'Medium', sr: 8,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/jynx.png',
+        vulnerabilities: ['bug', 'dark', 'fire', 'ghost', 'rock', 'steel'],
+        doubleVulnerabilities: [],
+        resistances: ['ice', 'psychic'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
+            { level: 1, move: 'Draining Kiss' },
             { level: 1, move: 'Pound' },
             { level: 1, move: 'Lick' },
             { level: 1, move: 'Lovely Kiss' },
             { level: 1, move: 'Powder Snow' },
-            { level: 9, move: 'Lovely Kiss' },
-            { level: 13, move: 'Powder Snow' }
-        ]
+            { level: 6, move: 'Double Slap' },
+            { level: 6, move: 'Ice Punch' },
+            { level: 10, move: 'Heart Stamp' },
+            { level: 10, move: 'Mean Look' },
+            { level: 14, move: 'Fake Tears' },
+            { level: 14, move: 'Wake-Up Slap' },
+            { level: 18, move: 'Avalanche' },
+            { level: 18, move: 'Body Slam' },
+            { level: 18, move: 'Wring Out' },
+            { level: 18, move: 'Perish Song' },
+            { level: 18, move: 'Blizzard' }
+        ],
+        features: [
+            {
+                name: "Oblivious",
+                description: "This Pokémon is immune to moves that attempt to charm or taunt it."
+            },
+            {
+                name: "Forewarn",
+                description: "Reveals the move with most damage output when entering battle."
+            },
+            {
+                name: "Dry Skin (Hidden)",
+                description: "Takes/heals damage equal to proficiency modifier in sunlight/rain."
+            }
+        ],
+        skillProficiencies: ['insight', 'deception'],
+        saveProficiencies: ['charisma']
     },
     // 125
-    'Electabuzz': { 
-        hp: 13, ac: 13, str: 16, dex: 20, con: 13, int: 19, wis: 16, cha: 16,
-        speed: 45, type1: 'electric', type2: '', size: 'Large', sr: 9,
+    'Electabuzz': {
+        hp: 68, ac: 15, str: 15, dex: 18, con: 15, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'electric', type2: '', size: 'Small', sr: 9,
+        hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/electabuzz.png',
+        vulnerabilities: ['ground'],
+        doubleVulnerabilities: [],
+        resistances: ['electric', 'flying', 'steel'],
+        doubleResistances: [],
+        immunities: [],
         learnset: [
-            { level: 1, move: 'Quick Attack' },
             { level: 1, move: 'Leer' },
+            { level: 1, move: 'Quick Attack' },
             { level: 1, move: 'Thunder Shock' },
-            { level: 7, move: 'Thunder Shock' },
-            { level: 13, move: 'Light Screen' },
-            { level: 19, move: 'Swift' }
-        ]
+            { level: 1, move: 'Low Kick' },
+            { level: 6, move: 'Swift' },
+            { level: 6, move: 'Shock Wave' },
+            { level: 10, move: 'Thunder Wave' },
+            { level: 10, move: 'Electro Ball' },
+            { level: 10, move: 'Light Screen' },
+            { level: 14, move: 'Thunder Punch' },
+            { level: 14, move: 'Discharge' },
+            { level: 18, move: 'Screech' },
+            { level: 18, move: 'Thunderbolt' },
+            { level: 18, move: 'Thunder' }
+        ],
+        features: [
+            {
+                name: "Static",
+                description: "When this Pokémon is hit by a melee attack, roll a d4. On a result of 4, the attacker takes an amount of electric damage equal to this Pokemon's proficiency bonus."
+            },
+            {
+                name: "Vital Spirit (Hidden)",
+                description: "This Pokémon cannot be put to sleep."
+            }
+        ],
+        skillProficiencies: ['athletics'],
+        saveProficiencies: ['constitution']
     },
     // 126
     'Magmar': { 
