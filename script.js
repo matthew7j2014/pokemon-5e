@@ -2087,7 +2087,7 @@ const pokemonDatabase = {
     // 50
     'Diglett': {
         hp: 18, ac: 12, str: 12, dex: 12, con: 14, int: 6, wis: 10, cha: 10,
-        speed: 20, type1: 'ground', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
+        speed: 20, type1: 'ground', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/diglett.png',
         learnset: [
             { level: 1, move: 'Sand Attack' },
@@ -2177,9 +2177,8 @@ const pokemonDatabase = {
     // 52
     'Meowth': { 
         hp: 16, ac: 13, str: 10, dex: 15, con: 10, int: 8, wis: 10, cha: 12,
-        speed: 30, type1: 'normal', type2: '', size: 'Small', sr: .5,
+        speed: 30, type1: 'normal', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/meowth.png',
-        hitDie: 'd6',
         learnset: [
             { level: 1, move: 'Growl' },
             { level: 1, move: 'Scratch' },
@@ -2211,7 +2210,7 @@ const pokemonDatabase = {
                 description: "Opponents in combat with this Pokémon cannot eat held berries."
             }
         ],
-        skillProficiencies: ['persuasion', 'deception', 'sleight of hand'],
+        skillProficiencies: ['persuasion', 'deception', 'sleight_of_hand'],
         saveProficiencies: ['dexterity', 'charisma'],
         vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
@@ -2221,8 +2220,8 @@ const pokemonDatabase = {
     },
     // 53
     'Persian': {
-        hp: 40, ac: 15, str: 14, dex: 16, con: 13, int: 13, wis: 13, cha: 16,
-        speed: 35, type1: 'normal', type2: '', size: 'Medium', sr: 7, hitDie: 'd10',
+        hp: 40, ac: 15, str: 14, dex: 18, con: 10, int: 8, wis: 12, cha: 14,
+        speed: 35, type1: 'normal', type2: '', size: 'Small', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/persian.png',
         learnset: [
             { level: 1, move: 'Bite' },
@@ -2258,7 +2257,7 @@ const pokemonDatabase = {
                 description: "Opponents in combat with this Pokémon cannot eat held berries."
             }
         ],
-        skillProficiencies: ['sleight of hand', 'deception', 'persuasion'],
+        skillProficiencies: ['sleight_of_hand', 'deception', 'persuasion'],
         saveProficiencies: ['dexterity', 'charisma'],
         vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
@@ -2269,7 +2268,7 @@ const pokemonDatabase = {
     // 54
     'Psyduck': {
         hp: 18, ac: 13, str: 11, dex: 12, con: 14, int: 6, wis: 12, cha: 10,
-        speed: 20, type1: 'water', type2: '', size: 'Medium', sr: .5, hitDie: 'd6',
+        speed: 20, type1: 'water', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/psyduck.png',
         learnset: [
             { level: 1, move: 'Scratch' },
@@ -2361,7 +2360,7 @@ const pokemonDatabase = {
     // 56
     'Mankey': {
         hp: 16, ac: 12, str: 12, dex: 14, con: 11, int: 6, wis: 10, cha: 8,
-        speed: 20, type1: 'fighting', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
+        speed: 20, type1: 'fighting', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/mankey.png',
         learnset: [
             { level: 1, move: 'Covet' },
@@ -2409,7 +2408,7 @@ const pokemonDatabase = {
     // 57
     'Primeape': {
         hp: 45, ac: 15, str: 16, dex: 16, con: 13, int: 6, wis: 12, cha: 8,
-        speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6, hitDie: 'd10',
+        speed: 30, type1: 'fighting', type2: '', size: 'Small', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/primeape.png',
         learnset: [
             { level: 1, move: 'Fling' },
@@ -2459,9 +2458,8 @@ const pokemonDatabase = {
     // 58
     'Growlithe': { 
         hp: 16, ac: 13, str: 13, dex: 14, con: 10, int: 6, wis: 10, cha: 10,
-        speed: 25, type1: 'fire', type2: '', size: 'Medium', sr: .5,
+        speed: 25, type1: 'fire', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/growlithe.png',
-        hitDie: 'd6',
         learnset: [
             { level: 1, move: 'Bite' },
             { level: 1, move: 'Roar' },
@@ -2542,9 +2540,8 @@ const pokemonDatabase = {
     // 60
     'Poliwag': { 
         hp: 16, ac: 13, str: 10, dex: 14, con: 11, int: 6, wis: 10, cha: 10,
-        speed: 20, type1: 'water', type2: '', size: 'Small', sr: .25,
+        speed: 20, type1: 'water', type2: '', size: 'Tiny', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/poliwag.png',
-        hitDie: 'd6',
         learnset: [
             { level: 1, move: 'Water Sport' },
             { level: 2, move: 'Water Gun' },
@@ -2922,9 +2919,8 @@ const pokemonDatabase = {
     // 69
     'Bellsprout': { 
         hp: 18, ac: 11, str: 10, dex: 12, con: 14, int: 6, wis: 10, cha: 10,
-        speed: 20, type1: 'grass', type2: 'poison', size: 'Tiny', sr: .25,
+        speed: 20, type1: 'grass', type2: 'poison', size: 'Tiny', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/bellsprout.png',
-        hitDie: 'd6',
         learnset: [
             { level: 1, move: 'Vine Whip' },
             { level: 2, move: 'Growth' },
@@ -3071,9 +3067,9 @@ const pokemonDatabase = {
                 description: "In rainy conditions, this Pokémon heals for an amount of HP equal to its proficiency bonus at the end of each of its turns."
             }
         ],
-        skillProficiencies: ['sleight-of-hand'],
+        skillProficiencies: ['sleight_of_hand'],
         saveProficiencies: ['constitution'],
-        vulnerabilities: ['electric', 'psychic'],
+        vulnerabilities: ['electric', 'ground', 'psychic'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'water', 'ice', 'steel', 'fighting', 'poison', 'bug', 'fairy'],
         doubleResistances: [],
@@ -3118,9 +3114,9 @@ const pokemonDatabase = {
                 description: "In rainy conditions, this Pokémon heals for an amount of HP equal to its proficiency bonus at the end of each of its turns."
             }
         ],
-        skillProficiencies: ['sleight-of-hand'],
+        skillProficiencies: ['sleight_of_hand'],
         saveProficiencies: ['constitution', 'strength'],
-        vulnerabilities: ['electric', 'psychic'],
+        vulnerabilities: ['electric', 'psychic', 'ground'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'water', 'ice', 'steel', 'fighting', 'poison', 'bug', 'fairy'],
         doubleResistances: [],
@@ -3165,7 +3161,7 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['athletics', 'survival'],
         saveProficiencies: ['constitution'],
-        vulnerabilities: ['water', 'ice', 'fighting', 'ground', 'steel'],
+        vulnerabilities: ['ice', 'fighting', 'ground', 'steel'],
         doubleVulnerabilities: ['grass', 'water'],
         resistances: ['normal', 'fire', 'poison', 'flying', 'rock'],
         doubleResistances: [],
@@ -3210,7 +3206,7 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['athletics', 'survival'],
         saveProficiencies: ['constitution', 'strength'],
-        vulnerabilities: ['water', 'ice', 'fighting', 'ground', 'steel'],
+        vulnerabilities: ['ice', 'fighting', 'ground', 'steel'],
         doubleVulnerabilities: ['grass', 'water'],
         resistances: ['normal', 'fire', 'poison', 'flying', 'rock'],
         doubleResistances: [],
@@ -3256,7 +3252,7 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['athletics', 'survival'],
         saveProficiencies: ['constitution', 'strength'],
-        vulnerabilities: ['water', 'ice', 'fighting', 'ground', 'steel'],
+        vulnerabilities: ['ice', 'fighting', 'ground', 'steel'],
         doubleVulnerabilities: ['grass', 'water'],
         resistances: ['normal', 'fire', 'poison', 'flying', 'rock'],
         doubleResistances: [],
@@ -4052,7 +4048,7 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['stealth', 'deception'],
         saveProficiencies: ['constitution', 'charisma'],
-        vulnerabilities: ['psychic', 'ghost', 'dark'],
+        vulnerabilities: ['psychic', 'ghost', 'dark', 'ground'],
         doubleVulnerabilities: [],
         resistances: ['grass', 'fairy'],
         doubleResistances: ['poison', 'bug'],
@@ -4204,7 +4200,7 @@ const pokemonDatabase = {
     // 98
     'Krabby': { 
         hp: 17, ac: 13, str: 14, dex: 12, con: 12, int: 6, wis: 10, cha: 8,
-        speed: 30, type1: 'water', type2: '', size: 'Small', sr: .25,
+        speed: 30, type1: 'water', type2: '', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/krabby.png',
         learnset: [
             { level: 1, move: 'Bubble' },
@@ -4226,7 +4222,7 @@ const pokemonDatabase = {
         features: [
             {
                 name: "Hyper Cutter",
-                description: "This Pokémon’s attack or damage bonuses cannot be decreased by an opponent’s moves."
+                description: "This Pokémon's attack or damage bonuses cannot be decreased by an opponent's moves."
             },
             {
                 name: "Shell Armor",
@@ -4237,7 +4233,7 @@ const pokemonDatabase = {
                 description: "This Pokémon cannot cause additional effects from damaging moves. Instead, on any such move, double the move modifier when calculating damage."
             }
         ],
-        skillProficiencies: ['sleight of hand', 'survival'],
+        skillProficiencies: ['sleight_of_hand', 'survival'],
         saveProficiencies: ['constitution'],
         vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
@@ -4282,7 +4278,7 @@ const pokemonDatabase = {
                 description: "This Pokémon cannot cause additional effects from damaging moves. Instead, on any such move, double the move modifier when calculating damage."
             }
         ],
-        skillProficiencies: ['sleight of hand', 'survival'],
+        skillProficiencies: ['sleight_of_hand', 'survival'],
         saveProficiencies: ['constitution'],
         vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
@@ -4504,8 +4500,8 @@ const pokemonDatabase = {
     },
     // 105
     'Marowak': {
-        hp: 13, ac: 22, str: 16, dex: 9, con: 16, int: 10, wis: 16, cha: 12,
-        speed: 25, type1: 'ground', type2: '', size: 'Medium', sr: 7, hitDie: 'd10',
+        hp: 50, ac: 16, str: 18, dex: 12, con: 14, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'ground', type2: '', size: 'MediSmallum', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/marowak.png',
         learnset: [
             { level: 1, move: 'Bone Club' },
@@ -4539,8 +4535,8 @@ const pokemonDatabase = {
                 description: "This Pokémon is immune to extra damage dealt by a Critical Hit."
             }
         ],
-        skillProficiencies: ['survival'],
-        saveProficiencies: ['constitution'],
+        skillProficiencies: ['athletics', 'survival'],
+        saveProficiencies: ['strength', 'constitution'],
         vulnerabilities: ['water', 'grass', 'ice'],
         doubleVulnerabilities: [],
         resistances: ['poison', 'rock'],
@@ -4550,14 +4546,8 @@ const pokemonDatabase = {
     // 106
     'Hitmonlee': {
         hp: 45, ac: 16, str: 14, dex: 16, con: 12, int: 6, wis: 12, cha: 10,
-        speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6,
-        hitDie: 'd10',
+        speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/hitmonlee.png',
-        vulnerabilities: ['fairy', 'flying', 'psychic'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'dark', 'rock'],
-        doubleResistances: [],
-        immunities: [],
         learnset: [
             { level: 1, move: 'Double Kick' },
             { level: 1, move: 'Revenge' },
@@ -4593,19 +4583,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics', 'acrobatics'],
-        saveProficiencies: ['strength', 'dexterity']
-    },
-    // 107
-    'Hitmonchan': {
-        hp: 45, ac: 16, str: 16, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
-        speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6,
-        hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/hitmonchan.png',
+        saveProficiencies: ['strength', 'dexterity'],
         vulnerabilities: ['fairy', 'flying', 'psychic'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'dark', 'rock'],
         doubleResistances: [],
-        immunities: [],
+        immunities: []
+    },
+    // 107
+    'Hitmonchan': {
+        hp: 45, ac: 16, str: 16, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
+        speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6, hitDie: 'd10',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/hitmonchan.png',
         learnset: [
             { level: 1, move: 'Comet Punch' },
             { level: 1, move: 'Pursuit' },
@@ -4641,19 +4630,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics', 'acrobatics'],
-        saveProficiencies: ['strength', 'dexterity']
+        saveProficiencies: ['strength', 'dexterity'],
+        vulnerabilities: ['fairy', 'flying', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'dark', 'rock'],
+        doubleResistances: [],
+        immunities: []
     },
     // 108
     'Lickitung': {
         hp: 70, ac: 14, str: 15, dex: 12, con: 15, int: 6, wis: 10, cha: 12,
-        speed: 30, type1: 'normal', type2: '', size: 'Small', sr: 7,
-        hitDie: 'd10',
+        speed: 30, type1: 'normal', type2: '', size: 'Small', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/lickitung.png',
-        vulnerabilities: ['fighting'],
-        doubleVulnerabilities: [],
-        resistances: [],
-        doubleResistances: [],
-        immunities: ['ghost'],
         learnset: [
             { level: 1, move: 'Lick' },
             { level: 1, move: 'Supersonic' },
@@ -4686,19 +4674,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['perception'],
-        saveProficiencies: ['constitution']
+        saveProficiencies: ['constitution'],
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost']
     },
     // 109
     'Koffing': {
         hp: 18, ac: 14, str: 15, dex: 10, con: 14, int: 6, wis: 10, cha: 8,
-        speed: 20, type1: 'poison', type2: '', size: 'Tiny', sr: 0.5,
-        hitDie: 'd6',
+        speed: 20, type1: 'poison', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/koffing.png',
-        vulnerabilities: ['ground', 'psychic'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'fairy', 'fighting', 'grass', 'poison'],
-        doubleResistances: [],
-        immunities: [],
         learnset: [
             { level: 1, move: 'Poison Gas' },
             { level: 1, move: 'Tackle' },
@@ -4723,19 +4710,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['deception'],
-        saveProficiencies: ['constitution']
-    },
-    // 110
-    'Weezing': {
-        hp: 88, ac: 16, str: 16, dex: 14, con: 18, int: 6, wis: 12, cha: 8,
-        speed: 30, type1: 'poison', type2: '', size: 'Medium', sr: 10,
-        hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/weezing.png',
+        saveProficiencies: ['constitution'],
         vulnerabilities: ['ground', 'psychic'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'fairy', 'fighting', 'grass', 'poison'],
         doubleResistances: [],
-        immunities: [],
+        immunities: []
+    },
+    // 110
+    'Weezing': {
+        hp: 88, ac: 16, str: 16, dex: 14, con: 18, int: 6, wis: 12, cha: 8,
+        speed: 30, type1: 'poison', type2: '', size: 'Medium', sr: 10, hitDie: 'd10',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/weezing.png',
         learnset: [
             { level: 1, move: 'Double Hit' },
             { level: 1, move: 'Poison Gas' },
@@ -4761,19 +4747,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['deception'],
-        saveProficiencies: ['constitution']
+        saveProficiencies: ['constitution'],
+        vulnerabilities: ['ground', 'psychic'],
+        doubleVulnerabilities: [],
+        resistances: ['bug', 'fairy', 'fighting', 'grass', 'poison'],
+        doubleResistances: [],
+        immunities: []
     },
     // 111
     'Rhyhorn': {
         hp: 40, ac: 13, str: 15, dex: 10, con: 14, int: 6, wis: 10, cha: 10,
-        speed: 30, type1: 'ground', type2: 'rock', size: 'Medium', sr: 3,
-        hitDie: 'd8',
+        speed: 30, type1: 'ground', type2: 'rock', size: 'Medium', sr: 3, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/rhyhorn.png',
-        vulnerabilities: ['fighting', 'grass', 'ground', 'ice', 'steel', 'water'],
-        doubleVulnerabilities: ['grass', 'water'],
-        resistances: ['fire', 'flying', 'normal', 'poison', 'rock'],
-        doubleResistances: [],
-        immunities: ['electric'],
         learnset: [
             { level: 1, move: 'Horn Attack' },
             { level: 1, move: 'Tail Whip' },
@@ -4808,19 +4793,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics'],
-        saveProficiencies: ['strength', 'constitution']
+        saveProficiencies: ['strength', 'constitution'],
+        vulnerabilities: ['fighting', 'ground', 'ice', 'steel'],
+        doubleVulnerabilities: ['grass', 'water'],
+        resistances: ['fire', 'flying', 'normal', 'poison', 'rock'],
+        doubleResistances: [],
+        immunities: ['electric']
     },
     // 112
     'Rhydon': {
         hp: 128, ac: 15, str: 18, dex: 13, con: 17, int: 6, wis: 12, cha: 10,
-        speed: 40, type1: 'ground', type2: 'rock', size: 'Large', sr: 11,
-        hitDie: 'd12',
+        speed: 40, type1: 'ground', type2: 'rock', size: 'Large', sr: 11, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/rhydon.png',
-        vulnerabilities: ['fighting', 'grass', 'ground', 'ice', 'steel', 'water'],
-        doubleVulnerabilities: ['grass', 'water'],
-        resistances: ['fire', 'flying', 'normal', 'poison', 'rock'],
-        doubleResistances: [],
-        immunities: ['electric'],
         learnset: [
             { level: 1, move: 'Fury Attack' },
             { level: 1, move: 'Hammer Arm' },
@@ -4856,19 +4840,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics'],
-        saveProficiencies: ['strength', 'constitution']
+        saveProficiencies: ['strength', 'constitution'],
+        vulnerabilities: ['fighting', 'ground', 'ice', 'steel'],
+        doubleVulnerabilities: ['grass', 'water'],
+        resistances: ['fire', 'flying', 'normal', 'poison', 'rock'],
+        doubleResistances: [],
+        immunities: ['electric']
     },
     // 113
     'Chansey': {
         hp: 75, ac: 13, str: 11, dex: 10, con: 18, int: 6, wis: 12, cha: 18,
-        speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 7,
-        hitDie: 'd12',
+        speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 7, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/chansey.png',
-        vulnerabilities: ['fighting'],
-        doubleVulnerabilities: [],
-        resistances: [],
-        doubleResistances: [],
-        immunities: ['ghost'],
         learnset: [
             { level: 1, move: 'Defense Curl' },
             { level: 1, move: 'Growl' },
@@ -4904,19 +4887,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['arcana', 'medicine'],
-        saveProficiencies: ['wisdom', 'charisma']
+        saveProficiencies: ['wisdom', 'charisma'],
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost']
     },
     // 114
     'Tangela': {
         hp: 35, ac: 15, str: 15, dex: 14, con: 15, int: 6, wis: 10, cha: 10,
-        speed: 30, type1: 'grass', type2: '', size: 'Small', sr: 5,
-        hitDie: 'd8',
+        speed: 30, type1: 'grass', type2: '', size: 'Small', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/tangela.png',
-        vulnerabilities: ['bug', 'fire', 'flying', 'ice', 'poison'],
-        doubleVulnerabilities: [],
-        resistances: ['electric', 'grass', 'ground', 'water'],
-        doubleResistances: [],
-        immunities: [],
         learnset: [
             { level: 1, move: 'Constrict' },
             { level: 1, move: 'Ingrain' },
@@ -4953,19 +4935,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['nature'],
-        saveProficiencies: ['constitution']
+        saveProficiencies: ['constitution'],
+        vulnerabilities: ['bug', 'fire', 'flying', 'ice', 'poison'],
+        doubleVulnerabilities: [],
+        resistances: ['electric', 'grass', 'ground', 'water'],
+        doubleResistances: [],
+        immunities: []
     },
     // 115
     'Kangaskhan': {
         hp: 60, ac: 18, str: 19, dex: 18, con: 15, int: 6, wis: 12, cha: 8,
-        speed: 30, type1: 'normal', type2: '', size: 'Large', sr: 10,
-        hitDie: 'd12',
+        speed: 30, type1: 'normal', type2: '', size: 'Large', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kangaskhan.png',
-        vulnerabilities: ['fighting'],
-        doubleVulnerabilities: [],
-        resistances: [],
-        doubleResistances: [],
-        immunities: ['ghost'],
         learnset: [
             { level: 1, move: 'Comet Punch' },
             { level: 1, move: 'Leer' },
@@ -4998,19 +4979,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics', 'perception', 'intimidation'],
-        saveProficiencies: ['strength', 'constitution']
+        saveProficiencies: ['strength', 'constitution'],
+        vulnerabilities: ['fighting'],
+        doubleVulnerabilities: [],
+        resistances: [],
+        doubleResistances: [],
+        immunities: ['ghost']
     },
     // 116
     'Horsea': {
         hp: 16, ac: 13, str: 11, dex: 14, con: 10, int: 6, wis: 10, cha: 12,
-        speed: 5, type1: 'water', type2: '', size: 'Tiny', sr: 0.5,
-        hitDie: 'd6',
+        speed: 5, type1: 'water', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/horsea.png',
-        vulnerabilities: ['electric', 'grass'],
-        doubleVulnerabilities: [],
-        resistances: ['fire', 'ice', 'steel', 'water'],
-        doubleResistances: [],
-        immunities: [],
         learnset: [
             { level: 1, move: 'Bubble' },
             { level: 2, move: 'Smokescreen' },
@@ -5040,19 +5020,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
-    },
-    // 117
-    'Seadra': {
-        hp: 64, ac: 15, str: 15, dex: 17, con: 13, int: 6, wis: 12, cha: 10,
-        speed: 35, type1: 'water', type2: '', size: 'Small', sr: 8,
-        hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/seadra.png',
+        saveProficiencies: ['dexterity'],
         vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'ice', 'steel', 'water'],
         doubleResistances: [],
-        immunities: [],
+        immunities: []
+    },
+    // 117
+    'Seadra': {
+        hp: 64, ac: 15, str: 15, dex: 17, con: 13, int: 6, wis: 12, cha: 10,
+        speed: 5, type1: 'water', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/seadra.png',
         learnset: [
             { level: 1, move: 'Bubble' },
             { level: 1, move: 'Hydro Pump' },
@@ -5082,19 +5061,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
-    },
-    // 118
-    'Goldeen': {
-        hp: 17, ac: 13, str: 11, dex: 13, con: 12, int: 6, wis: 10, cha: 10,
-        speed: 30, type1: 'water', type2: '', size: 'Small', sr: 0.25,
-        hitDie: 'd6',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/goldeen.png',
+        saveProficiencies: ['dexterity'],
         vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'ice', 'steel', 'water'],
         doubleResistances: [],
-        immunities: [],
+        immunities: []
+    },
+    // 118
+    'Goldeen': {
+        hp: 17, ac: 13, str: 11, dex: 13, con: 12, int: 6, wis: 10, cha: 10,
+        speed: 5, type1: 'water', type2: '', size: 'Small', sr: 0.25, hitDie: 'd6',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/goldeen.png',
         learnset: [
             { level: 1, move: 'Peck' },
             { level: 1, move: 'Tail Whip' },
@@ -5126,19 +5104,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
-    },
-    // 119
-    'Seaking': {
-        hp: 72, ac: 15, str: 14, dex: 17, con: 14, int: 6, wis: 12, cha: 10,
-        speed: 35, type1: 'water', type2: '', size: 'Medium', sr: 9,
-        hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/seaking.png',
+        saveProficiencies: ['dexterity'],
         vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'ice', 'steel', 'water'],
         doubleResistances: [],
-        immunities: [],
+        immunities: []
+    },
+    // 119
+    'Seaking': {
+        hp: 72, ac: 15, str: 14, dex: 17, con: 14, int: 6, wis: 12, cha: 10,
+        speed: 5, type1: 'water', type2: '', size: 'Medium', sr: 9, hitDie: 'd12',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/seaking.png',
         learnset: [
             { level: 1, move: 'Peck' },
             { level: 1, move: 'Poison Jab' },
@@ -5171,19 +5148,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
-    },
-    // 120
-    'Staryu': {
-        hp: 16, ac: 14, str: 10, dex: 14, con: 11, int: 6, wis: 12, cha: 10,
-        speed: 20, type1: 'water', type2: '', size: 'Small', sr: 0.5,
-        hitDie: 'd6',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/staryu.png',
+        saveProficiencies: ['dexterity'],
         vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'ice', 'steel', 'water'],
         doubleResistances: [],
-        immunities: [],
+        immunities: []
+    },
+    // 120
+    'Staryu': {
+        hp: 16, ac: 14, str: 10, dex: 14, con: 11, int: 6, wis: 12, cha: 10,
+        speed: 20, type1: 'water', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/staryu.png',
         learnset: [
             { level: 1, move: 'Harden' },
             { level: 1, move: 'Tackle' },
@@ -5220,19 +5196,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['electric', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fire', 'ice', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: []
     },
     // 121
     'Starmie': {
         hp: 64, ac: 17, str: 14, dex: 17, con: 13, int: 6, wis: 14, cha: 10,
-        speed: 40, type1: 'water', type2: 'psychic', size: 'Small', sr: 9,
-        hitDie: 'd10',
+        speed: 30, type1: 'water', type2: 'psychic', size: 'Small', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/starmie.png',
-        vulnerabilities: ['bug', 'dark', 'electric', 'ghost', 'grass'],
-        doubleVulnerabilities: [],
-        resistances: ['fighting', 'fire', 'ice', 'psychic', 'steel', 'water'],
-        doubleResistances: [],
-        immunities: [],
         learnset: [
             { level: 1, move: 'Hydro Pump' },
             { level: 1, move: 'Rapid Spin' },
@@ -5257,19 +5232,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['bug', 'dark', 'electric', 'ghost', 'grass'],
+        doubleVulnerabilities: [],
+        resistances: ['fighting', 'fire', 'ice', 'psychic', 'steel', 'water'],
+        doubleResistances: [],
+        immunities: []
     },
     // 122
     'Mr. Mime': {
         hp: 50, ac: 17, str: 12, dex: 15, con: 8, int: 12, wis: 14, cha: 12,
-        speed: 30, type1: 'psychic', type2: 'fairy', size: 'Medium', sr: 9,
-        hitDie: 'd8',
+        speed: 30, type1: 'psychic', type2: 'fairy', size: 'Medium', sr: 9, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/mr-mime.png',
-        vulnerabilities: ['ghost', 'poison', 'steel'],
-        doubleVulnerabilities: [],
-        resistances: ['fighting', 'psychic'],
-        doubleResistances: [],
-        immunities: ['dragon'],
         learnset: [
             { level: 1, move: 'Barrier' },
             { level: 1, move: 'Confusion' },
@@ -5311,19 +5285,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['performance'],
-        saveProficiencies: ['charisma']
+        saveProficiencies: ['charisma'],
+        vulnerabilities: ['ghost', 'poison', 'steel'],
+        doubleVulnerabilities: [],
+        resistances: ['psychic'],
+        doubleResistances: ['fighting'],
+        immunities: ['dragon']
     },
     // 123
     'Scyther': {
         hp: 58, ac: 16, str: 17, dex: 18, con: 12, int: 6, wis: 10, cha: 8,
-        speed: 35, type1: 'bug', type2: 'flying', size: 'Medium', sr: 8,
-        hitDie: 'd10',
+        speed: 35, type1: 'bug', type2: 'flying', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/scyther.png',
-        vulnerabilities: ['electric', 'fire', 'flying', 'ice', 'rock'],
-        doubleVulnerabilities: ['rock'],
-        resistances: ['bug'],
-        doubleResistances: ['grass', 'fighting'],
-        immunities: ['ground'],
         learnset: [
             { level: 1, move: 'Leer' },
             { level: 1, move: 'Quick Attack' },
@@ -5359,19 +5332,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['acrobatics'],
-        saveProficiencies: ['dexterity']
+        saveProficiencies: ['dexterity'],
+        vulnerabilities: ['electric', 'fire', 'flying', 'ice'],
+        doubleVulnerabilities: ['rock'],
+        resistances: ['bug'],
+        doubleResistances: ['grass', 'fighting'],
+        immunities: ['ground']
     },
     // 124
     'Jynx': {
         hp: 67, ac: 15, str: 12, dex: 16, con: 14, int: 8, wis: 16, cha: 16,
-        speed: 30, type1: 'ice', type2: 'psychic', size: 'Medium', sr: 8,
-        hitDie: 'd10',
+        speed: 30, type1: 'ice', type2: 'psychic', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/jynx.png',
-        vulnerabilities: ['bug', 'dark', 'fire', 'ghost', 'rock', 'steel'],
-        doubleVulnerabilities: [],
-        resistances: ['ice', 'psychic'],
-        doubleResistances: [],
-        immunities: [],
         learnset: [
             { level: 1, move: 'Draining Kiss' },
             { level: 1, move: 'Pound' },
@@ -5405,19 +5377,18 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['insight', 'deception'],
-        saveProficiencies: ['charisma']
+        saveProficiencies: ['charisma'],
+        vulnerabilities: ['bug', 'dark', 'fire', 'ghost', 'rock', 'steel'],
+        doubleVulnerabilities: [],
+        resistances: ['ice', 'psychic'],
+        doubleResistances: [],
+        immunities: [],
     },
     // 125
     'Electabuzz': {
         hp: 68, ac: 15, str: 15, dex: 18, con: 15, int: 6, wis: 12, cha: 10,
-        speed: 30, type1: 'electric', type2: '', size: 'Small', sr: 9,
-        hitDie: 'd10',
+        speed: 30, type1: 'electric', type2: '', size: 'Small', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/electabuzz.png',
-        vulnerabilities: ['ground'],
-        doubleVulnerabilities: [],
-        resistances: ['electric', 'flying', 'steel'],
-        doubleResistances: [],
-        immunities: [],
         learnset: [
             { level: 1, move: 'Leer' },
             { level: 1, move: 'Quick Attack' },
@@ -5445,7 +5416,12 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics'],
-        saveProficiencies: ['constitution']
+        saveProficiencies: ['constitution'],
+        vulnerabilities: ['ground'],
+        doubleVulnerabilities: [],
+        resistances: ['electric', 'flying', 'steel'],
+        doubleResistances: [],
+        immunities: []
     },
     // 126
     'Magmar': { 
