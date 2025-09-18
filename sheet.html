@@ -956,7 +956,25 @@
                                 <input type="number" name="attr_pokemon_move1_pp" placeholder="15" class="sheet-move-stat-input" />
                             </div>
                         </div>
-                        
+
+                        <div class="sheet-move-effectiveness">
+                            <label>Type Effectiveness:</label>
+                            <div class="sheet-effectiveness-row">
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">2×</span>
+                                    <textarea name="attr_pokemon_move1_super_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">½×</span>
+                                    <textarea name="attr_pokemon_move1_not_very_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">0×</span>
+                                    <textarea name="attr_pokemon_move1_no_effect" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="sheet-move-description-compact">
                             <label>Description:</label>
                             <textarea name="attr_pokemon_move1_description" placeholder="Move effects and description..." readonly></textarea>
@@ -1016,7 +1034,25 @@
                                 <input type="number" name="attr_pokemon_move2_pp" placeholder="15" class="sheet-move-stat-input" />
                             </div>
                         </div>
-                        
+
+                        <div class="sheet-move-effectiveness">
+                            <label>Type Effectiveness:</label>
+                            <div class="sheet-effectiveness-row">
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">2×</span>
+                                    <textarea name="attr_pokemon_move2_super_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">½×</span>
+                                    <textarea name="attr_pokemon_move2_not_very_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">0×</span>
+                                    <textarea name="attr_pokemon_move2_no_effect" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="sheet-move-description-compact">
                             <label>Description:</label>
                             <textarea name="attr_pokemon_move2_description" placeholder="Move effects and description..." readonly></textarea>
@@ -1076,7 +1112,25 @@
                                 <input type="number" name="attr_pokemon_move3_pp" placeholder="15" class="sheet-move-stat-input" />
                             </div>
                         </div>
-                        
+
+                        <div class="sheet-move-effectiveness">
+                            <label>Type Effectiveness:</label>
+                            <div class="sheet-effectiveness-row">
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">2×</span>
+                                    <textarea name="attr_pokemon_move3_super_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">½×</span>
+                                    <textarea name="attr_pokemon_move3_not_very_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">0×</span>
+                                    <textarea name="attr_pokemon_move3_no_effect" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="sheet-move-description-compact">
                             <label>Description:</label>
                             <textarea name="attr_pokemon_move3_description" placeholder="Move effects and description..." readonly></textarea>
@@ -1136,7 +1190,25 @@
                                 <input type="number" name="attr_pokemon_move4_pp" placeholder="15" class="sheet-move-stat-input" />
                             </div>
                         </div>
-                        
+
+                        <div class="sheet-move-effectiveness">
+                            <label>Type Effectiveness:</label>
+                            <div class="sheet-effectiveness-row">
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">2×</span>
+                                    <textarea name="attr_pokemon_move4_super_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">½×</span>
+                                    <textarea name="attr_pokemon_move4_not_very_effective" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                                <div class="sheet-effectiveness-group">
+                                    <span class="sheet-effectiveness-label">0×</span>
+                                    <textarea name="attr_pokemon_move4_no_effect" readonly class="sheet-effectiveness-types"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="sheet-move-description-compact">
                             <label>Description:</label>
                             <textarea name="attr_pokemon_move4_description" placeholder="Move effects and description..." readonly></textarea>
@@ -9302,6 +9374,9 @@ function updateMoveTypeClass(moveNum) {
         setAttrs(updateObj, function() {
             console.log(`✅ Successfully set type class for move ${moveNum}: ${typeClass}`);
             console.log(`✅ Successfully set type selector for move ${moveNum}: ${moveType}`);
+
+            // Update type effectiveness display
+            updateTypeEffectiveness(moveNum, moveType);
         });
 
         console.log(`🎨 Move ${moveNum} type updated: "${moveType}" -> "${typeClass}"`);
@@ -9367,6 +9442,75 @@ on("sheet:opened", function() {
     }
     console.log('✅ Finished processing all moves on sheet open');
 });
+
+// Type effectiveness data
+const typeEffectiveness = {
+    normal: { weak: ['fighting'], resist: [], immune: ['ghost'] },
+    fire: { weak: ['water', 'ground', 'rock'], resist: ['fire', 'grass', 'ice', 'bug', 'steel', 'fairy'], immune: [] },
+    water: { weak: ['electric', 'grass'], resist: ['fire', 'water', 'ice', 'steel'], immune: [] },
+    electric: { weak: ['ground'], resist: ['electric', 'flying', 'steel'], immune: [] },
+    grass: { weak: ['fire', 'ice', 'poison', 'flying', 'bug'], resist: ['water', 'electric', 'grass', 'ground'], immune: [] },
+    ice: { weak: ['fire', 'fighting', 'rock', 'steel'], resist: ['ice'], immune: [] },
+    fighting: { weak: ['flying', 'psychic', 'fairy'], resist: ['bug', 'rock', 'dark'], immune: ['ghost'] },
+    poison: { weak: ['ground', 'psychic'], resist: ['grass', 'fighting', 'poison', 'bug', 'fairy'], immune: [] },
+    ground: { weak: ['water', 'grass', 'ice'], resist: ['poison', 'rock'], immune: ['electric'] },
+    flying: { weak: ['electric', 'ice', 'rock'], resist: ['grass', 'fighting', 'bug'], immune: ['ground'] },
+    psychic: { weak: ['bug', 'ghost', 'dark'], resist: ['fighting', 'psychic'], immune: [] },
+    bug: { weak: ['fire', 'flying', 'rock'], resist: ['grass', 'fighting', 'ground'], immune: [] },
+    rock: { weak: ['water', 'grass', 'fighting', 'ground', 'steel'], resist: ['normal', 'fire', 'poison', 'flying'], immune: [] },
+    ghost: { weak: ['ghost', 'dark'], resist: ['poison', 'bug'], immune: ['normal', 'fighting'] },
+    dragon: { weak: ['ice', 'dragon', 'fairy'], resist: ['fire', 'water', 'electric', 'grass'], immune: [] },
+    dark: { weak: ['fighting', 'bug', 'fairy'], resist: ['ghost', 'dark'], immune: ['psychic'] },
+    steel: { weak: ['fire', 'fighting', 'ground'], resist: ['normal', 'grass', 'ice', 'flying', 'psychic', 'bug', 'rock', 'dragon', 'steel', 'fairy'], immune: ['poison'] },
+    fairy: { weak: ['poison', 'steel'], resist: ['fighting', 'bug', 'dark'], immune: ['dragon'] }
+};
+
+// Function to update type effectiveness display
+function updateTypeEffectiveness(moveNum, moveType) {
+    if (!moveType || moveType === '') {
+        // Clear all effectiveness displays if no type
+        setAttrs({
+            [`pokemon_move${moveNum}_super_effective`]: '',
+            [`pokemon_move${moveNum}_not_very_effective`]: '',
+            [`pokemon_move${moveNum}_no_effect`]: ''
+        });
+        return;
+    }
+
+    const type = moveType.toLowerCase();
+
+    // Get what this move type is super effective against (2x damage)
+    const superEffective = [];
+    const notVeryEffective = [];
+    const noEffect = [];
+
+    // Check each defending type
+    Object.keys(typeEffectiveness).forEach(defendingType => {
+        const defending = typeEffectiveness[defendingType];
+
+        if (defending.weak.includes(type)) {
+            superEffective.push(defendingType);
+        } else if (defending.resist.includes(type)) {
+            notVeryEffective.push(defendingType);
+        } else if (defending.immune.includes(type)) {
+            noEffect.push(defendingType);
+        }
+    });
+
+    // Create simple text lists instead of HTML
+    const superText = superEffective.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(', ');
+    const resistText = notVeryEffective.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(', ');
+    const immuneText = noEffect.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(', ');
+
+    // Update hidden attributes that we can reference in HTML
+    setAttrs({
+        [`pokemon_move${moveNum}_super_effective`]: superText,
+        [`pokemon_move${moveNum}_not_very_effective`]: resistText,
+        [`pokemon_move${moveNum}_no_effect`]: immuneText
+    });
+
+    console.log(`Type effectiveness for ${moveType}: Super=${superText}, Resisted=${resistText}, Immune=${immuneText}`);
+}
 
 // Test function to check current move types and selectors
 function debugMoveTypes() {

@@ -2927,3 +2927,105 @@ input[name="attr_pokemon_move4_type_selector"][value="Fairy"] ~ .sheet-move-head
     transition: transform 0.3s ease;
     font-size: 10px;
 }
+/* Type Effectiveness Section */
+.sheet-move-effectiveness {
+    margin: 8px 0;
+    padding: 8px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+.sheet-move-effectiveness label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.sheet-effectiveness-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.sheet-effectiveness-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sheet-effectiveness-label {
+    font-weight: bold;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.sheet-effectiveness-group:nth-child(1) .sheet-effectiveness-label {
+    background: #28a745;
+    color: white;
+}
+
+.sheet-effectiveness-group:nth-child(2) .sheet-effectiveness-label {
+    background: #ffc107;
+    color: black;
+}
+
+.sheet-effectiveness-group:nth-child(3) .sheet-effectiveness-label {
+    background: #dc3545;
+    color: white;
+}
+
+textarea.sheet-effectiveness-types {
+    border: none !important;
+    background: transparent !important;
+    font-size: 10px !important;
+    color: #333 !important;
+    width: 120px !important;
+    padding: 2px !important;
+    min-height: 16px !important;
+    height: auto !important;
+    max-height: none !important;
+    resize: none !important;
+    overflow: visible !important;
+    font-family: inherit !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+.sheet-type-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    font-size: 8px;
+    text-align: center;
+    line-height: 16px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Type icon colors */
+.sheet-type-icon.normal { background-color: #A8A878; color: #000; }
+.sheet-type-icon.fire { background-color: #F08030; }
+.sheet-type-icon.water { background-color: #6890F0; }
+.sheet-type-icon.electric { background-color: #F8D030; color: #000; }
+.sheet-type-icon.grass { background-color: #78C850; color: #000; }
+.sheet-type-icon.ice { background-color: #98D8D8; color: #000; }
+.sheet-type-icon.fighting { background-color: #C03028; }
+.sheet-type-icon.poison { background-color: #A040A0; }
+.sheet-type-icon.ground { background-color: #E0C068; color: #000; }
+.sheet-type-icon.flying { background-color: #A890F0; color: #000; }
+.sheet-type-icon.psychic { background-color: #F85888; }
+.sheet-type-icon.bug { background-color: #A8B820; color: #000; }
+.sheet-type-icon.rock { background-color: #B8A038; color: #000; }
+.sheet-type-icon.ghost { background-color: #705898; }
+.sheet-type-icon.dragon { background-color: #7038F8; }
+.sheet-type-icon.dark { background-color: #705848; }
+.sheet-type-icon.steel { background-color: #B8B8D0; color: #000; }
+.sheet-type-icon.fairy { background-color: #EE99AC; color: #000; }
