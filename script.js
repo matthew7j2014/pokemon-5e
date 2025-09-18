@@ -142,22 +142,6 @@ const pokemonDatabase = {
         hp: 17, ac: 13, str: 13, dex: 12, con: 12, int: 6, wis: 10, cha: 10,
         speed: 30, type1: 'grass', type2: 'poison', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/bulbasaur.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Growl' },
-            { level: 2, move: 'Vine Whip' },
-            { level: 2, move: 'Leech Seed' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Sleep Powder' },
-            { level: 6, move: 'Take Down' },
-            { level: 6, move: 'Razor Leaf' },
-            { level: 10, move: 'Sweet Scent' },
-            { level: 10, move: 'Growth' },
-            { level: 10, move: 'Double-Edge' },
-            { level: 14, move: 'Worry Seed' },
-            { level: 14, move: 'Synthesis' },
-            { level: 18, move: 'Seed Bomb' }
-        ],
         features: [
             {
                 name: "Overgrow",
@@ -181,22 +165,6 @@ const pokemonDatabase = {
         hp: 45, ac: 15, str: 15, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'grass', type2: 'poison', size: 'Medium', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/ivysaur.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Leech Seed' },
-            { level: 1, move: 'Vine Whip' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Sleep Powder' },
-            { level: 6, move: 'Take Down' },
-            { level: 10, move: 'Razor Leaf' },
-            { level: 10, move: 'Sweet Scent' },
-            { level: 14, move: 'Growth' },
-            { level: 14, move: 'Double-Edge' },
-            { level: 14, move: 'Worry Seed' },
-            { level: 18, move: 'Synthesis' },
-            { level: 18, move: 'Solar Beam' }
-        ],
         features: [
             {
                 name: "Overgrow",
@@ -220,24 +188,6 @@ const pokemonDatabase = {
         hp: 102, ac: 16, str: 19, dex: 17, con: 14, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'grass', type2: 'poison', size: 'Large', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/venusaur.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Leech Seed' },
-            { level: 1, move: 'Vine Whip' },
-            { level: 1, move: 'Petal Dance' },
-            { level: 1, move: 'Poison Powder' },
-            { level: 1, move: 'Sleep Powder' },
-            { level: 1, move: 'Take Down' },
-            { level: 1, move: 'Razor Leaf' },
-            { level: 1, move: 'Sweet Scent' },
-            { level: 14, move: 'Growth' },
-            { level: 14, move: 'Double-Edge' },
-            { level: 14, move: 'Worry Seed' },
-            { level: 18, move: 'Synthesis' },
-            { level: 18, move: 'Solar Beam' },
-            { level: 18, move: 'Petal Blizzard' }
-        ],
         features: [
             {
                 name: "Overgrow",
@@ -261,20 +211,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 12, dex: 14, con: 11, int: 6, wis: 10, cha: 10,
         speed: 30, type1: 'fire', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/charmander.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Scratch' },
-            { level: 2, move: 'Ember' },
-            { level: 2, move: 'Smokescreen' },
-            { level: 6, move: 'Dragon Rage' },
-            { level: 6, move: 'Scary Face' },
-            { level: 10, move: 'Fire Fang' },
-            { level: 10, move: 'Slash' },
-            { level: 14, move: 'Flame Burst' },
-            { level: 14, move: 'Flamethrower' },
-            { level: 18, move: 'Fire Spin' },
-            { level: 18, move: 'Inferno' }
-        ],
         features: [
             {
                 name: "Blaze",
@@ -298,20 +234,6 @@ const pokemonDatabase = {
         hp: 40, ac: 14, str: 14, dex: 16, con: 11, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'fire', type2: '', size: 'Medium', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/charmeleon.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Ember' },
-            { level: 1, move: 'Smokescreen' },
-            { level: 6, move: 'Dragon Rage' },
-            { level: 10, move: 'Scary Face' },
-            { level: 14, move: 'Fire Fang' },
-            { level: 14, move: 'Flame Burst' },
-            { level: 14, move: 'Slash' },
-            { level: 18, move: 'Flamethrower' },
-            { level: 18, move: 'Fire Spin' },
-            { level: 18, move: 'Inferno' }
-        ],
         features: [
             {
                 name: "Blaze",
@@ -335,26 +257,6 @@ const pokemonDatabase = {
         hp: 102, ac: 16, str: 16, dex: 19, con: 15, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'fire', type2: 'flying', size: 'Large', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/charizard.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Air Slash' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Ember' },
-            { level: 1, move: 'Dragon Claw' },
-            { level: 1, move: 'Shadow Claw' },
-            { level: 1, move: 'Wing Attack' },
-            { level: 1, move: 'Smokescreen' },
-            { level: 1, move: 'Dragon Rage' },
-            { level: 1, move: 'Scary Face' },
-            { level: 14, move: 'Fire Fang' },
-            { level: 14, move: 'Flame Burst' },
-            { level: 14, move: 'Slash' },
-            { level: 18, move: 'Flamethrower' },
-            { level: 18, move: 'Fire Spin' },
-            { level: 18, move: 'Heat Wave' },
-            { level: 18, move: 'Inferno' },
-            { level: 18, move: 'Flare Blitz' }
-        ],
         features: [
             {
                 name: "Blaze",
@@ -378,23 +280,6 @@ const pokemonDatabase = {
         hp: 18, ac: 14, str: 12, dex: 11, con: 14, int: 6, wis: 10, cha: 10,
         speed: 30, type1: 'water', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/squirtle.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 2, move: 'Water Gun' },
-            { level: 2, move: 'Withdraw' },
-            { level: 6, move: 'Bubble' },
-            { level: 6, move: 'Bite' },
-            { level: 6, move: 'Rapid Spin' },
-            { level: 10, move: 'Protect' },
-            { level: 10, move: 'Water Pulse' },
-            { level: 10, move: 'Wave Crash' },
-            { level: 14, move: 'Aqua Tail' },
-            { level: 14, move: 'Skull Bash' },
-            { level: 14, move: 'Iron Defense' },
-            { level: 18, move: 'Rain Dance' },
-            { level: 18, move: 'Hydro Pump' }
-        ],
         features: [
             {
                 name: "Torrent",
@@ -418,23 +303,6 @@ const pokemonDatabase = {
         hp: 50, ac: 15, str: 14, dex: 12, con: 15, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'water', type2: '', size: 'Medium', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/wartortle.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Withdraw' },
-            { level: 6, move: 'Bubble' },
-            { level: 6, move: 'Bite' },
-            { level: 10, move: 'Rapid Spin' },
-            { level: 10, move: 'Protect' },
-            { level: 14, move: 'Water Pulse' },
-            { level: 14, move: 'Aqua Tail' },
-            { level: 14, move: 'Skull Bash' },
-            { level: 14, move: 'Wave Crash' },
-            { level: 18, move: 'Iron Defense' },
-            { level: 18, move: 'Rain Dance' },
-            { level: 18, move: 'Hydro Pump' }
-        ],
         features: [
             {
                 name: "Torrent",
@@ -458,24 +326,6 @@ const pokemonDatabase = {
         hp: 122, ac: 17, str: 17, dex: 14, con: 19, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'water', type2: '', size: 'Large', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/blastoise.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Flash Cannon' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Withdraw' },
-            { level: 1, move: 'Bubble' },
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Rapid Spin' },
-            { level: 1, move: 'Protect' },
-            { level: 14, move: 'Water Pulse' },
-            { level: 14, move: 'Aqua Tail' },
-            { level: 14, move: 'Skull Bash' },
-            { level: 14, move: 'Wave Crash' },
-            { level: 18, move: 'Iron Defense' },
-            { level: 18, move: 'Rain Dance' },
-            { level: 18, move: 'Hydro Pump' }
-        ],
         features: [
             {
                 name: "Torrent",
@@ -500,11 +350,6 @@ const pokemonDatabase = {
         speed: 20, type1: 'bug', type2: '', size: 'Small', sr: .125, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/caterpie.png',
         hitDie: 'd6',
-        learnset: [
-            { level: 1, move: 'String Shot' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Bug Bite' }
-        ],
         features: [
             {
                 name: "Shield Dust",
@@ -528,9 +373,6 @@ const pokemonDatabase = {
         hp: 29, ac: 12, str: 10, dex: 9, con: 16, int: 6, wis: 10, cha: 10,
         speed: 10, type1: 'bug', type2: '', size: 'Small', sr: 1, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/metapod.png',
-        learnset: [
-            { level: 1, move: 'Harden' }
-        ],
         features: [
             {
                 name: "Shed Skin",
@@ -550,24 +392,6 @@ const pokemonDatabase = {
         hp: 38, ac: 14, str: 14, dex: 15, con: 10, int: 6, wis: 12, cha: 12,
         speed: 30, type1: 'bug', type2: 'flying', size: 'Medium', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/butterfree.png',
-        learnset: [
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Gust' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Sleep Powder' },
-            { level: 6, move: 'Stun Spore' },
-            { level: 6, move: 'Psybeam' },
-            { level: 10, move: 'Silver Wind' },
-            { level: 10, move: 'Supersonic' },
-            { level: 10, move: 'Safeguard' },
-            { level: 14, move: 'Whirlwind' },
-            { level: 14, move: 'Bug Buzz' },
-            { level: 14, move: 'Rage Powder' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Tailwind' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Quiver Dance' }
-        ],
         features: [
             {
                 name: "Compound Eyes",
@@ -592,11 +416,6 @@ const pokemonDatabase = {
         speed: 20, type1: 'bug', type2: 'poison', size: 'Small', sr: .125, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/weedle.png',
         hitDie: 'd6',
-        learnset: [
-            { level: 1, move: 'Poison Sting' },
-            { level: 1, move: 'String Shot' },
-            { level: 2, move: 'Bug Bite' }
-        ],
         features: [
             {
                 name: "Shield Dust",
@@ -621,9 +440,6 @@ const pokemonDatabase = {
         speed: 5, type1: 'bug', type2: 'poison', size: 'Small', sr: 1, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kakuna.png',
         hitDie: 'd8',
-        learnset: [
-            { level: 1, move: 'Harden' }
-        ],
         features: [
             {
                 name: "Shed Skin",
@@ -644,21 +460,6 @@ const pokemonDatabase = {
         speed: 30, type1: 'bug', type2: 'poison', size: 'Medium', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/beedrill.png',
         hitDie: 'd10',
-        learnset: [
-            { level: 1, move: 'Fury Attack' },
-            { level: 1, move: 'Twineedle' },
-            { level: 6, move: 'Rage' },
-            { level: 6, move: 'Pursuit' },
-            { level: 10, move: 'Focus Energy' },
-            { level: 10, move: 'Venoshock' },
-            { level: 10, move: 'Assurance' },
-            { level: 14, move: 'Toxic Spikes' },
-            { level: 14, move: 'Pin Missile' },
-            { level: 14, move: 'Poison Jab' },
-            { level: 18, move: 'Agility' },
-            { level: 18, move: 'Endeavor' },
-            { level: 18, move: 'Fell Stinger' }
-        ],
         features: [
             {
                 name: "Swarm",
@@ -682,22 +483,6 @@ const pokemonDatabase = {
         hp: 16, ac: 12, str: 10, dex: 12, con: 10, int: 6, wis: 10, cha: 10,
         speed: 25, type1: 'normal', type2: 'flying', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pidgey.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Sand Attack' },
-            { level: 2, move: 'Gust' },
-            { level: 6, move: 'Quick Attack' },
-            { level: 6, move: 'Whirlwind' },
-            { level: 10, move: 'Twister' },
-            { level: 10, move: 'Feather Dance' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Wing Attack' },
-            { level: 14, move: 'Roost' },
-            { level: 18, move: 'Tailwind' },
-            { level: 18, move: 'Mirror Move' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Hurricane' }
-        ],
         features: [
             {
                 name: "Keen Eye",
@@ -725,22 +510,6 @@ const pokemonDatabase = {
         hp: 40, ac: 13, str: 13, dex: 14, con: 10, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'normal', type2: 'flying', size: 'Medium', sr: 3, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pidgeotto.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Gust' },
-            { level: 6, move: 'Quick Attack' },
-            { level: 6, move: 'Whirlwind' },
-            { level: 10, move: 'Twister' },
-            { level: 10, move: 'Feather Dance' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Wing Attack' },
-            { level: 14, move: 'Roost' },
-            { level: 18, move: 'Tailwind' },
-            { level: 18, move: 'Mirror Move' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Hurricane' }
-        ],
         features: [
             {
                 name: "Keen Eye",
@@ -768,22 +537,6 @@ const pokemonDatabase = {
         hp: 77, ac: 16, str: 14, dex: 20, con: 12, int: 6, wis: 14, cha: 10,
         speed: 40, type1: 'normal', type2: 'flying', size: 'Large', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pidgeot.png',
-        learnset: [
-            { level: 1, move: 'Gust' },
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Whirlwind' },
-            { level: 10, move: 'Twister' },
-            { level: 10, move: 'Feather Dance' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Wing Attack' },
-            { level: 18, move: 'Roost' },
-            { level: 18, move: 'Tailwind' },
-            { level: 18, move: 'Mirror Move' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Hurricane' }
-        ],
         features: [
             {
                 name: "Keen Eye",
@@ -811,21 +564,6 @@ const pokemonDatabase = {
         hp: 16, ac: 12, str: 10, dex: 14, con: 11, int: 6, wis: 10, cha: 8,
         speed: 30, type1: 'normal', type2: '', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://files.d20.io/images/443835565/s67sf201PBNpnE3YrModQg/original.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 2, move: 'Quick Attack' },
-            { level: 2, move: 'Focus Energy' },
-            { level: 2, move: 'Bite' },
-            { level: 6, move: 'Pursuit' },
-            { level: 6, move: 'Hyper Fang' },
-            { level: 6, move: 'Assurance' },
-            { level: 10, move: 'Crunch' },
-            { level: 10, move: 'Sucker Punch' },
-            { level: 14, move: 'Super Fang' },
-            { level: 14, move: 'Double-Edge' },
-            { level: 14, move: 'Endeavor' }
-        ],
         features: [
             {
                 name: "Run Away",
@@ -849,23 +587,6 @@ const pokemonDatabase = {
         hp: 45, ac: 15, str: 15, dex: 15, con: 13, int: 6, wis: 12, cha: 8,
         speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 5, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/raticate.png',
-        learnset: [
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Scary Face' },
-            { level: 1, move: 'Swords Dance' },
-            { level: 1, move: 'Bite' },
-            { level: 6, move: 'Pursuit' },
-            { level: 6, move: 'Assurance' },
-            { level: 10, move: 'Hyper Fang' },
-            { level: 10, move: 'Crunch' },
-            { level: 14, move: 'Sucker Punch' },
-            { level: 14, move: 'Super Fang' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Endeavor' }
-        ],
         features: [
             {
                 name: "Run Away",
@@ -889,20 +610,6 @@ const pokemonDatabase = {
         hp: 16, ac: 12, str: 10, dex: 14, con: 10, int: 6, wis: 10, cha: 10,
         speed: 25, type1: 'normal', type2: 'flying', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/spearow.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Leer' },
-            { level: 2, move: 'Pursuit' },
-            { level: 2, move: 'Fury Attack' },
-            { level: 6, move: 'Aerial Ace' },
-            { level: 6, move: 'Mirror Move' },
-            { level: 10, move: 'Assurance' },
-            { level: 10, move: 'Agility' },
-            { level: 14, move: 'Focus Energy' },
-            { level: 14, move: 'Roost' },
-            { level: 18, move: 'Drill Peck' }
-        ],
         features: [
             {
                 name: "Keen Eye",
@@ -926,22 +633,6 @@ const pokemonDatabase = {
         hp: 40, ac: 15, str: 15, dex: 16, con: 10, int: 6, wis: 12, cha: 10,
         speed: 35, type1: 'normal', type2: 'flying', size: 'Medium', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/fearow.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Pluck' },
-            { level: 1, move: 'Pursuit' },
-            { level: 6, move: 'Fury Attack' },
-            { level: 6, move: 'Aerial Ace' },
-            { level: 6, move: 'Mirror Move' },
-            { level: 10, move: 'Assurance' },
-            { level: 10, move: 'Agility' },
-            { level: 14, move: 'Focus Energy' },
-            { level: 18, move: 'Roost' },
-            { level: 18, move: 'Drill Peck' },
-            { level: 18, move: 'Drill Run' }
-        ],
         features: [
             {
                 name: "Keen Eye",
@@ -965,25 +656,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 12, dex: 13, con: 11, int: 8, wis: 10, cha: 10,
         speed: 30, type1: 'poison', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/ekans.png',
-        learnset: [
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Wrap' },
-            { level: 1, move: 'Poison Sting' },
-            { level: 2, move: 'Bite' },
-            { level: 2, move: 'Glare' },
-            { level: 6, move: 'Screech' },
-            { level: 6, move: 'Acid' },
-            { level: 10, move: 'Spit Up' },
-            { level: 10, move: 'Stockpile' },
-            { level: 10, move: 'Swallow' },
-            { level: 14, move: 'Acid Spray' },
-            { level: 14, move: 'Mud Bomb' },
-            { level: 14, move: 'Gastro Acid' },
-            { level: 18, move: 'Haze' },
-            { level: 18, move: 'Coil' },
-            { level: 18, move: 'Gunk Shot' },
-            { level: 18, move: 'Belch' }
-        ],
         features: [
             {
                 name: "Intimidate",
@@ -1011,29 +683,6 @@ const pokemonDatabase = {
         hp: 45, ac: 15, str: 14, dex: 16, con: 12, int: 8, wis: 12, cha: 10,
         speed: 30, type1: 'poison', type2: '', size: 'Large', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/arbok.png',
-        learnset: [
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Crunch' },
-            { level: 1, move: 'Fire Fang' },
-            { level: 1, move: 'Ice Fang' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Poison Sting' },
-            { level: 1, move: 'Thunder Fang' },
-            { level: 1, move: 'Wrap' },
-            { level: 6, move: 'Glare' },
-            { level: 6, move: 'Screech' },
-            { level: 10, move: 'Acid' },
-            { level: 10, move: 'Spit Up' },
-            { level: 10, move: 'Stockpile' },
-            { level: 10, move: 'Swallow' },
-            { level: 14, move: 'Acid Spray' },
-            { level: 14, move: 'Mud Bomb' },
-            { level: 14, move: 'Gastro Acid' },
-            { level: 18, move: 'Haze' },
-            { level: 18, move: 'Coil' },
-            { level: 18, move: 'Gunk Shot' },
-            { level: 18, move: 'Belch' }
-        ],
         features: [
             {
                 name: "Intimidate",
@@ -1061,26 +710,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 11, dex: 15, con: 10, int: 6, wis: 10, cha: 12,
         speed: 30, type1: 'electric', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/pikachu.png',
-        learnset: [
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Thunder Shock' },
-            { level: 1, move: 'Play Nice' },
-            { level: 2, move: 'Growl' },
-            { level: 2, move: 'Quick Attack' },
-            { level: 6, move: 'Electro Ball' },
-            { level: 6, move: 'Thunder Wave' },
-            { level: 6, move: 'Feint' },
-            { level: 10, move: 'Double Team' },
-            { level: 10, move: 'Spark' },
-            { level: 10, move: 'Discharge' },
-            { level: 10, move: 'Nuzzle' },
-            { level: 14, move: 'Slam' },
-            { level: 14, move: 'Thunderbolt' },
-            { level: 14, move: 'Agility' },
-            { level: 18, move: 'Wild Charge' },
-            { level: 18, move: 'Light Screen' },
-            { level: 18, move: 'Thunder' }
-        ],
         features: [
             {
                 name: "Static",
@@ -1105,12 +734,6 @@ const pokemonDatabase = {
         speed: 35, type1: 'electric', type2: '', size: 'Small', sr: 7,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/raichu.png',
         hitDie: 'd10',
-        learnset: [
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Thunder Shock' },
-            { level: 1, move: 'Thunderbolt' }
-        ],
         features: [
             {
                 name: "Static",
@@ -1134,25 +757,6 @@ const pokemonDatabase = {
         hp: 17, ac: 14, str: 14, dex: 10, con: 12, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'ground', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/sandshrew.png',
-        learnset: [
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 2, move: 'Poison Sting' },
-            { level: 2, move: 'Rollout' },
-            { level: 2, move: 'Rapid Spin' },
-            { level: 2, move: 'Fury Cutter' },
-            { level: 6, move: 'Magnitude' },
-            { level: 6, move: 'Swift' },
-            { level: 10, move: 'Fury Swipes' },
-            { level: 10, move: 'Sand Tomb' },
-            { level: 10, move: 'Slash' },
-            { level: 14, move: 'Dig' },
-            { level: 14, move: 'Gyro Ball' },
-            { level: 18, move: 'Swords Dance' },
-            { level: 18, move: 'Sandstorm' },
-            { level: 18, move: 'Earthquake' }
-        ],
         features: [
             {
                 name: "Sand Veil",
@@ -1176,26 +780,6 @@ const pokemonDatabase = {
         hp: 50, ac: 16, str: 16, dex: 14, con: 14, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'ground', type2: '', size: 'Small', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/sandslash.png',
-        learnset: [
-            { level: 1, move: 'Crush Claw' },
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Poison Sting' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Rollout' },
-            { level: 1, move: 'Rapid Spin' },
-            { level: 1, move: 'Fury Cutter' },
-            { level: 6, move: 'Magnitude' },
-            { level: 6, move: 'Swift' },
-            { level: 10, move: 'Fury Swipes' },
-            { level: 10, move: 'Sand Tomb' },
-            { level: 14, move: 'Slash' },
-            { level: 14, move: 'Dig' },
-            { level: 18, move: 'Gyro Ball' },
-            { level: 18, move: 'Swords Dance' },
-            { level: 18, move: 'Sandstorm' },
-            { level: 18, move: 'Earthquake' }
-        ],
         features: [
             {
                 name: "Sand Veil",
@@ -1219,21 +803,6 @@ const pokemonDatabase = {
         hp: 17, ac: 12, str: 12, dex: 12, con: 12, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'poison', type2: '', size: 'Tiny', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/nidoran-f.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Scratch' },
-            { level: 2, move: 'Tail Whip' },
-            { level: 2, move: 'Double Kick' },
-            { level: 6, move: 'Poison Sting' },
-            { level: 6, move: 'Fury Swipes' },
-            { level: 10, move: 'Bite' },
-            { level: 10, move: 'Helping Hand' },
-            { level: 14, move: 'Toxic Spikes' },
-            { level: 14, move: 'Flatter' },
-            { level: 18, move: 'Crunch' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Poison Fang' }
-        ],
         features: [
             {
                 name: "Poison Point",
@@ -1261,21 +830,6 @@ const pokemonDatabase = {
         hp: 45, ac: 14, str: 14, dex: 13, con: 12, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'poison', type2: '', size: 'Small', sr: 4, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/nidorina.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Double Kick' },
-            { level: 6, move: 'Poison Sting' },
-            { level: 10, move: 'Fury Swipes' },
-            { level: 10, move: 'Bite' },
-            { level: 14, move: 'Helping Hand' },
-            { level: 14, move: 'Toxic Spikes' },
-            { level: 18, move: 'Flatter' },
-            { level: 18, move: 'Crunch' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Poison Fang' }
-        ],
         features: [
             {
                 name: "Poison Point",
@@ -1303,16 +857,6 @@ const pokemonDatabase = {
         hp: 122, ac: 16, str: 16, dex: 16, con: 18, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'poison', type2: 'ground', size: 'Medium', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/nidoqueen.png',
-        learnset: [
-            { level: 1, move: 'Double Kick' },
-            { level: 1, move: 'Poison Sting' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Chip Away' },
-            { level: 14, move: 'Body Slam' },
-            { level: 18, move: 'Earth Power' },
-            { level: 18, move: 'Superpower' }
-        ],
         features: [
             {
                 name: "Poison Point",
@@ -1341,21 +885,6 @@ const pokemonDatabase = {
         speed: 20, type1: 'poison', type2: '', size: 'Tiny', sr: .25,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/nidoran-m.png',
         hitDie: 'd6',
-        learnset: [
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Peck' },
-            { level: 2, move: 'Focus Energy' },
-            { level: 2, move: 'Double Kick' },
-            { level: 6, move: 'Poison Sting' },
-            { level: 6, move: 'Fury Attack' },
-            { level: 10, move: 'Horn Attack' },
-            { level: 10, move: 'Helping Hand' },
-            { level: 14, move: 'Toxic Spikes' },
-            { level: 14, move: 'Flatter' },
-            { level: 18, move: 'Poison Jab' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Horn Drill' }
-        ],
         features: [
             {
                 name: "Poison Point",
@@ -1383,21 +912,6 @@ const pokemonDatabase = {
         hp: 45, ac: 14, str: 13, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'poison', type2: '', size: 'Small', sr: 4, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/nidorino.png',
-        learnset: [
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Double Kick' },
-            { level: 6, move: 'Poison Sting' },
-            { level: 10, move: 'Fury Attack' },
-            { level: 10, move: 'Horn Attack' },
-            { level: 14, move: 'Helping Hand' },
-            { level: 14, move: 'Toxic Spikes' },
-            { level: 18, move: 'Flatter' },
-            { level: 18, move: 'Poison Jab' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Horn Drill' }
-        ],
         features: [
             {
                 name: "Poison Point",
@@ -1425,16 +939,6 @@ const pokemonDatabase = {
         hp: 112, ac: 15, str: 18, dex: 16, con: 16, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'poison', type2: 'ground', size: 'Medium', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/nidoking.png',
-        learnset: [
-            { level: 1, move: 'Double Kick' },
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Poison Sting' },
-            { level: 1, move: 'Chip Away' },
-            { level: 1, move: 'Thrash' },
-            { level: 18, move: 'Earth Power' },
-            { level: 18, move: 'Megahorn' }
-        ],
         features: [
             {
                 name: "Poison Point",
@@ -1462,32 +966,6 @@ const pokemonDatabase = {
         hp: 18, ac: 13, str: 12, dex: 12, con: 10, int: 6, wis: 12, cha: 12,
         speed: 30, type1: 'fairy', type2: '', size: 'Tiny', sr: 1, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/clefairy.png',
-        learnset: [
-            { level: 1, move: 'Disarming Voice' },
-            { level: 1, move: 'Encore' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Pound' },
-            { level: 1, move: 'Spotlight' },
-            { level: 2, move: 'Sing' },
-            { level: 2, move: 'Double Slap' },
-            { level: 6, move: 'Defense Curl' },
-            { level: 6, move: 'Follow Me' },
-            { level: 6, move: 'Bestow' },
-            { level: 6, move: 'Life Dew' },
-            { level: 10, move: 'Wake-Up Slap' },
-            { level: 10, move: 'Minimize' },
-            { level: 14, move: 'Stored Power' },
-            { level: 14, move: 'Metronome' },
-            { level: 14, move: 'Cosmic Power' },
-            { level: 18, move: 'Lucky Chant' },
-            { level: 18, move: 'Body Slam' },
-            { level: 18, move: 'Moonlight' },
-            { level: 18, move: 'Moonblast' },
-            { level: 18, move: 'Gravity' },
-            { level: 18, move: 'Meteor Mash' },
-            { level: 18, move: 'Healing Wish' },
-            { level: 18, move: 'After You' }
-        ],
         features: [
             {
                 name: "Cute Charm",
@@ -1515,15 +993,6 @@ const pokemonDatabase = {
         hp: 51, ac: 15, str: 14, dex: 15, con: 12, int: 6, wis: 14, cha: 14,
         speed: 30, type1: 'fairy', type2: '', size: 'Medium', sr: 8, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/clefable.png',
-        learnset: [
-            { level: 1, move: 'Disarming Voice' },
-            { level: 1, move: 'Double Slap' },
-            { level: 1, move: 'Metronome' },
-            { level: 1, move: 'Minimize' },
-            { level: 1, move: 'Sing' },
-            { level: 1, move: 'Spotlight' },
-            { level: 1, move: 'Life Dew' }
-        ],
         features: [
             {
                 name: "Cute Charm",
@@ -1551,28 +1020,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 10, dex: 13, con: 10, int: 6, wis: 10, cha: 12,
         speed: 30, type1: 'fire', type2: '', size: 'Tiny', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/vulpix.png',
-        learnset: [
-            { level: 1, move: 'Ember' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 2, move: 'Roar' },
-            { level: 2, move: 'Baby-Doll Eyes' },
-            { level: 2, move: 'Quick Attack' },
-            { level: 6, move: 'Confuse Ray' },
-            { level: 6, move: 'Fire Spin' },
-            { level: 6, move: 'Payback' },
-            { level: 10, move: 'Will-O-Wisp' },
-            { level: 10, move: 'Feint Attack' },
-            { level: 10, move: 'Hex' },
-            { level: 14, move: 'Flame Burst' },
-            { level: 14, move: 'Extrasensory' },
-            { level: 14, move: 'Safeguard' },
-            { level: 18, move: 'Flamethrower' },
-            { level: 18, move: 'Imprison' },
-            { level: 18, move: 'Fire Blast' },
-            { level: 18, move: 'Grudge' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Inferno' }
-        ],
         features: [
             {
                 name: "Flash Fire",
@@ -1596,15 +1043,6 @@ const pokemonDatabase = {
         hp: 40, ac: 17, str: 14, dex: 18, con: 11, int: 6, wis: 12, cha: 12,
         speed: 30, type1: 'fire', type2: '', size: 'Medium', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/ninetales.png',
-       
-        learnset: [
-            { level: 1, move: 'Confuse Ray' },
-            { level: 1, move: 'Flamethrower' },
-            { level: 1, move: 'Imprison' },
-            { level: 1, move: 'Nasty Plot' },
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Safeguard' }
-        ],
         features: [
             {
                 name: "Flash Fire",
@@ -1628,27 +1066,6 @@ const pokemonDatabase = {
         hp: 18, ac: 13, str: 12, dex: 12, con: 10, int: 6, wis: 12, cha: 12,
         speed: 20, type1: 'normal', type2: 'fairy', size: 'Tiny', sr: 1, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/jigglypuff.png',
-        learnset: [
-            { level: 1, move: 'Sing' },
-            { level: 1, move: 'Defense Curl' },
-            { level: 2, move: 'Pound' },
-            { level: 2, move: 'Disarming Voice' },
-            { level: 2, move: 'Play Nice' },
-            { level: 6, move: 'Disable' },
-            { level: 6, move: 'Double Slap' },
-            { level: 10, move: 'Rollout' },
-            { level: 10, move: 'Round' },
-            { level: 10, move: 'Spit Up' },
-            { level: 10, move: 'Stockpile' },
-            { level: 10, move: 'Swallow' },
-            { level: 10, move: 'Wake-Up Slap' },
-            { level: 14, move: 'Rest' },
-            { level: 14, move: 'Body Slam' },
-            { level: 14, move: 'Gyro Ball' },
-            { level: 14, move: 'Mimic' },
-            { level: 18, move: 'Hyper Voice' },
-            { level: 18, move: 'Double-Edge' }
-        ],
         features: [
             {
                 name: "Cute Charm",
@@ -1676,23 +1093,6 @@ const pokemonDatabase = {
         hp: 56, ac: 15, str: 14, dex: 13, con: 14, int: 6, wis: 14, cha: 14,
         speed: 30, type1: 'normal', type2: 'fairy', size: 'Medium', sr: 6, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/wigglytuff.png',
-        learnset: [
-            { level: 1, move: 'Sing' },
-            { level: 1, move: 'Disable' },
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Double Slap' },
-            { level: 1, move: 'Copycat' },
-            { level: 1, move: 'Covet' },
-            { level: 1, move: 'Pound' },
-            { level: 1, move: 'Disarming Voice' },
-            { level: 1, move: 'Round' },
-            { level: 4, move: 'Rollout' },
-            { level: 7, move: 'Rest' },
-            { level: 10, move: 'Body Slam' },
-            { level: 13, move: 'Mimic' },
-            { level: 16, move: 'Gyro Ball' },
-            { level: 18, move: 'Hyper Voice' }
-        ],
         features: [
             {
                 name: "Cute Charm",
@@ -1720,23 +1120,6 @@ const pokemonDatabase = {
         hp: 17, ac: 12, str: 10, dex: 14, con: 12, int: 6, wis: 12, cha: 8,
         speed: 25, type1: 'poison', type2: 'flying', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/zubat.png',
-        learnset: [
-            { level: 1, move: 'Absorb' },
-            { level: 2, move: 'Supersonic' },
-            { level: 2, move: 'Astonish' },
-            { level: 2, move: 'Bite' },
-            { level: 6, move: 'Wing Attack' },
-            { level: 6, move: 'Confuse Ray' },
-            { level: 6, move: 'Air Cutter' },
-            { level: 10, move: 'Swift' },
-            { level: 10, move: 'Poison Fang' },
-            { level: 14, move: 'Mean Look' },
-            { level: 14, move: 'Leech Life' },
-            { level: 14, move: 'Haze' },
-            { level: 18, move: 'Venoshock' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Quick Guard' }
-        ],
         features: [
             {
                 name: "Inner Focus",
@@ -1760,24 +1143,6 @@ const pokemonDatabase = {
         hp: 50, ac: 15, str: 14, dex: 18, con: 14, int: 6, wis: 14, cha: 8,
         speed: 30, type1: 'poison', type2: 'flying', size: 'Medium', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/golbat.png',
-        learnset: [
-            { level: 1, move: 'Absorb' },
-            { level: 1, move: 'Astonish' },
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Screech' },
-            { level: 1, move: 'Supersonic' },
-            { level: 6, move: 'Wing Attack' },
-            { level: 6, move: 'Confuse Ray' },
-            { level: 6, move: 'Air Cutter' },
-            { level: 10, move: 'Swift' },
-            { level: 10, move: 'Poison Fang' },
-            { level: 14, move: 'Mean Look' },
-            { level: 14, move: 'Leech Life' },
-            { level: 18, move: 'Haze' },
-            { level: 18, move: 'Venoshock' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Quick Guard' }
-        ],
         features: [
             {
                 name: "Inner Focus",
@@ -1801,24 +1166,6 @@ const pokemonDatabase = {
         hp: 17, ac: 13, str: 11, dex: 11, con: 12, int: 6, wis: 10, cha: 12,
         speed: 20, type1: 'grass', type2: 'poison', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/oddish.png',
-        learnset: [
-            { level: 1, move: 'Absorb' },
-            { level: 1, move: 'Growth' },
-            { level: 2, move: 'Sweet Scent' },
-            { level: 2, move: 'Acid' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Stun Spore' },
-            { level: 6, move: 'Sleep Powder' },
-            { level: 10, move: 'Mega Drain' },
-            { level: 10, move: 'Lucky Chant' },
-            { level: 10, move: 'Moonlight' },
-            { level: 14, move: 'Giga Drain' },
-            { level: 14, move: 'Toxic' },
-            { level: 18, move: 'Natural Gift' },
-            { level: 18, move: 'Moonblast' },
-            { level: 18, move: 'Petal Dance' },
-            { level: 18, move: 'Grassy Terrain' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -1842,24 +1189,6 @@ const pokemonDatabase = {
         hp: 50, ac: 14, str: 14, dex: 12, con: 15, int: 6, wis: 12, cha: 10,
         speed: 20, type1: 'grass', type2: 'poison', size: 'Medium', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/gloom.png',
-        learnset: [
-            { level: 1, move: 'Absorb' },
-            { level: 1, move: 'Acid' },
-            { level: 1, move: 'Growth' },
-            { level: 1, move: 'Sweet Scent' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Stun Spore' },
-            { level: 6, move: 'Sleep Powder' },
-            { level: 10, move: 'Mega Drain' },
-            { level: 10, move: 'Lucky Chant' },
-            { level: 14, move: 'Moonlight' },
-            { level: 14, move: 'Giga Drain' },
-            { level: 14, move: 'Toxic' },
-            { level: 18, move: 'Natural Gift' },
-            { level: 18, move: 'Petal Dance' },
-            { level: 18, move: 'Petal Blizzard' },
-            { level: 18, move: 'Grassy Terrain' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -1883,15 +1212,6 @@ const pokemonDatabase = {
         hp: 107, ac: 16, str: 16, dex: 14, con: 16, int: 6, wis: 14, cha: 14,
         speed: 30, type1: 'grass', type2: 'poison', size: 'Small', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/vileplume.png',
-        learnset: [
-            { level: 1, move: 'Aromatherapy' },
-            { level: 1, move: 'Mega Drain' },
-            { level: 1, move: 'Poison Powder' },
-            { level: 1, move: 'Stun Spore' },
-            { level: 18, move: 'Petal Dance' },
-            { level: 18, move: 'Solar Beam' },
-            { level: 18, move: 'Petal Blizzard' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -1915,20 +1235,6 @@ const pokemonDatabase = {
         hp: 18, ac: 13, str: 12, dex: 9, con: 15, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'bug', type2: 'grass', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/paras.png',
-        learnset: [
-            { level: 1, move: 'Scratch' },
-            { level: 2, move: 'Poison Powder' },
-            { level: 2, move: 'Stun Spore' },
-            { level: 2, move: 'Absorb' },
-            { level: 6, move: 'Fury Cutter' },
-            { level: 10, move: 'Spore' },
-            { level: 10, move: 'Slash' },
-            { level: 14, move: 'Growth' },
-            { level: 18, move: 'Giga Drain' },
-            { level: 18, move: 'Aromatherapy' },
-            { level: 18, move: 'Rage Powder' },
-            { level: 18, move: 'X-Scissor' }
-        ],
         features: [
             {
                 name: "Effect Spore",
@@ -1956,21 +1262,6 @@ const pokemonDatabase = {
         hp: 55, ac: 15, str: 16, dex: 12, con: 16, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'bug', type2: 'grass', size: 'Small', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/parasect.png',
-        learnset: [
-            { level: 1, move: 'Absorb' },
-            { level: 1, move: 'Cross Poison' },
-            { level: 1, move: 'Poison Powder' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Stun Spore' },
-            { level: 6, move: 'Fury Cutter' },
-            { level: 10, move: 'Spore' },
-            { level: 14, move: 'Slash' },
-            { level: 14, move: 'Growth' },
-            { level: 18, move: 'Giga Drain' },
-            { level: 18, move: 'Aromatherapy' },
-            { level: 18, move: 'Rage Powder' },
-            { level: 18, move: 'X-Scissor' }
-        ],
         features: [
             {
                 name: "Effect Spore",
@@ -1998,22 +1289,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 13, dex: 11, con: 11, int: 6, wis: 12, cha: 10,
         speed: 20, type1: 'bug', type2: 'poison', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/venonat.png',
-        learnset: [
-            { level: 1, move: 'Disable' },
-            { level: 1, move: 'Foresight' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Supersonic' },
-            { level: 2, move: 'Confusion' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Psybeam' },
-            { level: 10, move: 'Stun Spore' },
-            { level: 10, move: 'Signal Beam' },
-            { level: 14, move: 'Sleep Powder' },
-            { level: 14, move: 'Leech Life' },
-            { level: 18, move: 'Zen Headbutt' },
-            { level: 18, move: 'Poison Fang' },
-            { level: 18, move: 'Psychic' }
-        ],
         features: [
             {
                 name: "Compound Eyes",
@@ -2041,27 +1316,6 @@ const pokemonDatabase = {
         hp: 64, ac: 15, str: 14, dex: 17, con: 12, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'bug', type2: 'poison', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/venomoth.png',
-        learnset: [
-            { level: 1, move: 'Disable' },
-            { level: 1, move: 'Foresight' },
-            { level: 1, move: 'Gust' },
-            { level: 1, move: 'Quiver Dance' },
-            { level: 1, move: 'Silver Wind' },
-            { level: 1, move: 'Supersonic' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Poison Powder' },
-            { level: 1, move: 'Psybeam' },
-            { level: 10, move: 'Stun Spore' },
-            { level: 10, move: 'Signal Beam' },
-            { level: 14, move: 'Sleep Powder' },
-            { level: 14, move: 'Leech Life' },
-            { level: 14, move: 'Pounce' },
-            { level: 18, move: 'Zen Headbutt' },
-            { level: 18, move: 'Poison Fang' },
-            { level: 18, move: 'Psychic' },
-            { level: 18, move: 'Bug Buzz' }
-        ],
         features: [
             {
                 name: "Shield Dust",
@@ -2089,22 +1343,6 @@ const pokemonDatabase = {
         hp: 18, ac: 12, str: 12, dex: 12, con: 14, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'ground', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/diglett.png',
-        learnset: [
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Scratch' },
-            { level: 2, move: 'Growl' },
-            { level: 2, move: 'Astonish' },
-            { level: 6, move: 'Mud-Slap' },
-            { level: 6, move: 'Magnitude' },
-            { level: 6, move: 'Bulldoze' },
-            { level: 10, move: 'Sucker Punch' },
-            { level: 10, move: 'Mud Bomb' },
-            { level: 14, move: 'Earth Power' },
-            { level: 14, move: 'Dig' },
-            { level: 14, move: 'Slash' },
-            { level: 18, move: 'Earthquake' },
-            { level: 18, move: 'Fissure' }
-        ],
         features: [
             {
                 name: "Sand Veil",
@@ -2132,26 +1370,6 @@ const pokemonDatabase = {
         hp: 55, ac: 15, str: 15, dex: 18, con: 16, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'ground', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/dugtrio.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Night Slash' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Sand Tomb' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Tri Attack' },
-            { level: 1, move: 'Astonish' },
-            { level: 1, move: 'Rototiller' },
-            { level: 6, move: 'Mud-Slap' },
-            { level: 6, move: 'Magnitude' },
-            { level: 6, move: 'Bulldoze' },
-            { level: 10, move: 'Sucker Punch' },
-            { level: 10, move: 'Mud Bomb' },
-            { level: 14, move: 'Earth Power' },
-            { level: 14, move: 'Dig' },
-            { level: 18, move: 'Slash' },
-            { level: 18, move: 'Earthquake' },
-            { level: 18, move: 'Fissure' }
-        ],
         features: [
             {
                 name: "Sand Veil",
@@ -2179,23 +1397,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 10, dex: 15, con: 10, int: 8, wis: 10, cha: 12,
         speed: 30, type1: 'normal', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/meowth.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Scratch' },
-            { level: 2, move: 'Bite' },
-            { level: 2, move: 'Fake Out' },
-            { level: 6, move: 'Fury Swipes' },
-            { level: 6, move: 'Screech' },
-            { level: 10, move: 'Feint Attack' },
-            { level: 10, move: 'Taunt' },
-            { level: 14, move: 'Pay Day' },
-            { level: 14, move: 'Slash' },
-            { level: 18, move: 'Nasty Plot' },
-            { level: 18, move: 'Assurance' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Night Slash' },
-            { level: 18, move: 'Feint' }
-        ],
         features: [
             {
                 name: "Pickup",
@@ -2223,26 +1424,6 @@ const pokemonDatabase = {
         hp: 40, ac: 15, str: 14, dex: 18, con: 10, int: 8, wis: 12, cha: 14,
         speed: 35, type1: 'normal', type2: '', size: 'Small', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/persian.png',
-        learnset: [
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Fake Out' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Play Rough' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Swift' },
-            { level: 1, move: 'Switcheroo' },
-            { level: 6, move: 'Fury Swipes' },
-            { level: 6, move: 'Screech' },
-            { level: 10, move: 'Feint Attack' },
-            { level: 10, move: 'Taunt' },
-            { level: 14, move: 'Power Gem' },
-            { level: 18, move: 'Slash' },
-            { level: 18, move: 'Nasty Plot' },
-            { level: 18, move: 'Assurance' },
-            { level: 18, move: 'Captivate' },
-            { level: 18, move: 'Night Slash' },
-            { level: 18, move: 'Feint' }
-        ],
         features: [
             {
                 name: "Limber",
@@ -2270,24 +1451,6 @@ const pokemonDatabase = {
         hp: 18, ac: 13, str: 11, dex: 12, con: 14, int: 6, wis: 12, cha: 10,
         speed: 20, type1: 'water', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/psyduck.png',
-        learnset: [
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Water Sport' },
-            { level: 2, move: 'Tail Whip' },
-            { level: 2, move: 'Water Gun' },
-            { level: 2, move: 'Confusion' },
-            { level: 6, move: 'Fury Swipes' },
-            { level: 6, move: 'Water Pulse' },
-            { level: 6, move: 'Disable' },
-            { level: 10, move: 'Screech' },
-            { level: 10, move: 'Zen Headbutt' },
-            { level: 14, move: 'Aqua Tail' },
-            { level: 14, move: 'Soak' },
-            { level: 14, move: 'Psych Up' },
-            { level: 18, move: 'Amnesia' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Wonder Room' }
-        ],
         features: [
             {
                 name: "Damp",
@@ -2315,26 +1478,6 @@ const pokemonDatabase = {
         hp: 72, ac: 16, str: 14, dex: 15, con: 14, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'water', type2: '', size: 'Medium', sr: 10, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/golduck.png',
-        learnset: [
-            { level: 1, move: 'Aqua Jet' },
-            { level: 1, move: 'Me First' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Water Sport' },
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Fury Swipes' },
-            { level: 1, move: 'Water Pulse' },
-            { level: 1, move: 'Disable' },
-            { level: 10, move: 'Screech' },
-            { level: 10, move: 'Zen Headbutt' },
-            { level: 14, move: 'Aqua Tail' },
-            { level: 14, move: 'Soak' },
-            { level: 18, move: 'Psych Up' },
-            { level: 18, move: 'Amnesia' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Wonder Room' }
-        ],
         features: [
             {
                 name: "Damp",
@@ -2362,27 +1505,6 @@ const pokemonDatabase = {
         hp: 16, ac: 12, str: 12, dex: 14, con: 11, int: 6, wis: 10, cha: 8,
         speed: 20, type1: 'fighting', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/mankey.png',
-        learnset: [
-            { level: 1, move: 'Covet' },
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Low Kick' },
-            { level: 1, move: 'Scratch' },
-            { level: 2, move: 'Fury Swipes' },
-            { level: 2, move: 'Karate Chop' },
-            { level: 6, move: 'Pursuit' },
-            { level: 6, move: 'Seismic Toss' },
-            { level: 6, move: 'Swagger' },
-            { level: 10, move: 'Cross Chop' },
-            { level: 10, move: 'Assurance' },
-            { level: 14, move: 'Punishment' },
-            { level: 14, move: 'Thrash' },
-            { level: 14, move: 'Stomping Tantrum' },
-            { level: 18, move: 'Close Combat' },
-            { level: 18, move: 'Screech' },
-            { level: 18, move: 'Outrage' },
-            { level: 18, move: 'Final Gambit' }
-        ],
         features: [
             {
                 name: "Vital Spirit",
@@ -2410,29 +1532,6 @@ const pokemonDatabase = {
         hp: 45, ac: 15, str: 16, dex: 16, con: 13, int: 6, wis: 12, cha: 8,
         speed: 30, type1: 'fighting', type2: '', size: 'Small', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/primeape.png',
-        learnset: [
-            { level: 1, move: 'Fling' },
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Low Kick' },
-            { level: 1, move: 'Rage' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Fury Swipes' },
-            { level: 1, move: 'Karate Chop' },
-            { level: 6, move: 'Pursuit' },
-            { level: 6, move: 'Seismic Toss' },
-            { level: 10, move: 'Swagger' },
-            { level: 10, move: 'Cross Chop' },
-            { level: 10, move: 'Assurance' },
-            { level: 10, move: 'Rage Fist' },
-            { level: 14, move: 'Punishment' },
-            { level: 14, move: 'Thrash' },
-            { level: 18, move: 'Stomping Tantrum' },
-            { level: 18, move: 'Close Combat' },
-            { level: 18, move: 'Screech' },
-            { level: 18, move: 'Outrage' },
-            { level: 18, move: 'Final Gambit' }
-        ],
         features: [
             {
                 name: "Vital Spirit",
@@ -2460,26 +1559,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 13, dex: 14, con: 10, int: 6, wis: 10, cha: 10,
         speed: 25, type1: 'fire', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/growlithe.png',
-        learnset: [
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Roar' },
-            { level: 2, move: 'Ember' },
-            { level: 2, move: 'Leer' },
-            { level: 2, move: 'Odor Sleuth' },
-            { level: 6, move: 'Helping Hand' },
-            { level: 6, move: 'Flame Wheel' },
-            { level: 10, move: 'Reversal' },
-            { level: 10, move: 'Fire Fang' },
-            { level: 10, move: 'Take Down' },
-            { level: 14, move: 'Flame Burst' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Retaliate' },
-            { level: 14, move: 'Flamethrower' },
-            { level: 18, move: 'Crunch' },
-            { level: 18, move: 'Heat Wave' },
-            { level: 18, move: 'Outrage' },
-            { level: 18, move: 'Flare Blitz' }
-        ],
         features: [
             {
                 name: "Intimidate",
@@ -2507,14 +1586,6 @@ const pokemonDatabase = {
         hp: 80, ac: 16, str: 16, dex: 18, con: 16, int: 6, wis: 12, cha: 10,
         speed: 35, type1: 'fire', type2: '', size: 'Large', sr: 11, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/arcanine.png',
-        learnset: [
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Fire Fang' },
-            { level: 1, move: 'Odor Sleuth' },
-            { level: 1, move: 'Roar' },
-            { level: 1, move: 'Thunder Fang' },
-            { level: 14, move: 'Extreme Speed' }
-        ],
         features: [
             {
                 name: "Intimidate",
@@ -2542,21 +1613,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 10, dex: 14, con: 11, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'water', type2: '', size: 'Tiny', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/poliwag.png',
-        learnset: [
-            { level: 1, move: 'Water Sport' },
-            { level: 2, move: 'Water Gun' },
-            { level: 2, move: 'Hypnosis' },
-            { level: 2, move: 'Bubble' },
-            { level: 6, move: 'Double Slap' },
-            { level: 6, move: 'Rain Dance' },
-            { level: 10, move: 'Body Slam' },
-            { level: 10, move: 'Bubble Beam' },
-            { level: 14, move: 'Mud Shot' },
-            { level: 14, move: 'Belly Drum' },
-            { level: 14, move: 'Wake-Up Slap' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Mud Bomb' }
-        ],
         features: [
             {
                 name: "Water Absorb",
@@ -2584,21 +1640,6 @@ const pokemonDatabase = {
         hp: 45, ac: 14, str: 12, dex: 15, con: 12, int: 6, wis: 12, cha: 10,
         speed: 25, type1: 'water', type2: '', size: 'Small', sr: 3, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/poliwhirl.png',
-        learnset: [
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Water Sport' },
-            { level: 1, move: 'Bubble' },
-            { level: 6, move: 'Double Slap' },
-            { level: 6, move: 'Rain Dance' },
-            { level: 10, move: 'Body Slam' },
-            { level: 10, move: 'Bubble Beam' },
-            { level: 14, move: 'Mud Shot' },
-            { level: 18, move: 'Belly Drum' },
-            { level: 18, move: 'Wake-Up Slap' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Mud Bomb' }
-        ],
         features: [
             {
                 name: "Water Absorb",
@@ -2626,15 +1667,6 @@ const pokemonDatabase = {
         hp: 97, ac: 16, str: 19, dex: 17, con: 14, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'water', type2: 'fighting', size: 'Medium', sr: 12, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/poliwrath.png',
-        learnset: [
-            { level: 1, move: 'Bubble Beam' },
-            { level: 1, move: 'Double Slap' },
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Submission' },
-            { level: 14, move: 'Dynamic Punch' },
-            { level: 18, move: 'Mind Reader' },
-            { level: 18, move: 'Circle Throw' }
-        ],
         features: [
             {
                 name: "Water Absorb",
@@ -2662,10 +1694,6 @@ const pokemonDatabase = {
         hp: 15, ac: 12, str: 9, dex: 13, con: 8, int: 12, wis: 12, cha: 10,
         speed: 20, type1: 'psychic', type2: '', size: 'Small', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/abra.png',
-        learnset: [
-            { level: 1, move: 'Teleport' },
-            { level: 1, move: 'Scratch' }
-        ],
         features: [
             {
                 name: "Synchronize",
@@ -2693,23 +1721,6 @@ const pokemonDatabase = {
         hp: 40, ac: 14, str: 11, dex: 15, con: 10, int: 14, wis: 14, cha: 10,
         speed: 30, type1: 'psychic', type2: '', size: 'Medium', sr: 6, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kadabra.png',
-        learnset: [
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Kinesis' },
-            { level: 1, move: 'Teleport' },
-            { level: 6, move: 'Disable' },
-            { level: 10, move: 'Psybeam' },
-            { level: 10, move: 'Miracle Eye' },
-            { level: 10, move: 'Reflect' },
-            { level: 14, move: 'Psycho Cut' },
-            { level: 14, move: 'Recover' },
-            { level: 14, move: 'Telekinesis' },
-            { level: 14, move: 'Psychic' },
-            { level: 18, move: 'Ally Switch' },
-            { level: 18, move: 'Role Play' },
-            { level: 18, move: 'Future Sight' },
-            { level: 18, move: 'Trick' }
-        ],
         features: [
             {
                 name: "Synchronize",
@@ -2737,23 +1748,6 @@ const pokemonDatabase = {
         hp: 87, ac: 17, str: 12, dex: 16, con: 12, int: 16, wis: 16, cha: 10,
         speed: 30, type1: 'psychic', type2: '', size: 'Medium', sr: 12, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/alakazam.png',
-        learnset: [
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Kinesis' },
-            { level: 1, move: 'Teleport' },
-            { level: 1, move: 'Disable' },
-            { level: 1, move: 'Psybeam' },
-            { level: 1, move: 'Miracle Eye' },
-            { level: 1, move: 'Reflect' },
-            { level: 14, move: 'Psycho Cut' },
-            { level: 14, move: 'Recover' },
-            { level: 14, move: 'Telekinesis' },
-            { level: 14, move: 'Psychic' },
-            { level: 18, move: 'Ally Switch' },
-            { level: 18, move: 'Calm Mind' },
-            { level: 18, move: 'Future Sight' },
-            { level: 18, move: 'Trick' }
-        ],
         features: [
             {
                 name: "Synchronize",
@@ -2781,25 +1775,6 @@ const pokemonDatabase = {
         hp: 17, ac: 12, str: 14, dex: 12, con: 12, int: 6, wis: 10, cha: 10,
         speed: 25, type1: 'fighting', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/machop.png',
-        learnset: [
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Low Kick' },
-            { level: 1, move: 'Focus Energy' },
-            { level: 2, move: 'Karate Chop' },
-            { level: 2, move: 'Foresight' },
-            { level: 6, move: 'Low Sweep' },
-            { level: 6, move: 'Seismic Toss' },
-            { level: 6, move: 'Revenge' },
-            { level: 10, move: 'Knock Off' },
-            { level: 10, move: 'Vital Throw' },
-            { level: 10, move: 'Wake-Up Slap' },
-            { level: 14, move: 'Dual Chop' },
-            { level: 14, move: 'Submission' },
-            { level: 14, move: 'Bulk Up' },
-            { level: 18, move: 'Cross Chop' },
-            { level: 18, move: 'Scary Face' },
-            { level: 18, move: 'Dynamic Punch' }
-        ],
         features: [
             {
                 name: "Guts",
@@ -2827,25 +1802,6 @@ const pokemonDatabase = {
         hp: 50, ac: 14, str: 15, dex: 13, con: 14, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/machoke.png',
-        learnset: [
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Karate Chop' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Low Kick' },
-            { level: 1, move: 'Foresight' },
-            { level: 6, move: 'Low Sweep' },
-            { level: 6, move: 'Seismic Toss' },
-            { level: 6, move: 'Revenge' },
-            { level: 10, move: 'Knock Off' },
-            { level: 10, move: 'Vital Throw' },
-            { level: 10, move: 'Wake-Up Slap' },
-            { level: 14, move: 'Dual Chop' },
-            { level: 14, move: 'Submission' },
-            { level: 14, move: 'Bulk Up' },
-            { level: 18, move: 'Cross Chop' },
-            { level: 18, move: 'Scary Face' },
-            { level: 18, move: 'Dynamic Punch' }
-        ],
         features: [
             {
                 name: "Guts",
@@ -2873,27 +1829,6 @@ const pokemonDatabase = {
         hp: 107, ac: 15, str: 18, dex: 16, con: 16, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 12, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/machamp.png',
-        learnset: [
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Karate Chop' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Low Kick' },
-            { level: 1, move: 'Strength' },
-            { level: 1, move: 'Wide Guard' },
-            { level: 1, move: 'Foresight' },
-            { level: 1, move: 'Low Sweep' },
-            { level: 1, move: 'Seismic Toss' },
-            { level: 1, move: 'Revenge' },
-            { level: 1, move: 'Knock Off' },
-            { level: 1, move: 'Vital Throw' },
-            { level: 1, move: 'Wake-Up Slap' },
-            { level: 14, move: 'Dual Chop' },
-            { level: 14, move: 'Submission' },
-            { level: 14, move: 'Bulk Up' },
-            { level: 18, move: 'Cross Chop' },
-            { level: 18, move: 'Scary Face' },
-            { level: 18, move: 'Dynamic Punch' }
-        ],
         features: [
             {
                 name: "Guts",
@@ -2921,22 +1856,6 @@ const pokemonDatabase = {
         hp: 18, ac: 11, str: 10, dex: 12, con: 14, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'grass', type2: 'poison', size: 'Tiny', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/bellsprout.png',
-        learnset: [
-            { level: 1, move: 'Vine Whip' },
-            { level: 2, move: 'Growth' },
-            { level: 2, move: 'Wrap' },
-            { level: 6, move: 'Sleep Powder' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Stun Spore' },
-            { level: 10, move: 'Acid' },
-            { level: 10, move: 'Knock Off' },
-            { level: 14, move: 'Sweet Scent' },
-            { level: 14, move: 'Gastro Acid' },
-            { level: 18, move: 'Razor Leaf' },
-            { level: 18, move: 'Poison Jab' },
-            { level: 18, move: 'Slam' },
-            { level: 18, move: 'Wring Out' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -2960,22 +1879,6 @@ const pokemonDatabase = {
         hp: 50, ac: 13, str: 13, dex: 14, con: 15, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'grass', type2: 'poison', size: 'Small', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/weepinbell.png',
-        learnset: [
-            { level: 1, move: 'Growth' },
-            { level: 1, move: 'Vine Whip' },
-            { level: 1, move: 'Wrap' },
-            { level: 6, move: 'Sleep Powder' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Stun Spore' },
-            { level: 10, move: 'Acid' },
-            { level: 14, move: 'Knock Off' },
-            { level: 14, move: 'Sweet Scent' },
-            { level: 18, move: 'Gastro Acid' },
-            { level: 18, move: 'Razor Leaf' },
-            { level: 18, move: 'Poison Jab' },
-            { level: 18, move: 'Slam' },
-            { level: 18, move: 'Wring Out' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -2999,18 +1902,6 @@ const pokemonDatabase = {
         hp: 122, ac: 14, str: 16, dex: 16, con: 18, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'grass', type2: 'poison', size: 'Large', sr: 12, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/victreebel.png',
-        learnset: [
-            { level: 1, move: 'Leaf Tornado' },
-            { level: 1, move: 'Razor Leaf' },
-            { level: 1, move: 'Sleep Powder' },
-            { level: 1, move: 'Spit Up' },
-            { level: 1, move: 'Stockpile' },
-            { level: 1, move: 'Swallow' },
-            { level: 1, move: 'Sweet Scent' },
-            { level: 1, move: 'Vine Whip' },
-            { level: 14, move: 'Leaf Storm' },
-            { level: 18, move: 'Leaf Blade' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -3034,25 +1925,6 @@ const pokemonDatabase = {
         hp: 18, ac: 14, str: 14, dex: 14, con: 14, int: 6, wis: 10, cha: 8,
         speed: 5, type1: 'water', type2: 'poison', size: 'Small', sr: 2, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/tentacool.png',
-        learnset: [
-            { level: 1, move: 'Poison Sting' },
-            { level: 2, move: 'Supersonic' },
-            { level: 2, move: 'Constrict' },
-            { level: 2, move: 'Acid' },
-            { level: 6, move: 'Toxic Spikes' },
-            { level: 6, move: 'Water Pulse' },
-            { level: 6, move: 'Wrap' },
-            { level: 10, move: 'Acid Spray' },
-            { level: 10, move: 'Bubble Beam' },
-            { level: 14, move: 'Barrier' },
-            { level: 14, move: 'Poison Jab' },
-            { level: 14, move: 'Brine' },
-            { level: 18, move: 'Screech' },
-            { level: 18, move: 'Hex' },
-            { level: 18, move: 'Sludge Wave' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Wring Out' }
-        ],
         features: [
             {
                 name: "Clear Body",
@@ -3080,26 +1952,6 @@ const pokemonDatabase = {
         hp: 50, ac: 17, str: 17, dex: 18, con: 15, int: 6, wis: 10, cha: 8,
         speed: 20, type1: 'water', type2: 'poison', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/tentacruel.png',
-        learnset: [
-            { level: 1, move: 'Acid' },
-            { level: 1, move: 'Constrict' },
-            { level: 1, move: 'Poison Sting' },
-            { level: 1, move: 'Reflect Type' },
-            { level: 1, move: 'Supersonic' },
-            { level: 6, move: 'Toxic Spikes' },
-            { level: 6, move: 'Water Pulse' },
-            { level: 6, move: 'Wrap' },
-            { level: 10, move: 'Acid Spray' },
-            { level: 10, move: 'Bubble Beam' },
-            { level: 14, move: 'Barrier' },
-            { level: 14, move: 'Poison Jab' },
-            { level: 18, move: 'Brine' },
-            { level: 18, move: 'Screech' },
-            { level: 18, move: 'Hex' },
-            { level: 18, move: 'Sludge Wave' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Wring Out' }
-        ],
         features: [
             {
                 name: "Clear Body",
@@ -3127,24 +1979,6 @@ const pokemonDatabase = {
         hp: 18, ac: 13, str: 14, dex: 9, con: 14, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'rock', type2: 'ground', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/geodude.png',
-        learnset: [
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Mud Sport' },
-            { level: 2, move: 'Rock Polish' },
-            { level: 2, move: 'Rollout' },
-            { level: 6, move: 'Magnitude' },
-            { level: 6, move: 'Rock Throw' },
-            { level: 6, move: 'Smack Down' },
-            { level: 10, move: 'Bulldoze' },
-            { level: 10, move: 'Self-Destruct' },
-            { level: 14, move: 'Stealth Rock' },
-            { level: 14, move: 'Rock Blast' },
-            { level: 14, move: 'Earthquake' },
-            { level: 18, move: 'Explosion' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Stone Edge' }
-        ],
         features: [
             {
                 name: "Rock Head",
@@ -3172,24 +2006,6 @@ const pokemonDatabase = {
         hp: 55, ac: 15, str: 16, dex: 10, con: 16, int: 6, wis: 12, cha: 10,
         speed: 25, type1: 'rock', type2: 'ground', size: 'Medium', sr: 6, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/graveler.png',
-        learnset: [
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Mud Sport' },
-            { level: 1, move: 'Rock Polish' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Rollout' },
-            { level: 6, move: 'Magnitude' },
-            { level: 6, move: 'Rock Throw' },
-            { level: 6, move: 'Smack Down' },
-            { level: 10, move: 'Bulldoze' },
-            { level: 10, move: 'Self-Destruct' },
-            { level: 14, move: 'Stealth Rock' },
-            { level: 14, move: 'Rock Blast' },
-            { level: 14, move: 'Earthquake' },
-            { level: 18, move: 'Explosion' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Stone Edge' }
-        ],
         features: [
             {
                 name: "Rock Head",
@@ -3217,25 +2033,6 @@ const pokemonDatabase = {
         hp: 117, ac: 16, str: 19, dex: 13, con: 18, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'rock', type2: 'ground', size: 'Medium', sr: 13, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/golem.png',
-        learnset: [
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Mud Sport' },
-            { level: 1, move: 'Rock Polish' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Steamroller' },
-            { level: 1, move: 'Magnitude' },
-            { level: 1, move: 'Rock Throw' },
-            { level: 1, move: 'Smack Down' },
-            { level: 1, move: 'Bulldoze' },
-            { level: 1, move: 'Self-Destruct' },
-            { level: 14, move: 'Stealth Rock' },
-            { level: 14, move: 'Rock Blast' },
-            { level: 14, move: 'Earthquake' },
-            { level: 18, move: 'Explosion' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Stone Edge' },
-            { level: 18, move: 'Heavy Slam' }
-        ],
         features: [
             {
                 name: "Rock Head",
@@ -3263,22 +2060,6 @@ const pokemonDatabase = {
         hp: 18, ac: 14, str: 12, dex: 15, con: 10, int: 6, wis: 10, cha: 10,
         speed: 30, type1: 'fire', type2: '', size: 'Small', sr: .5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/ponyta.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Tail Whip' },
-            { level: 2, move: 'Ember' },
-            { level: 6, move: 'Flame Wheel' },
-            { level: 6, move: 'Stomp' },
-            { level: 10, move: 'Flame Charge' },
-            { level: 10, move: 'Fire Spin' },
-            { level: 14, move: 'Take Down' },
-            { level: 14, move: 'Inferno' },
-            { level: 14, move: 'Agility' },
-            { level: 18, move: 'Fire Blast' },
-            { level: 18, move: 'Bounce' },
-            { level: 18, move: 'Flare Blitz' }
-        ],
         features: [
             {
                 name: "Run Away",
@@ -3306,25 +2087,6 @@ const pokemonDatabase = {
         hp: 98, ac: 16, str: 16, dex: 18, con: 14, int: 6, wis: 12, cha: 12,
         speed: 40, type1: 'fire', type2: '', size: 'Large', sr: 11, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/rapidash.png',
-        learnset: [
-            { level: 1, move: 'Ember' },
-            { level: 1, move: 'Fury Attack' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Megahorn' },
-            { level: 1, move: 'Poison Jab' },
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Flame Wheel' },
-            { level: 1, move: 'Stomp' },
-            { level: 1, move: 'Flame Charge' },
-            { level: 1, move: 'Fire Spin' },
-            { level: 14, move: 'Take Down' },
-            { level: 14, move: 'Inferno' },
-            { level: 14, move: 'Agility' },
-            { level: 18, move: 'Fire Blast' },
-            { level: 18, move: 'Bounce' },
-            { level: 18, move: 'Flare Blitz' }
-        ],
         features: [
             {
                 name: "Run Away",
@@ -3352,24 +2114,6 @@ const pokemonDatabase = {
         hp: 20, ac: 12, str: 12, dex: 8, con: 14, int: 6, wis: 12, cha: 10,
         speed: 15, type1: 'water', type2: 'psychic', size: 'Medium', sr: .5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/slowpoke.png',
-        learnset: [
-            { level: 1, move: 'Curse' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Yawn' },
-            { level: 2, move: 'Growl' },
-            { level: 2, move: 'Water Gun' },
-            { level: 6, move: 'Confusion' },
-            { level: 6, move: 'Disable' },
-            { level: 10, move: 'Headbutt' },
-            { level: 14, move: 'Water Pulse' },
-            { level: 14, move: 'Zen Headbutt' },
-            { level: 14, move: 'Slack Off' },
-            { level: 14, move: 'Amnesia' },
-            { level: 18, move: 'Psychic' },
-            { level: 18, move: 'Rain Dance' },
-            { level: 18, move: 'Psych Up' },
-            { level: 18, move: 'Heal Pulse' }
-        ],
         features: [
             {
                 name: "Oblivious",
@@ -3397,25 +2141,6 @@ const pokemonDatabase = {
         hp: 97, ac: 16, str: 16, dex: 12, con: 18, int: 6, wis: 16, cha: 10,
         speed: 20, type1: 'water', type2: 'psychic', size: 'Medium', sr: 11, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/slowbro.png',
-        learnset: [
-            { level: 1, move: 'Curse' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Withdraw' },
-            { level: 1, move: 'Yawn' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Disable' },
-            { level: 10, move: 'Headbutt' },
-            { level: 14, move: 'Water Pulse' },
-            { level: 14, move: 'Zen Headbutt' },
-            { level: 14, move: 'Slack Off' },
-            { level: 18, move: 'Amnesia' },
-            { level: 18, move: 'Psychic' },
-            { level: 18, move: 'Rain Dance' },
-            { level: 18, move: 'Psych Up' },
-            { level: 18, move: 'Heal Pulse' }
-        ],
         features: [
             {
                 name: "Oblivious",
@@ -3443,26 +2168,6 @@ const pokemonDatabase = {
         hp: 18, ac: 14, str: 10, dex: 12, con: 14, int: 8, wis: 10, cha: 8,
         speed: 20, type1: 'electric', type2: 'steel', size: 'Tiny', sr: .5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/magnemite.png',
-        learnset: [
-            { level: 1, move: 'Supersonic' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Thunder Shock' },
-            { level: 2, move: 'Magnet Bomb' },
-            { level: 2, move: 'Thunder Wave' },
-            { level: 6, move: 'Light Screen' },
-            { level: 6, move: 'Sonic Boom' },
-            { level: 6, move: 'Spark' },
-            { level: 10, move: 'Mirror Shot' },
-            { level: 10, move: 'Metal Sound' },
-            { level: 14, move: 'Electro Ball' },
-            { level: 14, move: 'Flash Cannon' },
-            { level: 14, move: 'Screech' },
-            { level: 14, move: 'Discharge' },
-            { level: 18, move: 'Lock-On' },
-            { level: 18, move: 'Magnet Rise' },
-            { level: 18, move: 'Gyro Ball' },
-            { level: 18, move: 'Zap Cannon' }
-        ],
         features: [
             {
                 name: "Magnet Pull",
@@ -3490,28 +2195,6 @@ const pokemonDatabase = {
         hp: 55, ac: 16, str: 13, dex: 15, con: 17, int: 8, wis: 12, cha: 8,
         speed: 30, type1: 'electric', type2: 'steel', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/magneton.png',
-        learnset: [
-            { level: 1, move: 'Magnet Bomb' },
-            { level: 1, move: 'Supersonic' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Thunder Shock' },
-            { level: 1, move: 'Tri-Attack' },
-            { level: 1, move: 'Thunder Wave' },
-            { level: 1, move: 'Electric Terrain' },
-            { level: 6, move: 'Light Screen' },
-            { level: 6, move: 'Sonic Boom' },
-            { level: 10, move: 'Spark' },
-            { level: 10, move: 'Mirror Shot' },
-            { level: 10, move: 'Metal Sound' },
-            { level: 14, move: 'Electro Ball' },
-            { level: 14, move: 'Flash Cannon' },
-            { level: 14, move: 'Screech' },
-            { level: 18, move: 'Discharge' },
-            { level: 18, move: 'Lock-On' },
-            { level: 18, move: 'Magnet Rise' },
-            { level: 18, move: 'Gyro Ball' },
-            { level: 18, move: 'Zap Cannon' }
-        ],
         features: [
             {
                 name: "Magnet Pull",
@@ -3539,26 +2222,6 @@ const pokemonDatabase = {
         hp: 25, ac: 14, str: 14, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
         speed: 25, type1: 'normal', type2: 'flying', size: 'Tiny', sr: 3, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/farfetchd.png',
-        learnset: [
-            { level: 1, move: 'Fury Cutter' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Poison Jab' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 2, move: 'Fury Attack' },
-            { level: 2, move: 'Aerial Ace' },
-            { level: 6, move: 'Knock Off' },
-            { level: 6, move: 'Slash' },
-            { level: 10, move: 'Air Cutter' },
-            { level: 10, move: 'Swords Dance' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Night Slash' },
-            { level: 18, move: 'Acrobatics' },
-            { level: 18, move: 'Feint' },
-            { level: 18, move: 'False Swipe' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Brave Bird' }
-        ],
         features: [
             {
                 name: "Keen Eye",
@@ -3586,24 +2249,6 @@ const pokemonDatabase = {
         hp: 17, ac: 12, str: 10, dex: 15, con: 12, int: 6, wis: 10, cha: 10,
         speed: 35, type1: 'normal', type2: 'flying', size: 'Small', sr: 0.25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/doduo.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Peck' },
-            { level: 2, move: 'Quick Attack' },
-            { level: 2, move: 'Rage' },
-            { level: 6, move: 'Fury Attack' },
-            { level: 6, move: 'Pursuit' },
-            { level: 6, move: 'Pluck' },
-            { level: 10, move: 'Double Hit' },
-            { level: 10, move: 'Agility' },
-            { level: 14, move: 'Uproar' },
-            { level: 14, move: 'Acupressure' },
-            { level: 14, move: 'Swords Dance' },
-            { level: 14, move: 'Jump Kick' },
-            { level: 18, move: 'Drill Peck' },
-            { level: 18, move: 'Endeavor' },
-            { level: 18, move: 'Thrash' }
-        ],
         features: [
             {
                 name: "Run Away",
@@ -3631,25 +2276,6 @@ const pokemonDatabase = {
         hp: 64, ac: 15, str: 16, dex: 19, con: 13, int: 6, wis: 12, cha: 10,
         speed: 40, type1: 'normal', type2: 'flying', size: 'Medium', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/dodrio.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Rage' },
-            { level: 1, move: 'Tri-Attack' },
-            { level: 1, move: 'Fury Attack' },
-            { level: 1, move: 'Pursuit' },
-            { level: 1, move: 'Pluck' },
-            { level: 10, move: 'Double Hit' },
-            { level: 10, move: 'Agility' },
-            { level: 14, move: 'Uproar' },
-            { level: 14, move: 'Acupressure' },
-            { level: 14, move: 'Swords Dance' },
-            { level: 18, move: 'Jump Kick' },
-            { level: 18, move: 'Drill Peck' },
-            { level: 18, move: 'Endeavor' },
-            { level: 18, move: 'Thrash' }
-        ],
         features: [
             {
                 name: "Run Away",
@@ -3677,26 +2303,6 @@ const pokemonDatabase = {
         hp: 17, ac: 14, str: 13, dex: 11, con: 12, int: 6, wis: 10, cha: 10,
         speed: 10, type1: 'water', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/seel.png',
-        learnset: [
-            { level: 1, move: 'Headbutt' },
-            { level: 1, move: 'Growl' },
-            { level: 2, move: 'Water Sport' },
-            { level: 2, move: 'Icy Wind' },
-            { level: 6, move: 'Encore' },
-            { level: 6, move: 'Ice Shard' },
-            { level: 6, move: 'Rest' },
-            { level: 10, move: 'Aqua Ring' },
-            { level: 10, move: 'Aurora Beam' },
-            { level: 14, move: 'Aqua Jet' },
-            { level: 14, move: 'Brine' },
-            { level: 14, move: 'Take Down' },
-            { level: 14, move: 'Dive' },
-            { level: 18, move: 'Aqua Tail' },
-            { level: 18, move: 'Ice Beam' },
-            { level: 18, move: 'Safeguard' },
-            { level: 18, move: 'Hail' },
-            { level: 18, move: 'Snowscape' }
-        ],
         features: [
             {
                 name: "Thick Fat",
@@ -3724,27 +2330,6 @@ const pokemonDatabase = {
         hp: 72, ac: 16, str: 17, dex: 16, con: 14, int: 6, wis: 12, cha: 12,
         speed: 15, type1: 'water', type2: 'ice', size: 'Large', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/dewgong.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Headbutt' },
-            { level: 1, move: 'Icy Wind' },
-            { level: 1, move: 'Sheer Cold' },
-            { level: 1, move: 'Signal Beam' },
-            { level: 1, move: 'Encore' },
-            { level: 1, move: 'Ice Shard' },
-            { level: 10, move: 'Rest' },
-            { level: 10, move: 'Aqua Ring' },
-            { level: 10, move: 'Aurora Beam' },
-            { level: 14, move: 'Aqua Jet' },
-            { level: 14, move: 'Brine' },
-            { level: 14, move: 'Take Down' },
-            { level: 14, move: 'Dive' },
-            { level: 18, move: 'Aqua Tail' },
-            { level: 18, move: 'Ice Beam' },
-            { level: 18, move: 'Safeguard' },
-            { level: 18, move: 'Hail' },
-            { level: 18, move: 'Snowscape' }
-        ],
         features: [
             {
                 name: "Thick Fat",
@@ -3772,24 +2357,6 @@ const pokemonDatabase = {
         hp: 19, ac: 12, str: 14, dex: 9, con: 16, int: 6, wis: 10, cha: 8,
         speed: 15, type1: 'poison', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/grimer.png',
-        learnset: [
-            { level: 1, move: 'Poison Gas' },
-            { level: 1, move: 'Pound' },
-            { level: 2, move: 'Harden' },
-            { level: 2, move: 'Mud-Slap' },
-            { level: 6, move: 'Disable' },
-            { level: 6, move: 'Sludge' },
-            { level: 6, move: 'Mud-Bomb' },
-            { level: 10, move: 'Minimize' },
-            { level: 10, move: 'Fling' },
-            { level: 14, move: 'Sludge Bomb' },
-            { level: 14, move: 'Sludge Wave' },
-            { level: 14, move: 'Screech' },
-            { level: 18, move: 'Gunk Shot' },
-            { level: 18, move: 'Acid Armor' },
-            { level: 18, move: 'Memento' },
-            { level: 18, move: 'Belch' }
-        ],
         features: [
             {
                 name: "Stench",
@@ -3817,25 +2384,6 @@ const pokemonDatabase = {
         hp: 80, ac: 16, str: 17, dex: 13, con: 20, int: 6, wis: 12, cha: 8,
         speed: 20, type1: 'poison', type2: '', size: 'Medium', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/muk.png',
-        learnset: [
-            { level: 1, move: 'Harden' },
-            { level: 1, move: 'Mud-Slap' },
-            { level: 1, move: 'Poison Gas' },
-            { level: 1, move: 'Pound' },
-            { level: 1, move: 'Disable' },
-            { level: 1, move: 'Sludge' },
-            { level: 1, move: 'Mud-Bomb' },
-            { level: 1, move: 'Venom Drench' },
-            { level: 10, move: 'Minimize' },
-            { level: 10, move: 'Fling' },
-            { level: 14, move: 'Sludge Bomb' },
-            { level: 14, move: 'Sludge Wave' },
-            { level: 14, move: 'Screech' },
-            { level: 18, move: 'Gunk Shot' },
-            { level: 18, move: 'Acid Armor' },
-            { level: 18, move: 'Memento' },
-            { level: 18, move: 'Belch' }
-        ],
         features: [
             {
                 name: "Stench",
@@ -3863,25 +2411,6 @@ const pokemonDatabase = {
         hp: 18, ac: 14, str: 12, dex: 10, con: 14, int: 6, wis: 10, cha: 10,
         speed: 5, type1: 'water', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/shellder.png',
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Water Gun' },
-            { level: 2, move: 'Withdraw' },
-            { level: 2, move: 'Supersonic' },
-            { level: 6, move: 'Icicle Spear' },
-            { level: 6, move: 'Protect' },
-            { level: 10, move: 'Leer' },
-            { level: 10, move: 'Clamp' },
-            { level: 14, move: 'Ice Shard' },
-            { level: 14, move: 'Razor Shell' },
-            { level: 14, move: 'Aurora Beam' },
-            { level: 14, move: 'Whirlpool' },
-            { level: 18, move: 'Brine' },
-            { level: 18, move: 'Iron Defense' },
-            { level: 18, move: 'Ice Beam' },
-            { level: 18, move: 'Shell Smash' },
-            { level: 18, move: 'Hydro Pump' }
-        ],
         features: [
             {
                 name: "Shell Armor",
@@ -3909,18 +2438,6 @@ const pokemonDatabase = {
         hp: 55, ac: 18, str: 15, dex: 12, con: 16, int: 6, wis: 12, cha: 10,
         speed: 5, type1: 'water', type2: 'ice', size: 'Medium', sr: 8, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/cloyster.png',
-        learnset: [
-            { level: 1, move: 'Aurora Beam' },
-            { level: 1, move: 'Hydro Pump' },
-            { level: 1, move: 'Protect' },
-            { level: 1, move: 'Shell Smash' },
-            { level: 1, move: 'Supersonic' },
-            { level: 1, move: 'Toxic Spikes' },
-            { level: 1, move: 'Withdraw' },
-            { level: 6, move: 'Spike Cannon' },
-            { level: 14, move: 'Spikes' },
-            { level: 18, move: 'Icicle Crash' }
-        ],
         features: [
             {
                 name: "Shell Armor",
@@ -3948,23 +2465,6 @@ const pokemonDatabase = {
         hp: 16, ac: 12, str: 9, dex: 13, con: 11, int: 6, wis: 14, cha: 10,
         speed: 25, type1: 'ghost', type2: 'poison', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/gastly.png',
-        learnset: [
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Lick' },
-            { level: 2, move: 'Spite' },
-            { level: 2, move: 'Mean Look' },
-            { level: 6, move: 'Curse' },
-            { level: 6, move: 'Night Shade' },
-            { level: 10, move: 'Confuse Ray' },
-            { level: 10, move: 'Sucker Punch' },
-            { level: 10, move: 'Payback' },
-            { level: 14, move: 'Shadow Ball' },
-            { level: 14, move: 'Dream Eater' },
-            { level: 18, move: 'Dark Pulse' },
-            { level: 18, move: 'Destiny Bond' },
-            { level: 18, move: 'Hex' },
-            { level: 18, move: 'Nightmare' }
-        ],
         features: [
             {
                 name: "Levitate",
@@ -3984,24 +2484,6 @@ const pokemonDatabase = {
         hp: 45, ac: 14, str: 12, dex: 15, con: 13, int: 6, wis: 15, cha: 10,
         speed: 30, type1: 'ghost', type2: 'poison', size: 'Medium', sr: 5, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/haunter.png',
-        learnset: [
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Lick' },
-            { level: 1, move: 'Shadow Punch' },
-            { level: 1, move: 'Spite' },
-            { level: 1, move: 'Mean Look' },
-            { level: 6, move: 'Curse' },
-            { level: 6, move: 'Night Shade' },
-            { level: 10, move: 'Confuse Ray' },
-            { level: 10, move: 'Sucker Punch' },
-            { level: 14, move: 'Payback' },
-            { level: 14, move: 'Shadow Ball' },
-            { level: 18, move: 'Dream Eater' },
-            { level: 18, move: 'Dark Pulse' },
-            { level: 18, move: 'Destiny Bond' },
-            { level: 18, move: 'Hex' },
-            { level: 18, move: 'Nightmare' }
-        ],
         features: [
             {
                 name: "Levitate",
@@ -4021,25 +2503,6 @@ const pokemonDatabase = {
         hp: 102, ac: 15, str: 14, dex: 18, con: 14, int: 8, wis: 16, cha: 10,
         speed: 35, type1: 'ghost', type2: 'poison', size: 'Medium', sr: 12, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/gengar.png',
-        learnset: [
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Lick' },
-            { level: 1, move: 'Shadow Punch' },
-            { level: 1, move: 'Spite' },
-            { level: 1, move: 'Mean Look' },
-            { level: 1, move: 'Curse' },
-            { level: 1, move: 'Night Shade' },
-            { level: 1, move: 'Confuse Ray' },
-            { level: 1, move: 'Sucker Punch' },
-            { level: 14, move: 'Payback' },
-            { level: 14, move: 'Shadow Ball' },
-            { level: 18, move: 'Payback' },
-            { level: 18, move: 'Dream Eater' },
-            { level: 18, move: 'Dark Pulse' },
-            { level: 18, move: 'Destiny Bond' },
-            { level: 18, move: 'Hex' },
-            { level: 18, move: 'Nightmare' }
-        ],
         features: [
             {
                 name: "Cursed Body",
@@ -4059,30 +2522,6 @@ const pokemonDatabase = {
         hp: 65, ac: 17, str: 18, dex: 13, con: 16, int: 6, wis: 12, cha: 10,
         speed: 25, type1: 'rock', type2: 'ground', size: 'Huge', sr: 10,
         image: 'https://img.pokemondb.net/sprites/black-white/normal/onix.png',
-        learnset: [
-            { level: 1, move: 'Bind' },
-            { level: 1, move: 'Harden' },
-            { level: 1, move: 'Mud Sport' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Curse' },
-            { level: 1, move: 'Rock Throw' },
-            { level: 1, move: 'Rock Tomb' },
-            { level: 6, move: 'Rage' },
-            { level: 6, move: 'Stealth Rock' },
-            { level: 6, move: 'Rock Polish' },
-            { level: 10, move: 'Gyro Ball' },
-            { level: 10, move: 'Smack Down' },
-            { level: 10, move: 'Dragon Breath' },
-            { level: 10, move: 'Slam' },
-            { level: 14, move: 'Screech' },
-            { level: 14, move: 'Rock Slide' },
-            { level: 14, move: 'Sand Tomb' },
-            { level: 14, move: 'Iron Tail' },
-            { level: 18, move: 'Dig' },
-            { level: 18, move: 'Stone Edge' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Sandstorm' }
-        ],
         features: [
             {
                 name: "Rock Head",
@@ -4110,24 +2549,6 @@ const pokemonDatabase = {
         hp: 17, ac: 14, str: 13, dex: 10, con: 12, int: 6, wis: 14, cha: 8,
         speed: 25, type1: 'psychic', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/drowzee.png',
-        learnset: [
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Pound' },
-            { level: 2, move: 'Disable' },
-            { level: 2, move: 'Confusion' },
-            { level: 6, move: 'Headbutt' },
-            { level: 6, move: 'Poison Gas' },
-            { level: 10, move: 'Meditate' },
-            { level: 10, move: 'Psybeam' },
-            { level: 14, move: 'Psych Up' },
-            { level: 18, move: 'Synchronoise' },
-            { level: 18, move: 'Zen Headbutt' },
-            { level: 18, move: 'Swagger' },
-            { level: 18, move: 'Psychic' },
-            { level: 18, move: 'Nasty Plot' },
-            { level: 18, move: 'Psyshock' },
-            { level: 18, move: 'Future Sight' }
-        ],
         features: [
             {
                 name: "Insomnia",
@@ -4155,26 +2576,6 @@ const pokemonDatabase = {
         hp: 45, ac: 16, str: 14, dex: 15, con: 13, int: 8, wis: 16, cha: 8,
         speed: 30, type1: 'psychic', type2: '', size: 'Medium', sr: 8, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/hypno.png',
-        learnset: [
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Disable' },
-            { level: 1, move: 'Future Sight' },
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Nasty Plot' },
-            { level: 1, move: 'Nightmare' },
-            { level: 1, move: 'Pound' },
-            { level: 1, move: 'Switcheroo' },
-            { level: 6, move: 'Headbutt' },
-            { level: 6, move: 'Poison Gas' },
-            { level: 10, move: 'Meditate' },
-            { level: 10, move: 'Psybeam' },
-            { level: 14, move: 'Psych Up' },
-            { level: 18, move: 'Synchronoise' },
-            { level: 18, move: 'Zen Headbutt' },
-            { level: 18, move: 'Swagger' },
-            { level: 18, move: 'Psychic' },
-            { level: 18, move: 'Psyshock' }
-        ],
         features: [
             {
                 name: "Insomnia",
@@ -4202,23 +2603,6 @@ const pokemonDatabase = {
         hp: 17, ac: 13, str: 14, dex: 12, con: 12, int: 6, wis: 10, cha: 8,
         speed: 30, type1: 'water', type2: '', size: 'Small', sr: .25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/krabby.png',
-        learnset: [
-            { level: 1, move: 'Bubble' },
-            { level: 1, move: 'Mud Sport' },
-            { level: 2, move: 'Vice Grip' },
-            { level: 2, move: 'Leer' },
-            { level: 2, move: 'Harden' },
-            { level: 6, move: 'Bubble Beam' },
-            { level: 6, move: 'Mud Shot' },
-            { level: 10, move: 'Metal Claw' },
-            { level: 10, move: 'Stomp' },
-            { level: 14, move: 'Protect' },
-            { level: 14, move: 'Guillotine' },
-            { level: 14, move: 'Slam' },
-            { level: 18, move: 'Brine' },
-            { level: 18, move: 'Crabhammer' },
-            { level: 18, move: 'Flail' }
-        ],
         features: [
             {
                 name: "Hyper Cutter",
@@ -4246,24 +2630,6 @@ const pokemonDatabase = {
         hp: 50, ac: 16, str: 17, dex: 15, con: 15, int: 6, wis: 12, cha: 8,
         speed: 30, type1: 'water', type2: '', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kingler.png',
-        learnset: [
-            { level: 1, move: 'Bubble' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Mud Sport' },
-            { level: 1, move: 'Vice Grip' },
-            { level: 1, move: 'Wide Guard' },
-            { level: 1, move: 'Harden' },
-            { level: 6, move: 'Bubble Beam' },
-            { level: 6, move: 'Mud Shot' },
-            { level: 10, move: 'Metal Claw' },
-            { level: 10, move: 'Stomp' },
-            { level: 14, move: 'Protect' },
-            { level: 14, move: 'Slam' },
-            { level: 18, move: 'Guillotine' },
-            { level: 18, move: 'Brine' },
-            { level: 18, move: 'Crabhammer' },
-            { level: 18, move: 'Flail' }
-        ],
         features: [
             {
                 name: "Hyper Cutter",
@@ -4291,25 +2657,6 @@ const pokemonDatabase = {
         hp: 17, ac: 14, str: 12, dex: 14, con: 12, int: 6, wis: 10, cha: 8,
         speed: 25, type1: 'electric', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/voltorb.png',
-        learnset: [
-            { level: 1, move: 'Charge' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Sonic Boom' },
-            { level: 2, move: 'Spark' },
-            { level: 2, move: 'Eerie Impulse' },
-            { level: 6, move: 'Rollout' },
-            { level: 6, move: 'Screech' },
-            { level: 6, move: 'Charge Beam' },
-            { level: 10, move: 'Swift' },
-            { level: 10, move: 'Electro Ball' },
-            { level: 10, move: 'Self-Destruct' },
-            { level: 14, move: 'Light Screen' },
-            { level: 14, move: 'Magnet Rise' },
-            { level: 18, move: 'Discharge' },
-            { level: 18, move: 'Explosion' },
-            { level: 18, move: 'Gyro Ball' },
-            { level: 18, move: 'Mirror Coat' }
-        ],
         features: [
             {
                 name: "Soundproof",
@@ -4337,26 +2684,6 @@ const pokemonDatabase = {
         hp: 50, ac: 17, str: 14, dex: 17, con: 15, int: 6, wis: 12, cha: 8,
         speed: 40, type1: 'electric', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/electrode.png',
-        learnset: [
-            { level: 1, move: 'Charge' },
-            { level: 1, move: 'Sonic Boom' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Spark' },
-            { level: 1, move: 'Eerie Impulse' },
-            { level: 1, move: 'Magnetic Flux' },
-            { level: 6, move: 'Rollout' },
-            { level: 6, move: 'Screech' },
-            { level: 6, move: 'Charge Beam' },
-            { level: 10, move: 'Swift' },
-            { level: 10, move: 'Electro Ball' },
-            { level: 10, move: 'Self-Destruct' },
-            { level: 14, move: 'Light Screen' },
-            { level: 18, move: 'Magnet Rise' },
-            { level: 18, move: 'Discharge' },
-            { level: 18, move: 'Explosion' },
-            { level: 18, move: 'Gyro Ball' },
-            { level: 18, move: 'Mirror Coat' }
-        ],
         features: [
             {
                 name: "Soundproof",
@@ -4384,23 +2711,6 @@ const pokemonDatabase = {
         hp: 19, ac: 14, str: 13, dex: 12, con: 12, int: 6, wis: 10, cha: 10,
         speed: 20, type1: 'grass', type2: 'psychic', size: 'Tiny', sr: 0.5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/exeggcute.png',
-        learnset: [
-            { level: 1, move: 'Barrage' },
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Uproar' },
-            { level: 2, move: 'Reflect' },
-            { level: 2, move: 'Leech Seed' },
-            { level: 6, move: 'Bullet Seed' },
-            { level: 6, move: 'Stun Spore' },
-            { level: 10, move: 'Poison Powder' },
-            { level: 10, move: 'Sleep Powder' },
-            { level: 14, move: 'Confusion' },
-            { level: 14, move: 'Worry Seed' },
-            { level: 18, move: 'Natural Gift' },
-            { level: 18, move: 'Solar Beam' },
-            { level: 18, move: 'Extrasensory' },
-            { level: 18, move: 'Bestow' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -4424,17 +2734,6 @@ const pokemonDatabase = {
         hp: 56, ac: 15, str: 16, dex: 14, con: 14, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'grass', type2: 'psychic', size: 'Large', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/exeggutor.png',
-        learnset: [
-            { level: 1, move: 'Barrage' },
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Hypnosis' },
-            { level: 1, move: 'Seed Bomb' },
-            { level: 1, move: 'Stomp' },
-            { level: 6, move: 'Psyshock' },
-            { level: 10, move: 'Egg Bomb' },
-            { level: 18, move: 'Wood Hammer' },
-            { level: 18, move: 'Leaf Storm' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -4458,24 +2757,6 @@ const pokemonDatabase = {
         hp: 17, ac: 14, str: 12, dex: 11, con: 12, int: 6, wis: 10, cha: 12,
         speed: 30, type1: 'ground', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/cubone.png',
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 2, move: 'Bone Club' },
-            { level: 2, move: 'Headbutt' },
-            { level: 6, move: 'Leer' },
-            { level: 6, move: 'Focus Energy' },
-            { level: 10, move: 'Bonemerang' },
-            { level: 10, move: 'Rage' },
-            { level: 10, move: 'False Swipe' },
-            { level: 14, move: 'Thrash' },
-            { level: 14, move: 'Fling' },
-            { level: 14, move: 'Stomping Tantrum' },
-            { level: 18, move: 'Endeavor' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Retaliate' },
-            { level: 18, move: 'Bone Rush' }
-        ],
         features: [
             {
                 name: "Rock Head",
@@ -4503,24 +2784,6 @@ const pokemonDatabase = {
         hp: 50, ac: 16, str: 18, dex: 12, con: 14, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'ground', type2: '', size: 'MediSmallum', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/marowak.png',
-        learnset: [
-            { level: 1, move: 'Bone Club' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Headbutt' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 6, move: 'Leer' },
-            { level: 6, move: 'Focus Energy' },
-            { level: 10, move: 'Bonemerang' },
-            { level: 10, move: 'Rage' },
-            { level: 14, move: 'False Swipe' },
-            { level: 14, move: 'Thrash' },
-            { level: 18, move: 'Stomping Tantrum' },
-            { level: 18, move: 'Fling' },
-            { level: 18, move: 'Endeavor' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Retaliate' },
-            { level: 18, move: 'Bone Rush' }
-        ],
         features: [
             {
                 name: "Rock Head",
@@ -4548,26 +2811,6 @@ const pokemonDatabase = {
         hp: 45, ac: 16, str: 14, dex: 16, con: 12, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/hitmonlee.png',
-        learnset: [
-            { level: 1, move: 'Double Kick' },
-            { level: 1, move: 'Revenge' },
-            { level: 1, move: 'Reversal' },
-            { level: 1, move: 'Meditate' },
-            { level: 1, move: 'Rolling Kick' },
-            { level: 6, move: 'Jump Kick' },
-            { level: 6, move: 'Brick Break' },
-            { level: 10, move: 'Focus Energy' },
-            { level: 10, move: 'Feint' },
-            { level: 10, move: 'Foresight' },
-            { level: 14, move: 'High Jump Kick' },
-            { level: 14, move: 'Mind Reader' },
-            { level: 14, move: 'Axe Kick' },
-            { level: 18, move: 'Wide Guard' },
-            { level: 18, move: 'Blaze Kick' },
-            { level: 18, move: 'Endure' },
-            { level: 18, move: 'Mega Kick' },
-            { level: 18, move: 'Close Combat' }
-        ],
         features: [
             {
                 name: "Limber",
@@ -4595,26 +2838,6 @@ const pokemonDatabase = {
         hp: 45, ac: 16, str: 16, dex: 14, con: 12, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'fighting', type2: '', size: 'Medium', sr: 6, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/hitmonchan.png',
-        learnset: [
-            { level: 1, move: 'Comet Punch' },
-            { level: 1, move: 'Pursuit' },
-            { level: 1, move: 'Revenge' },
-            { level: 1, move: 'Agility' },
-            { level: 6, move: 'Bullet Punch' },
-            { level: 6, move: 'Mach Punch' },
-            { level: 10, move: 'Feint' },
-            { level: 10, move: 'Vacuum Wave' },
-            { level: 10, move: 'Fire Punch' },
-            { level: 10, move: 'Ice Punch' },
-            { level: 10, move: 'Thunder Punch' },
-            { level: 14, move: 'Quick Guard' },
-            { level: 14, move: 'Sky Uppercut' },
-            { level: 14, move: 'Mega Punch' },
-            { level: 18, move: 'Detect' },
-            { level: 18, move: 'Focus Punch' },
-            { level: 18, move: 'Counter' },
-            { level: 18, move: 'Close Combat' }
-        ],
         features: [
             {
                 name: "Keen Eye",
@@ -4642,23 +2865,6 @@ const pokemonDatabase = {
         hp: 70, ac: 14, str: 15, dex: 12, con: 15, int: 6, wis: 10, cha: 12,
         speed: 30, type1: 'normal', type2: '', size: 'Small', sr: 7, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/lickitung.png',
-        learnset: [
-            { level: 1, move: 'Lick' },
-            { level: 1, move: 'Supersonic' },
-            { level: 1, move: 'Defense Curl' },
-            { level: 6, move: 'Knock Off' },
-            { level: 6, move: 'Wrap' },
-            { level: 10, move: 'Stomp' },
-            { level: 10, move: 'Disable' },
-            { level: 14, move: 'Slam' },
-            { level: 14, move: 'Rollout' },
-            { level: 18, move: 'Chip Away' },
-            { level: 18, move: 'Me First' },
-            { level: 18, move: 'Refresh' },
-            { level: 18, move: 'Screech' },
-            { level: 18, move: 'Power Whip' },
-            { level: 18, move: 'Wring Out' }
-        ],
         features: [
             {
                 name: "Own Tempo",
@@ -4686,23 +2892,6 @@ const pokemonDatabase = {
         hp: 18, ac: 14, str: 15, dex: 10, con: 14, int: 6, wis: 10, cha: 8,
         speed: 20, type1: 'poison', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/koffing.png',
-        learnset: [
-            { level: 1, move: 'Poison Gas' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Smog' },
-            { level: 2, move: 'Smokescreen' },
-            { level: 6, move: 'Assurance' },
-            { level: 6, move: 'Clear Smog' },
-            { level: 6, move: 'Sludge' },
-            { level: 10, move: 'Self-Destruct' },
-            { level: 10, move: 'Haze' },
-            { level: 14, move: 'Gyro Ball' },
-            { level: 14, move: 'Sludge Bomb' },
-            { level: 18, move: 'Explosion' },
-            { level: 18, move: 'Destiny Bond' },
-            { level: 18, move: 'Memento' },
-            { level: 18, move: 'Belch' }
-        ],
         features: [
             {
                 name: "Levitate",
@@ -4722,24 +2911,6 @@ const pokemonDatabase = {
         hp: 88, ac: 16, str: 16, dex: 14, con: 18, int: 6, wis: 12, cha: 8,
         speed: 30, type1: 'poison', type2: '', size: 'Medium', sr: 10, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/weezing.png',
-        learnset: [
-            { level: 1, move: 'Double Hit' },
-            { level: 1, move: 'Poison Gas' },
-            { level: 1, move: 'Smog' },
-            { level: 1, move: 'Smokescreen' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Assurance' },
-            { level: 1, move: 'Clear Smog' },
-            { level: 1, move: 'Sludge' },
-            { level: 10, move: 'Self-Destruct' },
-            { level: 10, move: 'Haze' },
-            { level: 14, move: 'Gyro Ball' },
-            { level: 14, move: 'Sludge Bomb' },
-            { level: 18, move: 'Explosion' },
-            { level: 18, move: 'Destiny Bond' },
-            { level: 18, move: 'Memento' },
-            { level: 18, move: 'Belch' }
-        ],
         features: [
             {
                 name: "Levitate",
@@ -4759,25 +2930,6 @@ const pokemonDatabase = {
         hp: 40, ac: 13, str: 15, dex: 10, con: 14, int: 6, wis: 10, cha: 10,
         speed: 30, type1: 'ground', type2: 'rock', size: 'Medium', sr: 3, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/rhyhorn.png',
-        learnset: [
-            { level: 1, move: 'Horn Attack' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 2, move: 'Fury Attack' },
-            { level: 2, move: 'Scary Face' },
-            { level: 6, move: 'Smack Down' },
-            { level: 6, move: 'Stomp' },
-            { level: 10, move: 'Bulldoze' },
-            { level: 10, move: 'Chip Away' },
-            { level: 10, move: 'Head Smash' },
-            { level: 14, move: 'Rock Blast' },
-            { level: 14, move: 'Drill Run' },
-            { level: 14, move: 'Take Down' },
-            { level: 14, move: 'Stone Edge' },
-            { level: 18, move: 'Earthquake' },
-            { level: 18, move: 'Megahorn' },
-            { level: 18, move: 'Horn Drill' },
-            { level: 18, move: 'Double Edge' }
-        ],
         features: [
             {
                 name: "Lightning Rod",
@@ -4805,26 +2957,6 @@ const pokemonDatabase = {
         hp: 128, ac: 15, str: 18, dex: 13, con: 17, int: 6, wis: 12, cha: 10,
         speed: 40, type1: 'ground', type2: 'rock', size: 'Large', sr: 11, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/rhydon.png',
-        learnset: [
-            { level: 1, move: 'Fury Attack' },
-            { level: 1, move: 'Hammer Arm' },
-            { level: 1, move: 'Horn Attack' },
-            { level: 1, move: 'Scary Face' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Smack Down' },
-            { level: 1, move: 'Stomp' },
-            { level: 1, move: 'Bulldoze' },
-            { level: 1, move: 'Chip Away' },
-            { level: 14, move: 'Rock Blast' },
-            { level: 14, move: 'Drill Run' },
-            { level: 14, move: 'Take Down' },
-            { level: 14, move: 'Head Smash' },
-            { level: 18, move: 'Stone Edge' },
-            { level: 18, move: 'Earthquake' },
-            { level: 18, move: 'Megahorn' },
-            { level: 18, move: 'Horn Drill' },
-            { level: 18, move: 'Double Edge' }
-        ],
         features: [
             {
                 name: "Lightning Rod",
@@ -4852,26 +2984,6 @@ const pokemonDatabase = {
         hp: 75, ac: 13, str: 11, dex: 10, con: 18, int: 6, wis: 12, cha: 18,
         speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 7, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/chansey.png',
-        learnset: [
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Pound' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Refresh' },
-            { level: 6, move: 'Double Slap' },
-            { level: 6, move: 'Soft-Boiled' },
-            { level: 6, move: 'Life Dew' },
-            { level: 10, move: 'Bestow' },
-            { level: 10, move: 'Minimize' },
-            { level: 10, move: 'Take Down' },
-            { level: 14, move: 'Sing' },
-            { level: 14, move: 'Fling' },
-            { level: 18, move: 'Heal Pulse' },
-            { level: 18, move: 'Egg Bomb' },
-            { level: 18, move: 'Light Screen' },
-            { level: 18, move: 'Healing Wish' },
-            { level: 18, move: 'Double Edge' }
-        ],
         features: [
             {
                 name: "Natural Cure",
@@ -4899,27 +3011,6 @@ const pokemonDatabase = {
         hp: 35, ac: 15, str: 15, dex: 14, con: 15, int: 6, wis: 10, cha: 10,
         speed: 30, type1: 'grass', type2: '', size: 'Small', sr: 5, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/tangela.png',
-        learnset: [
-            { level: 1, move: 'Constrict' },
-            { level: 1, move: 'Ingrain' },
-            { level: 1, move: 'Sleep Powder' },
-            { level: 1, move: 'Vine Whip' },
-            { level: 1, move: 'Absorb' },
-            { level: 6, move: 'Poison Powder' },
-            { level: 6, move: 'Bind' },
-            { level: 10, move: 'Growth' },
-            { level: 10, move: 'Mega Drain' },
-            { level: 14, move: 'Knock Off' },
-            { level: 14, move: 'Stun Spore' },
-            { level: 14, move: 'Natural Gift' },
-            { level: 14, move: 'Ancient Power' },
-            { level: 18, move: 'Giga Drain' },
-            { level: 18, move: 'Slam' },
-            { level: 18, move: 'Tickle' },
-            { level: 18, move: 'Wring Out' },
-            { level: 18, move: 'Power Whip' },
-            { level: 18, move: 'Grassy Terrain' }
-        ],
         features: [
             {
                 name: "Chlorophyll",
@@ -4947,23 +3038,6 @@ const pokemonDatabase = {
         hp: 60, ac: 18, str: 19, dex: 18, con: 15, int: 6, wis: 12, cha: 8,
         speed: 30, type1: 'normal', type2: '', size: 'Large', sr: 10, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/kangaskhan.png',
-        learnset: [
-            { level: 1, move: 'Comet Punch' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Fake Out' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Double Hit' },
-            { level: 10, move: 'Rage' },
-            { level: 10, move: 'Mega Punch' },
-            { level: 14, move: 'Chip Away' },
-            { level: 14, move: 'Dizzy Punch' },
-            { level: 14, move: 'Crunch' },
-            { level: 18, move: 'Endure' },
-            { level: 18, move: 'Outrage' },
-            { level: 18, move: 'Sucker Punch' },
-            { level: 18, move: 'Reversal' }
-        ],
         features: [
             {
                 name: "Early Bird",
@@ -4991,20 +3065,6 @@ const pokemonDatabase = {
         hp: 16, ac: 13, str: 11, dex: 14, con: 10, int: 6, wis: 10, cha: 12,
         speed: 5, type1: 'water', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/horsea.png',
-        learnset: [
-            { level: 1, move: 'Bubble' },
-            { level: 2, move: 'Smokescreen' },
-            { level: 2, move: 'Leer' },
-            { level: 6, move: 'Water Gun' },
-            { level: 6, move: 'Twister' },
-            { level: 10, move: 'Bubble Beam' },
-            { level: 10, move: 'Focus Energy' },
-            { level: 14, move: 'Brine' },
-            { level: 14, move: 'Agility' },
-            { level: 18, move: 'Dragon Pulse' },
-            { level: 18, move: 'Dragon Dance' },
-            { level: 18, move: 'Hydro Pump' }
-        ],
         features: [
             {
                 name: "Swift Swim",
@@ -5032,20 +3092,6 @@ const pokemonDatabase = {
         hp: 64, ac: 15, str: 15, dex: 17, con: 13, int: 6, wis: 12, cha: 10,
         speed: 5, type1: 'water', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/seadra.png',
-        learnset: [
-            { level: 1, move: 'Bubble' },
-            { level: 1, move: 'Hydro Pump' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Smokescreen' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Twister' },
-            { level: 10, move: 'Bubble Beam' },
-            { level: 10, move: 'Focus Energy' },
-            { level: 14, move: 'Brine' },
-            { level: 18, move: 'Agility' },
-            { level: 18, move: 'Dragon Pulse' },
-            { level: 18, move: 'Dragon Dance' }
-        ],
         features: [
             {
                 name: "Poison Point",
@@ -5073,22 +3119,6 @@ const pokemonDatabase = {
         hp: 17, ac: 13, str: 11, dex: 13, con: 12, int: 6, wis: 10, cha: 10,
         speed: 5, type1: 'water', type2: '', size: 'Small', sr: 0.25, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/goldeen.png',
-        learnset: [
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Water Sport' },
-            { level: 2, move: 'Supersonic' },
-            { level: 2, move: 'Horn Attack' },
-            { level: 6, move: 'Flail' },
-            { level: 6, move: 'Water Pulse' },
-            { level: 10, move: 'Aqua Ring' },
-            { level: 10, move: 'Fury Attack' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Waterfall' },
-            { level: 18, move: 'Horn Drill' },
-            { level: 18, move: 'Soak' },
-            { level: 18, move: 'Megahorn' }
-        ],
         features: [
             {
                 name: "Swift Swim",
@@ -5116,23 +3146,6 @@ const pokemonDatabase = {
         hp: 72, ac: 15, str: 14, dex: 17, con: 14, int: 6, wis: 12, cha: 10,
         speed: 5, type1: 'water', type2: '', size: 'Medium', sr: 9, hitDie: 'd12',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/seaking.png',
-        learnset: [
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Poison Jab' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Water Sport' },
-            { level: 1, move: 'Supersonic' },
-            { level: 1, move: 'Horn Attack' },
-            { level: 1, move: 'Flail' },
-            { level: 1, move: 'Water Pulse' },
-            { level: 10, move: 'Aqua Ring' },
-            { level: 10, move: 'Fury Attack' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Waterfall' },
-            { level: 18, move: 'Horn Drill' },
-            { level: 18, move: 'Soak' },
-            { level: 18, move: 'Megahorn' }
-        ],
         features: [
             {
                 name: "Swift Swim",
@@ -5160,27 +3173,6 @@ const pokemonDatabase = {
         hp: 16, ac: 14, str: 10, dex: 14, con: 11, int: 6, wis: 12, cha: 10,
         speed: 20, type1: 'water', type2: '', size: 'Small', sr: 0.5, hitDie: 'd6',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/staryu.png',
-        learnset: [
-            { level: 1, move: 'Harden' },
-            { level: 1, move: 'Tackle' },
-            { level: 2, move: 'Water Gun' },
-            { level: 2, move: 'Rapid Spin' },
-            { level: 2, move: 'Recover' },
-            { level: 6, move: 'Psywave' },
-            { level: 6, move: 'Swift' },
-            { level: 10, move: 'Bubble Beam' },
-            { level: 10, move: 'Camouflage' },
-            { level: 10, move: 'Gyro Ball' },
-            { level: 14, move: 'Brine' },
-            { level: 14, move: 'Minimize' },
-            { level: 14, move: 'Reflect Type' },
-            { level: 14, move: 'Confuse Ray' },
-            { level: 18, move: 'Power Gem' },
-            { level: 18, move: 'Psychic' },
-            { level: 18, move: 'Light Screen' },
-            { level: 18, move: 'Cosmic Power' },
-            { level: 18, move: 'Hydro Pump' }
-        ],
         features: [
             {
                 name: "Illuminate",
@@ -5208,15 +3200,6 @@ const pokemonDatabase = {
         hp: 64, ac: 17, str: 14, dex: 17, con: 13, int: 6, wis: 14, cha: 10,
         speed: 30, type1: 'water', type2: 'psychic', size: 'Small', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/starmie.png',
-        learnset: [
-            { level: 1, move: 'Hydro Pump' },
-            { level: 1, move: 'Rapid Spin' },
-            { level: 1, move: 'Recover' },
-            { level: 1, move: 'Spotlight' },
-            { level: 1, move: 'Swift' },
-            { level: 1, move: 'Water Gun' },
-            { level: 18, move: 'Confuse Ray' }
-        ],
         features: [
             {
                 name: "Illuminate",
@@ -5244,32 +3227,6 @@ const pokemonDatabase = {
         hp: 50, ac: 17, str: 12, dex: 15, con: 8, int: 12, wis: 14, cha: 12,
         speed: 30, type1: 'psychic', type2: 'fairy', size: 'Medium', sr: 9, hitDie: 'd8',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/mr-mime.png',
-        learnset: [
-            { level: 1, move: 'Barrier' },
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Guard Swap' },
-            { level: 1, move: 'Magical Leaf' },
-            { level: 1, move: 'Misty Terrain' },
-            { level: 1, move: 'Power Swap' },
-            { level: 1, move: 'Quick Guard' },
-            { level: 1, move: 'Wide Guard' },
-            { level: 1, move: 'Copycat' },
-            { level: 1, move: 'Meditate' },
-            { level: 1, move: 'Double Slap' },
-            { level: 6, move: 'Mimic' },
-            { level: 6, move: 'Psywave' },
-            { level: 6, move: 'Encore' },
-            { level: 10, move: 'Light Screen' },
-            { level: 10, move: 'Reflect' },
-            { level: 10, move: 'Psybeam' },
-            { level: 14, move: 'Substitute' },
-            { level: 14, move: 'Recycle' },
-            { level: 14, move: 'Trick' },
-            { level: 18, move: 'Psychic' },
-            { level: 18, move: 'Role Play' },
-            { level: 18, move: 'Baton Pass' },
-            { level: 18, move: 'Safeguard' }
-        ],
         features: [
             {
                 name: "Soundproof",
@@ -5297,26 +3254,6 @@ const pokemonDatabase = {
         hp: 58, ac: 16, str: 17, dex: 18, con: 12, int: 6, wis: 10, cha: 8,
         speed: 35, type1: 'bug', type2: 'flying', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/scyther.png',
-        learnset: [
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Vacuum Wave' },
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Pursuit' },
-            { level: 6, move: 'False Swipe' },
-            { level: 6, move: 'Agility' },
-            { level: 6, move: 'Wing Attack' },
-            { level: 10, move: 'Fury Cutter' },
-            { level: 10, move: 'Slash' },
-            { level: 14, move: 'Razor Wind' },
-            { level: 14, move: 'Double Team' },
-            { level: 18, move: 'X-Scissor' },
-            { level: 18, move: 'Night Slash' },
-            { level: 18, move: 'Double Hit' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Swords Dance' },
-            { level: 18, move: 'Feint' }
-        ],
         features: [
             {
                 name: "Swarm",
@@ -5344,24 +3281,6 @@ const pokemonDatabase = {
         hp: 67, ac: 15, str: 12, dex: 16, con: 14, int: 8, wis: 16, cha: 16,
         speed: 30, type1: 'ice', type2: 'psychic', size: 'Medium', sr: 8, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/jynx.png',
-        learnset: [
-            { level: 1, move: 'Draining Kiss' },
-            { level: 1, move: 'Pound' },
-            { level: 1, move: 'Lick' },
-            { level: 1, move: 'Lovely Kiss' },
-            { level: 1, move: 'Powder Snow' },
-            { level: 6, move: 'Double Slap' },
-            { level: 6, move: 'Ice Punch' },
-            { level: 10, move: 'Heart Stamp' },
-            { level: 10, move: 'Mean Look' },
-            { level: 14, move: 'Fake Tears' },
-            { level: 14, move: 'Wake-Up Slap' },
-            { level: 18, move: 'Avalanche' },
-            { level: 18, move: 'Body Slam' },
-            { level: 18, move: 'Wring Out' },
-            { level: 18, move: 'Perish Song' },
-            { level: 18, move: 'Blizzard' }
-        ],
         features: [
             {
                 name: "Oblivious",
@@ -5389,22 +3308,6 @@ const pokemonDatabase = {
         hp: 68, ac: 15, str: 15, dex: 18, con: 15, int: 6, wis: 12, cha: 10,
         speed: 30, type1: 'electric', type2: '', size: 'Small', sr: 9, hitDie: 'd10',
         image: 'https://img.pokemondb.net/sprites/black-white/normal/electabuzz.png',
-        learnset: [
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Quick Attack' },
-            { level: 1, move: 'Thunder Shock' },
-            { level: 1, move: 'Low Kick' },
-            { level: 6, move: 'Swift' },
-            { level: 6, move: 'Shock Wave' },
-            { level: 10, move: 'Thunder Wave' },
-            { level: 10, move: 'Electro Ball' },
-            { level: 10, move: 'Light Screen' },
-            { level: 14, move: 'Thunder Punch' },
-            { level: 14, move: 'Discharge' },
-            { level: 18, move: 'Screech' },
-            { level: 18, move: 'Thunderbolt' },
-            { level: 18, move: 'Thunder' }
-        ],
         features: [
             {
                 name: "Static",
@@ -5445,29 +3348,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['athletics'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Ember' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Smog' },
-            { level: 1, move: 'Smokescreen' },
-            { level: 6, move: 'Feint Attack' },
-            { level: 6, move: 'Fire Spin' },
-            { level: 6, move: 'Clear Smog' },
-            { level: 10, move: 'Flame Burst' },
-            { level: 10, move: 'Confuse Ray' },
-            { level: 14, move: 'Fire Punch' },
-            { level: 14, move: 'Sunny Day' },
-            { level: 18, move: 'Lava Plume' },
-            { level: 18, move: 'Flamethrower' },
-            { level: 18, move: 'Fire Blast' }
-        ]
-    },
-    // 127
-    'Pinsir': {
-        hp: 60, ac: 16, str: 18, dex: 15, con: 15, int: 6, wis: 12, cha: 10,
-        speed: 30, type1: 'bug', type2: '', size: 'Small', sr: 9, hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/pinsir.png',
-        vulnerabilities: ['fire', 'flying', 'rock'],
         doubleVulnerabilities: [],
         resistances: ['fighting', 'grass', 'ground'],
         doubleResistances: [],
@@ -5488,31 +3368,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['athletics'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Focus Energy' },
-            { level: 1, move: 'Vice Grip' },
-            { level: 1, move: 'Bind' },
-            { level: 1, move: 'Seismic Toss' },
-            { level: 1, move: 'Harden' },
-            { level: 6, move: 'Revenge' },
-            { level: 6, move: 'Vital Throw' },
-            { level: 10, move: 'Double Hit' },
-            { level: 10, move: 'Brick Break' },
-            { level: 14, move: 'X-Scissor' },
-            { level: 14, move: 'Submission' },
-            { level: 14, move: 'Swords Dance' },
-            { level: 18, move: 'Storm Throw' },
-            { level: 18, move: 'Thrash' },
-            { level: 18, move: 'Superpower' },
-            { level: 18, move: 'Guillotine' }
-        ]
-    },
-    // 128
-    'Tauros': {
-        hp: 70, ac: 16, str: 17, dex: 18, con: 16, int: 8, wis: 10, cha: 8,
-        speed: 30, type1: 'normal', type2: '', size: 'Medium', sr: 10, hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/tauros.png',
-        vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
         resistances: [],
         doubleResistances: [],
@@ -5533,30 +3388,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['athletics', 'intimidation'],
         saveProficiencies: ['strength', 'constitution'],
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Rage' },
-            { level: 1, move: 'Horn Attack' },
-            { level: 1, move: 'Scary Face' },
-            { level: 6, move: 'Pursuit' },
-            { level: 6, move: 'Rest' },
-            { level: 10, move: 'Payback' },
-            { level: 10, move: 'Raging Bull' },
-            { level: 14, move: 'Work Up' },
-            { level: 14, move: 'Zen Headbutt' },
-            { level: 14, move: 'Take Down' },
-            { level: 18, move: 'Swagger' },
-            { level: 18, move: 'Thrash' },
-            { level: 18, move: 'Giga Impact' }
-        ]
-    },
-    // 129
-    'Magikarp': {
-        hp: 17, ac: 12, str: 9, dex: 14, con: 13, int: 6, wis: 8, cha: 10,
-        speed: 5, type1: 'water', type2: '', size: 'Small', sr: .25, hitDie: 'd6',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/magikarp.png',
-        vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'ice', 'steel', 'water'],
         doubleResistances: [],
@@ -5573,18 +3404,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: [],
         saveProficiencies: [],
-        learnset: [
-            { level: 1, move: 'Splash' },
-            { level: 2, move: 'Tackle' },
-            { level: 6, move: 'Flail' }
-        ]
-    },
-    // 130
-    'Gyarados': {
-        hp: 80, ac: 16, str: 18, dex: 16, con: 16, int: 6, wis: 12, cha: 10,
-        speed: 30, type1: 'water', type2: 'flying', size: 'Huge', sr: 10, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/gyarados.png',
-        vulnerabilities: ['electric', 'rock'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'fighting', 'fire', 'steel', 'water'],
         doubleResistances: [],
@@ -5601,29 +3420,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['athletics', 'intimidation'],
         saveProficiencies: ['strength', 'constitution'],
-        learnset: [
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Thrash' },
-            { level: 10, move: 'Leer' },
-            { level: 10, move: 'Twister' },
-            { level: 10, move: 'Ice Fang' },
-            { level: 14, move: 'Aqua Tail' },
-            { level: 14, move: 'Scary Face' },
-            { level: 14, move: 'Dragon Rage' },
-            { level: 14, move: 'Crunch' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Dragon Dance' },
-            { level: 18, move: 'Hurricane' },
-            { level: 18, move: 'Rain Dance' },
-            { level: 18, move: 'Hyper Beam' }
-        ]
-    },
-    // 131
-    'Lapras': {
-        hp: 70, ac: 16, str: 17, dex: 14, con: 12, int: 10, wis: 12, cha: 14,
-        speed: 10, type1: 'water', type2: 'ice', size: 'Large', sr: 10, hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/lapras.png',
-        vulnerabilities: ['electric', 'fighting', 'grass', 'rock'],
         doubleVulnerabilities: [],
         resistances: ['ice', 'water'],
         doubleResistances: [],
@@ -5644,31 +3440,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['survival', 'persuasion'],
         saveProficiencies: ['strength', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Sing' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Mist' },
-            { level: 1, move: 'Confuse Ray' },
-            { level: 1, move: 'Ice Shard' },
-            { level: 6, move: 'Water Pulse' },
-            { level: 6, move: 'Body Slam' },
-            { level: 6, move: 'Life Dew' },
-            { level: 10, move: 'Rain Dance' },
-            { level: 10, move: 'Perish Song' },
-            { level: 14, move: 'Ice Beam' },
-            { level: 18, move: 'Brine' },
-            { level: 18, move: 'Safeguard' },
-            { level: 18, move: 'Hydro Pump' },
-            { level: 18, move: 'Sheer Cold' }
-        ]
-    },
-    // 132
-    'Ditto': {
-        hp: 19, ac: 13, str: 12, dex: 12, con: 12, int: 8, wis: 12, cha: 12,
-        speed: 20, type1: 'normal', type2: '', size: 'Tiny', sr: 3, hitDie: 'd8',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/ditto.png',
-        vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
         resistances: [],
         doubleResistances: [],
@@ -5685,16 +3456,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['insight', 'deception'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Transform' }
-        ]
-    },
-    // 133
-    'Eevee': {
-        hp: 16, ac: 13, str: 13, dex: 13, con: 10, int: 6, wis: 10, cha: 12,
-        speed: 30, type1: 'normal', type2: '', size: 'Tiny', sr: .5, hitDie: 'd6',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/eevee.png',
-        vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
         resistances: [],
         doubleResistances: [],
@@ -5715,32 +3476,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['investigation', 'perception'],
         saveProficiencies: ['dexterity', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Covet' },
-            { level: 1, move: 'Growl' },
-            { level: 1, move: 'Helping Hand' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 2, move: 'Sand Attack' },
-            { level: 2, move: 'Baby-Doll Eyes' },
-            { level: 2, move: 'Quick Attack' },
-            { level: 6, move: 'Bite' },
-            { level: 6, move: 'Swift' },
-            { level: 10, move: 'Refresh' },
-            { level: 10, move: 'Take Down' },
-            { level: 14, move: 'Charm' },
-            { level: 14, move: 'Baton Pass' },
-            { level: 18, move: 'Double-Edge' },
-            { level: 18, move: 'Last Resort' },
-            { level: 18, move: 'Trump Card' }
-        ]
-    },
-    // 134
-    'Vaporeon': {
-        hp: 55, ac: 15, str: 15, dex: 15, con: 16, int: 6, wis: 12, cha: 14,
-        speed: 30, type1: 'water', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/vaporeon.png',
-        vulnerabilities: ['electric', 'grass'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'ice', 'steel', 'water'],
         doubleResistances: [],
@@ -5757,30 +3492,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['investigation', 'perception'],
         saveProficiencies: ['dexterity', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Helping Hand' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Baby-Doll Eyes' },
-            { level: 6, move: 'Quick Attack' },
-            { level: 6, move: 'Water Pulse' },
-            { level: 10, move: 'Aurora Beam' },
-            { level: 10, move: 'Aqua Ring' },
-            { level: 14, move: 'Acid Armor' },
-            { level: 14, move: 'Haze' },
-            { level: 18, move: 'Muddy Water' },
-            { level: 18, move: 'Last Resort' },
-            { level: 18, move: 'Hydro Pump' }
-        ]
-    },
-    // 135
-    'Jolteon': {
-        hp: 45, ac: 16, str: 15, dex: 18, con: 13, int: 6, wis: 12, cha: 14,
-        speed: 40, type1: 'electric', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/jolteon.png',
-        vulnerabilities: ['ground'],
         doubleVulnerabilities: [],
         resistances: ['electric', 'flying', 'steel'],
         doubleResistances: [],
@@ -5797,30 +3508,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['investigation', 'perception'],
         saveProficiencies: ['dexterity', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Helping Hand' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Thunder Shock' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Baby-Doll Eyes' },
-            { level: 6, move: 'Quick Attack' },
-            { level: 6, move: 'Double Kick' },
-            { level: 10, move: 'Thunder Fang' },
-            { level: 10, move: 'Pin Missile' },
-            { level: 14, move: 'Agility' },
-            { level: 14, move: 'Thunder Wave' },
-            { level: 18, move: 'Discharge' },
-            { level: 18, move: 'Last Resort' },
-            { level: 18, move: 'Thunder' }
-        ]
-    },
-    // 136
-    'Flareon': {
-        hp: 45, ac: 16, str: 18, dex: 15, con: 13, int: 6, wis: 12, cha: 14,
-        speed: 40, type1: 'fire', type2: '', size: 'Small', sr: 8, hitDie: 'd10',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/flareon.png',
-        vulnerabilities: ['ground', 'rock', 'water'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'fairy', 'fire', 'grass', 'ice', 'steel'],
         doubleResistances: [],
@@ -5837,30 +3524,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['investigation', 'perception'],
         saveProficiencies: ['dexterity', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Ember' },
-            { level: 1, move: 'Helping Hand' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Tail Whip' },
-            { level: 1, move: 'Sand Attack' },
-            { level: 1, move: 'Baby-Doll Eyes' },
-            { level: 6, move: 'Quick Attack' },
-            { level: 6, move: 'Bite' },
-            { level: 10, move: 'Fire Fang' },
-            { level: 10, move: 'Fire Spin' },
-            { level: 14, move: 'Scary Face' },
-            { level: 18, move: 'Smog' },
-            { level: 18, move: 'Lava Plume' },
-            { level: 18, move: 'Last Resort' },
-            { level: 18, move: 'Flare Blitz' }
-        ]
-    },
-    // 137
-    'Porygon': {
-        hp: 35, ac: 14, str: 15, dex: 12, con: 16, int: 6, wis: 12, cha: 12,
-        speed: 20, type1: 'normal', type2: '', size: 'Small', sr: 6, hitDie: 'd8',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/porygon.png',
-        vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
         resistances: [],
         doubleResistances: [],
@@ -5881,30 +3544,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['history'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Conversion' },
-            { level: 1, move: 'Conversion 2' },
-            { level: 1, move: 'Sharpen' },
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Psybeam' },
-            { level: 6, move: 'Agility' },
-            { level: 6, move: 'Recover' },
-            { level: 10, move: 'Magnet Rise' },
-            { level: 14, move: 'Signal Beam' },
-            { level: 14, move: 'Recycle' },
-            { level: 14, move: 'Discharge' },
-            { level: 14, move: 'Lock-On' },
-            { level: 18, move: 'Tri Attack' },
-            { level: 18, move: 'Magic Coat' },
-            { level: 18, move: 'Zap Cannon' }
-        ]
-    },
-    // 138
-    'Omanyte': {
-        hp: 28, ac: 15, str: 14, dex: 11, con: 15, int: 6, wis: 10, cha: 10,
-        speed: 15, type1: 'rock', type2: 'water', size: 'Tiny', sr: 2, hitDie: 'd8',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/omanyte.png',
-        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
         doubleResistances: [],
@@ -5925,29 +3564,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['survival'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Constrict' },
-            { level: 1, move: 'Withdraw' },
-            { level: 2, move: 'Bite' },
-            { level: 2, move: 'Water Gun' },
-            { level: 6, move: 'Rollout' },
-            { level: 6, move: 'Leer' },
-            { level: 10, move: 'Mud Shot' },
-            { level: 14, move: 'Brine' },
-            { level: 14, move: 'Protect' },
-            { level: 14, move: 'Ancient Power' },
-            { level: 18, move: 'Tickle' },
-            { level: 18, move: 'Rock Blast' },
-            { level: 18, move: 'Shell Smash' },
-            { level: 18, move: 'Hydro Pump' }
-        ]
-    },
-    // 139
-    'Omastar': {
-        hp: 105, ac: 16, str: 17, dex: 14, con: 18, int: 6, wis: 12, cha: 10,
-        speed: 20, type1: 'rock', type2: 'water', size: 'Small', sr: 11, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/omastar.png',
-        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
         doubleResistances: [],
@@ -5968,30 +3584,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['survival', 'intimidation'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Constrict' },
-            { level: 1, move: 'Spike Cannon' },
-            { level: 1, move: 'Withdraw' },
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Water Gun' },
-            { level: 1, move: 'Rollout' },
-            { level: 1, move: 'Leer' },
-            { level: 10, move: 'Mud Shot' },
-            { level: 14, move: 'Brine' },
-            { level: 14, move: 'Protect' },
-            { level: 14, move: 'Ancient Power' },
-            { level: 18, move: 'Tickle' },
-            { level: 18, move: 'Rock Blast' },
-            { level: 18, move: 'Shell Smash' },
-            { level: 18, move: 'Hydro Pump' }
-        ]
-    },
-    // 140
-    'Kabuto': {
-        hp: 28, ac: 14, str: 14, dex: 12, con: 14, int: 6, wis: 10, cha: 10,
-        speed: 15, type1: 'rock', type2: 'water', size: 'Tiny', sr: 2, hitDie: 'd8',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/kabuto.png',
-        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
         doubleResistances: [],
@@ -6012,27 +3604,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['survival'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Harden' },
-            { level: 1, move: 'Scratch' },
-            { level: 2, move: 'Absorb' },
-            { level: 2, move: 'Leer' },
-            { level: 6, move: 'Mud Shot' },
-            { level: 10, move: 'Sand Attack' },
-            { level: 10, move: 'Endure' },
-            { level: 14, move: 'Aqua Jet' },
-            { level: 14, move: 'Mega Drain' },
-            { level: 18, move: 'Metal Sound' },
-            { level: 18, move: 'Ancient Power' },
-            { level: 18, move: 'Wring Out' }
-        ]
-    },
-    // 141
-    'Kabutops': {
-        hp: 89, ac: 16, str: 18, dex: 16, con: 15, int: 6, wis: 12, cha: 10,
-        speed: 30, type1: 'rock', type2: 'water', size: 'Medium', sr: 11, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/kabutops.png',
-        vulnerabilities: ['electric', 'fighting', 'grass', 'ground'],
         doubleVulnerabilities: [],
         resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
         doubleResistances: [],
@@ -6053,30 +3624,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['survival', 'intimidation'],
         saveProficiencies: ['constitution'],
-        learnset: [
-            { level: 1, move: 'Feint' },
-            { level: 1, move: 'Harden' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Scratch' },
-            { level: 1, move: 'Slash' },
-            { level: 1, move: 'Absorb' },
-            { level: 1, move: 'Mud Shot' },
-            { level: 10, move: 'Sand Attack' },
-            { level: 10, move: 'Endure' },
-            { level: 14, move: 'Aqua Jet' },
-            { level: 14, move: 'Mega Drain' },
-            { level: 18, move: 'Metal Sound' },
-            { level: 18, move: 'Ancient Power' },
-            { level: 18, move: 'Wring Out' },
-            { level: 18, move: 'Night Slash' }
-        ]
-    },
-    // 142
-    'Aerodactyl': {
-        hp: 102, ac: 16, str: 16, dex: 20, con: 16, int: 6, wis: 12, cha: 10,
-        speed: 20, type1: 'rock', type2: 'flying', size: 'Large', sr: 13, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/aerodactyl.png',
-        vulnerabilities: ['electric', 'ice', 'rock', 'steel', 'water'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'fire', 'flying', 'normal', 'poison'],
         doubleResistances: [],
@@ -6097,32 +3644,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['investigation', 'perception'],
         saveProficiencies: ['strength', 'constitution'],
-        learnset: [
-            { level: 1, move: 'Bite' },
-            { level: 1, move: 'Fire Fang' },
-            { level: 1, move: 'Ice Fang' },
-            { level: 1, move: 'Iron Head' },
-            { level: 1, move: 'Scary Face' },
-            { level: 1, move: 'Supersonic' },
-            { level: 1, move: 'Thunder Fang' },
-            { level: 1, move: 'Wing Attack' },
-            { level: 1, move: 'Roar' },
-            { level: 1, move: 'Agility' },
-            { level: 1, move: 'Ancient Power' },
-            { level: 14, move: 'Crunch' },
-            { level: 18, move: 'Take Down' },
-            { level: 18, move: 'Sky Drop' },
-            { level: 18, move: 'Hyper Beam' },
-            { level: 18, move: 'Rock Slide' },
-            { level: 18, move: 'Giga Impact' }
-        ]
-    },
-    // 143
-    'Snorlax': {
-        hp: 132, ac: 15, str: 18, dex: 12, con: 20, int: 6, wis: 14, cha: 10,
-        speed: 20, type1: 'normal', type2: '', size: 'Large', sr: 14, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/snorlax.png',
-        vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
         resistances: [],
         doubleResistances: [],
@@ -6143,32 +3664,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['survival'],
         saveProficiencies: ['strength', 'constitution'],
-        learnset: [
-            { level: 1, move: 'Tackle' },
-            { level: 1, move: 'Defense Curl' },
-            { level: 1, move: 'Amnesia' },
-            { level: 1, move: 'Lick' },
-            { level: 1, move: 'Chip Away' },
-            { level: 1, move: 'Yawn' },
-            { level: 1, move: 'Body Slam' },
-            { level: 14, move: 'Rest' },
-            { level: 14, move: 'Snore' },
-            { level: 14, move: 'Sleep Talk' },
-            { level: 14, move: 'Giga Impact' },
-            { level: 14, move: 'High Horsepower' },
-            { level: 18, move: 'Rollout' },
-            { level: 18, move: 'Block' },
-            { level: 18, move: 'Belly Drum' },
-            { level: 18, move: 'Crunch' },
-            { level: 18, move: 'Heavy Slam' }
-        ]
-    },
-    // 144
-    'Articuno': {
-        hp: 246, ac: 18, str: 18, dex: 16, con: 18, int: 6, wis: 14, cha: 16,
-        speed: 20, type1: 'ice', type2: 'flying', size: 'Large', sr: 15, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/articuno.png',
-        vulnerabilities: ['electric', 'fire', 'rock', 'steel'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'grass'],
         doubleResistances: [],
@@ -6185,32 +3680,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['arcana', 'insight', 'intimidation'],
         saveProficiencies: ['dexterity', 'constitution'],
-        learnset: [
-            { level: 1, move: 'Gust' },
-            { level: 1, move: 'Powder Snow' },
-            { level: 1, move: 'Mist' },
-            { level: 1, move: 'Ice Shard' },
-            { level: 1, move: 'Mind Reader' },
-            { level: 1, move: 'Ancient Power' },
-            { level: 1, move: 'Agility' },
-            { level: 1, move: 'Reflect' },
-            { level: 1, move: 'Snowscape' },
-            { level: 18, move: 'Hail' },
-            { level: 18, move: 'Tailwind' },
-            { level: 18, move: 'Ice Beam' },
-            { level: 18, move: 'Blizzard' },
-            { level: 18, move: 'Roost' },
-            { level: 18, move: 'Hurricane' },
-            { level: 18, move: 'Sheer Cold' },
-            { level: 18, move: 'Freeze-Dry' }
-        ]
-    },
-    // 145
-    'Zapdos': {
-        hp: 232, ac: 17, str: 17, dex: 19, con: 16, int: 6, wis: 14, cha: 16,
-        speed: 20, type1: 'electric', type2: 'flying', size: 'Large', sr: 15, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/sprites/black-white/normal/zapdos.png',
-        vulnerabilities: ['ice', 'rock'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'fighting', 'flying', 'grass', 'steel'],
         doubleResistances: [],
@@ -6227,31 +3696,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['arcana', 'insight', 'intimidation'],
         saveProficiencies: ['dexterity', 'strength'],
-        learnset: [
-            { level: 1, move: 'Peck' },
-            { level: 1, move: 'Thunder Shock' },
-            { level: 1, move: 'Thunder Wave' },
-            { level: 1, move: 'Detect' },
-            { level: 1, move: 'Pluck' },
-            { level: 1, move: 'Ancient Power' },
-            { level: 1, move: 'Charge' },
-            { level: 1, move: 'Agility' },
-            { level: 18, move: 'Discharge' },
-            { level: 18, move: 'Rain Dance' },
-            { level: 18, move: 'Light Screen' },
-            { level: 18, move: 'Drill Peck' },
-            { level: 18, move: 'Thunder' },
-            { level: 18, move: 'Roost' },
-            { level: 18, move: 'Zap Cannon' },
-            { level: 18, move: 'Magnetic Flux' }
-        ]
-    },
-    // 146
-    'Moltres': {
-        hp: 232, ac: 16, str: 18, dex: 18, con: 16, int: 6, wis: 14, cha: 16,
-        speed: 20, type1: 'fire', type2: 'flying', size: 'Large', sr: 15, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/artwork/moltres.jpg',
-        vulnerabilities: ['electric', 'rock', 'water'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'fairy', 'fighting', 'fire', 'grass', 'steel'],
         doubleResistances: [],
@@ -6268,31 +3712,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: [],
         saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Wing Attack' },
-            { level: 1, move: 'Ember' },
-            { level: 1, move: 'Fire Spin' },
-            { level: 1, move: 'Agility' },
-            { level: 1, move: 'Endure' },
-            { level: 1, move: 'Ancient Power' },
-            { level: 1, move: 'Pluck' },
-            { level: 1, move: 'Flamethrower' },
-            { level: 18, move: 'Safeguard' },
-            { level: 18, move: 'Air Slash' },
-            { level: 18, move: 'Roost' },
-            { level: 18, move: 'Heat Wave' },
-            { level: 18, move: 'Solar Beam' },
-            { level: 18, move: 'Hurricane' },
-            { level: 18, move: 'Burn Up' },
-            { level: 18, move: 'Sky Attack' }
-        ]
-    },
-    // 147
-    'Dratini': {
-        hp: 20, ac: 13, str: 12, dex: 12, con: 10, int: 6, wis: 10, cha: 12,
-        speed: 30, type1: 'dragon', type2: '', size: 'Small', sr: 1, hitDie: 'd8',
-        image: 'https://img.pokemondb.net/artwork/dratini.jpg',
-        vulnerabilities: ['dragon', 'fairy', 'ice'],
         doubleVulnerabilities: [],
         resistances: ['electric', 'fire', 'grass', 'water'],
         doubleResistances: [],
@@ -6309,29 +3728,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['arcana'],
         saveProficiencies: ['wisdom'],
-        learnset: [
-            { level: 1, move: 'Wrap' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Thunder Wave' },
-            { level: 1, move: 'Twister' },
-            { level: 6, move: 'Dragon Rage' },
-            { level: 12, move: 'Slam' },
-            { level: 18, move: 'Agility' },
-            { level: 18, move: 'Dragon Tail' },
-            { level: 18, move: 'Aqua Tail' },
-            { level: 18, move: 'Dragon Rush' },
-            { level: 18, move: 'Safeguard' },
-            { level: 18, move: 'Dragon Dance' },
-            { level: 18, move: 'Outrage' },
-            { level: 18, move: 'Hyper Beam' }
-        ]
-    },
-    // 148
-    'Dragonair': {
-        hp: 53, ac: 14, str: 15, dex: 15, con: 12, int: 6, wis: 12, cha: 12,
-        speed: 30, type1: 'dragon', type2: '', size: 'Large', sr: 6, hitDie: 'd10',
-        image: 'https://img.pokemondb.net/artwork/dragonair.jpg',
-        vulnerabilities: ['dragon', 'fairy', 'ice'],
         doubleVulnerabilities: [],
         resistances: ['electric', 'fire', 'grass', 'water'],
         doubleResistances: [],
@@ -6348,29 +3744,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['arcana'],
         saveProficiencies: ['wisdom'],
-        learnset: [
-            { level: 1, move: 'Wrap' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Thunder Wave' },
-            { level: 1, move: 'Twister' },
-            { level: 6, move: 'Dragon Rage' },
-            { level: 12, move: 'Slam' },
-            { level: 18, move: 'Agility' },
-            { level: 18, move: 'Dragon Tail' },
-            { level: 18, move: 'Aqua Tail' },
-            { level: 18, move: 'Dragon Rush' },
-            { level: 18, move: 'Safeguard' },
-            { level: 18, move: 'Dragon Dance' },
-            { level: 18, move: 'Outrage' },
-            { level: 18, move: 'Hyper Beam' }
-        ]
-    },
-    // 149
-    'Dragonite': {
-        hp: 173, ac: 17, str: 19, dex: 18, con: 16, int: 8, wis: 14, cha: 14,
-        speed: 30, type1: 'dragon', type2: 'flying', size: 'Large', sr: 14, hitDie: 'd12',
-        image: 'https://img.pokemondb.net/artwork/dragonite.jpg',
-        vulnerabilities: ['dragon', 'fairy', 'ice', 'rock'],
         doubleVulnerabilities: [],
         resistances: ['bug', 'fighting', 'fire', 'grass', 'water'],
         doubleResistances: [],
@@ -6387,34 +3760,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: ['arcana', 'athletics'],
         saveProficiencies: ['strength', 'wisdom'],
-        learnset: [
-            { level: 1, move: 'Wing Attack' },
-            { level: 1, move: 'Fire Punch' },
-            { level: 1, move: 'Thunder Punch' },
-            { level: 1, move: 'Roost' },
-            { level: 1, move: 'Wrap' },
-            { level: 1, move: 'Leer' },
-            { level: 1, move: 'Thunder Wave' },
-            { level: 1, move: 'Twister' },
-            { level: 6, move: 'Dragon Rage' },
-            { level: 12, move: 'Slam' },
-            { level: 18, move: 'Agility' },
-            { level: 18, move: 'Dragon Tail' },
-            { level: 18, move: 'Aqua Tail' },
-            { level: 18, move: 'Dragon Rush' },
-            { level: 18, move: 'Safeguard' },
-            { level: 18, move: 'Dragon Dance' },
-            { level: 18, move: 'Outrage' },
-            { level: 18, move: 'Hyper Beam' },
-            { level: 18, move: 'Hurricane' }
-        ]
-    },
-    // 150
-    'Mewtwo': {
-        hp: 486, ac: 18, str: 19, dex: 24, con: 18, int: 20, wis: 20, cha: 18,
-        speed: 30, type1: 'psychic', type2: '', size: 'Medium', sr: 15, hitDie: 'd20',
-        image: 'https://img.pokemondb.net/artwork/mewtwo.jpg',
-        vulnerabilities: ['bug', 'dark', 'ghost'],
         doubleVulnerabilities: [],
         resistances: ['fighting', 'psychic'],
         doubleResistances: [],
@@ -6431,23 +3776,6 @@ const pokemonDatabase = {
         ],
         skillProficiencies: [],
         saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Confusion' },
-            { level: 1, move: 'Disable' },
-            { level: 1, move: 'Safeguard' },
-            { level: 1, move: 'Swift' },
-            { level: 11, move: 'Future Sight' },
-            { level: 22, move: 'Mist' },
-            { level: 33, move: 'Psychic' },
-            { level: 44, move: 'Recover' }
-        ]
-    },
-    // 151
-    'Mew': {
-        hp: 486, ac: 18, str: 14, dex: 22, con: 18, int: 16, wis: 20, cha: 20,
-        speed: 20, type1: 'psychic', type2: '', size: 'Tiny', sr: 15, hitDie: 'd20',
-        image: 'https://img.pokemondb.net/artwork/mew.jpg',
-        vulnerabilities: ['bug', 'dark', 'ghost'],
         doubleVulnerabilities: [],
         resistances: ['fighting', 'psychic'],
         doubleResistances: [],
