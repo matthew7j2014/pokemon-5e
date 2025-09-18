@@ -4294,4 +4294,4 @@ function createPokemon(pokemonName, level) {
     }, 100);
 }
 
-log('Pokemon Encounter System ready! Use !pokemon-encounter "Route 1" to test.');
+log('Pokemon Encounter System ready!');
