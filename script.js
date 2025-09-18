@@ -6853,9 +6853,114 @@ function createPokemon(pokemonName, level) {
         setTimeout(() => {
             calculateAndSetModifiers(character.id, level);
         }, 200);
-        
+
+        // Create default token with linked bars
+        setTimeout(() => {
+            // Get the attribute IDs for linking
+            const hpAttr = findObjs({
+                _type: 'attribute',
+                _characterid: character.id,
+                name: 'pokemon_hp'
+            })[0];
+
+            const acAttr = findObjs({
+                _type: 'attribute',
+                _characterid: character.id,
+                name: 'pokemon_ac'
+            })[0];
+
+            const levelAttr = findObjs({
+                _type: 'attribute',
+                _characterid: character.id,
+                name: 'pokemon_level'
+            })[0];
+
+            // Create a temporary token to set as default
+            const pageId = Campaign().get('playerpageid');
+            const tempToken = createObj('graphic', {
+                _pageid: pageId,
+                _subtype: 'token',
+                layer: 'gmlayer',
+                left: -9999,
+                top: -9999,
+                width: 70,
+                height: 70,
+                name: pokemonName, // Use just the Pokemon name without #1
+                imgsrc: characterImage || 'https://s3.amazonaws.com/files.d20.io/images/4095816/086J-nQbyz-9AjWa3DXjYQ/thumb.png?1400535580',
+                represents: character.id,
+                bar1_link: hpAttr ? hpAttr.id : '',
+                bar2_link: acAttr ? acAttr.id : '',
+                bar3_link: levelAttr ? levelAttr.id : '',
+                showname: false, // Disable nameplate
+                showplayers_name: false, // Players can't see nameplate
+                playersedit_name: true,
+                playersedit_bar1: true,
+                playersedit_bar2: false, // Players can't edit AC
+                playersedit_bar3: false, // Players can't edit Level
+                showplayers_bar1: true,
+                showplayers_bar2: false, // Players can't see AC
+                showplayers_bar3: false // Players can't see Level
+            });
+
+            // Set as default token
+            setDefaultTokenForCharacter(character, tempToken);
+
+            // Remove the temporary token
+            tempToken.remove();
+
+            // IMMEDIATELY restore attributes in case setDefaultTokenForCharacter corrupted them
+            setTimeout(() => {
+                const hpCheck = findObjs({_type: 'attribute', _characterid: character.id, name: 'pokemon_hp'})[0];
+                const acCheck = findObjs({_type: 'attribute', _characterid: character.id, name: 'pokemon_ac'})[0];
+                const levelCheck = findObjs({_type: 'attribute', _characterid: character.id, name: 'pokemon_level'})[0];
+
+                if (!hpCheck || !hpCheck.get('current')) {
+                    sendChat('Pokemon System', `/w GM HP was corrupted, restoring...`);
+                    if (hpCheck) {
+                        hpCheck.set('current', adjustedHP);
+                        hpCheck.set('max', adjustedHP);
+                    } else {
+                        createObj('attribute', {
+                            _characterid: character.id,
+                            name: 'pokemon_hp',
+                            current: adjustedHP,
+                            max: adjustedHP
+                        });
+                    }
+                }
+
+                if (!acCheck || !acCheck.get('current')) {
+                    sendChat('Pokemon System', `/w GM AC was corrupted, restoring...`);
+                    if (acCheck) {
+                        acCheck.set('current', adjustedAC);
+                    } else {
+                        createObj('attribute', {
+                            _characterid: character.id,
+                            name: 'pokemon_ac',
+                            current: adjustedAC
+                        });
+                    }
+                }
+
+                if (!levelCheck || !levelCheck.get('current')) {
+                    sendChat('Pokemon System', `/w GM Level was corrupted, restoring...`);
+                    if (levelCheck) {
+                        levelCheck.set('current', level);
+                    } else {
+                        createObj('attribute', {
+                            _characterid: character.id,
+                            name: 'pokemon_level',
+                            current: level
+                        });
+                    }
+                }
+            }, 50);
+
+            sendChat('Pokemon System', `/w GM Default token configured with linked bars: HP→bar1, AC→bar2, Level→bar3`);
+        }, 300);
+
         let announcement = `&{template:default} {{name=Pokemon Spawned!}} `;
-        announcement += `{{Pokemon=${pokemonName}}} {{Level=${level}}} {{HP=${adjustedHP}}} {{Hit Die=${pokemonData.hitDie || 'd6'}}} {{Note=Sheet will auto-populate moves when opened}}`;
+        announcement += `{{Pokemon=${pokemonName}}} {{Level=${level}}} {{HP=${adjustedHP}}} {{Hit Die=${pokemonData.hitDie || 'd6'}}} {{Note=Default token saved with linked bars}}`;
         sendChat('Pokemon System', '/w GM ' + announcement);
         
     }, 100);
