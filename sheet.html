@@ -905,9 +905,14 @@
                 </div>
                 
                 <!-- Move 1 -->
-                <div class="sheet-move-container">
-                    <!-- Hidden input to control collapse state -->
+                <div class="sheet-move-container" data-move-type="">
+                    <!-- Hidden inputs to control state and type -->
                     <input type="hidden" name="attr_pokemon_move1_collapsed" value="0" />
+                    <input type="hidden" name="attr_pokemon_move1_type_class" value="" />
+                    <input type="hidden" name="attr_pokemon_move1_bg_color" value="#f0f0f0" />
+                    <input type="hidden" name="attr_pokemon_move1_text_color" value="#000" />
+                    <!-- Type selector for styling - hidden but at container level -->
+                    <input type="hidden" name="attr_pokemon_move1_type_selector" value="Normal" />
                     
                     <div class="sheet-move-header">
                         <input type="text" name="attr_pokemon_move1" placeholder="Move Name" class="sheet-move-name" />
@@ -960,9 +965,14 @@
                 </div>
                 
                 <!-- Move 2 -->
-                <div class="sheet-move-container">
-                    <!-- Hidden input to control collapse state -->
+                <div class="sheet-move-container" data-move-type="">
+                    <!-- Hidden inputs to control state and type -->
                     <input type="hidden" name="attr_pokemon_move2_collapsed" value="0" />
+                    <input type="hidden" name="attr_pokemon_move2_type_class" value="" />
+                    <input type="hidden" name="attr_pokemon_move2_bg_color" value="#f0f0f0" />
+                    <input type="hidden" name="attr_pokemon_move2_text_color" value="#000" />
+                    <!-- Type selector for styling - hidden but at container level -->
+                    <input type="hidden" name="attr_pokemon_move2_type_selector" value="Normal" />
                     
                     <div class="sheet-move-header">
                         <input type="text" name="attr_pokemon_move2" placeholder="Move Name" class="sheet-move-name" />
@@ -1015,9 +1025,14 @@
                 </div>
                 
                 <!-- Move 3 -->
-                <div class="sheet-move-container">
-                    <!-- Hidden input to control collapse state -->
+                <div class="sheet-move-container" data-move-type="">
+                    <!-- Hidden inputs to control state and type -->
                     <input type="hidden" name="attr_pokemon_move3_collapsed" value="0" />
+                    <input type="hidden" name="attr_pokemon_move3_type_class" value="" />
+                    <input type="hidden" name="attr_pokemon_move3_bg_color" value="#f0f0f0" />
+                    <input type="hidden" name="attr_pokemon_move3_text_color" value="#000" />
+                    <!-- Type selector for styling - hidden but at container level -->
+                    <input type="hidden" name="attr_pokemon_move3_type_selector" value="Normal" />
                     
                     <div class="sheet-move-header">
                         <input type="text" name="attr_pokemon_move3" placeholder="Move Name" class="sheet-move-name" />
@@ -1070,9 +1085,14 @@
                 </div>
                 
                 <!-- Move 4 -->
-                <div class="sheet-move-container">
-                    <!-- Hidden input to control collapse state -->
+                <div class="sheet-move-container" data-move-type="">
+                    <!-- Hidden inputs to control state and type -->
                     <input type="hidden" name="attr_pokemon_move4_collapsed" value="0" />
+                    <input type="hidden" name="attr_pokemon_move4_type_class" value="" />
+                    <input type="hidden" name="attr_pokemon_move4_bg_color" value="#f0f0f0" />
+                    <input type="hidden" name="attr_pokemon_move4_text_color" value="#000" />
+                    <!-- Type selector for styling - hidden but at container level -->
+                    <input type="hidden" name="attr_pokemon_move4_type_selector" value="Normal" />
                     
                     <div class="sheet-move-header">
                         <input type="text" name="attr_pokemon_move4" placeholder="Move Name" class="sheet-move-name" />
@@ -9245,6 +9265,126 @@ on("change:pokemon_hp change:pokemon_level", function() {
         console.log(`Catch DC updated: 10 + ${baseSRRounded} + ${level} + ${hpComponent} = ${catchDC}`);
     });
 });
+
+// Move Type Styling Functions with Detailed Logging
+function getMoveTypeClass(moveType) {
+    console.log(`getMoveTypeClass called with: "${moveType}"`);
+    if (!moveType) {
+        console.log('Move type is empty, returning empty string');
+        return '';
+    }
+    const result = 'move-type-' + moveType.toLowerCase().replace(/\s+/g, '');
+    console.log(`getMoveTypeClass result: "${result}"`);
+    return result;
+}
+
+function updateMoveTypeClass(moveNum) {
+    console.log(`updateMoveTypeClass called for move ${moveNum}`);
+    getAttrs([`pokemon_move${moveNum}_type`], function(values) {
+        console.log(`getAttrs callback for move ${moveNum}, values:`, values);
+        const moveType = values[`pokemon_move${moveNum}_type`] || 'Normal';
+        console.log(`Raw move type for move ${moveNum}: "${moveType}"`);
+        const typeClass = getMoveTypeClass(moveType);
+        console.log(`Type class for move ${moveNum}: "${typeClass}"`);
+
+        // Get the type colors
+        const typeColors = getTypeColors(moveType);
+        console.log(`Type colors for ${moveType}:`, typeColors);
+
+        const updateObj = {};
+        updateObj[`pokemon_move${moveNum}_type_class`] = typeClass;
+        updateObj[`pokemon_move${moveNum}_bg_color`] = typeColors.background;
+        updateObj[`pokemon_move${moveNum}_text_color`] = typeColors.color;
+        // IMPORTANT: Update the selector field that drives CSS styling
+        updateObj[`pokemon_move${moveNum}_type_selector`] = moveType;
+        console.log(`Setting attributes for move ${moveNum}:`, updateObj);
+
+        setAttrs(updateObj, function() {
+            console.log(`✅ Successfully set type class for move ${moveNum}: ${typeClass}`);
+            console.log(`✅ Successfully set type selector for move ${moveNum}: ${moveType}`);
+        });
+
+        console.log(`🎨 Move ${moveNum} type updated: "${moveType}" -> "${typeClass}"`);
+    });
+}
+
+// Function to get type colors
+function getTypeColors(moveType) {
+    const typeColorMap = {
+        'normal': { background: '#A8A878', color: '#000' },
+        'fire': { background: '#F08030', color: '#fff' },
+        'water': { background: '#6890F0', color: '#fff' },
+        'electric': { background: '#F8D030', color: '#000' },
+        'grass': { background: '#78C850', color: '#000' },
+        'ice': { background: '#98D8D8', color: '#000' },
+        'fighting': { background: '#C03028', color: '#fff' },
+        'poison': { background: '#A040A0', color: '#fff' },
+        'ground': { background: '#E0C068', color: '#000' },
+        'flying': { background: '#A890F0', color: '#000' },
+        'psychic': { background: '#F85888', color: '#fff' },
+        'bug': { background: '#A8B820', color: '#000' },
+        'rock': { background: '#B8A038', color: '#000' },
+        'ghost': { background: '#705898', color: '#fff' },
+        'dragon': { background: '#7038F8', color: '#fff' },
+        'dark': { background: '#705848', color: '#fff' },
+        'steel': { background: '#B8B8D0', color: '#000' },
+        'fairy': { background: '#EE99AC', color: '#000' }
+    };
+
+    const normalizedType = moveType ? moveType.toLowerCase() : 'normal';
+    return typeColorMap[normalizedType] || typeColorMap['normal'];
+}
+
+// Listen for move type changes on all 4 moves with logging
+console.log('🎯 Setting up move type change listeners...');
+
+on("change:pokemon_move1_type", function() {
+    console.log('🔥 Move 1 type changed - calling updateMoveTypeClass(1)');
+    updateMoveTypeClass(1);
+});
+
+on("change:pokemon_move2_type", function() {
+    console.log('🔥 Move 2 type changed - calling updateMoveTypeClass(2)');
+    updateMoveTypeClass(2);
+});
+
+on("change:pokemon_move3_type", function() {
+    console.log('🔥 Move 3 type changed - calling updateMoveTypeClass(3)');
+    updateMoveTypeClass(3);
+});
+
+on("change:pokemon_move4_type", function() {
+    console.log('🔥 Move 4 type changed - calling updateMoveTypeClass(4)');
+    updateMoveTypeClass(4);
+});
+
+// Function to apply type styling to all moves when sheet opens
+on("sheet:opened", function() {
+    console.log('📋 Sheet opened - applying type styling to all moves');
+    for (let i = 1; i <= 4; i++) {
+        console.log(`🔄 Processing move ${i} on sheet open`);
+        updateMoveTypeClass(i);
+    }
+    console.log('✅ Finished processing all moves on sheet open');
+});
+
+// Test function to check current move types and selectors
+function debugMoveTypes() {
+    console.log('🔍 Debug: Checking all current move types and selectors...');
+    getAttrs([
+        'pokemon_move1_type', 'pokemon_move2_type', 'pokemon_move3_type', 'pokemon_move4_type',
+        'pokemon_move1_type_selector', 'pokemon_move2_type_selector', 'pokemon_move3_type_selector', 'pokemon_move4_type_selector'
+    ], function(values) {
+        console.log('🔍 All move data:', values);
+        for (let i = 1; i <= 4; i++) {
+            const moveType = values[`pokemon_move${i}_type`];
+            const selector = values[`pokemon_move${i}_type_selector`];
+            console.log(`🔍 Move ${i}: type="${moveType}", selector="${selector}"`);
+        }
+    });
+}
+
+console.log('🎨 Move type styling system loaded with debug logging!');
 
 console.log('Complete Pokemon Character Sheet System loaded!');
 </script>

@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:pokedex-5e.herokuapp.com)",
-      "WebFetch(domain:poke5e.app)"
+      "WebFetch(domain:poke5e.app)",
+      "WebSearch",
+      "WebFetch(domain:wiki.roll20.net)"
     ],
     "deny": [],
     "ask": []

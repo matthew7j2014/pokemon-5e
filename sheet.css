@@ -2294,16 +2294,6 @@ button[name="roll_initiative"]:active {
     transform: translateY(-1px);
 }
 
-/* Move Header - Cleaner layout */
-.sheet-move-header {
-    background: linear-gradient(135deg, #3B3F58 0%, #484a58 100%);
-    color: white;
-    padding: 10px 15px;
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    align-items: center;
-}
-
 .sheet-move-name {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -2632,6 +2622,114 @@ button[name="roll_initiative"]:active {
     font-size: 10px;
 }
 
+/* Move type colors based on official Pokemon colors */
+.move-type-normal { background-color: #A8A878; color: #000; }
+.move-type-fire { background-color: #F08030; color: #fff; }
+.move-type-water { background-color: #6890F0; color: #fff; }
+.move-type-electric { background-color: #F8D030; color: #000; }
+.move-type-grass { background-color: #78C850; color: #000; }
+.move-type-ice { background-color: #98D8D8; color: #000; }
+.move-type-fighting { background-color: #C03028; color: #fff; }
+.move-type-poison { background-color: #A040A0; color: #fff; }
+.move-type-ground { background-color: #E0C068; color: #000; }
+.move-type-flying { background-color: #A890F0; color: #000; }
+.move-type-psychic { background-color: #F85888; color: #fff; }
+.move-type-bug { background-color: #A8B820; color: #000; }
+.move-type-rock { background-color: #B8A038; color: #000; }
+.move-type-ghost { background-color: #705898; color: #fff; }
+.move-type-dragon { background-color: #7038F8; color: #fff; }
+.move-type-dark { background-color: #705848; color: #fff; }
+.move-type-steel { background-color: #B8B8D0; color: #000; }
+.move-type-fairy { background-color: #EE99AC; color: #000; }
+
+/* Type-based styling using Roll20 sibling selectors from container level */
+/* Move 1 Type Styling */
+input[name="attr_pokemon_move1_type_selector"][value="Normal"] ~ .sheet-move-header { background: #A8A878 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Fire"] ~ .sheet-move-header { background: #F08030 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Water"] ~ .sheet-move-header { background: #6890F0 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Electric"] ~ .sheet-move-header { background: #F8D030 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Grass"] ~ .sheet-move-header { background: #78C850 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Ice"] ~ .sheet-move-header { background: #98D8D8 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Fighting"] ~ .sheet-move-header { background: #C03028 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Poison"] ~ .sheet-move-header { background: #A040A0 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Ground"] ~ .sheet-move-header { background: #E0C068 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Flying"] ~ .sheet-move-header { background: #A890F0 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Psychic"] ~ .sheet-move-header { background: #F85888 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Bug"] ~ .sheet-move-header { background: #A8B820 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Rock"] ~ .sheet-move-header { background: #B8A038 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Ghost"] ~ .sheet-move-header { background: #705898 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Dragon"] ~ .sheet-move-header { background: #7038F8 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Dark"] ~ .sheet-move-header { background: #705848 !important; color: #fff !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Steel"] ~ .sheet-move-header { background: #B8B8D0 !important; color: #000 !important; }
+input[name="attr_pokemon_move1_type_selector"][value="Fairy"] ~ .sheet-move-header { background: #EE99AC !important; color: #000 !important; }
+
+/* Move 2 Type Styling */
+input[name="attr_pokemon_move2_type_selector"][value="Normal"] ~ .sheet-move-header { background: #A8A878 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Fire"] ~ .sheet-move-header { background: #F08030 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Water"] ~ .sheet-move-header { background: #6890F0 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Electric"] ~ .sheet-move-header { background: #F8D030 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Grass"] ~ .sheet-move-header { background: #78C850 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Ice"] ~ .sheet-move-header { background: #98D8D8 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Fighting"] ~ .sheet-move-header { background: #C03028 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Poison"] ~ .sheet-move-header { background: #A040A0 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Ground"] ~ .sheet-move-header { background: #E0C068 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Flying"] ~ .sheet-move-header { background: #A890F0 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Psychic"] ~ .sheet-move-header { background: #F85888 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Bug"] ~ .sheet-move-header { background: #A8B820 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Rock"] ~ .sheet-move-header { background: #B8A038 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Ghost"] ~ .sheet-move-header { background: #705898 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Dragon"] ~ .sheet-move-header { background: #7038F8 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Dark"] ~ .sheet-move-header { background: #705848 !important; color: #fff !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Steel"] ~ .sheet-move-header { background: #B8B8D0 !important; color: #000 !important; }
+input[name="attr_pokemon_move2_type_selector"][value="Fairy"] ~ .sheet-move-header { background: #EE99AC !important; color: #000 !important; }
+
+/* Move 3 Type Styling */
+input[name="attr_pokemon_move3_type_selector"][value="Normal"] ~ .sheet-move-header { background: #A8A878 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Fire"] ~ .sheet-move-header { background: #F08030 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Water"] ~ .sheet-move-header { background: #6890F0 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Electric"] ~ .sheet-move-header { background: #F8D030 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Grass"] ~ .sheet-move-header { background: #78C850 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Ice"] ~ .sheet-move-header { background: #98D8D8 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Fighting"] ~ .sheet-move-header { background: #C03028 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Poison"] ~ .sheet-move-header { background: #A040A0 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Ground"] ~ .sheet-move-header { background: #E0C068 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Flying"] ~ .sheet-move-header { background: #A890F0 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Psychic"] ~ .sheet-move-header { background: #F85888 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Bug"] ~ .sheet-move-header { background: #A8B820 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Rock"] ~ .sheet-move-header { background: #B8A038 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Ghost"] ~ .sheet-move-header { background: #705898 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Dragon"] ~ .sheet-move-header { background: #7038F8 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Dark"] ~ .sheet-move-header { background: #705848 !important; color: #fff !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Steel"] ~ .sheet-move-header { background: #B8B8D0 !important; color: #000 !important; }
+input[name="attr_pokemon_move3_type_selector"][value="Fairy"] ~ .sheet-move-header { background: #EE99AC !important; color: #000 !important; }
+
+/* Move 4 Type Styling */
+input[name="attr_pokemon_move4_type_selector"][value="Normal"] ~ .sheet-move-header { background: #A8A878 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Fire"] ~ .sheet-move-header { background: #F08030 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Water"] ~ .sheet-move-header { background: #6890F0 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Electric"] ~ .sheet-move-header { background: #F8D030 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Grass"] ~ .sheet-move-header { background: #78C850 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Ice"] ~ .sheet-move-header { background: #98D8D8 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Fighting"] ~ .sheet-move-header { background: #C03028 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Poison"] ~ .sheet-move-header { background: #A040A0 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Ground"] ~ .sheet-move-header { background: #E0C068 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Flying"] ~ .sheet-move-header { background: #A890F0 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Psychic"] ~ .sheet-move-header { background: #F85888 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Bug"] ~ .sheet-move-header { background: #A8B820 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Rock"] ~ .sheet-move-header { background: #B8A038 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Ghost"] ~ .sheet-move-header { background: #705898 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Dragon"] ~ .sheet-move-header { background: #7038F8 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Dark"] ~ .sheet-move-header { background: #705848 !important; color: #fff !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Steel"] ~ .sheet-move-header { background: #B8B8D0 !important; color: #000 !important; }
+input[name="attr_pokemon_move4_type_selector"][value="Fairy"] ~ .sheet-move-header { background: #EE99AC !important; color: #000 !important; }
+
+/* Ensure text is readable on colored backgrounds */
+.sheet-move-container .sheet-move-name {
+    background: transparent !important;
+    border: none !important;
+    font-weight: bold;
+}
+
 /* Existing move container styling - ensure it works with collapse */
 .sheet-move-container {
     border: 2px solid #3B3F58;
@@ -2651,6 +2749,7 @@ button[name="roll_initiative"]:active {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    grid-template-columns: 1fr auto auto;
 }
 
 .sheet-move-name {
