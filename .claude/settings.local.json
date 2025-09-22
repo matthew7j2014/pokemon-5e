@@ -4,7 +4,8 @@
       "WebFetch(domain:pokedex-5e.herokuapp.com)",
       "WebFetch(domain:poke5e.app)",
       "WebSearch",
-      "WebFetch(domain:wiki.roll20.net)"
+      "WebFetch(domain:wiki.roll20.net)",
+      "Read(//c/Users/matth/Downloads/**)"
     ],
     "deny": [],
     "ask": []
