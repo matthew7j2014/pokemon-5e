@@ -1251,7 +1251,7 @@ He hands over the **Boulder Badge** and a **TM (Rock Tomb)**, his eyes serious a
 - **Next breadcrumb:** Mt. Moon excavations → more shards, deeper truths about the Aether Eye.
 
 ### WHAT REALLY HAPPENED
-The group first went to the Gym and overhead billy talk about how to get to the basement. They then went to the Museum main entrance and looked around and talked to the curator then at night went behing the Museum and went in the basement. They defeated Team Rocket inside and discovered the shard and rocks gathered from Mt. Moon. Team Rocket escaped. They then went back outside and tried to go inside the Museum but it was closed. They broke inside with a high DC sleight of hand check and entered. They set off the alarms and the camera inside got clear view of them going through things behing the counter. They didn't find anything and escaped. They then went to the top-left building and knocked. The woman inside heard the gym alarm and hesitantly opened the door. The party tried to lie saying they didn't know what was going on at the museum but she saw right through them. She left her house and locked it and went to help with the investigation at the museum which was now swarming with cops. The party then went back to Brock's gym and it was empty except for Brock. Right as they were about to battle, a cop came in to tell Brock someone had broken into the museum. Brock left and said the battle would need to wait. The party decided to long rest at the gym and during the night, Billy's group comes in and rests there as well. In the morning, the group is woken by Brock and a League officer coming in and accusing the party of breaking in. At first they try to lie but then they tell the party that they have them on camera. Sawyer comes clean and tells them that they broke in trying to find out more after finding what they did in the basement. After several persuasion checks, the officer and brock believes them. Brock then tells them to battle Billys group for the chance at a badge. They defeat Billy's group and Brock and get the badges and TMs and money. Brock tells them the next step is Mt. Moon.
+Gin convinced the Mart owner to sell Mike some malfunctioned pokeballs. The group first went to the Gym and overhead billy talk about how to get to the basement. They then went to the Museum main entrance and looked around and talked to the curator then at night went behing the Museum and went in the basement. They defeated Team Rocket inside and discovered the shard and rocks gathered from Mt. Moon. Team Rocket escaped. They then went back outside and tried to go inside the Museum but it was closed. They broke inside with a high DC sleight of hand check and entered. They set off the alarms and the camera inside got clear view of them going through things behing the counter. They didn't find anything and escaped. They then went to the top-left building and knocked. The woman inside heard the gym alarm and hesitantly opened the door. The party tried to lie saying they didn't know what was going on at the museum but she saw right through them. She left her house and locked it and went to help with the investigation at the museum which was now swarming with cops. The party then went back to Brock's gym and it was empty except for Brock. Right as they were about to battle, a cop came in to tell Brock someone had broken into the museum. Brock left and said the battle would need to wait. The party decided to long rest at the gym and during the night, Billy's group comes in and rests there as well. In the morning, the group is woken by Brock and a League officer coming in and accusing the party of breaking in. At first they try to lie but then they tell the party that they have them on camera. Sawyer comes clean and tells them that they broke in trying to find out more after finding what they did in the basement. After several persuasion checks, the officer and brock believes them. Brock then tells them to battle Billys group for the chance at a badge. They defeat Billy's group and Brock and get the badges and TMs and money. Brock tells them the next step is Mt. Moon.
 
 ## Mt. Moon Arc
 ### Route 3
@@ -1338,142 +1338,68 @@ If the players give it to a knowledgeable NPC (like Juniper or Bill later), they
 🧠 1. Modern Neural Sync Tech
 
 What Oak, the League, and Rocket are using now.
-
 - **Purpose (Original):** Help trainers and Pokémon better understand each other — empathy-based bonding tech.
-
 - **Purpose (Now):** Covertly test **direct control** over Pokémon instincts (obedience, aggression, fear suppression).
-
 - **Tools Involved:**
-
   - Earpieces, control tags, collars, modified Poké Balls.
-
   - Pokémon like Rattata and Butterfree have been **"partial sync test subjects."**
-
 🧩 What the Players Have Encountered:
-
 - Oak’s **research was stolen** to accelerate this tech.
-
 - Team Rocket’s raid used Pokémon pre-conditioned through this tech (Koffing, Vileplume, maybe even Sandshrew).
-
 - Butterfree was Subject 8 — it **rejected the sync mid-test**, causing instability.
-
 - The Sync Dampener Band is a **countermeasure**.
-
 🧬 2. The Signal
-
 An ambient psychic field that players may hear referred to as “the hum,” “the resonance,” or “the tether.”
-
 - When players get near “nodes” or corrupted Pokémon, it **feels like a presence**.
-
 - The sync tech taps into this **signal** — but no one fully understands what it is yet.
-
 - It predates modern technology.
-
 **Analogy:** Sync tech is like building a radio. The **signal** is the strange, ancient broadcast it tunes into.
-
 🧿 3. The Artifact — “The Aether Eye” or Origin Node
-
 Ancient device. The source of the signal.
-
 - Buried or sealed long ago — possibly due to the danger it posed.
-
 - It **generates the signal** that modern sync tech piggybacks on.
-
 - It is rumored to **store consciousness**, override free will, and link minds — not just Pokémon, but humans too.
-
 - Team Rocket wants to find it and use it to **overwrite** the League, the wilds, even key trainers.
-
 🧠 So in Timeline Form:
-
 1. **Ancient Civilization** created the Aether Eye or similar artifacts to spiritually/mentally sync with Pokémon.
-
 2. It went too far — control and consciousness override occurred — and it was sealed or lost.
-
 3. **The League’s early researchers (Oak, Blaine, Cedar)** rediscovered psychic signal echoes in Pokémon behavior.
-
 4. **Oak** wanted to help trainer bonds; **Rocket** wanted control.
-
 5. **Current Rocket tests** use modern devices to copy what the artifact could do naturally.
-
 6. Your players are **seeing the fallout** — Pokémon breaking down, going rogue, syncing halfway… or waking up.
 
-
 ## Ancient Artifact
-
 **Name**: **The Aether Eye\
 Appearance**: A crystalline orb set in an obsidian root-like base. When active, it emits a pulse like a heartbeat.\
 **Effect**: In ancient times, it was said to bring absolute peace between Pokémon and people — but also **remove all free will**.
-
 - Rocket thinks they can use it to **create the perfect Pokémon army**.
-
 - But the Eye doesn’t just sync minds — it **stores them**.
-
 - There may be **spirits or echoes of ancient trainers** still trapped in its signal…
 
-
 ## Neural Sync Data
-
 **Neural Sync Data** is a classified research project developed by Professor Oak, exploring how a Pokémon’s brain activity can **synchronize** with a human’s—creating temporary emotional, sensory, or even psychic bonds.
-
 Think **Pokémon empathy + remote link + battle cognition**, a precursor to things like:
-
 - Mega Evolution bonds
-
 - Aura sync (e.g. with Lucario)
-
 - Latent psychic potential in trainers
 
-***
-
-
 ### **Why It’s Valuable (to Oak and Team Rocket)**
-
 - Oak developed it as a way to **understand Pokémon on a deeper level**—empathy-driven training and conservation.
-
 - **Team Rocket** wants it for the **exact opposite**: to hijack those connections and **control Pokémon behavior**, or possibly even override trainer loyalty using artificial synchronization.
-
 - The sync logs include **genetic markers**, **emotional imprinting data**, and **brainwave frequency profiles**—specifically from:
-
   - Psychic types like **Abra**
-
   - Emotionally bonded Pokémon like **Eevee**
-
   - Genetically interesting subjects like **Bellsprout** or **Growlithe**
 
-***
-
-
 ### **Possible Long-Term Twists**
-
 - **Bull’s Abra** may have been a **prototype sync subject**—his affinity for machines might be linked to a past test run involving neural links.
-
 - **Gin** might be naturally compatible with sync tech due to **Giovanni’s psychic-adjacent bloodline**, making him a target (or the only one who can finish Oak’s work).
-
 - **Sawyer's Flicker** (Eevee) might have already undergone an early sync trial—hence why she was marked for recovery by Rocket.
 
-***
-
-
 ### **How You Can Use It:**
-
 - Fragments of the data can be recovered in later sessions: encrypted logs, EEG readouts, psychic wave scanners.
-
 - Oak’s research could be split into **modules** Team Rocket is chasing across Kanto (good reason to travel from town to town).
-
 - Eventually, you could give one PC the ability to **briefly sync** with a Pokémon in a clutch moment—maybe during a boss battle or a legendary encounter.
-
-
-### **Future Items:**
-
-- Bull - Dratini
-
-- Sawyer - Vulpix
-
-- Jett - Horsea / Krabby / Shelder / Vulpix / Ponyta / Kabuto / Gastly
-
-- Gin - Nidoran (caught)
-
-- Mike - Lapras / Articuno / Dragonite / Gastly / Rhydon
 
 # Player Status
 ## Pokemon
@@ -1489,3 +1415,10 @@ Jett: Pokeball Repair and Crafting Toolset, Water Pokeball
 Sawyer: Itemfinder, Tempermental Pokeball
 Gin: PokeRadar, Grass Pokeball
 Mike: Satchel of Resourcefulness, Sync Dampener Band, Cave Dweller Pokeball
+
+## Player Wants (If they already have then keep that in mind)
+- Bull - Dratini
+- Sawyer - Vulpix
+- Jett - Horsea / Krabby / Shelder / Vulpix / Ponyta / Kabuto / Gastly
+- Gin - Nidoran (caught)
+- Mike - Lapras / Articuno / Dragonite / Gastly / Rhydon
