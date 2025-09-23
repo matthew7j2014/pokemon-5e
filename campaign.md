@@ -1257,7 +1257,17 @@ Gin convinced the Mart owner to sell Mike some malfunctioned pokeballs. The grou
 ### Route 3
 
 #### Wild Pokemon Table
-Pidgey, Spearow, Jigglypuff, Sandshrew, Ekans, Magikarp
+
+**Grass Areas:**
+- **Spearow** - Common, agitated by Mt. Moon energy
+- **Pidgey** - Common, peaceful encounters
+- **Jigglypuff** - Rare, could put party to sleep
+- **Ekans** - Uncommon, for variety
+
+**Water Areas:**
+- **Magikarp** - Common in water features
+- **Psyduck** - Uncommon, confused behavior due to Mt. Moon corruption
+- **Shelder** - Rare encounter
 
 #### 🌙 Night Watch Event – _“The Stone Caravan”_
 
@@ -1275,12 +1285,24 @@ The trainers whisper nervously:
 - “Why do we have to move these at night? Feels shady.”
 - “Doesn’t matter. We need the money. They pay half up front, half when it’s delivered.”
 **Player Choices**
+
+**Combat Approach:**
 - If they attack, the trainers panic and release Pokémon
-- **Reward if victorious**:
-  - Resonant Fossil Shards (weaker than the Pewter shard, but useful).
-- If the PCs hide (Group Stealth check DC 12): The trainers pass without noticing.
+- **Reward if victorious**: Resonant Fossil Shards (weaker than the Pewter shard, but useful)
+
+**Stealth Approach (Group Stealth DC 12):**
+- The trainers pass without noticing
+- Perfect intel gathering, no resources spent
 - They overhear key info:
-  - “What are they doing at Mt. Moon anyways? Why do they want these stones in there? Did you see the weird lights from just inside the cave?”
+  - "What are they doing at Mt. Moon anyways? Why do they want these stones in there? Did you see the weird lights from just inside the cave?"
+  - "Hope this is the last shipment... place gives me the creeps"
+  - "Did you hear about those researchers who went missing last week?"
+
+**Diplomacy Approach (Persuasion DC 15):**
+- If PCs approach peacefully, nervous trainers might talk
+- They reveal they're desperate for money, hired through intermediaries
+- Don't know who the real employer is, just "some organization with deep pockets"
+- Intel gained + potential ongoing contact, but trainers will remember them
 
 ### Mt. Moon
 # Special Items/Pokemon
