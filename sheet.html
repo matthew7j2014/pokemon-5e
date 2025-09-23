@@ -4613,7 +4613,8 @@ const pokemonDatabase = {
             { level: 1, move: 'Me First' },
             { level: 1, move: 'Recover' },
             { level: 1, move: 'Psystrike' },
-            { level: 1, move: 'Laser Focus' }
+            { level: 1, move: 'Laser Focus' },
+            { level: 1, move: 'Psychic Slam' }
         ]
     },
     'Mew': {
@@ -6966,6 +6967,17 @@ const moveDatabase = {
         time: 'action', range: '10 feet', type: 'Grass',
         description: 'You violently whip the target with vines or tentacles. Make a melee attack roll with 10-foot reach, dealing grass damage on a hit. This attack can reach targets up to 10 feet away.'
     },
+    'Psychic Slam': {
+        pp: 5, power: 'INT/WIS',
+        damage: [
+            { level: 1, damage: '2d6' },
+            { level: 5, damage: '4d5' },
+            { level: 10, damage: '5d6' },
+            { level: 17, damage: '6d8' }
+        ],
+        time: 'action', range: '30 ft radius', type: 'Psychic',
+        description: 'You psychically lift all creatures in a 30-foot radius centered on a point you can see within 60 feet, then slam them into the ground. Each creature in the area must make a DEX save against your Move DC. On a failed save, they take psychic damage and are knocked prone. On a successful save, they take half damage and are not knocked prone.'
+    },
     'Psybeam': {
         pp: 20, power: 'INT',
         damage: [
@@ -6994,15 +7006,9 @@ const moveDatabase = {
         description: 'This attack has an increased critical hit range of 19-20.'
     },
     'Psywave': {
-        pp: 15, power: 'INT',
-        damage: [
-            { level: 1, damage: '1d4' },
-            { level: 5, damage: '1d6' },
-            { level: 10, damage: '1d8' },
-            { level: 17, damage: '1d10' }
-        ],
-        time: 'action', range: '60 feet', type: 'Psychic',
-        description: 'You attack with an odd psychic wave that deals variable damage. Make a ranged attack roll. On a hit, roll the damage die and multiply the result by your current level (minimum 1). The final damage dealt is this total amount of psychic damage.'
+        pp: 10, power: 'INT/WIS', damage: '0',
+        time: 'action', range: 'self (40ft line, 5 feet wide)', type: 'Psychic',
+        description: 'You emit a wave of psychic energy in a 40 foot line, 5 feet wide. Each creature caught in the wave must make a WIS save against your Move DC, becoming confused on a fail.'
     },
     'Psystrike': {
         pp: 5, power: 'INT/WIS',
