@@ -3347,115 +3347,14 @@ const pokemonDatabase = {
             }
         ],
         skillProficiencies: ['athletics'],
-        saveProficiencies: ['constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['fighting', 'grass', 'ground'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Hyper Cutter",
-                description: "Attack or damage bonuses cannot be decreased by an opponent's moves."
-            },
-            {
-                name: "Mold Breaker",
-                description: "Moves ignore any abilities that would lessen their effect."
-            },
-            {
-                name: "Moxie (Hidden)",
-                description: "Upon causing an opponent to faint, may immediately take another action."
-            }
-        ],
-        skillProficiencies: ['athletics'],
-        saveProficiencies: ['constitution'],
-        doubleVulnerabilities: [],
-        resistances: [],
-        doubleResistances: [],
-        immunities: ['ghost'],
-        features: [
-            {
-                name: "Intimidate",
-                description: "Once per short rest, you can impose disadvantage on an enemy attack roll of your choice."
-            },
-            {
-                name: "Anger Point",
-                description: "After suffering a critical hit, this Pokémon doubles the damage dice for a single move it activates on the following turn."
-            },
-            {
-                name: "Sheer Force (Hidden)",
-                description: "When activating a move that has a chance to impose a stat change or inflict a status, this creature instead doubles its move modifier for the damage with no chance of the additional effect."
-            }
-        ],
-        skillProficiencies: ['athletics', 'intimidation'],
-        saveProficiencies: ['strength', 'constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['fire', 'ice', 'steel', 'water'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Swift Swim",
-                description: "This Pokémon's speed is doubled in rainy conditions."
-            },
-            {
-                name: "Rattled (Hidden)",
-                description: "When this Pokémon is hit by a damaging Dark, Bug, or Ghost move, it makes its next attack at advantage."
-            }
-        ],
-        skillProficiencies: [],
-        saveProficiencies: [],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'fighting', 'fire', 'steel', 'water'],
-        doubleResistances: [],
-        immunities: ['ground'],
-        features: [
-            {
-                name: "Intimidate",
-                description: "Once per short rest, you can impose disadvantage on an enemy attack roll of your choice."
-            },
-            {
-                name: "Moxie (Hidden)",
-                description: "Upon causing an opponent to faint, this Pokémon may immediately take another action."
-            }
-        ],
-        skillProficiencies: ['athletics', 'intimidation'],
-        saveProficiencies: ['strength', 'constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['ice', 'water'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Water Absorb",
-                description: "Takes no damage from water or water-type attacks. Instead, half of any water damage done is absorbed."
-            },
-            {
-                name: "Shell Armor",
-                description: "Immune to extra damage dealt by a Critical Hit."
-            },
-            {
-                name: "Hydration (Hidden)",
-                description: "Unaffected by negative status ailments in water or during rainy conditions."
-            }
-        ],
-        skillProficiencies: ['survival', 'persuasion'],
-        saveProficiencies: ['strength', 'charisma'],
-        doubleVulnerabilities: [],
-        resistances: [],
-        doubleResistances: [],
-        immunities: ['ghost'],
-        features: [
-            {
-                name: "Limber",
-                description: "This Pokémon is immune to being paralyzed."
-            },
-            {
-                name: "Imposter (Hidden)",
-                description: "This Pokémon can use Transform as a bonus action."
-            }
-        ],
-        skillProficiencies: ['insight', 'deception'],
-        saveProficiencies: ['constitution'],
+        saveProficiencies: ['constitution']
+    },
+    // 133
+    'Eevee': {
+        hp: 16, ac: 13, str: 13, dex: 13, con: 10, int: 6, wis: 10, cha: 12,
+        speed: 30, type1: 'normal', type2: '', size: 'Tiny', sr: 0.5, hitDie: 'd6',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/eevee.png',
+        vulnerabilities: ['fighting'],
         doubleVulnerabilities: [],
         resistances: [],
         doubleResistances: [],
@@ -3463,345 +3362,107 @@ const pokemonDatabase = {
         features: [
             {
                 name: "Run Away",
-                description: "Cannot be the target of an attack of opportunity."
+                description: "This Pokémon cannot be the target of an attack of opportunity."
             },
             {
                 name: "Adaptability",
-                description: "When using a move of its own type, may roll damage twice and choose total."
+                description: "When this Pokémon uses a move of its own type, it may roll the damage twice and choose either total."
             },
             {
                 name: "Anticipation (Hidden)",
-                description: "When entering battle, opponent reveals if they have a move Eevee is vulnerable to."
+                description: "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to."
             }
         ],
         skillProficiencies: ['investigation', 'perception'],
-        saveProficiencies: ['dexterity', 'charisma'],
+        saveProficiencies: ['dexterity', 'charisma']
+    },
+    // 147
+    'Dratini': {
+        hp: 20, ac: 13, str: 12, dex: 12, con: 10, int: 6, wis: 10, cha: 12,
+        speed: 30, swimSpeed: 30, type1: 'dragon', type2: '', size: 'Small', sr: 1, hitDie: 'd8',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/dratini.png',
+        vulnerabilities: ['dragon', 'fairy', 'ice'],
         doubleVulnerabilities: [],
-        resistances: ['fire', 'ice', 'steel', 'water'],
+        resistances: ['electric', 'fire', 'grass', 'water'],
         doubleResistances: [],
         immunities: [],
         features: [
             {
-                name: "Water Absorb",
-                description: "Takes no damage from water or water-type attacks. Instead, half of any water damage done is absorbed."
+                name: "Shed Skin",
+                description: "If this Pokémon is affected by a negative status ailment, they can roll a d4 at the end of each of their turns. On a result of 4, they are cured."
             },
             {
-                name: "Hydration (Hidden)",
-                description: "Unaffected by negative status ailments in water or during rainy conditions."
+                name: "Marvel Scale (Hidden)",
+                description: "This Pokémon's AC increase by 2 when suffering from a negative status condition."
             }
         ],
-        skillProficiencies: ['investigation', 'perception'],
-        saveProficiencies: ['dexterity', 'charisma'],
+        skillProficiencies: ['arcana'],
+        saveProficiencies: ['wisdom']
+    },
+    // 148
+    'Dragonair': {
+        hp: 53, ac: 14, str: 15, dex: 15, con: 12, int: 6, wis: 12, cha: 12,
+        speed: 30, swimSpeed: 30, flySpeed: 30, type1: 'dragon', type2: '', size: 'Large', sr: 6, hitDie: 'd10',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/dragonair.png',
+        vulnerabilities: ['dragon', 'fairy', 'ice'],
         doubleVulnerabilities: [],
-        resistances: ['electric', 'flying', 'steel'],
+        resistances: ['electric', 'fire', 'grass', 'water'],
         doubleResistances: [],
         immunities: [],
         features: [
             {
-                name: "Volt Absorb",
-                description: "Takes no damage from electricity or electric-type attacks. Instead, half of any electric damage done is absorbed."
+                name: "Shed Skin",
+                description: "If this Pokémon is affected by a negative status ailment, they can roll a d4 at the end of each of their turns. On a result of 4, they are cured."
             },
             {
-                name: "Quick Feet (Hidden)",
-                description: "When suffering from a negative status condition, this Pokémon's speed increases by 15 ft."
+                name: "Marvel Scale (Hidden)",
+                description: "This Pokémon's AC increase by 2 when suffering from a negative status condition."
             }
         ],
-        skillProficiencies: ['investigation', 'perception'],
-        saveProficiencies: ['dexterity', 'charisma'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'fairy', 'fire', 'grass', 'ice', 'steel'],
-        doubleResistances: [],
-        immunities: [],
+        skillProficiencies: ['arcana'],
+        saveProficiencies: ['wisdom']
+    },
+    // 150
+    'Mewtwo': {
+        hp: 486, ac: 18, str: 19, dex: 24, con: 18, int: 20, wis: 20, cha: 18,
+        speed: 30, flySpeed: 40, type1: 'psychic', type2: '', size: 'Medium', sr: 15, hitDie: 'd20',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/mewtwo.png',
         features: [
-            {
-                name: "Flash Fire",
-                description: "Takes no damage from fire attacks. Double STAB bonus on next fire-type move after taking fire damage."
-            },
-            {
-                name: "Guts (Hidden)",
-                description: "Not affected by burn/poison disadvantage, still takes end-of-turn damage."
-            }
-        ],
-        skillProficiencies: ['investigation', 'perception'],
-        saveProficiencies: ['dexterity', 'charisma'],
-        doubleVulnerabilities: [],
-        resistances: [],
-        doubleResistances: [],
-        immunities: ['ghost'],
-        features: [
-            {
-                name: "Trace",
-                description: "Copies a random ability of an opponent when entering battle."
-            },
-            {
-                name: "Download",
-                description: "Choose a different damage type for one of their normal attacks (once per short rest)."
-            },
-            {
-                name: "Analytic (Hidden)",
-                description: "After this Pokémon misses an attack, its next attack is done at advantage."
-            }
-        ],
-        skillProficiencies: ['history'],
-        saveProficiencies: ['constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Swift Swim",
-                description: "Speed doubled in rainy conditions."
-            },
-            {
-                name: "Shell Armor",
-                description: "Immune to critical hit extra damage."
-            },
-            {
-                name: "Weak Armor (Hidden)",
-                description: "Speed increases by 5ft when hit, AC reduced by 1."
-            }
-        ],
-        skillProficiencies: ['survival'],
-        saveProficiencies: ['constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Swift Swim",
-                description: "Speed doubled in rain."
-            },
-            {
-                name: "Shell Armor",
-                description: "Immune to critical hit extra damage."
-            },
-            {
-                name: "Weak Armor (Hidden)",
-                description: "Speed +5 when hit, AC -1."
-            }
-        ],
-        skillProficiencies: ['survival', 'intimidation'],
-        saveProficiencies: ['constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Swift Swim",
-                description: "Speed is doubled in rainy conditions."
-            },
-            {
-                name: "Battle Armor",
-                description: "Immune to extra damage dealt by a Critical Hit."
-            },
-            {
-                name: "Weak Armor (Hidden)",
-                description: "Speed increases by 5 feet, but AC reduced by 1."
-            }
-        ],
-        skillProficiencies: ['survival'],
-        saveProficiencies: ['constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['fire', 'flying', 'ice', 'normal', 'poison'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Swift Swim",
-                description: "Speed is doubled in rainy conditions."
-            },
-            {
-                name: "Battle Armor",
-                description: "Immune to extra damage dealt by a Critical Hit."
-            },
-            {
-                name: "Weak Armor (Hidden)",
-                description: "Speed increases by 5 feet, but AC reduced by 1."
-            }
-        ],
-        skillProficiencies: ['survival', 'intimidation'],
-        saveProficiencies: ['constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'fire', 'flying', 'normal', 'poison'],
-        doubleResistances: [],
-        immunities: ['ground'],
-        features: [
-            {
-                name: "Rock Head",
-                description: "This Pokémon takes no recoil damage."
-            },
             {
                 name: "Pressure",
-                description: "Any move targeting this Pokémon directly reduces its PP by two."
+                description: "Any move targeting this Pokémon directly (non-area of effect moves) reduces its PP by two when activated."
             },
             {
                 name: "Unnerve (Hidden)",
-                description: "Opponents in combat cannot eat held berries."
+                description: "Opponents in combat with this Pokémon cannot eat held berries."
             }
         ],
-        skillProficiencies: ['investigation', 'perception'],
-        saveProficiencies: ['strength', 'constitution'],
-        doubleVulnerabilities: [],
-        resistances: [],
-        doubleResistances: [],
-        immunities: ['ghost'],
-        features: [
-            {
-                name: "Immunity",
-                description: "Immune to becoming poisoned."
-            },
-            {
-                name: "Thick Fat",
-                description: "Takes half damage from Ice and Fire."
-            },
-            {
-                name: "Gluttony (Hidden)",
-                description: "Must eat held berry when below ½ HP."
-            }
-        ],
-        skillProficiencies: ['survival'],
-        saveProficiencies: ['strength', 'constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'grass'],
-        doubleResistances: [],
-        immunities: ['ground'],
-        features: [
-            {
-                name: "Pressure",
-                description: "Any move targeting this Pokémon directly reduces its PP by two when activated."
-            },
-            {
-                name: "Snow Cloak (Hidden)",
-                description: "This Pokémon is immune to Hail damage. It's AC is increased by 2 in arctic conditions."
-            }
-        ],
-        skillProficiencies: ['arcana', 'insight', 'intimidation'],
-        saveProficiencies: ['dexterity', 'constitution'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'fighting', 'flying', 'grass', 'steel'],
-        doubleResistances: [],
-        immunities: ['ground'],
-        features: [
-            {
-                name: "Pressure",
-                description: "Any move targeting this Pokémon directly reduces its PP by two."
-            },
-            {
-                name: "Static (Hidden)",
-                description: "When this Pokémon is hit by a melee attack, roll a d4. On a result of 4, the attacker takes an amount of electric damage."
-            }
-        ],
-        skillProficiencies: ['arcana', 'insight', 'intimidation'],
-        saveProficiencies: ['dexterity', 'strength'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'fairy', 'fighting', 'fire', 'grass', 'steel'],
-        doubleResistances: [],
-        immunities: ['ground'],
-        features: [
-            {
-                name: "Pressure",
-                description: "Any move targeting this Pokémon directly reduces its PP by two."
-            },
-            {
-                name: "Flame Body",
-                description: "Flames shine dim light in a 15 ft radius. When a creature hits you with a melee attack, they must make a Constitution saving throw or be burned."
-            }
-        ],
-        skillProficiencies: [],
-        saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
-        doubleVulnerabilities: [],
-        resistances: ['electric', 'fire', 'grass', 'water'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Shed Skin",
-                description: "If this Pokémon is affected by a negative status ailment, they can roll a d4 at the end of each of their turns. On a result of 4, they are cured."
-            },
-            {
-                name: "Marvel Scale (Hidden)",
-                description: "This Pokémon's AC increase by 2 when suffering from a negative status condition."
-            }
-        ],
-        skillProficiencies: ['arcana'],
-        saveProficiencies: ['wisdom'],
-        doubleVulnerabilities: [],
-        resistances: ['electric', 'fire', 'grass', 'water'],
-        doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Shed Skin",
-                description: "If this Pokémon is affected by a negative status ailment, they can roll a d4 at the end of each of their turns. On a result of 4, they are cured."
-            },
-            {
-                name: "Marvel Scale (Hidden)",
-                description: "This Pokémon's AC increase by 2 when suffering from a negative status condition."
-            }
-        ],
-        skillProficiencies: ['arcana'],
-        saveProficiencies: ['wisdom'],
-        doubleVulnerabilities: [],
-        resistances: ['bug', 'fighting', 'fire', 'grass', 'water'],
-        doubleResistances: [],
-        immunities: ['ground'],
-        features: [
-            {
-                name: "Inner Focus",
-                description: "This Pokémon is immune to flinching."
-            },
-            {
-                name: "Multiscale (Hidden)",
-                description: "If this Pokémon is at full health, the first damage dealt to it is halved."
-            }
-        ],
-        skillProficiencies: ['arcana', 'athletics'],
-        saveProficiencies: ['strength', 'wisdom'],
+        skillProficiencies: ['arcana', 'history', 'religion', 'insight'],
+        saveProficiencies: ['intelligence', 'wisdom'],
+        vulnerabilities: ['bug', 'dark', 'ghost'],
         doubleVulnerabilities: [],
         resistances: ['fighting', 'psychic'],
         doubleResistances: [],
-        immunities: [],
-        features: [
-            {
-                name: "Pressure",
-                description: "Any move targeting this Pokémon directly reduces its PP by two."
-            },
-            {
-                name: "Unnerve",
-                description: "Prevents opponents from eating held berries."
-            }
-        ],
-        skillProficiencies: [],
-        saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
-        doubleVulnerabilities: [],
-        resistances: ['fighting', 'psychic'],
-        doubleResistances: [],
-        immunities: [],
+        immunities: []
+    },
+    // 151
+    'Mew': {
+        hp: 486, ac: 18, str: 14, dex: 22, con: 18, int: 16, wis: 20, cha: 20,
+        speed: 20, flySpeed: 50, type1: 'psychic', type2: '', size: 'Tiny', sr: 15, hitDie: 'd20',
+        image: 'https://img.pokemondb.net/sprites/black-white/normal/mew.png',
         features: [
             {
                 name: "Synchronize",
-                description: "When you are poisoned, burned, or paralyzed by another creature, that creature is also afflicted with the same condition."
+                description: "If this Pokémon becomes burned, paralyzed, or poisoned, its attacker receives the negative status condition as well (if not immune)."
             }
         ],
-        skillProficiencies: [],
-        saveProficiencies: ['intelligence', 'wisdom', 'charisma'],
-        learnset: [
-            { level: 1, move: 'Reflect Type' },
-            { level: 1, move: 'Pound' },
-            { level: 10, move: 'Transform' },
-            { level: 20, move: 'Mega Punch' },
-            { level: 30, move: 'Metronome' },
-            { level: 40, move: 'Psychic' },
-            { level: 50, move: 'Barrier' },
-            { level: 60, move: 'Ancient Power' },
-            { level: 70, move: 'Amnesia' },
-            { level: 80, move: 'Me First' },
-            { level: 90, move: 'Baton Pass' },
-            { level: 100, move: 'Nasty Plot' }
-        ]
+        skillProficiencies: ['arcana', 'history', 'religion', 'insight'],
+        saveProficiencies: ['intelligence', 'wisdom'],
+        vulnerabilities: ['bug', 'dark', 'ghost'],
+        doubleVulnerabilities: [],
+        resistances: ['fighting', 'psychic'],
+        doubleResistances: [],
+        immunities: []
     }
 };
 

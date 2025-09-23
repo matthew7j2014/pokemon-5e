@@ -4596,28 +4596,41 @@ const pokemonDatabase = {
         learnset: [
             { level: 1, move: 'Confusion' },
             { level: 1, move: 'Disable' },
+            { level: 1, move: 'Psywave' },
             { level: 1, move: 'Safeguard' },
             { level: 1, move: 'Swift' },
-            { level: 11, move: 'Future Sight' },
-            { level: 22, move: 'Mist' },
-            { level: 33, move: 'Psychic' },
-            { level: 44, move: 'Recover' }
+            { level: 1, move: 'Future Sight' },
+            { level: 1, move: 'Psych Up'},
+            { level: 1, move: 'Psychic' },
+            { level: 1, move: 'Miracle Eye' },
+            { level: 1, move: 'Psycho Cut' },
+            { level: 1, move: 'Guard Swap' },
+            { level: 1, move: 'Power Swap' },
+            { level: 1, move: 'Barrier' },
+            { level: 1, move: 'Aura Sphere' },
+            { level: 1, move: 'Amnesia' },
+            { level: 1, move: 'Mist' },
+            { level: 1, move: 'Me First' },
+            { level: 1, move: 'Recover' },
+            { level: 1, move: 'Psystrike' },
+            { level: 1, move: 'Laser Focus' }
         ]
     },
     'Mew': {
         learnset: [
-            { level: 1, move: 'Reflect Type' },
             { level: 1, move: 'Pound' },
-            { level: 10, move: 'Transform' },
-            { level: 20, move: 'Mega Punch' },
-            { level: 30, move: 'Metronome' },
-            { level: 40, move: 'Psychic' },
-            { level: 50, move: 'Barrier' },
-            { level: 60, move: 'Ancient Power' },
-            { level: 70, move: 'Amnesia' },
-            { level: 80, move: 'Me First' },
-            { level: 90, move: 'Baton Pass' },
-            { level: 100, move: 'Nasty Plot' }
+            { level: 1, move: 'Reflect Type' },
+            { level: 1, move: 'Transform' },
+            { level: 1, move: 'Mega Punch' },
+            { level: 1, move: 'Metronome' },
+            { level: 1, move: 'Psychic' },
+            { level: 1, move: 'Barrier' },
+            { level: 1, move: 'Ancient Power' },
+            { level: 1, move: 'Amnesia' },
+            { level: 1, move: 'Me First' },
+            { level: 1, move: 'Baton Pass' },
+            { level: 1, move: 'Nasty Plot' },
+            { level: 1, move: 'Aura Sphere' }
         ]
     }
 };
@@ -4788,6 +4801,17 @@ const moveDatabase = {
         ],
         time: 'action', range: '20 feet', type: 'Ghost',
         description: 'You startle a creature with a loud shout. Make a ranged attack roll against a creature doing 1d6 + MOVE ghost damage on a hit. On a natural attack roll of 15 or more, the target flinches.'
+    },
+    'Aura Sphere': {
+        pp: 5, power: 'STR/DEX',
+        damage: [
+            { level: 1, damage: '1d6' },
+            { level: 5, damage: '1d10' },
+            { level: 10, damage: '2d8' },
+            { level: 17, damage: '5d4' }
+        ],
+        time: 'action', range: '30 feet', type: 'Fighting',
+        description: 'You release a blast of aura power that never misses its target. This attack automatically hits, except when targeting a creature in invulnerable stages of Fly, Dig, Bounce, etc.'
     },
     'Aurora Beam': {
         pp: 10, power: 'STR/DEX',
@@ -6331,6 +6355,11 @@ const moveDatabase = {
         time: 'action', range: '15 foot radius', type: 'Fire',
         description: 'You attack all creatures around you with a scorching blast of lava. All creatures within 15 feet must make a DEX save. On a fail, they take fire damage and have a 30% chance to be burned.'
     },
+    'Laser Focus': {
+        pp: 15, power: '', damage: '0',
+        time: 'action', range: 'self', type: 'Normal', duration: '1 round, concentration',
+        description: 'You spend your action concentrating intensely. If you keep your concentration, your first attack on your next turn always results in a critical hit.'
+    },
     'Leaf Blade': {
         pp: 15, power: 'STR',
         damage: [
@@ -6523,6 +6552,17 @@ const moveDatabase = {
         time: 'action', range: '50 feet', type: 'Grass',
         description: 'You attempt to drain the life force of a target. Make a ranged attack, doing 1d6 + MOVE grass damage on a hit. Half of the damage dealt is restored to the user.'
     },
+    'Mega Punch': {
+        pp: 15, power: 'STR',
+        damage: [
+            { level: 1, damage: '2d6' },
+            { level: 5, damage: '2d8' },
+            { level: 10, damage: '4d6' },
+            { level: 17, damage: '6d6' }
+        ],
+        time: 'action', range: 'melee', type: 'Normal',
+        description: 'You strike out with a hard punch. Make a melee attack against a target.'
+    },
     'Megahorn': {
         pp: 5, power: 'STR/DEX',
         damage: [
@@ -6563,6 +6603,11 @@ const moveDatabase = {
         pp: 5, power: '', damage: '0',
         time: 'action', range: 'self', type: 'Normal', duration: '1 minute, concentration',
         description: 'You appear smaller to your creatures, increasing your evasion. For the duration, you gain an additional +2 to your AC.'
+    },
+    'Mist': {
+        pp: 15, power: '', damage: '0',
+        time: 'action', range: '30 feet', type: 'Ice', duration: '1 minute',
+        description: 'A light mist surrounds a target, offering a protective barrier. The target is immune to negative stat changes for the duration, but any current effects are still in place.'
     },
     'Miracle Eye': {
         pp: 15, power: '', damage: '0',
@@ -6958,6 +7003,17 @@ const moveDatabase = {
         ],
         time: 'action', range: '60 feet', type: 'Psychic',
         description: 'You attack with an odd psychic wave that deals variable damage. Make a ranged attack roll. On a hit, roll the damage die and multiply the result by your current level (minimum 1). The final damage dealt is this total amount of psychic damage.'
+    },
+    'Psystrike': {
+        pp: 5, power: 'INT/WIS',
+        damage: [
+            { level: 1, damage: '2d6' },
+            { level: 5, damage: '2d12' },
+            { level: 10, damage: '4d8' },
+            { level: 17, damage: '8d6' }
+        ],
+        time: 'action', range: '30 feet', type: 'Psychic',
+        description: 'You materialize a psychic wave that shocks a creature. Make a ranged attack, dealing psychic damage on a hit.'
     },
     'Punishment': {
         pp: 5, power: 'STR',

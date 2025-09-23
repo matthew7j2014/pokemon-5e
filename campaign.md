@@ -1304,7 +1304,510 @@ The trainers whisper nervously:
 - Don't know who the real employer is, just "some organization with deep pockets"
 - Intel gained + potential ongoing contact, but trainers will remember them
 
+### Route 4
+
+*Route 4 stretches between Mt. Moon and Cerulean City, a well-traveled path that normally bustles with trainers making their way between destinations. The route features grassy meadows, a small pond, and most importantly for weary travelers—a Pokemon Center positioned strategically before the challenging Mt. Moon ascent.*
+
+*But as you approach the familiar red-roofed building, something feels... off. The usual crowd of trainers chatting outside is absent. The Pokemon Center sits too quiet, too still, like a stage set waiting for actors.*
+
+#### 🏥 The Compromised Pokemon Center
+
+*The Pokemon Center looks normal from the outside—red roof, spinning Pokeball sign, the familiar architecture that promises safety and healing. But the closer you get, the more details seem wrong. No other trainers mill about outside. The windows seem darker than they should be.*
+
+**Initial Observations (Perception DC 12):**
+- Too quiet—no ambient chatter or Pokemon sounds
+- Unusual number of antennae and cables on the roof
+- Healing machine sounds are different—lower, more mechanical
+- No other trainers visible despite this being a major rest stop
+
+**Approaching the Center:**
+
+**Option 1: Direct Approach**
+- Walk straight in expecting normal Pokemon Center services
+- "Nurse Joy" greets them with subtle wrongness (Insight DC 13 to notice)
+- Offered healing services with hidden agenda
+
+**Option 2: Surveillance First**
+- Circle the building, peek in windows (Stealth DC 14)
+- Spot Rocket operatives through back windows
+
+##### The False Sanctuary Encounter
+
+**"Nurse Judy" - Rocket Operative Agent Marina**
+- Appearance: Perfect Nurse Joy disguise, but something's off about her demeanor
+- Personality: Overly curious about destinations, subtly probing for information
+- Goal: Gather intelligence on Mt. Moon-bound trainers and steal Pokemon data
+
+**The Deception:**
+*"Welcome to our Pokemon Center! My, you all look like you've been traveling far. Are you perhaps heading to Mt. Moon? We've had so many trainers asking about the... excavations lately. Please, let me heal your Pokemon—our machines have been newly upgraded!"*
+
+**What's Really Happening:**
+- Healing machines modified with data scanners and temporary sync devices
+- Pokemon briefly trapped while data is copied
+- Communication equipment in back rooms coordinates with Mt. Moon base
+- Real Nurse Joy imprisoned in basement storage room
+
+**Player Choices:**
+
+**If They Use Services (Insight DC 15 to notice issues):**
+- Pokemon placed in modified healing machines
+- Subtle wrongness: machines hum differently, take longer than normal
+- Success: Notice Pokemon seem agitated during "healing"
+- Failure: Pokemon data copied, party's capabilities known to Rocket
+
+**If They Investigate:**
+- **Back Rooms (Stealth DC 16):** Find communication equipment, maps tracking trainer movements
+- **Basement (Investigation DC 14):** Discover real Nurse Joy bound and gagged
+- **Equipment Analysis (Technology DC 13):** Bull recognizes modified Pokemon storage tech
+
+**If Discovered:**
+- 3 Rocket Operatives emerge from hiding
+- "Agent Marina" drops disguise, engages in battle
+- Combat encounter with modified Pokemon Center as battlefield
+
+##### Key Intel to Discover:
+
+**Communication Logs:**
+- "Multiple trainer groups en route to Mt. Moon"
+- "Groups transporting stones from Museum to Mt. Moon"
+- "Maintain cover until Operation Wavelength complete"
+- "Any trainers showing unusual Pokemon bonds to be detained"
+- "Older logs reveal groups were transporting stones to the Museum from Mt. Moon"
+
+**Tracking Maps:**
+- Other trainer groups being monitored
+- Coordinate grid showing Mt. Moon access points
+- Groups transporting rocks to Mt. Moon from the Museum.
+
+**Modified Equipment:**
+- Pokemon healing machines with data extraction capability (Read Bull Hook)
+- Communication array linking to Mt. Moon base
+- Prototype sync devices for "emergency situations"
+
+##### Character Development Moments:
+
+**Bull's Tech Recognition:**
+
+*Read aloud to Bull when he examines the healing machines:*
+
+*As you approach the healing machine, something immediately feels wrong. The familiar hum of standard Pokemon Center equipment is there, but underneath it runs a secondary frequency—one you know intimately from years in your father's labs. Your hands move instinctively to the machine's side panel, and what you find makes your blood run cold.*
+
+*Integrated seamlessly into the healing matrix are components that bear the distinctive hexagonal etching of Gates Digital technology. Not just any Gates tech—this is from the experimental Neural Interface Division, the classified projects your father thought were too dangerous for commercial release. Someone has taken your family's most sensitive storage protocols and spliced them directly into Pokemon healing equipment.*
+
+*The implications hit you like a punch to the gut. This isn't just stealing Pokemon—it's creating perfect digital copies of their neural patterns, their bond memories, their instinctive behaviors. Every Pokemon "healed" here would have their entire psychic blueprint extracted and stored. With your family's compression algorithms, they could fit thousands of Pokemon profiles into a device the size of a Pokeball.*
+
+*But there's something else. As your fingers trace the modified circuitry, you realize this isn't just extraction—there are input channels too. They're not just copying Pokemon data. They're preparing to overwrite it.*
+
+**Bull's Choice Moment:**
+- **Sabotage immediately:** Rip out the Gates components (alerting Rocket but stopping the process)
+- **Gather evidence:** Document the modifications (risk of discovery but valuable intelligence)
+- **Use his knowledge:** Attempt to access the system's logs (high-risk, high-reward)
+- **Play ignorant:** Pretend not to notice while planning (maintains cover but Pokemon remain at risk)
+
+**If Bull Chooses to Gather Evidence:**
+
+*Read aloud:*
+
+*Your hands shake slightly as you pull out your Pokedex and activate its camera function. This is evidence that could bring down not just this operation, but potentially implicate your father's company in something horrific. You need to be methodical, careful—one wrong move and you'll alert Team Rocket.*
+
+*Moving with practiced precision from years of lab documentation, you photograph the hexagonal Gates components, the modified circuit pathways, and most importantly, the serial numbers etched into the neural interface modules. Your heart pounds as you recognize some of these numbers—prototypes that supposedly never left the R&D facility.*
+
+**Technology Check (DC 15):**
+- **Success:** Bull identifies specific modification patterns and can predict how the system operates
+- **Failure:** Evidence gathered but without full understanding of capabilities
+
+**Evidence Gained on Success:**
+- **Serial numbers** linking directly to Gates Digital classified projects
+- **Technical specifications** showing exact capabilities of the neural extraction
+- **Modification blueprints** (photographed) that could be used to reverse-engineer countermeasures
+- **Proof of corporate espionage** - Gates tech stolen and weaponized
+
+**Intel Revealed:**
+- This isn't the only location—the modifications are too sophisticated for a single installation
+- The neural extraction rate suggests they've processed dozens of Pokemon already
+- Input channels show they're not just copying—they're preparing for mass overwrite operations
+- Some of the components have battle damage, suggesting they've tested this in combat situations
+
+**Bull's Realization:**
+*As you review the photos on your Pokedex screen, the full scope hits you. The timestamps on the components show they've been operational for weeks. The neural pattern storage banks have capacity indicators showing they're nearly full. And worst of all, some of the modification work bears the signature tool marks of your father's personal engineering team.*
+
+*Either someone at Gates Digital is directly collaborating with Team Rocket, or they've infiltrated the company at the highest levels.*
+
+**If Bull Tries to Contact His Father:**
+
+- Phone rings... and rings... unusually long for his father's private line
+- When "Big Bull" answers, his voice sounds strained, distracted
+- "Son? This isn't a good time. There have been some... irregularities in our R&D division. I can't talk openly right now."
+- Background sounds suggest he's not in his usual office
+- Call cuts short: "Trust no one at the company right now. I'll contact you when it's safe."
+
+**If Bull Sends a Coded Message:**
+- Uses Gates family business terminology about "unauthorized storage access"
+- Father responds quickly with coded warning: "The vault has been compromised. External parties have root access. Maintain distance until security sweep complete."
+- Translation: Company infiltrated at highest levels, stay away from Gates facilities
+
+**If Bull Waits for Security:**
+- Must resist urge to call for now
+- Evidence becomes more valuable but family remains at risk
+- Father's status unknown until later contact
+
+**The Horrifying Possibility:**
+*A worse thought creeps into your mind as you stare at the evidence. What if your father already knows? What if this isn't infiltration—what if Gates Digital is willingly partnering with Team Rocket? The company's motto suddenly takes on a sinister meaning: "Size Doesn't Matter - It's How You Use Your Storage."*
+
+**Gin's Research Instincts:**
+*Something about the Pokemon in the center bothers Gin. They're too subdued, too compliant. This isn't how Pokemon should behave in a healing environment. His research training screams that something is fundamentally wrong.*
+
+**Jett's Ranger Awareness:**
+*Jett notices immediately—the local Pokemon are avoiding this area entirely. No Pidgey on the roof, no Rattata scurrying around the building's foundation. Whatever's happening here, the wild Pokemon want no part of it.*
+
+**What Really Happened:**
+*[To be filled in after session]*
+
 ### Mt. Moon
+
+*The jagged peaks of Mt. Moon loom against the horizon, their ancient stone faces carved by centuries of wind and weather. Famous for its rare fossils, mysterious Moon Stones, and the legendary Clefairy that dance under starlight, the mountain has long been a destination for researchers and adventurous trainers.*
+
+*But something feels different as you approach. The usual bustle of tourists and researchers is absent. A few scattered camps sit abandoned along the main path, and the mountain seems... quieter than it should be. Even the Pidgey seem reluctant to fly too close to the cave entrances.*
+
+## Approaching Mt. Moon
+
+*Read aloud as the party gets their first clear view of the mountain:*
+
+*Mt. Moon rises before you like a sleeping giant, its craggy peaks cutting sharp silhouettes against the sky. The path that winds up its face should be dotted with colorful tents and the cheerful voices of researchers, but instead you see only empty campsites and hastily abandoned equipment scattered in the dirt.*
+
+*As you draw closer, the wrongness becomes more apparent. No Clefairy peek out from cave mouths. No Zubat flutter around the entrances. Even the hardy mountain grass seems stunted, growing in uneven patches as if the earth itself is uneasy.*
+
+*Most telling of all: where the main tourist entrance should welcome visitors with friendly signs and helpful guides, you instead see the stark red and black of Team Rocket uniforms. A checkpoint has been established across the primary path, complete with barriers and official-looking paperwork.*
+
+### Initial Observations
+
+**What the Party Can See (No Check Required):**
+- Main entrance blocked by Team Rocket checkpoint with 4-6 guards
+- Official-looking signs: "Authorized League Personnel Only - Excavation in Progress"
+- Several alternative cave entrances visible along the mountain face
+- Abandoned research camps with supplies left behind
+- Unnatural silence - no Pokemon activity around the mountain
+
+**Perception Check (DC 12):**
+- Strange mechanical humming echoing faintly from deep within the mountain
+- Unusual amount of radio antenna equipment at the checkpoint
+- Some of the "abandoned" camps look recently evacuated, not long-term empty
+- Fresh tire tracks leading to and from the main entrance
+
+**Investigation Check (DC 15):**
+- The Rocket guards aren't just checking IDs - they're scanning people with handheld devices
+- Multiple cave entrances that don't appear on standard tourist maps
+- Equipment caches hidden in some of the abandoned camps
+- Signs of Pokemon being herded or driven away from the area
+
+## Entry Point Decision
+
+*The party must choose how to approach Mt. Moon. Each option has different risks, rewards, and consequences:*
+
+#### Entry Points
+
+##### Main Tourist Entrance (Heavily Guarded):
+
+*The main entrance to Mt. Moon has been transformed from a welcoming tourist destination into a military-style checkpoint. Red and black barriers stretch across the familiar stone archway, and the cheerful welcome signs have been replaced with stark warnings about "authorized personnel only."*
+
+**The Checkpoint Setup:**
+- **Outer Perimeter:** Two guards at barriers, checking papers and turning away civilians
+- **Scanning Station:** Advanced equipment that looks like airport security - but modified
+- **Command Post:** Temporary structure with communications equipment and supervisor
+- **Inner Guards:** 2-3 additional guards just inside the cave entrance
+- **Emergency Protocol:** Alarm system that can alert the entire mountain operation
+
+**Guard Personnel:**
+- **Checkpoint Supervisor "Sergeant Volt"** - Experienced, suspicious, hard to fool
+- **Scanner Technician** - Focused on equipment, less observant of people
+- **4 Rocket Grunts** - Standard security, follow orders but not particularly bright
+- **Communications Officer** - In command post, monitoring radio chatter
+
+**The Cover Story (What Guards Believe):**
+- League has authorized "emergency excavation" due to "geological instability"
+- Only certified researchers and League officials permitted inside
+- Pokemon in the area are "agitated by seismic activity" - hence the evacuation
+- Timeline is urgent - they need to "secure dangerous fossil specimens" quickly
+
+**If Diplomacy/Stealth Fails:**
+- **Round 1:** Surprise round if guards caught off-guard
+- **Alarm System:** Activated on Round 2 unless disabled quickly
+- **Reinforcements:** Additional guards arrive in 3-5 rounds
+- **Tactical Considerations:** Checkpoint provides cover, guards have radio communication
+- **Victory Conditions:** Defeat all guards AND disable alarm system
+
+**Guard Capabilities:**
+- **Sergeant Volt:** Magneton, Electrode - electric types, tactical awareness
+- **Grunts:** Standard Rocket teams (Rattata, Koffing, Ekans level 12-15)
+- **Equipment:** Stun weapons, sync dampeners, communication devices
+
+**Information to Gather:**
+
+**If Party Gets Inside Through Deception:**
+- **Scanner Results:** Equipment designed to detect "unusual Pokemon bonds"
+- **Radio Chatter:** References to "Wavelength Protocol" and "neural extraction quotas"
+- **Shift Schedules:** Guard rotations, supply deliveries, supervisor check-ins
+- **Mountain Layout:** Basic map of authorized areas vs. restricted zones
+
+**Equipment Analysis (Technology Check DC 13):**
+- **Scanning Devices:** Modified to detect psychic resonance, not just standard ID
+- **Communication Array:** Links to multiple sites across Kanto, not just local
+- **Emergency Protocols:** Lockdown procedures suggest something valuable inside
+
+**Supervisor's Knowledge (if captured/convinced):**
+- **Operation Timeline:** "Phase 3 testing" scheduled to complete within days
+- **Personnel Numbers:** 50+ operatives throughout the mountain
+- **Higher Authority:** Reports to "Lieutenant Wavelength" in deep chambers
+- **Other Sites:** This isn't the only location - references to similar operations
+
+**Consequences of Main Entrance Success:**
+- **Clean Entry:** Mountain operation unaware of intrusion
+- **Intelligence Gathered:** Understanding of Rocket's cover story and timeline
+- **Resource Access:** Well-lit tunnels, clear path markers, emergency supplies
+- **Alert Level:** Low - guards inside expect "authorized personnel"
+
+**Consequences of Main Entrance Failure:**
+- **Mountain-Wide Alert:** All levels aware of intrusion
+- **Increased Security:** Additional patrols, locked doors, heightened vigilance
+- **Time Pressure:** Operation accelerated to complete before League arrives
+- **Pursuit:** Active hunting parties sent to find and eliminate intruders
+
+##### Northern Mining Shaft (Climbing Challenge):
+- **Location:** Old excavation site, scaffolding partially collapsed but still climbable
+- **Requirements:** Athletics checks, climbing gear helpful but not essential
+- **Advantages:** Bypasses all guards, enters Level 1 from advantageous position
+- **Disadvantages:** Dangerous terrain, potential for injury, equipment noise
+- **Skill Challenges:** Athletics DC 14 (DC 12 with climbing gear), Stealth DC 13 for quiet ascent
+- **Consequences:** Success = safe bypass, Failure = fall damage or noise alerts nearby patrols
+
+##### Eastern Cave System (Wild Pokemon Territory):**
+- **Location:** Natural cave network, overgrown and unmarked on tourist maps
+- **Requirements:** Survival skills, Pokemon handling, light sources
+- **Advantages:** Completely unguarded, multiple routes through mountain, supply caches in abandoned camps
+- **Disadvantages:** Corrupted wild Pokemon encounters, easy to get lost, longer route
+- **Skill Challenges:** Survival DC 13 for navigation, Animal Handling for wild Pokemon
+- **Consequences:** Success = stealth entry + supplies, Failure = Pokemon encounters or lost time
+
+##### Western Cliff Route (Technical Ascent):**
+- **Location:** Sheer rock face requiring team coordination and climbing expertise
+- **Requirements:** Advanced climbing skills, rope/gear, Flying Pokemon assistance helpful
+- **Advantages:** Spectacular approach avoids all ground security, direct access to Level 2
+- **Disadvantages:** Extremely dangerous, weather dependent, visible to any air patrols
+- **Skill Challenges:** Athletics DC 16, group coordination checks, weather resistance
+- **Consequences:** Success = bypass entire Level 1, Failure = serious fall damage or exposure
+
+##### Party Tactical Considerations
+
+**Character Strengths by Route:**
+- **Main Entrance:** Gin's research credentials, Bull's corporate knowledge
+- **Mining Shaft:** Jett's survival skills, Sawyer's fighting types for debris clearing
+- **Cave System:** Jett's ranger expertise, multiple team members with cave-suitable Pokemon
+- **Cliff Route:** Team coordination essential, Bull's Kadabra for psychic assistance
+
+**Entry Method Affects:**
+- **Level 1 encounters** - some avoided or altered based on entry point
+- **Rocket alertness** - how prepared deeper levels are for intrusion
+- **Available resources** - cave route provides supply caches
+- **Time pressure** - some routes faster but riskier
+- **Character development** - each route highlights different party strengths
+
+#### Level 1: The Corrupted Depths
+
+*The upper caves of Mt. Moon retain some of their natural beauty, but something is fundamentally wrong. The familiar drip of water echoes strangely, as if the stone itself is listening. Violet light pulses faintly from deeper passages, and the Zubat that remain fly in erratic, disturbing patterns.*
+
+##### Key Locations:
+
+**Main Chamber:**
+- Central hub with passages leading deeper
+- Abandoned research equipment scattered about
+- Evidence of hasty evacuation
+- Faint mechanical humming from below
+
+**Abandoned Camps:**
+- Recent researcher encampments, hastily abandoned
+- Supplies and equipment left behind
+- Personal logs describing "unsettling discoveries"
+- Clues about deeper excavation sites
+
+**Corrupted Pokemon Areas:**
+- Zubat swarms with erratic flight patterns
+- Geodude with unnatural glowing cracks
+- Wild Pokemon fleeing toward exits
+- Some Pokemon trapped by sync collars
+
+##### Encounters:
+
+**1. The Clefairy Rescue**
+*In a side chamber, you discover a family of Clefairy trapped in makeshift cages, each wearing a pulsing violet collar. Their usually bright eyes are dim, and they move in unnatural unison. One small Clefairy looks up at you with desperate, still-free eyes—the collar around its neck sparks and flickers.*
+
+- **Stealth Option:** Remove collars quietly (Technology DC 15)
+- **Combat Option:** Fight the sync effect while freeing them
+- **Consequence:** Freed Clefairy may help later, but alarms may trigger
+
+**2. Rocket Scout Patrol**
+- 2-3 Rocket Grunts with basic Pokemon
+- Can be avoided with Stealth or confronted
+- Carry communication devices and maps of deeper levels
+- Know passwords for Level 2 access
+
+#### Level 2: The Excavation Zone
+
+*The natural beauty of Mt. Moon gives way to stark industrial efficiency. Drilling equipment hums constantly, carving new passages and exposing ancient stone. Harsh electric lights cast everything in sickly white, and the air tastes of ozone and desperation. This is where Team Rocket's ambitions take physical form.*
+
+##### Key Locations:
+
+**Active Mining Operations:**
+- Industrial drilling equipment extracting fossils
+- Teams of scientists cataloging discoveries
+- Transport systems moving materials to Level 3
+- Heavy Rocket security presence
+
+**Pokemon Holding Pens:**
+- Dozens of captured wild Pokemon in sync collars
+- Observation chambers for behavioral monitoring
+- Failed experiment subjects in recovery
+- Research logs on sync effectiveness
+
+**Research Laboratory:**
+- Scientists analyzing fragments of Oak's stolen data
+- Prototype sync devices in various stages of completion
+- Communication equipment linking to other Rocket sites
+- Evidence of region-wide operation planning
+
+##### Key NPCs:
+
+**Dr. Cipher** - Lead Research Scientist
+- Brilliant but morally corrupted researcher
+- Obsessed with "perfecting the human-Pokemon bond"
+- Defensive about her work: "We're advancing Pokemon science!"
+- Commands sync-enhanced Pokemon team
+
+**Commander Surge** - Military Operations
+- Handles site security and logistics
+- Gruff, efficient, utterly loyal to Rocket
+- Sees Pokemon as tools, nothing more
+- Elite trained team with military precision
+
+##### Encounters:
+
+**3. Tech Recognition**
+*Bull's eyes widen as he spots familiar technology integrated into the transport systems. Gates Digital Storage units, modified with strange crystalline components, hum with the same frequency as the mountain itself. His family's innovation, twisted into something sinister.*
+
+- **Bull's Choice:** Sabotage the systems OR use knowledge to infiltrate
+- **Consequence:** Affects difficulty of reaching Level 3
+- **Character Development:** Confronting family legacy being corrupted
+
+**4. The Missing Researchers**
+*In a supply closet, you find Dr. Marina huddled behind overturned crates. The fossil researcher from the Stone Caravan intel is injured but alive, her eyes wide with terror. "You have to stop them," she whispers. "The chamber below... they've found something that should have stayed buried."*
+
+- **Information:** Map of Level 3, warnings about the Aether Eye fragment
+- **Choice:** Evacuate her immediately OR ask her to help with infiltration
+- **Intel:** Rocket's timeline—they're accelerating toward something big
+
+#### Level 3: The Ancient Chamber
+
+*The deepest level of Mt. Moon reveals secrets that predate human civilization. Ancient stone carved with intricate patterns pulses with violet light, and the air itself seems alive with psychic energy. This is where past and present collide, where Team Rocket's ambitions meet powers they barely understand.*
+
+##### The Chamber of Echoes:
+
+*The main chamber is vast, its ceiling lost in shadows above. In the center, suspended in a web of cables and crystalline conduits, hangs a fragment of the Aether Eye—a crystalline orb the size of a human head, pulsing with hypnotic rhythm.*
+
+##### Key Locations:
+
+**The Aether Eye Fragment:**
+- Ancient artifact of immense psychic power
+- Connected to sync devices throughout the chamber
+- Pulses affect emotions and concentration
+- Source of the mountain's corruption
+
+**Mass Sync Testing Arena:**
+- Observation deck
+- Control systems managing the sync network
+- Emergency containment protocols
+
+**Ancient Inscriptions:**
+- Walls covered in pre-civilization writing
+
+**Deep Underground Pool:**
+- Natural spring untouched by corruption
+- Crystal-clear water with healing properties
+
+##### Final Encounters:
+
+**Lieutenant Wavelength - The Trap Revealed**
+
+*Read aloud as the party approaches what they think is their final objective:*
+
+*Lieutenant Wavelength steps into the chamber, but she's not surprised. She's smiling. "Welcome," she says calmly. "I was wondering how long it would take you to find your way here. Did you really think we didn't know you were coming from the moment you left Pewter City?"*
+
+**The Horrible Realization:**
+
+*"The Stone Caravan encounter on Route 3? Those were my operatives, providing exactly the intelligence I wanted you to have. The Pokemon Center on Route 4? You were supposed to discover it, gather that specific information. Your entry into Mt. Moon? Whichever route you chose, my guards had orders to let you through eventually."*
+
+*Her smile widens.*
+
+*"The 'evidence' you found about overloading the fragment? We wrote those research notes. The 'weakness' in our defenses? Carefully planned gaps. You've been following a script, and you've played your parts beautifully."*
+
+**The Real Weapon:**
+
+*"Now that you're here, tired, separated from easy escape routes, I'd like you to meet someone." Wavelength produces a crystalline Pokeball that pulses with violet energy. "The first subject to achieve perfect synthesis with Aether Eye technology."*
+
+*What emerges is unmistakably Mewtwo, but different. Violet energy courses through crystalline cables fused to its body. Its eyes burn with the cold fire of the Aether Eye fragments.*
+
+**Wavelength's Explanation:**
+*"Beautiful, isn't it? No more conflict between trainer and Pokemon. No more misunderstanding. Perfect unity of purpose. Which brings us to why you're really here - your resistance to sync technology is remarkable. We simply must understand how it works."*
+
+**The Demonstration of Power:**
+
+**Round 1 - Casual Dominance:**
+- Mewtwo doesn't move from its position
+- Psychic attacks hit the entire party simultaneously
+- Party Pokemon are lifted helplessly into the air
+- *"This is approximately 15% of its capability."*
+
+**Round 2 - If They Continue Fighting:**
+- Mewtwo takes control of party Pokemon mid-battle
+- *"Your Pokemon fight beautifully... for me now."*
+- Environmental destruction from psychic pressure
+- *"Shall we increase to 30%?"*
+
+**The Mercy:**
+*Wavelength raises her hand. "Enough. I think they understand." Mewtwo's grip loosens slightly. "You have two choices. Leave now with this knowledge, or I demonstrate what 100% looks like.
+
+**The Parting Message:**
+*"You may go. In fact, I insist. Tell the League what you've seen here. Tell them about Mewtwo. Tell them that Mt. Moon was just the prototype." She smiles coldly. "Phase 2 begins soon. I do hope they're prepared."*
+
+**Consequences of the "Defeat":**
+- **Intelligence gained** - scope of Rocket's true plan revealed
+- **Personal failure** - couldn't save captured Pokemon or stop the operation
+- **Urgency created** - "Phase 2" begins soon
+- **Power demonstrated** - party realizes they need help from League
+- **Psychological impact** - they were manipulated from the beginning
+
+#### Campaign Consequences
+
+**Immediate Impact:**
+- Team Rocket forced to accelerate other operations
+- Party's reputation with League significantly enhanced
+- Regional threat level escalated
+- Other Aether Eye fragments locations revealed
+
+**Character Development:**
+- **Bull:** Confronted family legacy, gained psychic ally
+- **Gin:** Witnessed Oak's research weaponized, strengthened resolve
+- **Jett:** Evolved from local ranger to regional protector
+- **Sawyer:** Proved Johto's strength on biggest stage yet
+- **Mike:** Learned connection between legendaries and ancient powers
+
+**Plot Threads for Future:**
+- Other Rocket sites across Kanto activated early
+- League investigation into ancient artifact network
+- Search for remaining Aether Eye fragments
+- Growing psychic sensitivity in some party members
+
+**What Really Happened:**
+*[To be filled in after session]*
+
 # Special Items/Pokemon
 
 ## Broken Neural Resonator from Route 22
