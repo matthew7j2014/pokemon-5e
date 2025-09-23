@@ -1469,7 +1469,7 @@ The trainers whisper nervously:
 
 *But something feels different as you approach. The usual bustle of tourists and researchers is absent. A few scattered camps sit abandoned along the main path, and the mountain seems... quieter than it should be. Even the Pidgey seem reluctant to fly too close to the cave entrances.*
 
-## Approaching Mt. Moon
+#### Approaching Mt. Moon
 
 *Read aloud as the party gets their first clear view of the mountain:*
 
@@ -1479,7 +1479,7 @@ The trainers whisper nervously:
 
 *Most telling of all: where the main tourist entrance should welcome visitors with friendly signs and helpful guides, you instead see the stark red and black of Team Rocket uniforms. A checkpoint has been established across the primary path, complete with barriers and official-looking paperwork.*
 
-### Initial Observations
+##### Initial Observations
 
 **What the Party Can See (No Check Required):**
 - Main entrance blocked by Team Rocket checkpoint with 4-6 guards
@@ -1499,10 +1499,6 @@ The trainers whisper nervously:
 - Multiple cave entrances that don't appear on standard tourist maps
 - Equipment caches hidden in some of the abandoned camps
 - Signs of Pokemon being herded or driven away from the area
-
-## Entry Point Decision
-
-*The party must choose how to approach Mt. Moon. Each option has different risks, rewards, and consequences:*
 
 #### Entry Points
 
