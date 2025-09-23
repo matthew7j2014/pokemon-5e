@@ -1775,7 +1775,7 @@ The trainers whisper nervously:
 *Wavelength raises her hand. "Enough. I think they understand." Mewtwo's grip loosens slightly. "You have two choices. Leave now with this knowledge, or I demonstrate what 100% looks like.
 
 **The Parting Message:**
-*"You may go. In fact, I insist. Tell the League what you've seen here. Tell them about Mewtwo. Tell them that Mt. Moon was just the prototype." She smiles coldly. "Phase 2 begins soon. I do hope they're prepared."*
+*"You may go. In fact, I insist. Mewtwo will not concede. Tell the League what you've seen here. Tell them about Mewtwo. Tell them that Mt. Moon was just the prototype." She smiles coldly. "Phase 2 begins soon. I do hope they're prepared."*
 
 **Consequences of the "Defeat":**
 - **Intelligence gained** - scope of Rocket's true plan revealed
