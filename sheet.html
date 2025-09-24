@@ -7282,15 +7282,15 @@ const moveDatabase = {
         description: 'You kick up a cloud of sand in an attempt to blind a target in range. The target must make a CON save against your Move DC. On a fail, for the remainder of the encounter, they add -1 to all of their attack rolls. This move can be stacked for a maximum of -5 to attack rolls.'
     },
     'Sand Tomb': {
-        pp: 15, power: 'STR',
+        pp: 10, power: 'STR',
         damage: [
-            { level: 1, damage: '1d6' },
-            { level: 5, damage: '2d6' },
-            { level: 10, damage: '3d6' },
-            { level: 17, damage: '4d6' }
+            { level: 1, damage: '1d10' },
+            { level: 5, damage: '2d8' },
+            { level: 10, damage: '5d4' },
+            { level: 17, damage: '4d8' }
         ],
         time: 'action', range: '30 feet', type: 'Ground',
-        description: 'You trap the target in a tomb of sand. The target takes damage and cannot move on their next turn.'
+        description: 'You summon a wave of sand that surrounds the target. Force a creature to make a STR saving throw. On a fail, they take 1d10 + MOVE ground damage and are restrained until the end of their next turn.'
     },
     'Scary Face': {
         pp: 5, power: 'STR/CHA', damage: '0',
@@ -7773,6 +7773,17 @@ const moveDatabase = {
         time: 'action', range: '40 feet', type: 'Normal',
         description: 'You emit a high pitched screech heard only by the target. Choose a target in range. The target must pass a WIS saving throw against your Move DC or become confused.'
     },
+    'Swords Dance': {
+        pp: 5, power: 'DEX/WIS',
+        damage: [
+            { level: 1, damage: '2d6' },
+            { level: 5, damage: '2d8' },
+            { level: 10, damage: '2d8' },
+            { level: 17, damage: '3d8' }
+        ],
+        time: 'action', range: 'self', type: 'Normal', duration: '1 minute, concentration',
+        description: 'When you activate this move, a sword appears and dances around you, increasing your AC by 1. As a bonus action on a future turn, you may drop concentration to release this sword and roll a ranged attack at a target within 30 feet of you, dealing 2d6 + MOVE normal damage on a hit. At level 10, you can create two swords (+2 AC, two ranged attacks).'
+    },
     'Swagger': {
         pp: 10, power: 'WIS/CHA', damage: '0',
         time: 'action', range: '40 feet', type: 'Normal', duration: 'instantaneous',
@@ -7955,9 +7966,15 @@ const moveDatabase = {
         description: 'You attack with a trump card. The fewer PP this move has remaining, the more damage it deals. Add +1d4 damage for each PP spent.'
     },
     'Twineedle': {
-        pp: 20, power: 'STR/DEX', damage: '1d4',
-        time: 'action', range: 'melee', type: 'Bug',
-        description: 'You make two quick stinging attacks. Roll to hit twice. On a hit, the target must make a CON save or be poisoned for 1 minute. Damage: 1d4 → 1d6 → 1d8.'
+        pp: 5, power: 'STR/DEX',
+        damage: [
+            { level: 1, damage: '1d4' },
+            { level: 5, damage: '2d4' },
+            { level: 10, damage: '1d12' },
+            { level: 17, damage: '4d4' }
+        ],
+        time: 'action', range: '40 feet', type: 'Bug',
+        description: 'You fire two sharp projectiles at a creature in range. They do not have to target the same creature. Make two separate attack rolls, each dealing 1d4 + MOVE bug damage. If either attack roll is 19-20, the target is poisoned.'
     },
     'Twister': {
         pp: 10, power: 'STR/DEX',

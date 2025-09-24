@@ -3496,7 +3496,6 @@ on('chat:message', function(msg) {
             return sendChat('Pokemon System', '/w GM ' + errorMsg);
         }
         
-        sendChat('Pokemon System', `/w GM Creating ${foundPokemon} level ${level}...`);
         createPokemon(foundPokemon, level);
     }
 });
@@ -3904,7 +3903,6 @@ function createPokemon(pokemonName, level) {
                 const levelCheck = findObjs({_type: 'attribute', _characterid: character.id, name: 'pokemon_level'})[0];
 
                 if (!hpCheck || !hpCheck.get('current')) {
-                    sendChat('Pokemon System', `/w GM HP was corrupted, restoring...`);
                     if (hpCheck) {
                         hpCheck.set('current', adjustedHP);
                         hpCheck.set('max', adjustedHP);
@@ -3919,7 +3917,6 @@ function createPokemon(pokemonName, level) {
                 }
 
                 if (!acCheck || !acCheck.get('current')) {
-                    sendChat('Pokemon System', `/w GM AC was corrupted, restoring...`);
                     if (acCheck) {
                         acCheck.set('current', adjustedAC);
                     } else {
@@ -3932,7 +3929,6 @@ function createPokemon(pokemonName, level) {
                 }
 
                 if (!levelCheck || !levelCheck.get('current')) {
-                    sendChat('Pokemon System', `/w GM Level was corrupted, restoring...`);
                     if (levelCheck) {
                         levelCheck.set('current', level);
                     } else {
@@ -3944,13 +3940,11 @@ function createPokemon(pokemonName, level) {
                     }
                 }
             }, 50);
-
-            sendChat('Pokemon System', `/w GM Default token configured with linked bars: HP→bar1, AC→bar2, Level→bar3`);
         }, 300);
 
         let announcement = `&{template:default} {{name=Pokemon Spawned!}} `;
         announcement += `{{Pokemon=${pokemonName}}} {{Level=${level}}} {{HP=${adjustedHP}}} {{Hit Die=${pokemonData.hitDie || 'd6'}}} {{Note=Default token saved with linked bars}}`;
-        sendChat('Pokemon System', '/w GM ' + announcement);
+        sendChat('Pokemon System', 'SUCCESS');
         
     }, 100);
 }

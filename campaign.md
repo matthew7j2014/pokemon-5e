@@ -1254,9 +1254,30 @@ He hands over the **Boulder Badge** and a **TM (Rock Tomb)**, his eyes serious a
 Gin convinced the Mart owner to sell Mike some malfunctioned pokeballs. The group first went to the Gym and overhead billy talk about how to get to the basement. They then went to the Museum main entrance and looked around and talked to the curator then at night went behing the Museum and went in the basement. They defeated Team Rocket inside and discovered the shard and rocks gathered from Mt. Moon. Team Rocket escaped. They then went back outside and tried to go inside the Museum but it was closed. They broke inside with a high DC sleight of hand check and entered. They set off the alarms and the camera inside got clear view of them going through things behing the counter. They didn't find anything and escaped. They then went to the top-left building and knocked. The woman inside heard the gym alarm and hesitantly opened the door. The party tried to lie saying they didn't know what was going on at the museum but she saw right through them. She left her house and locked it and went to help with the investigation at the museum which was now swarming with cops. The party then went back to Brock's gym and it was empty except for Brock. Right as they were about to battle, a cop came in to tell Brock someone had broken into the museum. Brock left and said the battle would need to wait. The party decided to long rest at the gym and during the night, Billy's group comes in and rests there as well. In the morning, the group is woken by Brock and a League officer coming in and accusing the party of breaking in. At first they try to lie but then they tell the party that they have them on camera. Sawyer comes clean and tells them that they broke in trying to find out more after finding what they did in the basement. After several persuasion checks, the officer and brock believes them. Brock then tells them to battle Billys group for the chance at a badge. They defeat Billy's group and Brock and get the badges and TMs and money. Brock tells them the next step is Mt. Moon.
 
 ## Mt. Moon Arc
+
 ### Route 3
 
-#### Wild Pokemon Table
+#### Hidden Items Table
+##### Pokeball crafting notes
+Looks like someone has been keeping notes on some items that can be used when crafting pokeballs to give them extra capabilities.
+
+**Pokeball Infusion Techniques**
+*Hidden in a Ranger's field journal*
+
+**Description**: A set of weathered field notes detailing how ancient craftsmen used mineral fragments to enhance Pokeball construction. The pages show detailed diagrams of embedding small stone fragments into Pokeball shells during the forging process."
+
+**Effect**: Upgrades the **Pokeball Repair and Crafting Toolkit** with mineral infusion techniques:
+
+**Stone Infusion** (once per long rest when crafting a Pokeball):
+- **Moon Stone Fragment**: Creates a **Lunar Ball** - Unlocks hidden ability to pokemon inside this ball
+- **Fire Stone Fragment**: Creates a **Ember Ball** - Gives specialization bonus to pokemon inside if fire type
+- **Thunder Stone Fragment**: Creates a **Static Ball** - Gives specialization bonus to pokemon inside if electric type
+- **Water Stone Fragment**: Creates a **Tide Ball** - Gives specialization bonus to pokemon inside if water type
+- **Leaf Stone Fragment**: Creates a **Grove Ball** - Gives specialization bonus to pokemon inside if grass type
+- **Dusk Stone Fragment**: Creates a **Shadow Ball** - Gives specialization bonus to pokemon inside if dark or ghost type
+- **Ice Stone Fragment**: Creates a **Frost Ball** - Gives specialization bonus to pokemon inside if ice type
+
+#### Wild Pokemon Table (level 5)
 
 **Grass Areas:**
 - **Spearow** - Common, agitated by Mt. Moon energy
@@ -1277,7 +1298,7 @@ The party sets up camp on Route 3 for their first true rest after Pewter.
 **On success:**They hear the _squeak… squeak…_ of a rusty wheel. Then hushed voices.\
 **On failure:**They still see the group eventually, but only when the Rockets are much closer, giving less time to prepare.
 What They See
-Through the brush, 3–4 ragtag trainers are hauling a **wooden wheelbarrow stacked with jagged gray stones**, each faintly humming with resonance (foreshadowing Mt. Moon fossils/shards).
+Through the brush, 5 ragtag trainers are hauling a **wooden wheelbarrow stacked with jagged gray stones**, each faintly humming with resonance (foreshadowing Mt. Moon fossils/shards).
 These aren’t Rockets—they look like ordinary travelers, students, or miners. But their unease is obvious.
 - The stones pulse faint violet light every few seconds.
 The trainers whisper nervously:
@@ -1357,7 +1378,6 @@ The trainers whisper nervously:
 
 **If They Investigate:**
 - **Back Rooms (Stealth DC 16):** Find communication equipment, maps tracking trainer movements
-- **Basement (Investigation DC 14):** Discover real Nurse Joy bound and gagged
 - **Equipment Analysis (Technology DC 13):** Bull recognizes modified Pokemon storage tech
 
 **If Discovered:**
@@ -1382,6 +1402,35 @@ The trainers whisper nervously:
 **Modified Equipment:**
 - Pokemon healing machines with data extraction capability (Read Bull Hook)
 - Communication array linking to Mt. Moon base
+
+##### Aftermath Scenarios
+
+**If They Fought and Won:**
+
+**Immediate Aftermath:**
+- **Real Nurse Joy freed** from basement storage - injured but grateful. If they find her through a hidden door in the back room on the floor.
+- **Stolen Pokemon data** recovered from modified machines - could contain intel on other trainers
+- **Communication logs** revealing coordination with Mt. Moon base and other sites
+- **Emergency medical supplies** for treating both party and any injured bystanders
+
+**Consequences & Intel:**
+- **Radio chatter intercepts** - Mt. Moon base knows the Pokemon Center is compromised
+- **Fake documentation** revealing the scope of Rocket's "League authorization" forgeries
+
+**Story Branches:**
+- **Time pressure increases** - Mt. Moon operation accelerated due to blown cover
+- **League involvement** - Real authorities finally called, but will take time to arrive
+- **Moral complexity** - Some Rocket grunts genuinely believed they were doing League work
+
+##### Character-Specific Moments
+
+**Bull (Tech background):**
+- Recognizes **modified Gates Digital components** in the scanning equipment
+- His family's security tech has been **reverse-engineered and corrupted**
+
+**Gin (Professor's son):**
+- Finds **stolen research data** from Professor Oak and other researchers
+- Realizes the scope of Rocket's **academic infiltration**
 - Prototype sync devices for "emergency situations"
 
 ##### Character Development Moments:
@@ -1463,6 +1512,62 @@ The trainers whisper nervously:
 **What Really Happened:**
 *[To be filled in after session]*
 
+##### Nurse Joy Dialogue Options
+
+**If Real Nurse Joy is Rescued:**
+
+*"Oh thank Arceus! I thought... I thought they were going to keep me down there forever. That woman, she... she's been pretending to be me for three days now!"*
+
+*"They kept talking about something called 'Phase 2'... and how Mt. Moon was just the 'prototype.' They mentioned other Pokemon Centers too - Route 10, near the Power Plant, and one near Lavender Town. They're not just here!"*
+
+*"They forced me to watch while they modified my healing machines. They said they were 'improving' them, but I could see the Pokemon getting distressed during the process. Whatever they were doing, it wasn't healing."*
+
+*"The radio chatter never stopped - they're coordinating with someone called 'Lieutenant Wavelength' up at Mt. Moon. They kept saying things like 'the subjects are responding better than expected' and 'neural extraction quotas ahead of schedule.'"*
+
+*"My Chansey... they took her for 'testing.' She's been my partner for fifteen years. If you're going to Mt. Moon, please... if you see her..."* [tears up]
+
+**If Asked About Other Trainers:**
+*"So many trainers have passed through in the last few days. That fake Joy, she was scanning all their Pokemon, copying data. She seemed especially interested in anyone with 'unusual bonds' - whatever that means."*
+
+**Fake "Nurse Judy" Dialogue (Before Discovery):**
+
+**Initial Greeting:**
+*"Welcome to our Pokemon Center! My, you all look like you've traveled quite far. Please, come in, come in! Let me take a look at your Pokemon - our healing services have been... upgraded recently."*
+
+**Probing for Information:**
+*"Mt. Moon, you said? Oh my, we've had so many trainers asking about that lately. The excavations there have stirred up quite a bit of interest. Tell me, what draws you to such a... dangerous place?"*
+
+**During 'Healing' Process:**
+*"Now don't worry if the machines sound a bit different - we've installed the latest League-approved technology. It's much more... thorough than the old systems. Your Pokemon might seem a bit drowsy afterward, but that's perfectly normal!"*
+
+**If Players Seem Suspicious:**
+*"Is something wrong? You seem... tense. Perhaps you've had a long journey? I do hope you're not one of those trainers who doesn't trust modern Pokemon care. The League assures us these new procedures are completely safe."*
+
+**When Confronted/Discovered:**
+*"Well, well. Clever little trainers, aren't you? Agent Marina, actually. And you've just made things very complicated for yourselves."* [drops the sweet act] *"Did you really think we wouldn't know you were coming?" She presses a button under the desk and the door to the backroom opens and out steps 3 rocket grunts. "We can do this the easy way or the hard way.."*
+
+**After Being Defeated:**
+
+**Defiant/Mocking:**
+*"You think this changes anything? You're already too late. Mt. Moon is just the beginning.."*
+
+**Revealing the Scope:**
+*"Three days... three days I've been copying Pokemon data from every trainer who walked through that door. Dozens of profiles, all uploaded to our servers. Your Pokemon aren't special anymore - we have their patterns."*
+
+**If Interrogated:**
+
+**About Mt. Moon:**
+*"Lieutenant Wavelength doesn't need this place anymore. The prototype testing is complete. Soon every Pokemon Center in Kanto will be running our 'upgrades.'"*
+
+##### Items found in backroom
+Hidden in a locked chest (13 DC sleight of hand)
+5x Super Potion
+5x Potion
+5x Revive
+5x Escape Rope
+5x Antidote
+5x Great Ball
+
 ### Mt. Moon
 
 *The jagged peaks of Mt. Moon loom against the horizon, their ancient stone faces carved by centuries of wind and weather. Famous for its rare fossils, mysterious Moon Stones, and the legendary Clefairy that dance under starlight, the mountain has long been a destination for researchers and adventurous trainers.*
@@ -1482,27 +1587,24 @@ The trainers whisper nervously:
 ##### Initial Observations
 
 **What the Party Can See (No Check Required):**
-- Main entrance blocked by Team Rocket checkpoint with 4-6 guards
-- Official-looking signs: "Authorized League Personnel Only - Excavation in Progress"
-- Several alternative cave entrances visible along the mountain face
-- Abandoned research camps with supplies left behind
+- Main entrance blocked by Team Rocket checkpoint with 2 guards
+- Official-looking signs: "Authorized Personnel Only - Excavation in Progress"
 - Unnatural silence - no Pokemon activity around the mountain
 
 **Perception Check (DC 12):**
+- Several alternative cave entrances visible along the mountain face
 - Strange mechanical humming echoing faintly from deep within the mountain
 - Unusual amount of radio antenna equipment at the checkpoint
-- Some of the "abandoned" camps look recently evacuated, not long-term empty
 - Fresh tire tracks leading to and from the main entrance
 
 **Investigation Check (DC 15):**
 - The Rocket guards aren't just checking IDs - they're scanning people with handheld devices
 - Multiple cave entrances that don't appear on standard tourist maps
-- Equipment caches hidden in some of the abandoned camps
 - Signs of Pokemon being herded or driven away from the area
 
-#### Entry Points
+##### Entry Points
 
-##### Main Tourist Entrance (Heavily Guarded):
+###### Main Tourist Entrance (Heavily Guarded):
 
 *The main entrance to Mt. Moon has been transformed from a welcoming tourist destination into a military-style checkpoint. Red and black barriers stretch across the familiar stone archway, and the cheerful welcome signs have been replaced with stark warnings about "authorized personnel only."*
 
@@ -1568,7 +1670,7 @@ The trainers whisper nervously:
 - **Time Pressure:** Operation accelerated to complete before League arrives
 - **Pursuit:** Active hunting parties sent to find and eliminate intruders
 
-##### Northern Mining Shaft (Climbing Challenge):
+###### Northern Mining Shaft (Climbing Challenge):
 - **Location:** Old excavation site, scaffolding partially collapsed but still climbable
 - **Requirements:** Athletics checks, climbing gear helpful but not essential
 - **Advantages:** Bypasses all guards, enters Level 1 from advantageous position
@@ -1576,7 +1678,7 @@ The trainers whisper nervously:
 - **Skill Challenges:** Athletics DC 14 (DC 12 with climbing gear), Stealth DC 13 for quiet ascent
 - **Consequences:** Success = safe bypass, Failure = fall damage or noise alerts nearby patrols
 
-##### Eastern Cave System (Wild Pokemon Territory):**
+###### Eastern Cave System (Wild Pokemon Territory):**
 - **Location:** Natural cave network, overgrown and unmarked on tourist maps
 - **Requirements:** Survival skills, Pokemon handling, light sources
 - **Advantages:** Completely unguarded, multiple routes through mountain, supply caches in abandoned camps
@@ -1584,7 +1686,7 @@ The trainers whisper nervously:
 - **Skill Challenges:** Survival DC 13 for navigation, Animal Handling for wild Pokemon
 - **Consequences:** Success = stealth entry + supplies, Failure = Pokemon encounters or lost time
 
-##### Western Cliff Route (Technical Ascent):**
+###### Western Cliff Route (Technical Ascent):**
 - **Location:** Sheer rock face requiring team coordination and climbing expertise
 - **Requirements:** Advanced climbing skills, rope/gear, Flying Pokemon assistance helpful
 - **Advantages:** Spectacular approach avoids all ground security, direct access to Level 2
@@ -1592,7 +1694,7 @@ The trainers whisper nervously:
 - **Skill Challenges:** Athletics DC 16, group coordination checks, weather resistance
 - **Consequences:** Success = bypass entire Level 1, Failure = serious fall damage or exposure
 
-##### Party Tactical Considerations
+###### Party Tactical Considerations
 
 **Character Strengths by Route:**
 - **Main Entrance:** Gin's research credentials, Bull's corporate knowledge
@@ -1609,42 +1711,131 @@ The trainers whisper nervously:
 
 #### Level 1: The Corrupted Depths
 
-*The upper caves of Mt. Moon retain some of their natural beauty, but something is fundamentally wrong. The familiar drip of water echoes strangely, as if the stone itself is listening. Violet light pulses faintly from deeper passages, and the Zubat that remain fly in erratic, disturbing patterns.*
-
-##### Key Locations:
-
-**Main Chamber:**
-- Central hub with passages leading deeper
-- Abandoned research equipment scattered about
-- Evidence of hasty evacuation
-- Faint mechanical humming from below
-
-**Abandoned Camps:**
-- Recent researcher encampments, hastily abandoned
-- Supplies and equipment left behind
-- Personal logs describing "unsettling discoveries"
-- Clues about deeper excavation sites
-
-**Corrupted Pokemon Areas:**
-- Zubat swarms with erratic flight patterns
-- Geodude with unnatural glowing cracks
-- Wild Pokemon fleeing toward exits
-- Some Pokemon trapped by sync collars
+*The upper caves of Mt. Moon retain some of their natural beauty, but something is fundamentally wrong. The familiar drip of water echoes strangely, as if the stone itself is listening. lights seem to pulse faintly from deeper passages, and the Zubat that remain fly in erratic, disturbing patterns.*
 
 ##### Encounters:
 
-**1. The Clefairy Rescue**
-*In a side chamber, you discover a family of Clefairy trapped in makeshift cages, each wearing a pulsing violet collar. Their usually bright eyes are dim, and they move in unnatural unison. One small Clefairy looks up at you with desperate, still-free eyes—the collar around its neck sparks and flickers.*
+###### The Clefairy Rescue
+*As you round a corner in the natural cave system, you stumble upon a sight in a side chamber. Six Clefairy of various sizes are trapped in hastily-constructed metal cages, their bars welded together from salvaged mining equipment. Each Clefairy wears a pulsing violet collar that casts eerie shadows on the cave walls.*
 
-- **Stealth Option:** Remove collars quietly (Technology DC 15)
-- **Combat Option:** Fight the sync effect while freeing them
-- **Consequence:** Freed Clefairy may help later, but alarms may trigger
+*The adult Clefairy move with disturbing mechanical precision—turning their heads in unison, blinking at the same intervals. Their normally bright, curious eyes are dulled to a lifeless gray. But one small Clefairy, barely more than a Cleffa, looks up at you with desperate, pleading eyes. The collar around its tiny neck sparks and flickers erratically, as if its spirit is still fighting the control.*
 
-**2. Rocket Scout Patrol**
+**The Scene:**
+- **3 Clefairy total**
+- **Makeshift cages**: Welded metal bars, crude but effective
+- **Violet collars**: Pulsing sync devices controlling their behavior
+
+**Approach Options:**
+
+**Investigation Phase (Before Acting):**
+- **Investigation DC 13**: Notice red blinking lights on each cage - primitive alarm systems
+- **Investigation DC 16**: Locate the motion sensors positioned to monitor the area
+- **Investigation DC 18**: Find the central alarm control box hidden behind loose rocks
+- **Technology DC 15**: Identify that the alarm system is separate from the collars
+
+**Alarm Disabling:**
+- **Option 1**: Disable individual cage alarms (Technology DC 14 per cage, 6 attempts needed)
+- **Option 2**: Disable central alarm system (Investigation DC 16 to locate, Technology DC 18 to disable all at once)
+- **Option 3**: Create interference (Appropriate Pokemon move like Thunder Wave or Supersonic, DC 15)
+- **Failure**: Alarms sound, attracting Rocket patrol in 2-3 rounds
+
+**Rescue Approaches:**
+
+**Stealth Liberation:**
+- **Prerequisite**: Alarms must be disabled first
+- **Collar Removal**: Technology DC 15 per Clefairy (start with the free one for advantage)
+- **Cage Opening**: Thieves' Tools or STR check DC 12
+- **Success**: Quiet rescue, Clefairy remain calm and grateful
+
+**Combat Liberation:**
+- **Immediate action**: Break cages with attacks (AC 15, 10 HP per cage)
+- **Sync Resistance**: Controlled Clefairy will try to stop you (Charm, Disable effects)
+- **Collar Removal**: Technology DC 18 during combat (disadvantage due to conditions)
+- **Consequence**: Noise attracts patrols regardless of alarm status
+
+**Mixed Approach:**
+- **Phase 1**: Disable alarms and free the young Clefairy first
+- **Phase 2**: Use freed Clefairy's help to calm the others (grants advantage on remaining checks)
+- **Phase 3**: Systematic liberation with reduced DCs
+
+**Consequences:**
+
+**Success (Stealth):**
+- All Clefairy freed and grateful
+- Adult Clefairy share knowledge of secret passages and hidden Moon Stone cache
+- Show hidden campsite in cave hidden behing clefairy cages. Inside are 2 moon stone fragments, 2 old rods, 3 flashlights, 3 sleeping bags, rations
+- No immediate alert to Team Rocket
+
+**Success (Combat):**
+- Clefairy freed but traumatized (take time to recover)
+- Rocket patrol arrives in 3-5 rounds due to noise
+
+**Failure:**
+- Alarms bring immediate Rocket response (2-3 Grunts + 1 Technician)
+- Some Clefairy remain controlled and must be fought
+- Missed opportunity for Clefairy assistance in later encounters
+
+**Potential Rewards:**
+- **Clefairy Guidance**: Knowledge of safe paths and hidden areas in Mt. Moon
+- **Moon Stone Fragment**: Gift from grateful Clefairy family
+- **Metronome Teaching**: Young Clefairy teaches one party Pokemon the move Metronome
+- **Rocket Intel**: Collars contain data about sync collar frequencies and weaknesses
+
+###### The Hanging Zubat Ambush
+*As you move through a narrow passage connecting two chambers, the faint sound of dripping water masks another sound—the soft flutter of leathery wings above. Looking up, you can barely make out dark shapes clinging to the cavern ceiling. Dozens of Zubat hang motionless, but their usual sleepy demeanor is replaced by an unnatural alertness. Their eyes glow with a faint violet light, and they track your movements with predatory focus.*
+
+**Encounter Setup:**
+- **8-12 Zubat** hanging from ceiling 15 feet above
+- **Passive Perception DC 14** to notice them before entering the chamber
+- **Stealth DC 16** to pass through without disturbing them
+- **Investigation DC 13** to notice the violet glow in their eyes (sign of corruption)
+
+**If Detected Early:**
+- Party can attempt to sneak past or find alternate route
+- Can attack from range before Zubat swarm down
+- Zubat have disadvantage on first attack if surprised
+
+**If Not Detected:**
+- Zubat drop down when party reaches middle of chamber
+- Swarm tactics: multiple Zubat focus one target
+- Use Supersonic to confuse, then Leech Life to drain
+
+###### Rocket Scout Patrol
 - 2-3 Rocket Grunts with basic Pokemon
 - Can be avoided with Stealth or confronted
 - Carry communication devices and maps of deeper levels
-- Know passwords for Level 2 access
+
+##### Hidden Items Table
+###### Itemfinder Upgrade - Signal Amplifier Module
+*Found behind rock, maybe dropped unknowingly*
+
+**Description**: A sleek metallic antenna upgrade, with distinctive segmented sections and fine copper wiring visible along its length. The antenna feels surprisingly lightweight despite its sturdy construction. Etched along the base in weathered text: "Property of Kanto Rangers - Field Survey Division."
+
+When examined closely, the antenna's segments can be extended or retracted telescopically, and the copper wiring appears to be wound in precise geometric patterns. The craftsmanship suggests this was created by someone with deep understanding of both radio technology and signal amplification techniques.
+
+**Installation**: The Signal Amplifier Antenna screws directly onto the Itemfinder where the original antenna was attached. Once installed and properly tuned using the adjustment dials, the device immediately begins emitting a stronger, more focused detection signal with significantly improved range and penetration.
+
+**Enhanced Capabilities**:
+
+**Extended Range:**
+- Detection radius increased from 30 feet to 60 feet
+- Can now detect items in adjacent rooms or chambers
+
+**Penetration Scanning:**
+- Can detect through thin walls, floors, and ceilings (up to 2 feet thick)
+- Identifies items hidden behind false walls or panels
+- Reveals items in containers, chests, or storage compartments
+
+##### Wild Pokemon Table - Level 1
+
+**Cave Chambers (Roll d20):**
+1-6: **Zubat** - Common, some show violet corruption in eyes
+7-10: **Geodude** - Uncommon, with unnatural glowing cracks in rocky shell
+11-13: **Paras** - Uncommon, mushrooms glow faintly violet
+14-15: **Oddish** - Rare, hiding from Team Rocket operations
+16-18: **Sandshrew** - Rare, digging frantically to escape deeper levels
+19: **Clefairy** - Rare
+20: **Onix** - Very rare, agitated by mining operations below
 
 #### Level 2: The Excavation Zone
 
@@ -1659,46 +1850,85 @@ The trainers whisper nervously:
 - Heavy Rocket security presence
 
 **Pokemon Holding Pens:**
-- Dozens of captured wild Pokemon in sync collars
-- Observation chambers for behavioral monitoring
-- Failed experiment subjects in recovery
-- Research logs on sync effectiveness
+- Several captured wild Pokemon in sync collars
 
-**Research Laboratory:**
-- Scientists analyzing fragments of Oak's stolen data
-- Prototype sync devices in various stages of completion
-- Communication equipment linking to other Rocket sites
-- Evidence of region-wide operation planning
+##### Encounters
+###### The Active Mining Operation
 
-##### Key NPCs:
+*The mechanical grinding and drilling sounds grow louder as you decend the ladder into harsh artificial light. Below, the natural beauty of Mt. Moon has been brutally carved away - massive industrial drilling equipment tears into the ancient stone walls, supervised by workers in Team Rocket uniforms. Sparks fly as diamond-tipped bits bite deep into rock that has stood undisturbed for millennia.*
 
-**Dr. Cipher** - Lead Research Scientist
-- Brilliant but morally corrupted researcher
-- Obsessed with "perfecting the human-Pokemon bond"
-- Defensive about her work: "We're advancing Pokemon science!"
-- Commands sync-enhanced Pokemon team
+**The Scene:**
+*As you descend the ladder, the noise is overwhelming. Three massive drilling rigs work in synchronized precision, each targeting specific points in the cave wall where violet veins of energy pulse through the stone. Workers operate the equipment with mechanical efficiency, their movements unnaturally coordinated. Standing behind the drill, overlooking the operation is a man in a pristine lab coat, his silver hair pulled back severely. He holds a tablet displaying complex readings and speaks into a headset with scientific precision.*
 
-**Commander Surge** - Military Operations
-- Handles site security and logistics
-- Gruff, efficient, utterly loyal to Rocket
-- Sees Pokemon as tools, nothing more
-- Elite trained team with military precision
+**Dr. Cipher - Lead Research Scientist:**
+- Brilliant but morally corrupted researcher in his 50s
+- Obsessed with "perfecting the human-Pokemon bond through scientific advancement"
+- Believes her work will revolutionize Pokemon training
 
-##### Encounters:
+**Initial Approach Options:**
 
-**3. Tech Recognition**
-*Bull's eyes widen as he spots familiar technology integrated into the transport systems. Gates Digital Storage units, modified with strange crystalline components, hum with the same frequency as the mountain itself. His family's innovation, twisted into something sinister.*
+**Stealth Observation (Stealth DC 16):**
+*If successful, players overhear:*
+- Dr. Cipher: *"The fragment below is responding beautifully to our extraction attempts."*
+- Worker: *"Doctor, we're detecting micro-fractures in the containment matrix."*
+- Dr. Cipher: *"Acceptable losses. The Aether Eye has waited here for centuries - a few more fractures won't compromise the harvest. Continue drilling."*
 
-- **Bull's Choice:** Sabotage the systems OR use knowledge to infiltrate
-- **Consequence:** Affects difficulty of reaching Level 3
-- **Character Development:** Confronting family legacy being corrupted
+**Direct Confrontation:**
+*Dr. Cipher notices the party immediately:*
+- *"Well, well. Unauthorized personnel in a restricted excavation site. How terribly disappointing."* [adjusts glasses] *"I suppose you're here to 'stop' us? How wonderfully predictable."*
 
-**4. The Missing Researchers**
-*In a supply closet, you find Dr. Marina huddled behind overturned crates. The fossil researcher from the Stone Caravan intel is injured but alive, her eyes wide with terror. "You have to stop them," she whispers. "The chamber below... they've found something that should have stayed buried."*
+**Dr. Cipher's Dialogue:**
 
-- **Information:** Map of Level 3, warnings about the Aether Eye fragment
-- **Choice:** Evacuate her immediately OR ask her to help with infiltration
-- **Intel:** Rocket's timeline—they're accelerating toward something big
+**If Questioned About the Operation:**
+*"We are conducting the most important scientific research of our generation! This crude drilling is merely the precursor to something revolutionary - the complete synthesis of human and Pokemon consciousness. No more guesswork in training. No more 'bonds' left to chance. Perfect unity through technological advancement!"*
+
+**If Accused of Cruelty to Pokemon:**
+*"Cruelty? CRUELTY? We are liberating Pokemon from the chaos of independent thought! Do you know how much Pokemon suffer from confusion, from conflicting desires? We offer them clarity, purpose, perfect harmony with their trainers. This is mercy, not cruelty!"*
+
+**If Players Mention the Corrupted Pokemon They've Seen:**
+*"Ah, you've witnessed our field tests. Remarkable, isn't it? Pokemon operating at peak efficiency, free from the emotional turbulence that hampers their potential. Those 'corrupted' specimens, as you so crudely put it, represent the future of Pokemon training."*
+
+**Combat Encounter Setup:**
+
+**If Diplomacy Fails or Players Attack:**
+*"You know what? I grow tired of justifying brilliance to intellectual inferiors. Workers - contain the intruders. I have research to complete."*
+
+**The Battle:**
+
+**If Dr. Cipher is Defeated:**
+*"You... you don't understand what you've done. The drilling sequence was perfectly calibrated. Without proper supervision, the resonance cascade could..."* [hears rumbles from deeper in the mountain] *"It is too late, I have to go."*
+
+**Consequences:**
+
+**Victory Outcomes:**
+- **Drilling Equipment Sabotaged**: Can be destroyed to slow Team Rocket's progress
+- **Workers Freed**: Some were under mild sync influence and become grateful informants
+- **Time Pressure Increased**: Uncontrolled drilling destabilizes the mountain structure
+
+**Failure/Escape Outcomes:**
+- **Operation Continues**: Drilling proceeds on schedule
+- **Enhanced Security**: Dr. Cipher calls for reinforcements throughout the mountain
+- **Accelerated Timeline**: Research advances to dangerous levels more quickly
+
+**Key Information Revealed:**
+- The drilling is targeting an ancient Aether Eye fragment below
+- Team Rocket has been conducting "field tests" on wild Pokemon
+- The sync technology is more advanced than previously understood
+- Multiple sites across Kanto are part of a larger network
+- Dr. Cipher genuinely believes she's helping Pokemon, making her a tragic antagonist
+
+**Drilling Site Rewards (After Defeating Team Rocket):**
+
+  From the Drilling Operations:
+
+  - Aether Eye Fragments (3-4 small shards): Can be used to craft anti-sync devices or upgrade existing equipment
+  - Moon Stone Cache: The drilling exposed a natural deposit (2-3 Moon Stones, 1 rare Star Piece)
+  - Fossil Specimens: Rare fossils exposed by the drilling (Old Amber, Helix Fossil fragments) -  have them roll some stuff here
+
+  From the Drilling Machinery:
+
+  - Industrial Diamond Bits: Extremely valuable, could be sold or used to upgrade mining equipment
+  - Power Crystals: High-energy crystals used to power the drilling rigs (useful for crafting)
 
 #### Level 3: The Ancient Chamber
 
@@ -1931,7 +2161,7 @@ Gin: Dratini, Wartortle, Nidoran (M), Bellsprout, Clefairy, Ponyta (M)
 Mike: Dragonair, Rattata, Bulbasaur, Staryu, Ponyta (F), Growlithe, Doduo
 
 ## Special Items
-Bull: Shiny Charm, Fire Pokeball
+Bull: Shiny Charm +1, Fire Pokeball
 Jett: Pokeball Repair and Crafting Toolset, Water Pokeball
 Sawyer: Itemfinder, Tempermental Pokeball
 Gin: PokeRadar, Grass Pokeball
