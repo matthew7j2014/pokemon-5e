@@ -1964,15 +1964,15 @@ When examined closely, the antenna's segments can be extended or retracted teles
 
 *Read aloud as the party approaches what they think is their final objective:*
 
-*Lieutenant Wavelength steps into the chamber, but she's not surprised. She's smiling. "Welcome," she says calmly. "I was wondering how long it would take you to find your way here. Did you really think we didn't know you were coming from the moment you left Pewter City?"*
+*Lieutenant Wavelength is waiting in the chamber, but she's not surprised. She's smiling. "Welcome," she says calmly. "I was wondering how long it would take you to find your way here. Did you really think we didn't know you were coming from the moment you left Pewter City?"*
 
 **The Horrible Realization:**
 
-*"The Stone Caravan encounter on Route 3? Those were my operatives, providing exactly the intelligence I wanted you to have. The Pokemon Center on Route 4? You were supposed to discover it, gather that specific information. Your entry into Mt. Moon? Whichever route you chose, my guards had orders to let you through eventually."*
+*"The Stone Caravan encounter on Route 3? The Pokemon Center on Route 4? Your entry into Mt. Moon? Whichever route you chose, my guards had orders to let you through eventually."*
 
 *Her smile widens.*
 
-*"The 'evidence' you found about overloading the fragment? We wrote those research notes. The 'weakness' in our defenses? Carefully planned gaps. You've been following a script, and you've played your parts beautifully."*
+*"You've been following a script, and you've played your parts beautifully."*
 
 **The Real Weapon:**
 
@@ -1980,35 +1980,34 @@ When examined closely, the antenna's segments can be extended or retracted teles
 
 *What emerges is unmistakably Mewtwo, but different. Violet energy courses through crystalline cables fused to its body. Its eyes burn with the cold fire of the Aether Eye fragments.*
 
+**The Moral Test:**
+
+*But then you notice movement in the shadows behind Wavelength. A small form—an Eevee—trapped in a crystalline cage that pulses with the same violet energy as the Aether Eye fragment. The little Pokemon is conscious but clearly in distress, its fur standing on end as the cage's energy crackles around it.*
+
+*Wavelength notices your attention and smiles coldly. "Ah yes, our next test subject. This little one has shown remarkable resistance to synchronization—much like yourselves. We're quite curious to see what makes it so... stubborn."*
+
+*The Eevee's eyes meet yours—frightened but defiant. It's positioned directly between you and Wavelength, close enough to reach if someone were brave enough to try, but doing so would mean turning their back on Mewtwo.*
+
+*Wavelength gestures casually behind the party. "Oh, and before we begin properly..." A section of the ancient stone wall grinds open, revealing a narrow tunnel that leads upward toward fresh air. "That leads directly to the surface. You're free to leave at any time. I'm not unreasonable." Her smile is cold as steel. "The choice, as always, is yours."*
+
 **Wavelength's Explanation:**
-*"Beautiful, isn't it? No more conflict between trainer and Pokemon. No more misunderstanding. Perfect unity of purpose. Which brings us to why you're really here - your resistance to sync technology is remarkable. We simply must understand how it works."*
+*"Beautiful, isn't it? No more conflict between trainer and Pokemon. No more misunderstanding. Perfect unity of purpose. Which brings us to why you're really here - your resistance to sync technology is remarkable. We simply must understand how it works. You may go. In fact, I insist. Mewtwo will not concede. Tell the League what you've seen here. Tell them about Mewtwo. Tell them that Mt. Moon was just the prototype." She smiles coldly. "Phase 2 begins soon. I do hope they're prepared."*
 
-**The Demonstration of Power:**
+**Player Choice Point:**
+The party can choose to:
+1. **Take the escape tunnel immediately** (safe but abandons Eevee completely)
+2. **Attempt to rescue Eevee** (risky but heroic)
+3. **Focus on Mewtwo threat** (engage but abandon Eevee)
+4. **Try to rescue Eevee AND escape** (extremely difficult but saves everyone)
+5. **Try to rescue Eevee AND fight** (heroic but nearly impossible)
 
-**Round 1 - Casual Dominance:**
-- Mewtwo doesn't move from its position
-- Psychic attacks hit the entire party simultaneously
-- Party Pokemon are lifted helplessly into the air
-- *"This is approximately 15% of its capability."*
-
-**Round 2 - If They Continue Fighting:**
-- Mewtwo takes control of party Pokemon mid-battle
-- *"Your Pokemon fight beautifully... for me now."*
-- Environmental destruction from psychic pressure
-- *"Shall we increase to 30%?"*
-
-**The Mercy:**
-*Wavelength raises her hand. "Enough. I think they understand." Mewtwo's grip loosens slightly. "You have two choices. Leave now with this knowledge, or I demonstrate what 100% looks like.
-
-**The Parting Message:**
-*"You may go. In fact, I insist. Mewtwo will not concede. Tell the League what you've seen here. Tell them about Mewtwo. Tell them that Mt. Moon was just the prototype." She smiles coldly. "Phase 2 begins soon. I do hope they're prepared."*
-
-**Consequences of the "Defeat":**
-- **Intelligence gained** - scope of Rocket's true plan revealed
-- **Personal failure** - couldn't save captured Pokemon or stop the operation
-- **Urgency created** - "Phase 2" begins soon
-- **Power demonstrated** - party realizes they need help from League
-- **Psychological impact** - they were manipulated from the beginning
+**If They Attempt Eevee Rescue:**
+- Requires one PC to break away from the group
+- **Athletics/Acrobatics DC 16** to reach the cage while dodging Mewtwo's psychic pressure
+- **Sleight of Hand DC 18** or **STR DC 15** to break the crystalline lock
+- Mewtwo will psychically slam the rescuer for attempting it (**2d8 + 5 psychic damage**, **CON save DC 16** or be stunned)
+- If successful: Eevee joins the party as a grateful ally
+- If failed: Eevee is moved out of reach, Wavelength taunts their failure
 
 #### Campaign Consequences
 
