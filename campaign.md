@@ -1257,6 +1257,14 @@ Gin convinced the Mart owner to sell Mike some malfunctioned pokeballs. The grou
 
 ### Route 3
 
+*Leaving Pewter City behind, the cobbled streets give way to a winding dirt path that stretches eastward toward the looming silhouette of Mt. Moon. The route feels different from the well-traveled roads you've walked before—wilder, more untamed. Ancient oak trees line the path.*
+
+*As you walk, the familiar sounds of civilization fade, replaced by the rustle of tall grass and the distant cry of Spearow overhead. The air carries a strange quality here, a subtle electric tension that makes the hair on your arms stand up occasionally.*
+
+*Most unsettling of all is Mt. Moon itself, growing larger with each step. The mountain's peaks cut sharp against the sky, and there's something wrong about the way the light hits its stone faces. Even from this distance, you can feel it—a low hum that's not quite audible, more felt than heard.*
+
+*The path ahead winds through meadows and patches of dense forest, with small streams and lakes. But today, you notice, there are fewer travelers than there should be. The route feels strangely empty, as if others have decided to avoid this particular journey.*
+
 #### Hidden Items Table
 ##### Pokeball crafting notes
 Looks like someone has been keeping notes on some items that can be used when crafting pokeballs to give them extra capabilities.
@@ -1291,6 +1299,8 @@ Looks like someone has been keeping notes on some items that can be used when cr
 - **Shelder** - Rare encounter
 
 #### 🌙 Night Watch Event – _“The Stone Caravan”_
+
+Tom, Tim, Arielle, Joeffrey, Eric
 
 The party sets up camp on Route 3 for their first true rest after Pewter.
 - The road is quiet, stars bright overhead. The distant mountains loom like shadows.
