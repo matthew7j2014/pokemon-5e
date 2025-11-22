@@ -6,7 +6,8 @@
       "WebSearch",
       "WebFetch(domain:wiki.roll20.net)",
       "Read(//c/Users/matth/Downloads/**)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebFetch(domain:bulbapedia.bulbagarden.net)"
     ],
     "deny": [],
     "ask": []
