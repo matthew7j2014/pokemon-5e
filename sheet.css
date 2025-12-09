@@ -717,6 +717,11 @@ input[type="radio"] {
     padding: 15px;
 }
 
+/* Add spacing between feature sections */
+.sheet-features-cards-container + .sheet-features-cards-container {
+    margin-top: 20px;
+}
+
 .sheet-features-header {
     display: flex;
     justify-content: space-between;
@@ -800,6 +805,84 @@ input[type="radio"] {
 }
 
 .sheet-feature-container input[name="attr_feature_3_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+/* Class Features - Hide inactive containers */
+.sheet-feature-container input[name="attr_class_feature_slot_1_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_class_feature_slot_2_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_class_feature_slot_3_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+/* Class Features - Collapse functionality */
+.sheet-feature-container input[name="attr_class_feature_1_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_class_feature_2_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_class_feature_3_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+/* Class Features - Rotate collapse icon */
+.sheet-feature-container input[name="attr_class_feature_1_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+.sheet-feature-container input[name="attr_class_feature_2_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+.sheet-feature-container input[name="attr_class_feature_3_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+/* Path Features - Hide inactive containers */
+.sheet-feature-container input[name="attr_path_feature_slot_1_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_path_feature_slot_2_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_path_feature_slot_3_active"][value="0"] ~ .sheet-feature-card {
+    display: none;
+}
+
+/* Path Features - Collapse functionality */
+.sheet-feature-container input[name="attr_path_feature_1_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_path_feature_2_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+.sheet-feature-container input[name="attr_path_feature_3_collapsed"][value="1"] ~ .sheet-feature-card .sheet-feature-content {
+    display: none;
+}
+
+/* Path Features - Rotate collapse icon */
+.sheet-feature-container input[name="attr_path_feature_1_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+.sheet-feature-container input[name="attr_path_feature_2_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
+    transform: rotate(-90deg);
+}
+
+.sheet-feature-container input[name="attr_path_feature_3_collapsed"][value="1"] ~ .sheet-feature-card .sheet-collapse-btn span {
     transform: rotate(-90deg);
 }
 

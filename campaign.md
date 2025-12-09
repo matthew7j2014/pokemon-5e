@@ -2237,6 +2237,409 @@ The party can choose to:
 **What Really Happened:**
 *[To be filled in after session]*
 
+# Act 4
+
+##  Cerulean City Arrival Scene
+
+*The path from Route 4 opens up, and suddenly you're there—Cerulean City lies before you like a breath of fresh air after the darkness of Mt. Moon. Blue-roofed buildings cluster around a central plaza where a grand fountain sparkles in the afternoon light. The sound of running water is everywhere—canals wind through the city, and in the distance, you can see the famous Cerulean Cape stretching toward the horizon.*
+
+*Unlike Pallet Town's quiet charm or Pewter's industrial grit, Cerulean feels alive. Trainers walk the streets, shop signs sway in the breeze, and somewhere nearby you hear the distant cry of water-type Pokémon.*
+
+*For the first time since Oak's lab was attacked, you're somewhere that feels... almost normal.*
+
+## 🏥 Pokémon Center
+
+*The automatic doors slide open with a cheerful chime. Inside, the Pokémon Center is bustling—trainers lined up at the counter, a few sitting in the lounge area comparing badges, others gathered around a TV broadcasting League news. The healing machines hum softly, and the air smells faintly of antiseptic and Oran berries.*
+
+*It's so... routine. So normal. After everything in Mt. Moon, the normalcy almost feels surreal.*
+
+🧍 **NPCs Inside:**
+
+### 💠 Nurse Joy
+
+*This Nurse Joy looks slightly younger than the one in Viridian, with bright eyes and a more energetic demeanor. Her Chansey stands beside her, already preparing the healing station.*
+
+**Initial Greeting:**
+*"Welcome to the Cerulean City Pokémon Center! Oh my—you five look like you've been through quite an ordeal. Please, let me take care of your Pokémon right away!"*
+
+**After healing (if players ask about recent events):**
+*"Cerulean's been relatively quiet, thank goodness. Though we did have some strange reports from Mt. Moon yesterday—trainers saying they heard explosions deep in the mountain, wild Pokémon fleeing... You wouldn't happen to know anything about that, would you?"*
+
+**If players mention Team Rocket:**
+*Her expression darkens.* "Team Rocket? Here in Kanto? I thought they were just rumors... This is serious. You should speak with Misty at the gym—she's been coordinating with the League about suspicious activity in the region."
+
+### 📋 Notice Board
+
+**Postings:**
+- "LEAGUE ALERT: Report any sightings of Team Rocket operatives immediately"
+- "Nugget Bridge Challenge! Battle your way across Route 24 for prizes!"
+- "Bill the Pokémon Researcher needs assistance - cottage on Route 25"
+- "Wanted: Trainers for Misty's Gym Challenge - Water-type specialists encouraged to apply"
+- "Missing: Trainer's Clefairy, last seen near Mt. Moon. Reward offered."
+
+## 🏪 Poké Mart
+
+*A clean, well-maintained shop with bright blue trim and wide windows displaying Poké Balls and potions. Unlike the struggling Viridian Mart, this one seems to be doing good business—trainers come and go regularly.*
+
+🧑‍💼 **NPC: Clerk – Maya**
+
+*A cheerful woman in her mid-20s with a Poké Mart vest and a genuine smile. She seems unfazed by recent events.*
+
+**Greeting:**
+*"Welcome to Cerulean Poké Mart! We've got everything a trainer needs—fresh stock just came in this morning!"*
+
+**If asked about Team Rocket:**
+*"Team Rocket? Here? Oh gosh, I hope not. We had enough trouble when that house got robbed yesterday. Police are still investigating—it's the talk of the town."*
+
+🧾 **Inventory**
+
+| Item | Price | Stock | Description |
+|:---:|:---:|:---:|:---|
+| Potion | 300 | 12 | *Standard healing spray* |
+| Super Potion | 700 | 6 | *Stronger healing formula* |
+| Poké Ball | 200 | 15 | *Well-stocked* |
+| Great Ball | 600 | 4 | *"Popular with gym challengers"* |
+| Antidote | 100 | 8 | *Essential for Route 9 and 10* |
+| Awakening | 250 | 4 | *Cures sleep status* |
+| Paralyze Heal | 200 | 4 | *Cures paralysis* |
+| Repel | 350 | 5 | *Keep weak Pokémon away* |
+| Escape Rope | 550 | 3 | *Quick exit from caves/dungeons* |
+
+**Special Item (hidden behind counter, Persuasion DC 13 or if they mention Mt. Moon):**
+- **TM11 - Bubble Beam** (2000₽) - *"Got this from a trainer who cleared Misty's gym. Figured someone could use it."*
+
+## 🏊 Cerulean Gym - Misty's Domain
+
+*The gym is an impressive structure with a distinctive blue dome roof. Through the windows, you can see the shimmer of water. A sign out front reads: "Cerulean Gym - Leader: Misty - The Tomboyish Mermaid!"*
+
+*A few trainers loiter outside, some looking nervous, others excited.*
+
+### Gym Structure
+
+**If players enter:**
+
+*The interior is built around a massive indoor pool, with platforms and walkways suspended above the water. The air is humid and echoes with the sound of splashing. Several platforms serve as battle arenas, and you can see various Water-type Pokémon swimming in the clear blue water below.*
+
+### 🧍 Gym Leader Misty
+
+*A woman with orange hair in a side ponytail, wearing a yellow crop top and jean shorts. She's in the middle of training her Starmie when you enter, clearly a skilled battler despite her young age.*
+
+**Initial Meeting:**
+*"Hey! New challengers?"* (She sizes up your team with an experienced eye.) *"You've got that look—like you've seen some real action. Not just practice battles."*
+
+**If players mention Mt. Moon or Team Rocket:**
+*Her playful demeanor shifts to something more serious.* "Wait—you're the ones Captain Vale told me about? The researchers from Oak's lab?"
+*(She recalls her Starmie and walks over.)*
+*"Look, I'll be straight with you. The League's been keeping me in the loop about weird stuff happening across Kanto. Mt. Moon going haywire, Viridian Forest lockdown, and now you're telling me Team Rocket has Mewtwo?"*
+*"I'm only 16, but I'm still a Gym Leader. That means protecting this city and its people. If Team Rocket is really back... I need to know everything."*
+
+**What Misty can offer:**
+- **Alliance** - She believes the party and wants to help
+- **Gym Challenge** - Available whenever they're ready (rewards Cascade Badge + TM11)
+- **Information Network** - She has contacts with other Gym Leaders
+- **Safe Haven** - The gym can serve as a secure meeting place
+
+**Intel she provides:**
+*"Two days ago, a woman in a white coat was spotted at the Pokémon Center. Dark hair, cold eyes, had some kind of high-tech equipment. She asked about routes to Vermillion City, then left toward Route 5."*
+*"Route 5 leads to the Underground Path—it comes out at Route 6, right outside Vermillion. If someone wanted to travel fast and avoid attention, that's the way to do it."*
+
+**Gym Challenge (if players want to battle):**
+- 3 Trainers before Misty (Water-type specialists)
+- Misty's team: Staryu (Lv. 18), Starmie (Lv. 21)
+- Reward: Cascade Badge, TM11 (Bubble Beam), 2100₽
+
+## 🏠 Robbed House - "The Cerulean Burglary"
+
+*One of the houses in the northwest area has police tape across the doorway. A small crowd has gathered, and you can see Officer Jenny taking statements.*
+
+### The Crime Scene
+
+*This is a modest home with a tidy garden, now marred by a broken window. The back door hangs ajar, clearly forced open.*
+
+🧍 **Officer Jenny**
+
+*A stern but fair policewoman with blue hair and a motorcycle parked nearby. Her Growlithe is sniffing around the perimeter.*
+
+**When approached:**
+*"This is an active crime scene. Unless you have information about the break-in, I'll have to ask you to—"*
+*(Growlithe suddenly perks up, sniffing toward the party's direction. Specifically toward any Pokémon that were in Mt. Moon.)*
+*"Hold on... Growlithe's picking up something. You wouldn't happen to have been near Mt. Moon recently, would you?"*
+
+**If players admit they were:**
+*"Interesting. Growlithe is trained to detect specific chemical signatures—the same ones we've been finding at Team Rocket sites. You're not suspects,"* (she says quickly, seeing their concern) *"but I'm very curious why you smell like a crime scene."*
+
+**Investigation Options:**
+
+**Perception DC 14 (examining the scene):**
+- The break-in is staged to look like a simple robbery
+- But the items taken are specific: TM28 (Dig), research notes about underground tunnels, old maps of Cerulean Cave
+- A faint violet residue on the windowsill—same color as Aether Eye energy
+
+**Investigation DC 16:**
+- Boot prints leading toward Route 24/25 (north)
+- Size and tread match Team Rocket operative standard issue
+- Whoever did this was looking for something specific—old maps and tunnel access information
+
+**What was stolen:**
+- TM28 (Dig)
+- Geological survey maps of the area
+- Research notes about "acoustic phenomena" in Cerulean Cave
+
+### 🧍 Homeowner - Mr. Takashi
+
+*An elderly man, clearly shaken by the break-in.*
+
+**If players talk to him:**
+*"I don't understand... they didn't take my valuables, my Pokémon were untouched. They only wanted my old research materials from when I worked for Silph Co."*
+*"I used to be a geological surveyor—mapped cave systems across Kanto. But that was 30 years ago! Why would anyone want those dusty old maps now?"*
+
+**If players pass Insight DC 14:**
+- He's hiding something—not maliciously, but out of fear
+- He worked on classified projects involving "psychic resonance detection"
+- The maps he had showed areas where "the signal" was strongest
+- Cerulean Cave was marked as a "resonance hotspot"
+
+**If players earn his trust (Persuasion DC 15):**
+*"Alright... I'll tell you. Back in my Silph days, we were mapping sites for potential... let's call them 'artifacts.' Ancient Pokémon relics that gave off unusual energy readings."*
+*"Cerulean Cave was one of the strongest sites. We never got clearance to explore it fully—the League sealed it off after an expedition team went missing. But if someone wanted to find another one of those artifacts..."*
+*(He trails off, looking worried.)*
+
+**Quest Hook:** This ties the robbery to Team Rocket searching for another Aether Eye fragment location—Cerulean Cave (which is currently sealed and guarded).
+
+## 🏡 Top-Left House - "The Nurse's Cottage"
+
+*A cozy house with a small medicinal herb garden out front. A sign reads: "Pokémon Home Care - Nurse Practitioner"*
+
+🧍 **NPC: Retired Nurse Ida**
+
+*A kind elderly woman who used to work at the Pokémon Center before retiring. She still treats Pokémon in her home.*
+
+**Services:**
+- Free healing for one Pokémon (once per visit)
+- Sells homemade Potions (200₽ each, equivalent to regular Potions)
+- Offers advice about Water-type Pokémon care
+
+**If players mention Mt. Moon:**
+*"Oh, you poor dears. Mt. Moon has always been special—the Clefairy there are sacred. If Team Rocket hurt those precious Pokémon..."*
+*She offers them a home-cooked meal and a place to rest if needed.*
+
+## 🏡 Top-Right House - "The Trader's Home"
+
+*A house decorated with souvenirs from across Kanto and beyond.*
+
+🧍 **NPC: Marcus the Trader**
+
+*A jovial middle-aged man who travels frequently and collects rare items.*
+
+**Services:**
+- Will trade specific items for TMs
+- Has information about routes and cities
+- Rumors about legendary Pokémon
+
+**Current Trades Available:**
+- **Your Potion** → **TM19 (Seismic Toss)** (He'll trade if you bring 3 Potions)
+- **Your Nugget** → **2000₽** (standard exchange rate)
+- Information about Bill's cottage (free, just ask)
+
+**Rumors he shares:**
+*"You hear about the weird guy up on Route 25? Bill, I think his name is. Brilliant researcher but a total hermit. Word is he's working on some kind of Pokémon storage system—wants to let people store Pokémon digitally! Can you imagine?"*
+
+## 🏡 Bottom-Left House (Green Roof) - "The Copycat Girl's House"
+
+*A house with an oddly specific collection of Pokémon dolls visible through the windows.*
+
+🧍 **NPC: Copycat (Unnamed girl, age 12)**
+
+*A strange young girl who mimics people's mannerisms and speech patterns. She's lonely and wants friends.*
+
+**Interaction:**
+*When players speak, she repeats their words in a playful but slightly unsettling way.*
+
+*"Hello! ...Hello! ...You're trainers? ...You're trainers?"*
+
+**If players are patient with her:**
+- She gives them a **Poké Doll** (can be used to flee wild Pokémon encounters)
+- Mentions she saw "scary people in black" walking toward Route 5 yesterday
+- One of them had "a weird purple glowing box"
+
+**Mini-Quest (optional):**
+- She lost her favorite Clefairy Doll in Vermillion City
+- If players retrieve it later, she'll reward them with a **Rare Candy**
+
+## 🏡 Bottom-Right House (Blue Roof) - "The Bike Enthusiast's Home"
+
+*A modest house with a small garage. You can hear mechanical tinkering from inside.*
+
+🧍 **NPC: Cycling Sam**
+
+*A young man obsessed with bicycles and speed.*
+
+**Interaction:**
+*"Bikes are the future of travel, man! Way better than those clunky old Pokémon wagons. You can get from here to Vermillion in half the time!"*
+
+**Services:**
+- Information about routes and travel times
+- Will rent a Bicycle (5000₽ security deposit, refundable)
+- Can upgrade the Bicycle (later in campaign)
+
+**If players ask about recent activity:**
+*"Yeah, saw some suspicious types heading south yesterday. Looked like they were in a hurry—didn't even stop to appreciate my bike collection! Weirdos."*
+
+## 🏡 Center-Bottom House (Beige Roof) - "The Researcher's Study"
+
+*A house with a small telescope on the roof and star charts visible through the window.*
+
+🧍 **NPC: Professor Meridian**
+
+*A young researcher studying Clefairy migration patterns and lunar cycles.*
+
+**Interaction:**
+*"Fascinating! You survived Mt. Moon? Please, tell me—did you see the Clefairy colonies? Are they safe?"*
+
+**If players mention freeing the Clefairy:**
+*"Thank Arceus! Those Pokémon are incredibly important to the ecosystem. The Moon Stone evolution phenomenon is still not fully understood, but I believe it's connected to ancient energy fields in the mountain."*
+
+**Intel she provides:**
+*"You know, I've been tracking unusual energy readings across Kanto. Mt. Moon's spike was off the charts two days ago—right when you were there, I presume. But here's the strange part: I detected a similar but smaller spike near Cerulean Cave around the same time."*
+
+*"Almost like... an echo. Or a response."*
+
+**Reward:**
+- Gives them a **Moon Stone** as thanks for helping the Clefairy
+- Offers to track energy readings and report anomalies to them
+
+## Routes Leading Out
+
+### 🛤️ Route 24 (North) - "Nugget Bridge Path"
+
+*A well-maintained bridge crosses the water north of Cerulean. You can see trainers lined up along the bridge—it looks like some kind of challenge.*
+
+**Nugget Bridge Challenge:**
+- 5 trainers in a row (levels 12-16)
+- Beat all 5 to receive a Nugget
+- The final "trainer" is actually a **Team Rocket Recruiter** who tries to recruit the party
+- When refused, he battles them (has Ekans Lv. 15, Zubat Lv. 15)
+
+**After defeating the Rocket Grunt:**
+- He flees, dropping a **Rocket Communicator** (partially damaged)
+- Tech check DC 15: Can extract recent communications mentioning "Vermillion extraction point"
+
+**Route 25 (East of 24):**
+- Long path leading to Bill's cottage
+- Wild Pokémon: Oddish, Bellsprout, Pidgey, Meowth, Abra
+- Several trainers looking for battles
+
+### 🛤️ Route 5 (South) - "The Underground Path"
+
+*A short route leading to the Underground Path entrance. The path connects to Route 6, bypassing Saffron City.*
+
+*A guard stands at the entrance to Saffron City's gate, blocking access.*
+
+**Guard:**
+*"Sorry, Saffron City is under lockdown. Some kind of corporate dispute with Silph Co. You'll have to take the Underground Path to Vermillion."*
+
+**Underground Path:**
+- Safe tunnel, no wild Pokémon
+- A few trainers inside
+- Vending machines (Fresh Water 200₽, Soda Pop 300₽, Lemonade 350₽)
+- Some suspicious figures loitering (Team Rocket scouts?)
+
+### 🛤️ Route 9 (East) - "To Rock Tunnel"
+
+*Currently inaccessible—route is blocked by League Rangers due to unusual Pokémon activity.*
+
+**Ranger:**
+*"Rock Tunnel's been closed temporarily. Some kind of cave-in. Try back in a few weeks."*
+
+*(This is actually a cover story—Team Rocket activity in the area made the League seal it temporarily.)*
+
+## Bill's Cottage Quest
+
+*Following the path along Route 24 and then east on Route 25, you eventually reach a small cottage perched on a cliff overlooking the sea. It's clearly a researcher's dwelling—antennas and satellite dishes cover the roof.*
+
+### 🏡 Bill's Cottage
+
+*The door is unlocked, and you hear a commotion inside.*
+
+**When players enter:**
+
+*You step into a cluttered cottage filled with computers, monitors displaying Pokémon data, and strange machinery. The walls are covered with schematics and diagrams.*
+
+*Then you notice something odd—a large teleportation pod in the center of the room, humming with energy. And coming from inside it... a voice.*
+
+**Strange Voice:**
+*"Oh thank goodness! Someone's here! Please, you have to help me—I was testing my teleporter and something went wrong. I'm stuck! There's a switch on the wall—just pull it and I should be able to get out!"*
+
+**Investigation DC 12:**
+- The machinery looks experimental but functional
+- The switch is clearly labeled "EMERGENCY RELEASE"
+- This seems safe... probably
+
+**When they pull the switch:**
+
+*The pod hums, flashes, and the door hisses open. Out steps a man in his mid-20s with messy brown hair and glasses, looking extremely relieved.*
+
+*"Thank you! I thought I'd be stuck as a— well, never mind. I'm Bill, Pokémon researcher and inventor."*
+
+### 🧍 NPC: Bill
+
+*Brilliant but eccentric Pokémon researcher specializing in storage systems and digital Pokémon technology.*
+
+**After being rescued:**
+*"I've been working on a Pokémon Storage System—a way to digitally store Pokémon and access them from anywhere in Kanto. Revolutionary, right? Though clearly I need to work out some bugs..."*
+
+**If players mention Team Rocket or show him tech:**
+*His expression turns serious.* "Let me see that... Oh no. Oh no no no. This is based on my early prototype designs—but corrupted. Weaponized."*
+
+*(He examines any Rocket tech they have, like the Neural Resonator or communicator.)*
+
+*"Whoever built this knows their way around Pokémon data storage and transfer. But instead of storing Pokémon... this looks like it's designed to override their neural patterns. This is sick."*
+
+**What Bill can provide:**
+- **Analysis of Rocket tech** - Gives +2 to future tech checks involving sync devices
+- **Broken Neural Resonator upgrade** - If they have it, he can repair it partially (now gives +2 instead of +1)
+- **PC Storage Access** - Players can now use PC boxes to store extra Pokémon
+- **S.S. Anne Ticket** - "I was supposed to attend a trainer party in Vermillion, but after this teleporter incident... you go instead. Network with some elite trainers—might learn something useful."
+
+**Long-term connection:**
+- Bill becomes a recurring ally
+- Can research Rocket tech, upgrade Pokédexes, provide intel
+- Potential quest giver for storage system-related missions
+
+## Investigation Summary & Next Steps
+
+After exploring Cerulean City, the party should have multiple leads:
+
+**Main Plot Threads:**
+
+1. **Wavelength's Trail** → Route 5/Underground Path → Vermillion City
+   - Captain Vale's intelligence suggests this is where she went
+   - S.S. Anne ticket from Bill provides reason to go there
+
+2. **Cerulean Cave Mystery** → Sealed for now, but Team Rocket is interested
+   - Robbed house reveals Rocket looking for cave maps
+   - Another Aether Eye fragment might be hidden there
+   - Currently too dangerous/sealed (end-game content)
+
+3. **Nugget Bridge Rocket Recruiter** → Provides immediate Team Rocket encounter
+   - Drops communicator with Vermillion intel
+   - Shows Rocket is actively recruiting in the area
+
+4. **Missing Flicker Arc** → Sawyer's personal quest
+   - No direct leads yet, but Wavelength heading to Vermillion
+   - Pursuit arc continues
+
+**Optional Side Content:**
+
+- Misty's Gym Challenge (Cascade Badge)
+- Rival group dynamics (Tommy's team)
+- Bill's ongoing research assistance
+- Copycat's missing doll quest (Vermillion)
+- Training and Pokémon catching in routes
+
+**Recommended Path Forward:**
+Route 5 → Underground Path → Route 6 → Vermillion City (S.S. Anne arc)
+
 # Special Items/Pokemon
 
 ## Broken Neural Resonator from Route 22

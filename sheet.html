@@ -12,23 +12,13 @@
         <div class="sheet-character-header">
             <h4>Character Information</h4>
             
-            <div class="sheet-header-row">
-                <!-- Character Name -->
-                <div class="sheet-info-field sheet-name-field">
+            <div class="sheet-header-row" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+                <!-- Left Side: Name and HP -->
+                <div class="sheet-info-field sheet-name-field" style="margin: 0;">
                     <label>Character Name</label>
                     <input type="text" name="attr_character_name" placeholder="Enter name" />
                 </div>
-                
-                <div class="sheet-separator"></div>
-                
-                <!-- Level -->
-                <div class="sheet-info-field sheet-stat-field">
-                    <label>Level</label>
-                    <input type="number" name="attr_trainer_level" value="1" />
-                </div>
-                
-                <!-- Hit Points -->
-                <div class="sheet-info-field sheet-hp-field">
+                <div class="sheet-info-field sheet-hp-field" style="margin: 0;">
                     <label>Hit Points</label>
                     <div class="sheet-hp-container">
                         <input type="number" name="attr_hp" placeholder="24" />
@@ -36,32 +26,40 @@
                         <input type="number" name="attr_hp_max" placeholder="24" />
                     </div>
                 </div>
-                
-                <!-- Armor Class -->
-                <div class="sheet-info-field sheet-stat-field">
-                    <label>AC</label>
-                    <input type="number" name="attr_ac" value="10" />
+
+                <!-- Right Side: Level and Stats -->
+                <div class="sheet-info-field" style="margin: 0; display: flex; flex-direction: column;">
+                    <label>Level</label>
+                    <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                        <input type="number" name="attr_trainer_level" value="1" style="width: 50px;" />
+                        <button type="roll" name="roll_trainer_levelup" value="&{template:default} {{name=Trainer Level Up!}} {{roll=[[1@{trainer_hitdie}@{constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
+                            ⬆
+                        </button>
+                    </div>
                 </div>
-                
-                <!-- Proficiency Bonus -->
-                <div class="sheet-info-field sheet-stat-field">
-                    <label>Prof</label>
-                    <input type="number" name="attr_proficiency_bonus" value="2" />
+
+                <!-- Stats Display Section -->
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-start; margin: 0; padding: 0;">
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>AC</label>
+                        <span name="attr_ac" style="font-size: 18px; font-weight: bold;">10</span>
+                    </div>
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>Prof</label>
+                        <span name="attr_proficiency_bonus" style="font-size: 18px; font-weight: bold;">+2</span>
+                    </div>
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>Speed</label>
+                        <span name="attr_speed" style="font-size: 18px; font-weight: bold;">30</span>
+                    </div>
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>Swim</label>
+                        <span name="attr_swim_speed" style="font-size: 18px; font-weight: bold;">5</span>
+                    </div>
                 </div>
-                
-                <div class="sheet-separator"></div>
-                
-                <!-- Speed -->
-                <div class="sheet-info-field sheet-speed-field">
-                    <label>Speed</label>
-                    <input type="number" name="attr_speed" value="30" />
-                </div>
-                
-                <!-- Swim Speed -->
-                <div class="sheet-info-field sheet-stat-field">
-                    <label>Swim</label>
-                    <input type="number" name="attr_swim_speed" value="5" />
-                </div>
+
+                <!-- Hidden Hit Die field -->
+                <input type="hidden" name="attr_trainer_hitdie" value="d8" />
             </div>
         </div>
     </div>
@@ -229,15 +227,153 @@
                 <!-- Features -->
                 <div class="sheet-features-container">
                     <h4>Features & Traits</h4>
-                    
-                    <div class="sheet-feature-box">
-                        <label>Class Features</label>
-                        <textarea name="attr_class_features" placeholder="List your trainer class abilities and features"></textarea>
+
+                    <!-- Class Features Cards -->
+                    <div class="sheet-features-cards-container">
+                        <div class="sheet-features-header">
+                            <h5>Class Features</h5>
+                            <button type="action" name="act_add_class_feature" class="sheet-add-feature-btn">+ Add Feature</button>
+                        </div>
+
+                        <!-- Class Feature Slot 1 -->
+                        <div class="sheet-feature-container">
+                            <input type="hidden" name="attr_class_feature_slot_1_active" value="0" />
+                            <input type="hidden" name="attr_class_feature_1_collapsed" value="0" />
+                            <div class="sheet-feature-card">
+                                <div class="sheet-feature-header">
+                                    <div class="sheet-feature-title">
+                                        <input type="text" name="attr_class_feature_1_name" placeholder="Class Feature Name" />
+                                    </div>
+                                    <div class="sheet-feature-controls">
+                                        <button type="action" name="act_toggle_class_feature_1" class="sheet-collapse-btn">
+                                            <span name="attr_class_feature_1_collapse_icon">▼</span>
+                                        </button>
+                                        <button type="action" name="act_hide_class_feature_1" class="sheet-delete-btn">×</button>
+                                    </div>
+                                </div>
+                                <div class="sheet-feature-content">
+                                    <textarea name="attr_class_feature_1_description" class="sheet-feature-text" placeholder="Describe this class feature..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Class Feature Slot 2 -->
+                        <div class="sheet-feature-container">
+                            <input type="hidden" name="attr_class_feature_slot_2_active" value="0" />
+                            <input type="hidden" name="attr_class_feature_2_collapsed" value="0" />
+                            <div class="sheet-feature-card">
+                                <div class="sheet-feature-header">
+                                    <div class="sheet-feature-title">
+                                        <input type="text" name="attr_class_feature_2_name" placeholder="Class Feature Name" />
+                                    </div>
+                                    <div class="sheet-feature-controls">
+                                        <button type="action" name="act_toggle_class_feature_2" class="sheet-collapse-btn">
+                                            <span name="attr_class_feature_2_collapse_icon">▼</span>
+                                        </button>
+                                        <button type="action" name="act_hide_class_feature_2" class="sheet-delete-btn">×</button>
+                                    </div>
+                                </div>
+                                <div class="sheet-feature-content">
+                                    <textarea name="attr_class_feature_2_description" class="sheet-feature-text" placeholder="Describe this class feature..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Class Feature Slot 3 -->
+                        <div class="sheet-feature-container">
+                            <input type="hidden" name="attr_class_feature_slot_3_active" value="0" />
+                            <input type="hidden" name="attr_class_feature_3_collapsed" value="0" />
+                            <div class="sheet-feature-card">
+                                <div class="sheet-feature-header">
+                                    <div class="sheet-feature-title">
+                                        <input type="text" name="attr_class_feature_3_name" placeholder="Class Feature Name" />
+                                    </div>
+                                    <div class="sheet-feature-controls">
+                                        <button type="action" name="act_toggle_class_feature_3" class="sheet-collapse-btn">
+                                            <span name="attr_class_feature_3_collapse_icon">▼</span>
+                                        </button>
+                                        <button type="action" name="act_hide_class_feature_3" class="sheet-delete-btn">×</button>
+                                    </div>
+                                </div>
+                                <div class="sheet-feature-content">
+                                    <textarea name="attr_class_feature_3_description" class="sheet-feature-text" placeholder="Describe this class feature..."></textarea>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="sheet-feature-box">
-                        <label>Path Features</label>
-                        <textarea name="attr_path_features" placeholder="List your trainer path abilities and benefits"></textarea>
+
+                    <!-- Path Features Cards -->
+                    <div class="sheet-features-cards-container">
+                        <div class="sheet-features-header">
+                            <h5>Path Features</h5>
+                            <button type="action" name="act_add_path_feature" class="sheet-add-feature-btn">+ Add Feature</button>
+                        </div>
+
+                        <!-- Path Feature Slot 1 -->
+                        <div class="sheet-feature-container">
+                            <input type="hidden" name="attr_path_feature_slot_1_active" value="0" />
+                            <input type="hidden" name="attr_path_feature_1_collapsed" value="0" />
+                            <div class="sheet-feature-card">
+                                <div class="sheet-feature-header">
+                                    <div class="sheet-feature-title">
+                                        <input type="text" name="attr_path_feature_1_name" placeholder="Path Feature Name" />
+                                    </div>
+                                    <div class="sheet-feature-controls">
+                                        <button type="action" name="act_toggle_path_feature_1" class="sheet-collapse-btn">
+                                            <span name="attr_path_feature_1_collapse_icon">▼</span>
+                                        </button>
+                                        <button type="action" name="act_hide_path_feature_1" class="sheet-delete-btn">×</button>
+                                    </div>
+                                </div>
+                                <div class="sheet-feature-content">
+                                    <textarea name="attr_path_feature_1_description" class="sheet-feature-text" placeholder="Describe this path feature..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Path Feature Slot 2 -->
+                        <div class="sheet-feature-container">
+                            <input type="hidden" name="attr_path_feature_slot_2_active" value="0" />
+                            <input type="hidden" name="attr_path_feature_2_collapsed" value="0" />
+                            <div class="sheet-feature-card">
+                                <div class="sheet-feature-header">
+                                    <div class="sheet-feature-title">
+                                        <input type="text" name="attr_path_feature_2_name" placeholder="Path Feature Name" />
+                                    </div>
+                                    <div class="sheet-feature-controls">
+                                        <button type="action" name="act_toggle_path_feature_2" class="sheet-collapse-btn">
+                                            <span name="attr_path_feature_2_collapse_icon">▼</span>
+                                        </button>
+                                        <button type="action" name="act_hide_path_feature_2" class="sheet-delete-btn">×</button>
+                                    </div>
+                                </div>
+                                <div class="sheet-feature-content">
+                                    <textarea name="attr_path_feature_2_description" class="sheet-feature-text" placeholder="Describe this path feature..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Path Feature Slot 3 -->
+                        <div class="sheet-feature-container">
+                            <input type="hidden" name="attr_path_feature_slot_3_active" value="0" />
+                            <input type="hidden" name="attr_path_feature_3_collapsed" value="0" />
+                            <div class="sheet-feature-card">
+                                <div class="sheet-feature-header">
+                                    <div class="sheet-feature-title">
+                                        <input type="text" name="attr_path_feature_3_name" placeholder="Path Feature Name" />
+                                    </div>
+                                    <div class="sheet-feature-controls">
+                                        <button type="action" name="act_toggle_path_feature_3" class="sheet-collapse-btn">
+                                            <span name="attr_path_feature_3_collapse_icon">▼</span>
+                                        </button>
+                                        <button type="action" name="act_hide_path_feature_3" class="sheet-delete-btn">×</button>
+                                    </div>
+                                </div>
+                                <div class="sheet-feature-content">
+                                    <textarea name="attr_path_feature_3_description" class="sheet-feature-text" placeholder="Describe this path feature..."></textarea>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -607,16 +743,13 @@
         <div class="sheet-character-header">
             <h4>Pokemon Information</h4>
             
-            <div class="sheet-header-row">
-                <div class="sheet-info-field">
+            <div class="sheet-header-row" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+                <!-- Left Side: Name and HP -->
+                <div class="sheet-info-field" style="margin: 0;">
                     <label>Pokemon Name</label>
                     <input type="text" name="attr_pokemon_name" />
                 </div>
-                <div class="sheet-info-field">
-                    <label>Level</label>
-                    <input type="number" name="attr_pokemon_level" value="1" />
-                </div>
-                <div class="sheet-info-field sheet-hp-field">
+                <div class="sheet-info-field sheet-hp-field" style="margin: 0;">
                     <label>Hit Points</label>
                     <div class="sheet-hp-container">
                         <input type="number" name="attr_pokemon_hp" placeholder="24" />
@@ -624,26 +757,44 @@
                         <input type="number" name="attr_pokemon_hp_max" placeholder="24" />
                     </div>
                 </div>
-                <div class="sheet-info-field">
-                    <label>Speed</label>
-                    <input type="number" name="attr_pokemon_speed" value="30" />
+
+                <!-- Right Side: Level and Stats -->
+                <div class="sheet-info-field" style="margin: 0; display: flex; flex-direction: column;">
+                    <label>Level</label>
+                    <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
+                        <input type="number" name="attr_pokemon_level" value="1" style="width: 50px;" />
+                        <button type="roll" name="roll_pokemon_levelup" value="&{template:default} {{name=@{pokemon_name} Level Up!}} {{roll=[[1@{pokemon_hitdie}@{pokemon_constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
+                            ⬆
+                        </button>
+                    </div>
                 </div>
-                <div class="sheet-info-field">
-                    <label>Catch DC</label>
-                    <input type="number" name="attr_pokemon_catch_dc" value="10" readonly />
+
+                <!-- Stats Display Section -->
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-start; margin: 0; padding: 0;">
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>AC</label>
+                        <span name="attr_pokemon_ac" style="font-size: 18px; font-weight: bold;">10</span>
+                    </div>
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>Speed</label>
+                        <span name="attr_pokemon_speed" style="font-size: 18px; font-weight: bold;">30</span>
+                    </div>
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>Prof</label>
+                        <span name="attr_pokemon_proficiency_bonus" style="font-size: 18px; font-weight: bold;">+2</span>
+                    </div>
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>STAB</label>
+                        <span name="attr_pokemon_stab_bonus" style="font-size: 18px; font-weight: bold;">+2</span>
+                    </div>
+                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                        <label>Catch DC</label>
+                        <span name="attr_pokemon_catch_dc" style="font-size: 18px; font-weight: bold;">10</span>
+                    </div>
                 </div>
-                <div class="sheet-info-field">
-                    <label>Armor Class</label>
-                    <input type="number" name="attr_pokemon_ac" value="10" />
-                </div>
-                 <div class="sheet-info-field">
-                    <label>STAB Bonus</label>
-                    <input type="number" name="attr_pokemon_stab_bonus" value="2" />
-                </div>
-                <div class="sheet-info-field">
-                    <label>Proficiency Bonus</label>
-                    <input type="number" name="attr_pokemon_proficiency_bonus" value="2" />
-                </div>
+
+                <!-- Hidden Hit Die field -->
+                <input type="hidden" name="attr_pokemon_hitdie" value="d8" />
             </div>
         </div>
     </div>
@@ -9332,6 +9483,175 @@ on("clicked:toggle_feature_3", function() {
         setAttrs({
             "feature_3_collapsed": newState,
             "feature_3_collapse_icon": newIcon
+        });
+    });
+});
+
+// Class Features handlers
+on("clicked:add_class_feature", function() {
+    console.log("Add Class Feature button clicked!");
+    getAttrs([
+        "class_feature_slot_1_active",
+        "class_feature_slot_2_active",
+        "class_feature_slot_3_active"
+    ], function(values) {
+        console.log("Class feature slots:", values);
+        for (let i = 1; i <= 3; i++) {
+            const slotActive = values[`class_feature_slot_${i}_active`];
+            if (slotActive !== "1") {
+                console.log(`Activating class feature slot ${i}`);
+                const setObj = {};
+                setObj[`class_feature_slot_${i}_active`] = "1";
+                setObj[`class_feature_${i}_name`] = "";
+                setObj[`class_feature_${i}_description`] = "";
+                setObj[`class_feature_${i}_collapsed`] = "0";
+                setObj[`class_feature_${i}_collapse_icon`] = "▼";
+                setAttrs(setObj);
+                break;
+            }
+        }
+    });
+});
+
+on("clicked:hide_class_feature_1", function() {
+    setAttrs({
+        "class_feature_slot_1_active": "0",
+        "class_feature_1_name": "",
+        "class_feature_1_description": ""
+    });
+});
+
+on("clicked:hide_class_feature_2", function() {
+    setAttrs({
+        "class_feature_slot_2_active": "0",
+        "class_feature_2_name": "",
+        "class_feature_2_description": ""
+    });
+});
+
+on("clicked:hide_class_feature_3", function() {
+    setAttrs({
+        "class_feature_slot_3_active": "0",
+        "class_feature_3_name": "",
+        "class_feature_3_description": ""
+    });
+});
+
+on("clicked:toggle_class_feature_1", function() {
+    getAttrs(["class_feature_1_collapsed"], function(values) {
+        const isCollapsed = values.class_feature_1_collapsed === "1";
+        const newState = isCollapsed ? "0" : "1";
+        const newIcon = isCollapsed ? "▼" : "▶";
+        setAttrs({
+            "class_feature_1_collapsed": newState,
+            "class_feature_1_collapse_icon": newIcon
+        });
+    });
+});
+
+on("clicked:toggle_class_feature_2", function() {
+    getAttrs(["class_feature_2_collapsed"], function(values) {
+        const isCollapsed = values.class_feature_2_collapsed === "1";
+        const newState = isCollapsed ? "0" : "1";
+        const newIcon = isCollapsed ? "▼" : "▶";
+        setAttrs({
+            "class_feature_2_collapsed": newState,
+            "class_feature_2_collapse_icon": newIcon
+        });
+    });
+});
+
+on("clicked:toggle_class_feature_3", function() {
+    getAttrs(["class_feature_3_collapsed"], function(values) {
+        const isCollapsed = values.class_feature_3_collapsed === "1";
+        const newState = isCollapsed ? "0" : "1";
+        const newIcon = isCollapsed ? "▼" : "▶";
+        setAttrs({
+            "class_feature_3_collapsed": newState,
+            "class_feature_3_collapse_icon": newIcon
+        });
+    });
+});
+
+// Path Features handlers
+on("clicked:add_path_feature", function() {
+    getAttrs([
+        "path_feature_slot_1_active",
+        "path_feature_slot_2_active",
+        "path_feature_slot_3_active"
+    ], function(values) {
+        for (let i = 1; i <= 3; i++) {
+            const slotActive = values[`path_feature_slot_${i}_active`];
+            if (slotActive !== "1") {
+                const setObj = {};
+                setObj[`path_feature_slot_${i}_active`] = "1";
+                setObj[`path_feature_${i}_name`] = "";
+                setObj[`path_feature_${i}_description`] = "";
+                setObj[`path_feature_${i}_collapsed`] = "0";
+                setObj[`path_feature_${i}_collapse_icon`] = "▼";
+                setAttrs(setObj);
+                break;
+            }
+        }
+    });
+});
+
+on("clicked:hide_path_feature_1", function() {
+    setAttrs({
+        "path_feature_slot_1_active": "0",
+        "path_feature_1_name": "",
+        "path_feature_1_description": ""
+    });
+});
+
+on("clicked:hide_path_feature_2", function() {
+    setAttrs({
+        "path_feature_slot_2_active": "0",
+        "path_feature_2_name": "",
+        "path_feature_2_description": ""
+    });
+});
+
+on("clicked:hide_path_feature_3", function() {
+    setAttrs({
+        "path_feature_slot_3_active": "0",
+        "path_feature_3_name": "",
+        "path_feature_3_description": ""
+    });
+});
+
+on("clicked:toggle_path_feature_1", function() {
+    getAttrs(["path_feature_1_collapsed"], function(values) {
+        const isCollapsed = values.path_feature_1_collapsed === "1";
+        const newState = isCollapsed ? "0" : "1";
+        const newIcon = isCollapsed ? "▼" : "▶";
+        setAttrs({
+            "path_feature_1_collapsed": newState,
+            "path_feature_1_collapse_icon": newIcon
+        });
+    });
+});
+
+on("clicked:toggle_path_feature_2", function() {
+    getAttrs(["path_feature_2_collapsed"], function(values) {
+        const isCollapsed = values.path_feature_2_collapsed === "1";
+        const newState = isCollapsed ? "0" : "1";
+        const newIcon = isCollapsed ? "▼" : "▶";
+        setAttrs({
+            "path_feature_2_collapsed": newState,
+            "path_feature_2_collapse_icon": newIcon
+        });
+    });
+});
+
+on("clicked:toggle_path_feature_3", function() {
+    getAttrs(["path_feature_3_collapsed"], function(values) {
+        const isCollapsed = values.path_feature_3_collapsed === "1";
+        const newState = isCollapsed ? "0" : "1";
+        const newIcon = isCollapsed ? "▼" : "▶";
+        setAttrs({
+            "path_feature_3_collapsed": newState,
+            "path_feature_3_collapse_icon": newIcon
         });
     });
 });
