@@ -32,7 +32,7 @@
                     <label>Level</label>
                     <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                         <input type="number" name="attr_trainer_level" value="1" style="width: 50px;" />
-                        <button type="roll" name="roll_trainer_levelup" value="&{template:default} {{name=Trainer Level Up!}} {{roll=[[1@{trainer_hitdie}@{constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
+                        <button type="roll" name="roll_trainer_levelup" value="&{template:default} {{name=Trainer Level Up!}} {{roll=[[{1@{trainer_hitdie}, @{trainer_hitdie_half}d1}kh1 + @{constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
                             ⬆
                         </button>
                     </div>
@@ -58,8 +58,9 @@
                     </div>
                 </div>
 
-                <!-- Hidden Hit Die field -->
+                <!-- Hidden Hit Die fields -->
                 <input type="hidden" name="attr_trainer_hitdie" value="d8" />
+                <input type="hidden" name="attr_trainer_hitdie_half" value="4" />
             </div>
         </div>
     </div>
@@ -763,7 +764,7 @@
                     <label>Level</label>
                     <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                         <input type="number" name="attr_pokemon_level" value="1" style="width: 50px;" />
-                        <button type="roll" name="roll_pokemon_levelup" value="&{template:default} {{name=@{pokemon_name} Level Up!}} {{roll=[[1@{pokemon_hitdie}@{pokemon_constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
+                        <button type="roll" name="roll_pokemon_levelup" value="&{template:default} {{name=@{pokemon_name} Level Up!}} {{roll=[[{1@{pokemon_hitdie}, @{pokemon_hitdie_half}d1}kh1 + @{pokemon_constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
                             ⬆
                         </button>
                     </div>
@@ -793,8 +794,9 @@
                     </div>
                 </div>
 
-                <!-- Hidden Hit Die field -->
+                <!-- Hidden Hit Die fields -->
                 <input type="hidden" name="attr_pokemon_hitdie" value="d8" />
+                <input type="hidden" name="attr_pokemon_hitdie_half" value="4" />
             </div>
         </div>
     </div>
