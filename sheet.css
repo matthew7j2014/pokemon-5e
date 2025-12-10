@@ -3186,3 +3186,13 @@ input[name="attr_pokemon_paralyzed"]:not(:checked) ~ div {
 input[name="attr_pokemon_paralyzed"]:not(:checked) ~ span {
     display: none !important;
 }
+
+/* Show condition details when asleep checkbox is checked */
+input[name="attr_pokemon_asleep"]:checked ~ div {
+    display: flex !important;
+}
+
+/* Hide details when not checked */
+input[name="attr_pokemon_asleep"]:not(:checked) ~ div {
+    display: none !important;
+}

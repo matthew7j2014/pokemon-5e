@@ -865,7 +865,7 @@
                 </div>
                 <div class="sheet-saving-throw">
                     <input type="checkbox" name="attr_pokemon_constitution_save_prof" />
-                    <button type="roll" name="roll_pokemon_constitution_save" value="&{template:default} {{name=@{pokemon_name} Constitution Save}} {{roll=[[1d20+@{pokemon_constitution_save_mod}]]}}">
+                    <button type="action" name="act_roll_pokemon_constitution_save">
                         <span name="attr_pokemon_constitution_save_total">+0</span>
                     </button>
                 </div>
@@ -880,7 +880,7 @@
                 </div>
                 <div class="sheet-saving-throw">
                     <input type="checkbox" name="attr_pokemon_intelligence_save_prof" />
-                    <button type="roll" name="roll_pokemon_intelligence_save" value="&{template:default} {{name=@{pokemon_name} Intelligence Save}} {{roll=[[1d20+@{pokemon_intelligence_save_mod}]]}}">
+                    <button type="action" name="act_roll_pokemon_intelligence_save">
                         <span name="attr_pokemon_intelligence_save_total">+0</span>
                     </button>
                 </div>
@@ -895,7 +895,7 @@
                 </div>
                 <div class="sheet-saving-throw">
                     <input type="checkbox" name="attr_pokemon_wisdom_save_prof" />
-                    <button type="roll" name="roll_pokemon_wisdom_save" value="&{template:default} {{name=@{pokemon_name} Wisdom Save}} {{roll=[[1d20+@{pokemon_wisdom_save_mod}]]}}">
+                    <button type="action" name="act_roll_pokemon_wisdom_save">
                         <span name="attr_pokemon_wisdom_save_total">+0</span>
                     </button>
                 </div>
@@ -910,7 +910,7 @@
                 </div>
                 <div class="sheet-saving-throw">
                     <input type="checkbox" name="attr_pokemon_charisma_save_prof" />
-                    <button type="roll" name="roll_pokemon_charisma_save" value="&{template:default} {{name=@{pokemon_name} Charisma Save}} {{roll=[[1d20+@{pokemon_charisma_save_mod}]]}}">
+                    <button type="action" name="act_roll_pokemon_charisma_save">
                         <span name="attr_pokemon_charisma_save_total">+0</span>
                     </button>
                 </div>
@@ -993,6 +993,22 @@
                     </button>
                 </div>
                 <span style="font-size: 10px; color: #666; font-style: italic; display: none;">Half speed</span>
+            </div>
+
+            <!-- Asleep Condition -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <input type="checkbox" name="attr_pokemon_asleep" value="1" />
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Incapacitated and restrained for 3 rounds. Disadvantage on all saves. Roll d20 when hit or at end of turn: 11+ = wake up.">Asleep</label>
+                <input type="hidden" name="attr_pokemon_asleep_rounds" value="3" />
+
+                <!-- Show when asleep is active -->
+                <div style="display: none; align-items: center; gap: 5px;">
+                    <span style="font-size: 12px;">Rounds:</span>
+                    <span name="attr_pokemon_asleep_rounds" style="font-weight: bold; font-size: 14px;">3</span>
+                    <button type="action" name="act_pokemon_wake_check" style="padding: 2px 8px; font-size: 11px; font-weight: bold;" title="Roll d20 - 11+ wakes up">
+                        Wake
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -10563,16 +10579,98 @@ on('clicked:pokemon_paralysis_check', function() {
     });
 });
 
-// Pokemon STR Save - with disadvantage if paralyzed
+// Pokemon Asleep Condition - Reset rounds when checked
+on('change:pokemon_asleep', function() {
+    getAttrs(['pokemon_asleep'], function(values) {
+        if (values.pokemon_asleep === '1') {
+            setAttrs({
+                pokemon_asleep_rounds: 3
+            });
+        }
+    });
+});
+
+// Pokemon Wake Check - Roll d20 to attempt waking up
+on('clicked:pokemon_wake_check', function() {
+    getAttrs(['pokemon_asleep_rounds', 'pokemon_name'], function(values) {
+        const roundsRemaining = parseInt(values.pokemon_asleep_rounds) || 0;
+        const pokemonName = values.pokemon_name || 'Pokemon';
+
+        if (roundsRemaining <= 0) {
+            // Already awake
+            setAttrs({
+                pokemon_asleep: '0',
+                pokemon_asleep_rounds: 0
+            });
+
+            const awakeMessage = `&{template:default} {{name=${pokemonName}}} {{status=Already Awake}}`;
+            startRoll(awakeMessage, function(results) {
+                finishRoll(results.rollId);
+            });
+            return;
+        }
+
+        // Roll d20 to wake up
+        const rollFormula = `&{template:default} {{name=${pokemonName} Wake Check}} {{Round=${roundsRemaining} remaining}} {{Roll=[[1d20]]}}`;
+
+        startRoll(rollFormula, function(results) {
+            const rollResult = results.results.Roll.result;
+            let newRounds = Math.max(0, roundsRemaining - 1);
+            let resultMessage = '';
+
+            finishRoll(results.rollId);
+
+            if (rollResult >= 11) {
+                // Wakes up!
+                newRounds = 0;
+                resultMessage = `&{template:default} {{name=${pokemonName} Wakes Up!}} {{Result=No longer asleep!}}`;
+                setAttrs({
+                    pokemon_asleep: '0'
+                });
+            } else {
+                // Still asleep
+                resultMessage = `&{template:default} {{name=${pokemonName}}} {{Result=Still asleep (${rollResult} < 11)}} {{Rounds Left=${newRounds}}}`;
+            }
+
+            // Update rounds
+            setAttrs({
+                pokemon_asleep_rounds: newRounds
+            });
+
+            // Output result message
+            startRoll(resultMessage, function(r) {
+                finishRoll(r.rollId);
+            });
+
+            // Auto-clear if rounds reach 0
+            if (newRounds <= 0) {
+                setAttrs({
+                    pokemon_asleep: '0'
+                });
+            }
+        });
+    });
+});
+
+// Pokemon STR Save - with disadvantage if paralyzed or asleep
 on('clicked:roll_pokemon_strength_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_strength_save_mod', 'pokemon_paralyzed'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_strength_save_mod', 'pokemon_paralyzed', 'pokemon_asleep'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_strength_save_mod) || 0;
         const isParalyzed = values.pokemon_paralyzed === '1';
+        const isAsleep = values.pokemon_asleep === '1';
 
         let rollFormula;
-        if (isParalyzed) {
-            rollFormula = `&{template:default} {{name=${pokemonName} Strength Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Paralyzed=Disadvantage}}`;
+        let statusNote = '';
+        if (isParalyzed || isAsleep) {
+            if (isParalyzed && isAsleep) {
+                statusNote = ' {{Status=Paralyzed & Asleep - Disadvantage}}';
+            } else if (isParalyzed) {
+                statusNote = ' {{Paralyzed=Disadvantage}}';
+            } else {
+                statusNote = ' {{Asleep=Disadvantage}}';
+            }
+            rollFormula = `&{template:default} {{name=${pokemonName} Strength Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Strength Save}} {{roll=[[1d20+${saveMod}]]}}`;
         }
@@ -10583,18 +10681,107 @@ on('clicked:roll_pokemon_strength_save', function() {
     });
 });
 
-// Pokemon DEX Save - with disadvantage if paralyzed
+// Pokemon DEX Save - with disadvantage if paralyzed or asleep
 on('clicked:roll_pokemon_dexterity_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_dexterity_save_mod', 'pokemon_paralyzed'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_dexterity_save_mod', 'pokemon_paralyzed', 'pokemon_asleep'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_dexterity_save_mod) || 0;
         const isParalyzed = values.pokemon_paralyzed === '1';
+        const isAsleep = values.pokemon_asleep === '1';
 
         let rollFormula;
-        if (isParalyzed) {
-            rollFormula = `&{template:default} {{name=${pokemonName} Dexterity Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Paralyzed=Disadvantage}}`;
+        let statusNote = '';
+        if (isParalyzed || isAsleep) {
+            if (isParalyzed && isAsleep) {
+                statusNote = ' {{Status=Paralyzed & Asleep - Disadvantage}}';
+            } else if (isParalyzed) {
+                statusNote = ' {{Paralyzed=Disadvantage}}';
+            } else {
+                statusNote = ' {{Asleep=Disadvantage}}';
+            }
+            rollFormula = `&{template:default} {{name=${pokemonName} Dexterity Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Dexterity Save}} {{roll=[[1d20+${saveMod}]]}}`;
+        }
+
+        startRoll(rollFormula, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Pokemon Constitution Save - with disadvantage if asleep
+on('clicked:roll_pokemon_constitution_save', function() {
+    getAttrs(['pokemon_name', 'pokemon_constitution_save_mod', 'pokemon_asleep'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const saveMod = parseInt(values.pokemon_constitution_save_mod) || 0;
+        const isAsleep = values.pokemon_asleep === '1';
+
+        let rollFormula;
+        if (isAsleep) {
+            rollFormula = `&{template:default} {{name=${pokemonName} Constitution Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        } else {
+            rollFormula = `&{template:default} {{name=${pokemonName} Constitution Save}} {{roll=[[1d20+${saveMod}]]}}`;
+        }
+
+        startRoll(rollFormula, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Pokemon Intelligence Save - with disadvantage if asleep
+on('clicked:roll_pokemon_intelligence_save', function() {
+    getAttrs(['pokemon_name', 'pokemon_intelligence_save_mod', 'pokemon_asleep'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const saveMod = parseInt(values.pokemon_intelligence_save_mod) || 0;
+        const isAsleep = values.pokemon_asleep === '1';
+
+        let rollFormula;
+        if (isAsleep) {
+            rollFormula = `&{template:default} {{name=${pokemonName} Intelligence Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        } else {
+            rollFormula = `&{template:default} {{name=${pokemonName} Intelligence Save}} {{roll=[[1d20+${saveMod}]]}}`;
+        }
+
+        startRoll(rollFormula, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Pokemon Wisdom Save - with disadvantage if asleep
+on('clicked:roll_pokemon_wisdom_save', function() {
+    getAttrs(['pokemon_name', 'pokemon_wisdom_save_mod', 'pokemon_asleep'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const saveMod = parseInt(values.pokemon_wisdom_save_mod) || 0;
+        const isAsleep = values.pokemon_asleep === '1';
+
+        let rollFormula;
+        if (isAsleep) {
+            rollFormula = `&{template:default} {{name=${pokemonName} Wisdom Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        } else {
+            rollFormula = `&{template:default} {{name=${pokemonName} Wisdom Save}} {{roll=[[1d20+${saveMod}]]}}`;
+        }
+
+        startRoll(rollFormula, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Pokemon Charisma Save - with disadvantage if asleep
+on('clicked:roll_pokemon_charisma_save', function() {
+    getAttrs(['pokemon_name', 'pokemon_charisma_save_mod', 'pokemon_asleep'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const saveMod = parseInt(values.pokemon_charisma_save_mod) || 0;
+        const isAsleep = values.pokemon_asleep === '1';
+
+        let rollFormula;
+        if (isAsleep) {
+            rollFormula = `&{template:default} {{name=${pokemonName} Charisma Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        } else {
+            rollFormula = `&{template:default} {{name=${pokemonName} Charisma Save}} {{roll=[[1d20+${saveMod}]]}}`;
         }
 
         startRoll(rollFormula, function(results) {
