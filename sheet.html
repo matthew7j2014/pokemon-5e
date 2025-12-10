@@ -32,7 +32,7 @@
                     <label>Level</label>
                     <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                         <input type="number" name="attr_trainer_level" value="1" style="width: 50px;" />
-                        <button type="roll" name="roll_trainer_levelup" value="&{template:default} {{name=Trainer Level Up!}} {{roll=[[{1@{trainer_hitdie}, @{trainer_hitdie_half}d1}kh1 + @{constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
+                        <button type="action" name="act_trainer_levelup" style="padding: 2px 8px; font-size: 16px;">
                             ⬆
                         </button>
                     </div>
@@ -764,7 +764,7 @@
                     <label>Level</label>
                     <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                         <input type="number" name="attr_pokemon_level" value="1" style="width: 50px;" />
-                        <button type="roll" name="roll_pokemon_levelup" value="&{template:default} {{name=@{pokemon_name} Level Up!}} {{roll=[[{1@{pokemon_hitdie}, @{pokemon_hitdie_half}d1}kh1@{pokemon_constitution_mod}]]}} {{HP Gain=Add this roll to Max HP}} {{Restore=Restore all HP to maximum}} {{PP Reset=Reset PP for all moves}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}" style="padding: 2px 8px; font-size: 16px;">
+                        <button type="action" name="act_pokemon_levelup" style="padding: 2px 8px; font-size: 16px;">
                             ⬆
                         </button>
                     </div>
@@ -9159,7 +9159,7 @@ on("clicked:use_move4", function() {
 
 function rollPokemonMove(moveSlot) {
     console.log('Rolling move for slot:', moveSlot);
-    
+
     getAttrs([
         'pokemon_name',
         `pokemon_move${moveSlot}`,
@@ -9168,6 +9168,7 @@ function rollPokemonMove(moveSlot) {
         `pokemon_move${moveSlot}_range`,
         `pokemon_move${moveSlot}_type`,
         `pokemon_move${moveSlot}_description`,
+        `pokemon_move${moveSlot}_pp`,
         'pokemon_proficiency_bonus',
         'pokemon_ace_trainer_bonus',
         'pokemon_stab_bonus',
@@ -9184,7 +9185,7 @@ function rollPokemonMove(moveSlot) {
         'pokemon_charisma_mod'
     ], function(values) {
         console.log('Move data retrieved:', values);
-        
+
         const pokemonName = values.pokemon_name || 'Pokemon';
         const moveName = values[`pokemon_move${moveSlot}`];
         const power = values[`pokemon_move${moveSlot}_power`] || '';
@@ -9193,6 +9194,7 @@ function rollPokemonMove(moveSlot) {
         const range = values[`pokemon_move${moveSlot}_range`] || '5 feet';
         const moveType = values[`pokemon_move${moveSlot}_type`] || 'Normal';
         const description = values[`pokemon_move${moveSlot}_description`] || 'No description available.';
+        const currentPP = parseInt(values[`pokemon_move${moveSlot}_pp`]) || 0;
         const profBonus = parseInt(values.pokemon_proficiency_bonus) || 2;
         const aceBonus = parseInt(values.pokemon_ace_trainer_bonus) || 0;
         const stabBonus = values.pokemon_stab_bonus !== undefined ? parseInt(values.pokemon_stab_bonus) : 0;
@@ -9200,9 +9202,18 @@ function rollPokemonMove(moveSlot) {
         const pokemonType2 = (values.pokemon_type2 || '').toLowerCase();
         const loyalty = values.pokemon_loyalty || 'Neutral';
         const loyaltyValue = values.pokemon_loyalty_value || 0;
-        
+
         if (!moveName || moveName === '') {
             console.log(`No move in slot ${moveSlot}`);
+            return;
+        }
+
+        // Check if there's enough PP
+        if (currentPP <= 0) {
+            const outOfPPMessage = `&{template:default} {{name=${pokemonName}}} {{alert=Cannot use ${moveName}!}} {{reason=Out of PP!}}`;
+            startRoll(outOfPPMessage, function(results) {
+                finishRoll(results.rollId);
+            });
             return;
         }
         
@@ -9297,11 +9308,18 @@ function rollPokemonMove(moveSlot) {
         }
         
         console.log('Roll template:', rollTemplate);
-        
+
         // Execute the roll
         startRoll(rollTemplate, function(results) {
             console.log('Roll executed successfully');
             finishRoll(results.rollId);
+
+            // Decrease PP by 1 after successful roll
+            const newPP = currentPP - 1;
+            const updateObj = {};
+            updateObj[`pokemon_move${moveSlot}_pp`] = newPP;
+            setAttrs(updateObj);
+            console.log(`PP decreased: ${currentPP} -> ${newPP}`);
         });
     });
 }
@@ -10033,6 +10051,92 @@ on('change:pokemon_type1 change:pokemon_type2', calculateTypeEffectiveness);
 
 // Calculate on sheet open
 on('sheet:opened', calculateTypeEffectiveness);
+
+// Trainer Level Up - Automatic
+on('clicked:trainer_levelup', function() {
+    getAttrs(['trainer_level', 'hp_max', 'trainer_hitdie', 'trainer_hitdie_half', 'constitution_mod', 'character_name'],
+    function(values) {
+        const currentLevel = parseInt(values.trainer_level) || 1;
+        const currentMaxHP = parseInt(values.hp_max) || 0;
+        const hitDie = values.trainer_hitdie || 'd8';
+        const hitDieHalf = parseInt(values.trainer_hitdie_half) || 4;
+        const conMod = parseInt(values.constitution_mod) || 0;
+        const trainerName = values.character_name || 'Trainer';
+
+        // Calculate new values first
+        const newLevel = currentLevel + 1;
+
+        // Create comprehensive roll template with HP roll
+        const rollFormula = `&{template:default} {{name=${trainerName} Level Up!}} {{Level=${currentLevel} → ${newLevel}}} {{HP Gained=[[{1${hitDie}, ${hitDieHalf}d1}kh1 + ${conMod}]]}} {{HP Restored=Fully healed!}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}`;
+
+        startRoll(rollFormula, function(results) {
+            const hpGain = results.results['HP Gained'].result;
+
+            finishRoll(results.rollId);
+
+            // Calculate new max HP
+            const newMaxHP = currentMaxHP + hpGain;
+
+            // Prepare attributes to set
+            const newAttrs = {
+                trainer_level: newLevel,
+                hp_max: newMaxHP,
+                hp: newMaxHP // Restore to full HP
+            };
+
+            setAttrs(newAttrs);
+        });
+    });
+});
+
+// Pokemon Level Up - Automatic
+on('clicked:pokemon_levelup', function() {
+    getAttrs(['pokemon_level', 'pokemon_hp_max', 'pokemon_hitdie', 'pokemon_hitdie_half', 'pokemon_constitution_mod',
+              'pokemon_move1_name', 'pokemon_move2_name', 'pokemon_move3_name', 'pokemon_move4_name', 'pokemon_name'],
+    function(values) {
+        const currentLevel = parseInt(values.pokemon_level) || 1;
+        const currentMaxHP = parseInt(values.pokemon_hp_max) || 0;
+        const hitDie = values.pokemon_hitdie || 'd8';
+        const hitDieHalf = parseInt(values.pokemon_hitdie_half) || 4;
+        const conMod = parseInt(values.pokemon_constitution_mod) || 0;
+        const pokemonName = values.pokemon_name || 'Pokemon';
+
+        // Calculate new values first
+        const newLevel = currentLevel + 1;
+
+        // Create comprehensive roll template with HP roll
+        const rollFormula = `&{template:default} {{name=${pokemonName} Level Up!}} {{Level=${currentLevel} → ${newLevel}}} {{HP Gained=[[{1${hitDie}, ${hitDieHalf}d1}kh1 + ${conMod}]]}} {{HP Restored=Fully healed!}} {{PP Reset=All PP restored!}} {{More Info=[Pokemon Leveling Reference](https://poke5e.app/reference/pokemon-leveling)}}`;
+
+        startRoll(rollFormula, function(results) {
+            const hpGain = results.results['HP Gained'].result;
+
+            finishRoll(results.rollId);
+
+            // Calculate new max HP
+            const newMaxHP = currentMaxHP + hpGain;
+
+            // Look up max PP for each move from moveDatabase
+            const move1PP = values.pokemon_move1_name && moveDatabase[values.pokemon_move1_name] ? moveDatabase[values.pokemon_move1_name].pp : 0;
+            const move2PP = values.pokemon_move2_name && moveDatabase[values.pokemon_move2_name] ? moveDatabase[values.pokemon_move2_name].pp : 0;
+            const move3PP = values.pokemon_move3_name && moveDatabase[values.pokemon_move3_name] ? moveDatabase[values.pokemon_move3_name].pp : 0;
+            const move4PP = values.pokemon_move4_name && moveDatabase[values.pokemon_move4_name] ? moveDatabase[values.pokemon_move4_name].pp : 0;
+
+            // Prepare attributes to set
+            const newAttrs = {
+                pokemon_level: newLevel,
+                pokemon_hp_max: newMaxHP,
+                pokemon_hp: newMaxHP, // Restore to full HP
+                // Reset PP to max values from moveDatabase
+                pokemon_move1_pp: move1PP,
+                pokemon_move2_pp: move2PP,
+                pokemon_move3_pp: move3PP,
+                pokemon_move4_pp: move4PP
+            };
+
+            setAttrs(newAttrs);
+        });
+    });
+});
 
 console.log('Complete Pokemon Character Sheet System loaded!');
 </script>
