@@ -1050,13 +1050,36 @@
             </div>
         </div>
 
-        <!-- Column 2: Pokemon Moves -->
+        <!-- Column 2: Pokemon Weaknesses & Moves -->
         <div class="sheet-column">
+            <!-- Pokemon Weaknesses -->
+            <div class="sheet-weaknesses-container" style="margin-bottom: 20px;">
+                <div class="sheet-weaknesses-header">
+                    <h4>Pokemon Weaknesses</h4>
+                </div>
+                <div style="background: #f8f9fa; border: 2px solid #3B3F58; border-radius: 8px; padding: 15px;">
+                    <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; font-size: 13px;">
+                        <div style="font-weight: bold; color: #dc3545;">4x:</div>
+                        <input type="text" name="attr_pokemon_double_vulnerabilities" placeholder="e.g., Rock" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
+
+                        <div style="font-weight: bold; color: #dc3545;">2x:</div>
+                        <input type="text" name="attr_pokemon_vulnerabilities" placeholder="e.g., Fire, Electric, Ice" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
+
+                        <div style="font-weight: bold; color: #28a745;">½x:</div>
+                        <input type="text" name="attr_pokemon_resistances" placeholder="e.g., Bug, Grass" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
+
+                        <div style="font-weight: bold; color: #6c757d;">0x:</div>
+                        <input type="text" name="attr_pokemon_immunities" placeholder="e.g., Ground" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pokemon Moves -->
             <div class="sheet-moves-container">
                 <div class="sheet-moves-header">
                     <h4>Pokemon Moves</h4>
                 </div>
-                
+
                 <!-- Move 1 -->
                 <div class="sheet-move-container" data-move-type="">
                     <!-- Hidden inputs to control state and type -->
@@ -9930,6 +9953,86 @@ function debugMoveTypes() {
 }
 
 console.log('🎨 Move type styling system loaded with debug logging!');
+
+const typeChart = {
+    normal: { weak: ['fighting'], resist: [], immune: ['ghost'] },
+    fire: { weak: ['water', 'ground', 'rock'], resist: ['fire', 'grass', 'ice', 'bug', 'steel', 'fairy'], immune: [] },
+    water: { weak: ['electric', 'grass'], resist: ['fire', 'water', 'ice', 'steel'], immune: [] },
+    electric: { weak: ['ground'], resist: ['electric', 'flying', 'steel'], immune: [] },
+    grass: { weak: ['fire', 'ice', 'poison', 'flying', 'bug'], resist: ['water', 'electric', 'grass', 'ground'], immune: [] },
+    ice: { weak: ['fire', 'fighting', 'rock', 'steel'], resist: ['ice'], immune: [] },
+    fighting: { weak: ['flying', 'psychic', 'fairy'], resist: ['bug', 'rock', 'dark'], immune: [] },
+    poison: { weak: ['ground', 'psychic'], resist: ['grass', 'fighting', 'poison', 'bug', 'fairy'], immune: [] },
+    ground: { weak: ['water', 'grass', 'ice'], resist: ['poison', 'rock'], immune: ['electric'] },
+    flying: { weak: ['electric', 'ice', 'rock'], resist: ['grass', 'fighting', 'bug'], immune: ['ground'] },
+    psychic: { weak: ['bug', 'ghost', 'dark'], resist: ['fighting', 'psychic'], immune: [] },
+    bug: { weak: ['fire', 'flying', 'rock'], resist: ['grass', 'fighting', 'ground'], immune: [] },
+    rock: { weak: ['water', 'grass', 'fighting', 'ground', 'steel'], resist: ['normal', 'fire', 'poison', 'flying'], immune: [] },
+    ghost: { weak: ['ghost', 'dark'], resist: ['poison', 'bug'], immune: ['normal', 'fighting'] },
+    dragon: { weak: ['ice', 'dragon', 'fairy'], resist: ['fire', 'water', 'electric', 'grass'], immune: [] },
+    dark: { weak: ['fighting', 'bug', 'fairy'], resist: ['ghost', 'dark'], immune: ['psychic'] },
+    steel: { weak: ['fire', 'fighting', 'ground'], resist: ['normal', 'grass', 'ice', 'flying', 'psychic', 'bug', 'rock', 'dragon', 'steel', 'fairy'], immune: ['poison'] },
+    fairy: { weak: ['poison', 'steel'], resist: ['fighting', 'bug', 'dark'], immune: ['dragon'] }
+};
+
+function calculateTypeEffectiveness() {
+    getAttrs(['pokemon_type1', 'pokemon_type2'], function(values) {
+        const type1 = values.pokemon_type1?.toLowerCase();
+        const type2 = values.pokemon_type2?.toLowerCase();
+
+        if (!type1) return;
+
+        // Initialize effectiveness multipliers for each attacking type
+        const effectiveness = {};
+        const allTypes = Object.keys(typeChart);
+
+        // Set all to 1x by default
+        allTypes.forEach(type => effectiveness[type] = 1);
+
+        // Apply type1 effectiveness
+        if (typeChart[type1]) {
+            typeChart[type1].weak.forEach(t => effectiveness[t] = (effectiveness[t] || 1) * 2);
+            typeChart[type1].resist.forEach(t => effectiveness[t] = (effectiveness[t] || 1) * 0.5);
+            typeChart[type1].immune.forEach(t => effectiveness[t] = 0);
+        }
+
+        // Apply type2 effectiveness if dual-type
+        if (type2 && typeChart[type2]) {
+            typeChart[type2].weak.forEach(t => effectiveness[t] = (effectiveness[t] || 1) * 2);
+            typeChart[type2].resist.forEach(t => effectiveness[t] = (effectiveness[t] || 1) * 0.5);
+            typeChart[type2].immune.forEach(t => effectiveness[t] = 0);
+        }
+
+        // Categorize by effectiveness
+        const doubleVuln = [];
+        const vuln = [];
+        const resist = [];
+        const immune = [];
+
+        Object.keys(effectiveness).forEach(type => {
+            const eff = effectiveness[type];
+            if (eff === 4) doubleVuln.push(type.charAt(0).toUpperCase() + type.slice(1));
+            else if (eff === 2) vuln.push(type.charAt(0).toUpperCase() + type.slice(1));
+            else if (eff === 0.25) resist.push(type.charAt(0).toUpperCase() + type.slice(1));
+            else if (eff === 0.5) resist.push(type.charAt(0).toUpperCase() + type.slice(1));
+            else if (eff === 0) immune.push(type.charAt(0).toUpperCase() + type.slice(1));
+        });
+
+        // Set attributes
+        setAttrs({
+            pokemon_double_vulnerabilities: doubleVuln.join(', ') || 'None',
+            pokemon_vulnerabilities: vuln.join(', ') || 'None',
+            pokemon_resistances: resist.join(', ') || 'None',
+            pokemon_immunities: immune.join(', ') || 'None'
+        });
+    });
+}
+
+// Calculate on type change
+on('change:pokemon_type1 change:pokemon_type2', calculateTypeEffectiveness);
+
+// Calculate on sheet open
+on('sheet:opened', calculateTypeEffectiveness);
 
 console.log('Complete Pokemon Character Sheet System loaded!');
 </script>

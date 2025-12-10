@@ -1349,6 +1349,13 @@ input[type="number"] {
     margin-bottom: 10px;
 }
 
+.sheet-weaknesses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .sheet-suggest-moves-btn {
     background: #4CAF50;
     color: white;
