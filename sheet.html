@@ -1010,6 +1010,13 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Flinched Condition -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <input type="checkbox" name="attr_pokemon_flinched" value="1" />
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Disadvantage on attack rolls, skill checks, and saves until end of next turn. Targets have advantage on saves vs your moves.">Flinched</label>
+                <span style="font-size: 10px; color: #666; font-style: italic;">Until end of next turn</span>
+            </div>
         </div>
 
         <!-- Pokemon Weaknesses (Right 50%) -->
@@ -9290,6 +9297,7 @@ function rollPokemonMove(moveSlot) {
         'pokemon_loyalty_value',
         'pokemon_burned',
         'pokemon_poisoned',
+        'pokemon_flinched',
         // Get all ability modifiers for dual stat calculation
         'pokemon_strength_mod',
         'pokemon_dexterity_mod',
@@ -9404,16 +9412,23 @@ function rollPokemonMove(moveSlot) {
         // Create STAB indicator for display
         const stabIndicator = getsSTAB ? ` + ${stabBonus} STAB` : '';
 
-        // Check if Pokemon is burned or poisoned
+        // Check if Pokemon is burned, poisoned, or flinched
         const isBurned = values.pokemon_burned === '1';
         const isPoisoned = values.pokemon_poisoned === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
-        // Create attack roll with disadvantage if poisoned
+        // Create attack roll with disadvantage if poisoned or flinched
         let attackRoll;
-        let poisonedNote = '';
-        if (isPoisoned) {
+        let attackStatusNote = '';
+        if (isPoisoned || isFlinched) {
             attackRoll = `[[{1d20+${totalAttackBonus}, 1d20+${totalAttackBonus}}kl1]]`;
-            poisonedNote = ' {{Poisoned=Attack with disadvantage}}';
+            if (isPoisoned && isFlinched) {
+                attackStatusNote = ' {{Status=Poisoned & Flinched - Attack disadvantage}}';
+            } else if (isPoisoned) {
+                attackStatusNote = ' {{Poisoned=Attack with disadvantage}}';
+            } else {
+                attackStatusNote = ' {{Flinched=Attack with disadvantage}}';
+            }
         } else {
             attackRoll = `[[1d20+${totalAttackBonus}]]`;
         }
@@ -9425,7 +9440,7 @@ function rollPokemonMove(moveSlot) {
             // Status move - no damage, just show effect
             if (power && power !== '') {
                 // Has a power stat for DC calculation
-                rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=${attackRoll}}} {{Damage=None}} {{Stat Used=${statInfo}}} {{Effect=Status Move}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${poisonedNote}`;
+                rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=${attackRoll}}} {{Damage=None}} {{Stat Used=${statInfo}}} {{Effect=Status Move}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${attackStatusNote}`;
             } else {
                 // No power stat - pure utility move
                 rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Damage=None}} {{Effect=Status/Utility Move}} {{Range=${range}}} {{Type=${moveType}}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}`;
@@ -9443,7 +9458,7 @@ function rollPokemonMove(moveSlot) {
                 damageRoll = `[[${damage}+${totalDamageBonus}]]`;
             }
 
-            rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=${attackRoll}}} {{Damage=${damageRoll}}} {{Stat Used=${statInfo}}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${poisonedNote}${burnedNote}`;
+            rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=${attackRoll}}} {{Damage=${damageRoll}}} {{Stat Used=${statInfo}}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${attackStatusNote}${burnedNote}`;
         }
         
         console.log('Roll template:', rollTemplate);
@@ -10652,24 +10667,25 @@ on('clicked:pokemon_wake_check', function() {
     });
 });
 
-// Pokemon STR Save - with disadvantage if paralyzed or asleep
+// Pokemon STR Save - with disadvantage if paralyzed or asleep or flinched
 on('clicked:roll_pokemon_strength_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_strength_save_mod', 'pokemon_paralyzed', 'pokemon_asleep'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_strength_save_mod', 'pokemon_paralyzed', 'pokemon_asleep', 'pokemon_flinched'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_strength_save_mod) || 0;
         const isParalyzed = values.pokemon_paralyzed === '1';
         const isAsleep = values.pokemon_asleep === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
         let rollFormula;
         let statusNote = '';
-        if (isParalyzed || isAsleep) {
-            if (isParalyzed && isAsleep) {
-                statusNote = ' {{Status=Paralyzed & Asleep - Disadvantage}}';
-            } else if (isParalyzed) {
-                statusNote = ' {{Paralyzed=Disadvantage}}';
-            } else {
-                statusNote = ' {{Asleep=Disadvantage}}';
-            }
+        if (isParalyzed || isAsleep || isFlinched) {
+            // Build status note
+            let statuses = [];
+            if (isParalyzed) statuses.push('Paralyzed');
+            if (isAsleep) statuses.push('Asleep');
+            if (isFlinched) statuses.push('Flinched');
+            statusNote = ` {{Status=${statuses.join(' & ')} - Disadvantage}}`;
+
             rollFormula = `&{template:default} {{name=${pokemonName} Strength Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Strength Save}} {{roll=[[1d20+${saveMod}]]}}`;
@@ -10681,24 +10697,25 @@ on('clicked:roll_pokemon_strength_save', function() {
     });
 });
 
-// Pokemon DEX Save - with disadvantage if paralyzed or asleep
+// Pokemon DEX Save - with disadvantage if paralyzed or asleep or flinched
 on('clicked:roll_pokemon_dexterity_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_dexterity_save_mod', 'pokemon_paralyzed', 'pokemon_asleep'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_dexterity_save_mod', 'pokemon_paralyzed', 'pokemon_asleep', 'pokemon_flinched'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_dexterity_save_mod) || 0;
         const isParalyzed = values.pokemon_paralyzed === '1';
         const isAsleep = values.pokemon_asleep === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
         let rollFormula;
         let statusNote = '';
-        if (isParalyzed || isAsleep) {
-            if (isParalyzed && isAsleep) {
-                statusNote = ' {{Status=Paralyzed & Asleep - Disadvantage}}';
-            } else if (isParalyzed) {
-                statusNote = ' {{Paralyzed=Disadvantage}}';
-            } else {
-                statusNote = ' {{Asleep=Disadvantage}}';
-            }
+        if (isParalyzed || isAsleep || isFlinched) {
+            // Build status note
+            let statuses = [];
+            if (isParalyzed) statuses.push('Paralyzed');
+            if (isAsleep) statuses.push('Asleep');
+            if (isFlinched) statuses.push('Flinched');
+            statusNote = ` {{Status=${statuses.join(' & ')} - Disadvantage}}`;
+
             rollFormula = `&{template:default} {{name=${pokemonName} Dexterity Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Dexterity Save}} {{roll=[[1d20+${saveMod}]]}}`;
@@ -10710,16 +10727,24 @@ on('clicked:roll_pokemon_dexterity_save', function() {
     });
 });
 
-// Pokemon Constitution Save - with disadvantage if asleep
+// Pokemon Constitution Save - with disadvantage if asleep or flinched
 on('clicked:roll_pokemon_constitution_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_constitution_save_mod', 'pokemon_asleep'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_constitution_save_mod', 'pokemon_asleep', 'pokemon_flinched'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_constitution_save_mod) || 0;
         const isAsleep = values.pokemon_asleep === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
         let rollFormula;
-        if (isAsleep) {
-            rollFormula = `&{template:default} {{name=${pokemonName} Constitution Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        let statusNote = '';
+        if (isAsleep || isFlinched) {
+            // Build status note
+            let statuses = [];
+            if (isAsleep) statuses.push('Asleep');
+            if (isFlinched) statuses.push('Flinched');
+            statusNote = ` {{Status=${statuses.join(' & ')} - Disadvantage}}`;
+
+            rollFormula = `&{template:default} {{name=${pokemonName} Constitution Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Constitution Save}} {{roll=[[1d20+${saveMod}]]}}`;
         }
@@ -10730,16 +10755,24 @@ on('clicked:roll_pokemon_constitution_save', function() {
     });
 });
 
-// Pokemon Intelligence Save - with disadvantage if asleep
+// Pokemon Intelligence Save - with disadvantage if asleep or flinched
 on('clicked:roll_pokemon_intelligence_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_intelligence_save_mod', 'pokemon_asleep'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_intelligence_save_mod', 'pokemon_asleep', 'pokemon_flinched'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_intelligence_save_mod) || 0;
         const isAsleep = values.pokemon_asleep === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
         let rollFormula;
-        if (isAsleep) {
-            rollFormula = `&{template:default} {{name=${pokemonName} Intelligence Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        let statusNote = '';
+        if (isAsleep || isFlinched) {
+            // Build status note
+            let statuses = [];
+            if (isAsleep) statuses.push('Asleep');
+            if (isFlinched) statuses.push('Flinched');
+            statusNote = ` {{Status=${statuses.join(' & ')} - Disadvantage}}`;
+
+            rollFormula = `&{template:default} {{name=${pokemonName} Intelligence Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Intelligence Save}} {{roll=[[1d20+${saveMod}]]}}`;
         }
@@ -10750,16 +10783,24 @@ on('clicked:roll_pokemon_intelligence_save', function() {
     });
 });
 
-// Pokemon Wisdom Save - with disadvantage if asleep
+// Pokemon Wisdom Save - with disadvantage if asleep or flinched
 on('clicked:roll_pokemon_wisdom_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_wisdom_save_mod', 'pokemon_asleep'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_wisdom_save_mod', 'pokemon_asleep', 'pokemon_flinched'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_wisdom_save_mod) || 0;
         const isAsleep = values.pokemon_asleep === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
         let rollFormula;
-        if (isAsleep) {
-            rollFormula = `&{template:default} {{name=${pokemonName} Wisdom Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        let statusNote = '';
+        if (isAsleep || isFlinched) {
+            // Build status note
+            let statuses = [];
+            if (isAsleep) statuses.push('Asleep');
+            if (isFlinched) statuses.push('Flinched');
+            statusNote = ` {{Status=${statuses.join(' & ')} - Disadvantage}}`;
+
+            rollFormula = `&{template:default} {{name=${pokemonName} Wisdom Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Wisdom Save}} {{roll=[[1d20+${saveMod}]]}}`;
         }
@@ -10770,16 +10811,24 @@ on('clicked:roll_pokemon_wisdom_save', function() {
     });
 });
 
-// Pokemon Charisma Save - with disadvantage if asleep
+// Pokemon Charisma Save - with disadvantage if asleep or flinched
 on('clicked:roll_pokemon_charisma_save', function() {
-    getAttrs(['pokemon_name', 'pokemon_charisma_save_mod', 'pokemon_asleep'], function(values) {
+    getAttrs(['pokemon_name', 'pokemon_charisma_save_mod', 'pokemon_asleep', 'pokemon_flinched'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const saveMod = parseInt(values.pokemon_charisma_save_mod) || 0;
         const isAsleep = values.pokemon_asleep === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
         let rollFormula;
-        if (isAsleep) {
-            rollFormula = `&{template:default} {{name=${pokemonName} Charisma Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Asleep=Disadvantage}}`;
+        let statusNote = '';
+        if (isAsleep || isFlinched) {
+            // Build status note
+            let statuses = [];
+            if (isAsleep) statuses.push('Asleep');
+            if (isFlinched) statuses.push('Flinched');
+            statusNote = ` {{Status=${statuses.join(' & ')} - Disadvantage}}`;
+
+            rollFormula = `&{template:default} {{name=${pokemonName} Charisma Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}}${statusNote}`;
         } else {
             rollFormula = `&{template:default} {{name=${pokemonName} Charisma Save}} {{roll=[[1d20+${saveMod}]]}}`;
         }
@@ -10790,19 +10839,27 @@ on('clicked:roll_pokemon_charisma_save', function() {
     });
 });
 
-// Generic Pokemon Skill/Ability Check Function with Poisoned Disadvantage
+// Generic Pokemon Skill/Ability Check Function with Poisoned/Flinched Disadvantage
 function rollPokemonSkill(skillName, modAttr) {
-    getAttrs(['pokemon_name', modAttr, 'pokemon_poisoned'], function(values) {
+    getAttrs(['pokemon_name', modAttr, 'pokemon_poisoned', 'pokemon_flinched'], function(values) {
         const pokemonName = values.pokemon_name || 'Pokemon';
         const skillMod = parseInt(values[modAttr]) || 0;
         const isPoisoned = values.pokemon_poisoned === '1';
+        const isFlinched = values.pokemon_flinched === '1';
 
         let rollFormula;
-        let poisonedNote = '';
 
-        if (isPoisoned) {
+        if (isPoisoned || isFlinched) {
             // Roll with disadvantage
-            rollFormula = `&{template:default} {{name=${pokemonName} ${skillName}}} {{roll=[[{1d20+${skillMod}, 1d20+${skillMod}}kl1]]}} {{Poisoned=Disadvantage on ability checks}}`;
+            let statusNote = '';
+            if (isPoisoned && isFlinched) {
+                statusNote = 'Poisoned & Flinched - Disadvantage';
+            } else if (isPoisoned) {
+                statusNote = 'Poisoned - Disadvantage';
+            } else {
+                statusNote = 'Flinched - Disadvantage';
+            }
+            rollFormula = `&{template:default} {{name=${pokemonName} ${skillName}}} {{roll=[[{1d20+${skillMod}, 1d20+${skillMod}}kl1]]}} {{Status=${statusNote}}}`;
         } else {
             // Normal roll
             rollFormula = `&{template:default} {{name=${pokemonName} ${skillName}}} {{roll=[[1d20+${skillMod}]]}}`;
