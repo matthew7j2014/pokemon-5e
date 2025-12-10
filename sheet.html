@@ -20,12 +20,22 @@
                 </div>
                 <div class="sheet-info-field sheet-hp-field" style="margin: 0;">
                     <label>Hit Points</label>
-                    <div class="sheet-hp-container">
-                        <input type="number" name="attr_hp" placeholder="24" />
-                        <span class="sheet-hp-separator">/</span>
-                        <input type="number" name="attr_hp_max" placeholder="24" />
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <div class="sheet-hp-container">
+                            <input type="number" name="attr_hp" placeholder="24" />
+                            <span class="sheet-hp-separator">/</span>
+                            <input type="number" name="attr_hp_max" placeholder="24" />
+                        </div>
+                        <button type="action" name="act_trainer_short_rest" style="padding: 4px 8px; font-size: 14px; font-weight: bold; min-width: 32px;" title="Short Rest - Roll Hit Die">
+                            <span name="attr_trainer_hit_dice_remaining">0</span>
+                        </button>
+                        <button type="action" name="act_trainer_long_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold;" title="Long Rest - Restore HP and Hit Dice">
+                            LR
+                        </button>
                     </div>
                 </div>
+                <!-- Hidden field to track remaining hit dice -->
+                <input type="hidden" name="attr_trainer_hit_dice_remaining" value="1" />
 
                 <!-- Right Side: Level and Stats -->
                 <div class="sheet-info-field" style="margin: 0; display: flex; flex-direction: column;">
@@ -752,12 +762,22 @@
                 </div>
                 <div class="sheet-info-field sheet-hp-field" style="margin: 0;">
                     <label>Hit Points</label>
-                    <div class="sheet-hp-container">
-                        <input type="number" name="attr_pokemon_hp" placeholder="24" />
-                        <span class="sheet-hp-separator">/</span>
-                        <input type="number" name="attr_pokemon_hp_max" placeholder="24" />
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <div class="sheet-hp-container">
+                            <input type="number" name="attr_pokemon_hp" placeholder="24" />
+                            <span class="sheet-hp-separator">/</span>
+                            <input type="number" name="attr_pokemon_hp_max" placeholder="24" />
+                        </div>
+                        <button type="action" name="act_pokemon_short_rest" style="padding: 4px 8px; font-size: 14px; font-weight: bold; min-width: 32px;" title="Short Rest - Roll Hit Die">
+                            <span name="attr_pokemon_hit_dice_remaining">0</span>
+                        </button>
+                        <button type="action" name="act_pokemon_long_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold;" title="Long Rest - Restore HP, Hit Dice, and PP">
+                            LR
+                        </button>
                     </div>
                 </div>
+                <!-- Hidden field to track remaining hit dice -->
+                <input type="hidden" name="attr_pokemon_hit_dice_remaining" value="1" />
 
                 <!-- Right Side: Level and Stats -->
                 <div class="sheet-info-field" style="margin: 0; display: flex; flex-direction: column;">
@@ -10052,6 +10072,82 @@ on('change:pokemon_type1 change:pokemon_type2', calculateTypeEffectiveness);
 // Calculate on sheet open
 on('sheet:opened', calculateTypeEffectiveness);
 
+// Trainer Short Rest - Roll Hit Die
+on('clicked:trainer_short_rest', function() {
+    getAttrs(['hp', 'hp_max', 'trainer_hit_dice_remaining', 'trainer_hitdie', 'constitution_mod', 'character_name'], function(values) {
+        const currentHP = parseInt(values.hp) || 0;
+        const maxHP = parseInt(values.hp_max) || 1;
+        const hitDiceRemaining = parseInt(values.trainer_hit_dice_remaining) || 0;
+        const hitDie = values.trainer_hitdie || 'd8';
+        const conMod = parseInt(values.constitution_mod) || 0;
+        const trainerName = values.character_name || 'Trainer';
+
+        // Check if there are hit dice remaining
+        if (hitDiceRemaining <= 0) {
+            const noHitDiceMessage = `&{template:default} {{name=${trainerName}}} {{alert=No Hit Dice Remaining!}} {{info=Long rest to restore hit dice}}`;
+            startRoll(noHitDiceMessage, function(results) {
+                finishRoll(results.rollId);
+            });
+            return;
+        }
+
+        // Create roll template for hit die roll
+        const rollFormula = `&{template:default} {{name=${trainerName} Short Rest}} {{Hit Die Roll=[[1${hitDie} + ${conMod}]]}} {{Hit Dice Remaining=${hitDiceRemaining - 1}}}`;
+
+        startRoll(rollFormula, function(results) {
+            const hpRecovered = results.results['Hit Die Roll'].result;
+
+            finishRoll(results.rollId);
+
+            // Calculate new HP (can't exceed max)
+            const newHP = Math.min(currentHP + hpRecovered, maxHP);
+            const newHitDiceRemaining = hitDiceRemaining - 1;
+
+            // Update attributes
+            setAttrs({
+                hp: newHP,
+                trainer_hit_dice_remaining: newHitDiceRemaining
+            });
+        });
+    });
+});
+
+// Sync trainer hit dice remaining with level when level changes
+on('change:trainer_level', function() {
+    getAttrs(['trainer_level', 'trainer_hit_dice_remaining'], function(values) {
+        const newLevel = parseInt(values.trainer_level) || 1;
+        const currentHitDice = parseInt(values.trainer_hit_dice_remaining) || 0;
+
+        // Only update if hit dice is currently 0 or greater than new level
+        if (currentHitDice === 0 || currentHitDice > newLevel) {
+            setAttrs({
+                trainer_hit_dice_remaining: newLevel
+            });
+        }
+    });
+});
+
+// Trainer Long Rest
+on('clicked:trainer_long_rest', function() {
+    getAttrs(['hp_max', 'trainer_level', 'character_name'], function(values) {
+        const maxHP = parseInt(values.hp_max) || 1;
+        const currentLevel = parseInt(values.trainer_level) || 1;
+        const trainerName = values.character_name || 'Trainer';
+
+        // Restore HP and hit dice
+        setAttrs({
+            hp: maxHP,
+            trainer_hit_dice_remaining: currentLevel
+        });
+
+        // Output to chat
+        const restMessage = `&{template:default} {{name=${trainerName} Long Rest}} {{HP Restored=Full HP restored!}} {{Hit Dice=${currentLevel} hit dice restored}}`;
+        startRoll(restMessage, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
 // Trainer Level Up - Automatic
 on('clicked:trainer_levelup', function() {
     getAttrs(['trainer_level', 'hp_max', 'trainer_hitdie', 'trainer_hitdie_half', 'constitution_mod', 'character_name'],
@@ -10081,7 +10177,8 @@ on('clicked:trainer_levelup', function() {
             const newAttrs = {
                 trainer_level: newLevel,
                 hp_max: newMaxHP,
-                hp: newMaxHP // Restore to full HP
+                hp: newMaxHP, // Restore to full HP
+                trainer_hit_dice_remaining: newLevel // Reset hit dice to new level
             };
 
             setAttrs(newAttrs);
@@ -10089,10 +10186,97 @@ on('clicked:trainer_levelup', function() {
     });
 });
 
+// Pokemon Short Rest - Roll Hit Die
+on('clicked:pokemon_short_rest', function() {
+    getAttrs(['pokemon_hp', 'pokemon_hp_max', 'pokemon_hit_dice_remaining', 'pokemon_hitdie', 'pokemon_constitution_mod', 'pokemon_name'], function(values) {
+        const currentHP = parseInt(values.pokemon_hp) || 0;
+        const maxHP = parseInt(values.pokemon_hp_max) || 1;
+        const hitDiceRemaining = parseInt(values.pokemon_hit_dice_remaining) || 0;
+        const hitDie = values.pokemon_hitdie || 'd8';
+        const conMod = parseInt(values.pokemon_constitution_mod) || 0;
+        const pokemonName = values.pokemon_name || 'Pokemon';
+
+        // Check if there are hit dice remaining
+        if (hitDiceRemaining <= 0) {
+            const noHitDiceMessage = `&{template:default} {{name=${pokemonName}}} {{alert=No Hit Dice Remaining!}} {{info=Long rest to restore hit dice}}`;
+            startRoll(noHitDiceMessage, function(results) {
+                finishRoll(results.rollId);
+            });
+            return;
+        }
+
+        // Create roll template for hit die roll
+        const rollFormula = `&{template:default} {{name=${pokemonName} Short Rest}} {{Hit Die Roll=[[1${hitDie} + ${conMod}]]}} {{Hit Dice Remaining=${hitDiceRemaining - 1}}}`;
+
+        startRoll(rollFormula, function(results) {
+            const hpRecovered = results.results['Hit Die Roll'].result;
+
+            finishRoll(results.rollId);
+
+            // Calculate new HP (can't exceed max)
+            const newHP = Math.min(currentHP + hpRecovered, maxHP);
+            const newHitDiceRemaining = hitDiceRemaining - 1;
+
+            // Update attributes
+            setAttrs({
+                pokemon_hp: newHP,
+                pokemon_hit_dice_remaining: newHitDiceRemaining
+            });
+        });
+    });
+});
+
+// Sync hit dice remaining with level when level changes
+on('change:pokemon_level', function() {
+    getAttrs(['pokemon_level', 'pokemon_hit_dice_remaining'], function(values) {
+        const newLevel = parseInt(values.pokemon_level) || 1;
+        const currentHitDice = parseInt(values.pokemon_hit_dice_remaining) || 0;
+
+        // Only update if hit dice is currently 0 or greater than new level
+        // This prevents overwriting during short rests
+        if (currentHitDice === 0 || currentHitDice > newLevel) {
+            setAttrs({
+                pokemon_hit_dice_remaining: newLevel
+            });
+        }
+    });
+});
+
+// Pokemon Long Rest
+on('clicked:pokemon_long_rest', function() {
+    getAttrs(['pokemon_hp_max', 'pokemon_level', 'pokemon_move1', 'pokemon_move2', 'pokemon_move3', 'pokemon_move4', 'pokemon_name'], function(values) {
+        const maxHP = parseInt(values.pokemon_hp_max) || 1;
+        const currentLevel = parseInt(values.pokemon_level) || 1;
+        const pokemonName = values.pokemon_name || 'Pokemon';
+
+        // Look up max PP for each move from moveDatabase
+        const move1PP = values.pokemon_move1 && moveDatabase[values.pokemon_move1] ? moveDatabase[values.pokemon_move1].pp : 0;
+        const move2PP = values.pokemon_move2 && moveDatabase[values.pokemon_move2] ? moveDatabase[values.pokemon_move2].pp : 0;
+        const move3PP = values.pokemon_move3 && moveDatabase[values.pokemon_move3] ? moveDatabase[values.pokemon_move3].pp : 0;
+        const move4PP = values.pokemon_move4 && moveDatabase[values.pokemon_move4] ? moveDatabase[values.pokemon_move4].pp : 0;
+
+        // Restore HP, hit dice, and PP
+        setAttrs({
+            pokemon_hp: maxHP,
+            pokemon_hit_dice_remaining: currentLevel,
+            pokemon_move1_pp: move1PP,
+            pokemon_move2_pp: move2PP,
+            pokemon_move3_pp: move3PP,
+            pokemon_move4_pp: move4PP
+        });
+
+        // Output to chat
+        const restMessage = `&{template:default} {{name=${pokemonName} Long Rest}} {{HP Restored=Full HP restored!}} {{Hit Dice=${currentLevel} hit dice restored}} {{PP Reset=All PP restored!}}`;
+        startRoll(restMessage, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
 // Pokemon Level Up - Automatic
 on('clicked:pokemon_levelup', function() {
     getAttrs(['pokemon_level', 'pokemon_hp_max', 'pokemon_hitdie', 'pokemon_hitdie_half', 'pokemon_constitution_mod',
-              'pokemon_move1_name', 'pokemon_move2_name', 'pokemon_move3_name', 'pokemon_move4_name', 'pokemon_name'],
+              'pokemon_move1', 'pokemon_move2', 'pokemon_move3', 'pokemon_move4', 'pokemon_name'],
     function(values) {
         const currentLevel = parseInt(values.pokemon_level) || 1;
         const currentMaxHP = parseInt(values.pokemon_hp_max) || 0;
@@ -10116,16 +10300,17 @@ on('clicked:pokemon_levelup', function() {
             const newMaxHP = currentMaxHP + hpGain;
 
             // Look up max PP for each move from moveDatabase
-            const move1PP = values.pokemon_move1_name && moveDatabase[values.pokemon_move1_name] ? moveDatabase[values.pokemon_move1_name].pp : 0;
-            const move2PP = values.pokemon_move2_name && moveDatabase[values.pokemon_move2_name] ? moveDatabase[values.pokemon_move2_name].pp : 0;
-            const move3PP = values.pokemon_move3_name && moveDatabase[values.pokemon_move3_name] ? moveDatabase[values.pokemon_move3_name].pp : 0;
-            const move4PP = values.pokemon_move4_name && moveDatabase[values.pokemon_move4_name] ? moveDatabase[values.pokemon_move4_name].pp : 0;
+            const move1PP = values.pokemon_move1 && moveDatabase[values.pokemon_move1] ? moveDatabase[values.pokemon_move1].pp : 0;
+            const move2PP = values.pokemon_move2 && moveDatabase[values.pokemon_move2] ? moveDatabase[values.pokemon_move2].pp : 0;
+            const move3PP = values.pokemon_move3 && moveDatabase[values.pokemon_move3] ? moveDatabase[values.pokemon_move3].pp : 0;
+            const move4PP = values.pokemon_move4 && moveDatabase[values.pokemon_move4] ? moveDatabase[values.pokemon_move4].pp : 0;
 
             // Prepare attributes to set
             const newAttrs = {
                 pokemon_level: newLevel,
                 pokemon_hp_max: newMaxHP,
                 pokemon_hp: newMaxHP, // Restore to full HP
+                pokemon_hit_dice_remaining: newLevel, // Reset hit dice to new level
                 // Reset PP to max values from moveDatabase
                 pokemon_move1_pp: move1PP,
                 pokemon_move2_pp: move2PP,
