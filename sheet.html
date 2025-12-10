@@ -30,7 +30,7 @@
                             <span name="attr_trainer_hit_dice_remaining">0</span>
                         </button>
                         <button type="action" name="act_trainer_long_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold;" title="Long Rest - Restore HP and Hit Dice">
-                            LR
+                            Long Rest
                         </button>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                         <input type="number" name="attr_trainer_level" value="1" style="width: 50px;" />
                         <button type="action" name="act_trainer_levelup" style="padding: 2px 8px; font-size: 16px;">
-                            ⬆
+                            Level Up
                         </button>
                     </div>
                 </div>
@@ -752,72 +752,74 @@
     <!-- Top Pokemon Info -->
     <div class="sheet-top-info">
         <div class="sheet-character-header">
-            <h4>Pokemon Information</h4>
-            
-            <div class="sheet-header-row" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
-                <!-- Left Side: Name and HP -->
-                <div class="sheet-info-field" style="margin: 0;">
-                    <label>Pokemon Name</label>
-                    <input type="text" name="attr_pokemon_name" />
-                </div>
-                <div class="sheet-info-field sheet-hp-field" style="margin: 0;">
-                    <label>Hit Points</label>
-                    <div style="display: flex; align-items: center; gap: 5px;">
-                        <div class="sheet-hp-container">
-                            <input type="number" name="attr_pokemon_hp" placeholder="24" />
-                            <span class="sheet-hp-separator">/</span>
-                            <input type="number" name="attr_pokemon_hp_max" placeholder="24" />
-                        </div>
-                        <button type="action" name="act_pokemon_short_rest" style="padding: 4px 8px; font-size: 14px; font-weight: bold; min-width: 32px;" title="Short Rest - Roll Hit Die">
-                            <span name="attr_pokemon_hit_dice_remaining">0</span>
-                        </button>
-                        <button type="action" name="act_pokemon_long_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold;" title="Long Rest - Restore HP, Hit Dice, and PP">
-                            LR
-                        </button>
-                    </div>
-                </div>
-                <!-- Hidden field to track remaining hit dice -->
-                <input type="hidden" name="attr_pokemon_hit_dice_remaining" value="1" />
-
-                <!-- Right Side: Level and Stats -->
-                <div class="sheet-info-field" style="margin: 0; display: flex; flex-direction: column;">
-                    <label>Level</label>
-                    <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
-                        <input type="number" name="attr_pokemon_level" value="1" style="width: 50px;" />
-                        <button type="action" name="act_pokemon_levelup" style="padding: 2px 8px; font-size: 16px;">
-                            ⬆
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Stats Display Section -->
-                <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-start; margin: 0; padding: 0;">
-                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
-                        <label>AC</label>
-                        <span name="attr_pokemon_ac" style="font-size: 18px; font-weight: bold;">10</span>
-                    </div>
-                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
-                        <label>Speed</label>
-                        <span name="attr_pokemon_speed" style="font-size: 18px; font-weight: bold;">30</span>
-                    </div>
-                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
-                        <label>Prof</label>
-                        <span name="attr_pokemon_proficiency_bonus" style="font-size: 18px; font-weight: bold;">+2</span>
-                    </div>
-                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
-                        <label>STAB</label>
-                        <span name="attr_pokemon_stab_bonus" style="font-size: 18px; font-weight: bold;">+2</span>
-                    </div>
-                    <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
-                        <label>Catch DC</label>
-                        <span name="attr_pokemon_catch_dc" style="font-size: 18px; font-weight: bold;">10</span>
-                    </div>
-                </div>
-
-                <!-- Hidden Hit Die fields -->
-                <input type="hidden" name="attr_pokemon_hitdie" value="d8" />
-                <input type="hidden" name="attr_pokemon_hitdie_half" value="4" />
+            <!-- Pokemon Name - Prominent Display -->
+            <div style="margin: 0 auto; width: 200px;">
+                <input type="text" name="attr_pokemon_name" placeholder="Pokemon Name" style="width: 100%; text-align: center; border: 2px solid #3B3F58;" />
             </div>
+
+            <!-- Primary Stats Row: HP and Level with Controls -->
+            <div style="display: grid; grid-template-columns: 1fr auto auto 1fr; gap: 15px; margin-bottom: 15px; padding: 10px; border-radius: 6px;">
+                <!-- HP Section -->
+                <div class="sheet-info-field">
+                    <label>Hit Points</label>
+                    <div class="sheet-hp-container">
+                        <input type="number" name="attr_pokemon_hp" placeholder="24" />
+                        <span class="sheet-hp-separator">/</span>
+                        <input type="number" name="attr_pokemon_hp_max" placeholder="24" />
+                    </div>
+                </div>
+
+                <!-- Rest Buttons -->
+                <div style="display: flex; gap: 6px; align-items: center;">
+                    <button type="action" name="act_pokemon_short_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold; min-width: 32px; border: 1px solid #3B3F58;" title="Short Rest - Roll Hit Die">
+                        Short Rest - <span name="attr_pokemon_hit_dice_remaining">0</span>
+                    </button>
+                    <button type="action" name="act_pokemon_long_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold; border: 1px solid #3B3F58;" title="Long Rest - Restore HP, Hit Dice, and PP">
+                        Long Rest
+                    </button>
+                </div>
+
+                <!-- Level Up Button -->
+                <div style="display: flex; gap: 6px; align-items: center;">
+                    <button type="action" name="act_pokemon_levelup" style="padding: 4px 8px; font-size: 12px; font-weight: bold; border: 1px solid #3B3F58;" title="Level Up">
+                        Level Up
+                    </button>
+                </div>
+
+                <!-- Level Display -->
+                <div class="sheet-info-field">
+                    <label>Level</label>
+                    <input type="number" name="attr_pokemon_level" value="1" style="width: 60px;" />
+                </div>
+            </div>
+
+            <!-- Secondary Stats Row -->
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 8px; background: white; border: 2px solid #3B3F58; border-radius: 6px;">
+                <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                    <label>AC</label>
+                    <span name="attr_pokemon_ac" style="font-size: 18px; font-weight: bold;">10</span>
+                </div>
+                <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                    <label>Speed</label>
+                    <span name="attr_pokemon_speed" style="font-size: 18px; font-weight: bold;">30</span>
+                </div>
+                <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                    <label>Prof</label>
+                    <span name="attr_pokemon_proficiency_bonus" style="font-size: 18px; font-weight: bold;">+2</span>
+                </div>
+                <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                    <label>STAB</label>
+                    <span name="attr_pokemon_stab_bonus" style="font-size: 18px; font-weight: bold;">+2</span>
+                </div>
+                <div class="sheet-info-field" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0;">
+                    <label>Catch DC</label>
+                    <span name="attr_pokemon_catch_dc" style="font-size: 18px; font-weight: bold;">10</span>
+                </div>
+            </div>
+
+            <!-- Hidden Hit Die fields -->
+            <input type="hidden" name="attr_pokemon_hitdie" value="d8" />
+            <input type="hidden" name="attr_pokemon_hitdie_half" value="4" />
         </div>
     </div>
 
@@ -925,9 +927,9 @@
             <h4 style="font-size: 12px; font-weight: bold; color: #3B3F58; text-transform: uppercase; margin: 0 0 15px 0; text-align: center; letter-spacing: 1px;">Conditions</h4>
 
             <!-- Confused Condition -->
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px; height: 20px;">
                 <input type="checkbox" name="attr_pokemon_confused" value="1" />
-                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Half speed, no reactions">Confused</label>
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Half speed, no reactions">Confused</label>
                 <input type="hidden" name="attr_pokemon_confused_rounds" value="3" />
 
                 <!-- Show when confused is active -->
@@ -941,9 +943,9 @@
             </div>
 
             <!-- Burned Condition -->
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px; height: 20px;">
                 <input type="checkbox" name="attr_pokemon_burned" value="1" />
-                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Damage rolls: roll twice, take lower. Takes prof bonus damage at start of turn. Fire types immune.">Burned</label>
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Damage rolls: roll twice, take lower. Takes prof bonus damage at start of turn. Fire types immune.">Burned</label>
 
                 <!-- Show when burned is active -->
                 <div style="display: none; align-items: center; gap: 5px;">
@@ -954,9 +956,9 @@
             </div>
 
             <!-- Poisoned Condition -->
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px; height: 20px;">
                 <input type="checkbox" name="attr_pokemon_poisoned" value="1" />
-                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Disadvantage on ability checks and attack rolls. Takes prof bonus damage at end of turn. Poison and Steel types immune.">Poisoned</label>
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Disadvantage on ability checks and attack rolls. Takes prof bonus damage at end of turn. Poison and Steel types immune.">Poisoned</label>
 
                 <!-- Show when poisoned is active -->
                 <div style="display: none; align-items: center; gap: 5px;">
@@ -967,9 +969,9 @@
             </div>
 
             <!-- Frozen Condition -->
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px; height: 20px;">
                 <input type="checkbox" name="attr_pokemon_frozen" value="1" />
-                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Incapacitated and restrained. STR save DC 10 + prof at end of turn to break free. Lasts 1 hour outside combat. Ice types immune.">Frozen</label>
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Incapacitated and restrained. STR save DC 10 + prof at end of turn to break free. Lasts 1 hour outside combat. Ice types immune.">Frozen</label>
 
                 <!-- Show when frozen is active -->
                 <div style="display: none; align-items: center; gap: 5px;">
@@ -982,9 +984,9 @@
             </div>
 
             <!-- Paralyzed Condition -->
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px; height: 20px;">
                 <input type="checkbox" name="attr_pokemon_paralyzed" value="1" />
-                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Disadvantage on STR/DEX saves. Half speed. Roll d4 at start of turn: 1 = incapacitated/restrained. Electric types immune.">Paralyzed</label>
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Disadvantage on STR/DEX saves. Half speed. Roll d4 at start of turn: 1 = incapacitated/restrained. Electric types immune.">Paralyzed</label>
 
                 <!-- Show when paralyzed is active -->
                 <div style="display: none; align-items: center; gap: 5px;">
@@ -996,9 +998,9 @@
             </div>
 
             <!-- Asleep Condition -->
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px; height: 20px;">
                 <input type="checkbox" name="attr_pokemon_asleep" value="1" />
-                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Incapacitated and restrained for 3 rounds. Disadvantage on all saves. Roll d20 when hit or at end of turn: 11+ = wake up.">Asleep</label>
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Incapacitated and restrained for 3 rounds. Disadvantage on all saves. Roll d20 when hit or at end of turn: 11+ = wake up.">Asleep</label>
                 <input type="hidden" name="attr_pokemon_asleep_rounds" value="3" />
 
                 <!-- Show when asleep is active -->
@@ -1012,10 +1014,9 @@
             </div>
 
             <!-- Flinched Condition -->
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px; height: 20px;">
                 <input type="checkbox" name="attr_pokemon_flinched" value="1" />
-                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Disadvantage on attack rolls, skill checks, and saves until end of next turn. Targets have advantage on saves vs your moves.">Flinched</label>
-                <span style="font-size: 10px; color: #666; font-style: italic;">Until end of next turn</span>
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Disadvantage on attack rolls, skill checks, and saves until end of next turn. Targets have advantage on saves vs your moves.">Flinched</label>
             </div>
         </div>
 
@@ -1023,19 +1024,27 @@
         <div class="sheet-weaknesses-container" style="background: #F0F2F8; border: 2px solid #3B3F58; border-radius: 8px; padding: 15px; flex: 1;">
             <h4 style="font-size: 12px; font-weight: bold; color: #3B3F58; text-transform: uppercase; margin: 0 0 15px 0; text-align: center; letter-spacing: 1px;">Pokemon Weaknesses</h4>
 
-            <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; font-size: 13px;">
-                <div style="font-weight: bold; color: #dc3545; text-align: center;">4x:</div>
-                <input type="text" name="attr_pokemon_double_vulnerabilities" placeholder="e.g., Rock" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+            <div style="background: white; border: 2px solid #3B3F58; border-radius: 6px; padding: 12px;">
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; font-size: 13px;">
+                    <span style="font-weight: bold; color: #dc3545; text-align: right;">4x:</span>
+                    <span name="attr_pokemon_double_vulnerabilities" style="color: #333;">-</span>
 
-                <div style="font-weight: bold; color: #dc3545; text-align: center;">2x:</div>
-                <input type="text" name="attr_pokemon_vulnerabilities" placeholder="e.g., Fire, Electric, Ice" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+                    <span style="font-weight: bold; color: #dc3545; text-align: right;">2x:</span>
+                    <span name="attr_pokemon_vulnerabilities" style="color: #333;">-</span>
 
-                <div style="font-weight: bold; color: #28a745; text-align: center;">½x:</div>
-                <input type="text" name="attr_pokemon_resistances" placeholder="e.g., Bug, Grass" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+                    <span style="font-weight: bold; color: #28a745; text-align: right;">½x:</span>
+                    <span name="attr_pokemon_resistances" style="color: #333;">-</span>
 
-                <div style="font-weight: bold; color: #6c757d; text-align: center;">0x:</div>
-                <input type="text" name="attr_pokemon_immunities" placeholder="e.g., Ground" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+                    <span style="font-weight: bold; color: #6c757d; text-align: right;">0x:</span>
+                    <span name="attr_pokemon_immunities" style="color: #333;">-</span>
+                </div>
             </div>
+
+            <!-- Hidden inputs to store the data -->
+            <input type="hidden" name="attr_pokemon_double_vulnerabilities" />
+            <input type="hidden" name="attr_pokemon_vulnerabilities" />
+            <input type="hidden" name="attr_pokemon_resistances" />
+            <input type="hidden" name="attr_pokemon_immunities" />
         </div>
     </div>
 
