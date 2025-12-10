@@ -754,7 +754,7 @@
         <div class="sheet-character-header">
             <!-- Pokemon Name - Prominent Display -->
             <div style="margin: 0 auto; width: 200px;">
-                <input type="text" name="attr_pokemon_name" placeholder="Pokemon Name" style="width: 100%; text-align: center; border: 2px solid #3B3F58;" />
+                <input type="text" name="attr_pokemon_name" placeholder="Pokemon Name" style="width: 100%; text-align: center; border: 2px solid #3B3F58; background: white;" />
             </div>
 
             <!-- Primary Stats Row: HP and Level with Controls -->
@@ -771,17 +771,17 @@
 
                 <!-- Rest Buttons -->
                 <div style="display: flex; gap: 6px; align-items: center;">
-                    <button type="action" name="act_pokemon_short_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold; min-width: 32px; border: 1px solid #3B3F58;" title="Short Rest - Roll Hit Die">
+                    <button type="action" name="act_pokemon_short_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold; min-width: 32px; border: 1px solid #3B3F58; background: white;" title="Short Rest - Roll Hit Die">
                         Short Rest - <span name="attr_pokemon_hit_dice_remaining">0</span>
                     </button>
-                    <button type="action" name="act_pokemon_long_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold; border: 1px solid #3B3F58;" title="Long Rest - Restore HP, Hit Dice, and PP">
+                    <button type="action" name="act_pokemon_long_rest" style="padding: 4px 8px; font-size: 12px; font-weight: bold; border: 1px solid #3B3F58; background: white;" title="Long Rest - Restore HP, Hit Dice, and PP">
                         Long Rest
                     </button>
                 </div>
 
                 <!-- Level Up Button -->
                 <div style="display: flex; gap: 6px; align-items: center;">
-                    <button type="action" name="act_pokemon_levelup" style="padding: 4px 8px; font-size: 12px; font-weight: bold; border: 1px solid #3B3F58;" title="Level Up">
+                    <button type="action" name="act_pokemon_levelup" style="padding: 4px 8px; font-size: 12px; font-weight: bold; border: 1px solid #3B3F58; background: white;" title="Level Up">
                         Level Up
                     </button>
                 </div>
@@ -8816,7 +8816,7 @@ on("change:pokemon_strength change:pokemon_dexterity change:pokemon_constitution
 
 // Force recalculation when pokemon_species changes (this triggers when API creates Pokemon)
 on("change:pokemon_species", function() {
-    console.log('Pokemon species changed, forcing stat recalculation...');
+    console.log('Pokemon species changed, forcing full recalculation and data population...');
     setTimeout(() => {
         // Force recalculate all pokemon stat modifiers
         const pokemonStats = ['pokemon_strength', 'pokemon_dexterity', 'pokemon_constitution', 'pokemon_intelligence', 'pokemon_wisdom', 'pokemon_charisma'];
@@ -8833,6 +8833,18 @@ on("change:pokemon_species", function() {
                     calculatePokemonSkills();
                     calculatePokemonSaves();
                     console.log('Pokemon stats and saves recalculated');
+
+                    // Also populate type effectiveness/weaknesses
+                    setTimeout(() => {
+                        calculateTypeEffectiveness();
+                        console.log('Type effectiveness calculated');
+                    }, 200);
+
+                    // And populate moves based on species and level
+                    setTimeout(() => {
+                        doMovePopulation();
+                        console.log('Moves populated');
+                    }, 400);
                 }, 100);
             });
         });
@@ -10947,6 +10959,36 @@ on('clicked:pokemon_levelup', function() {
 
             setAttrs(newAttrs);
         });
+    });
+});
+
+// Status Marker System - Add visual indicators to tokens
+on('change:pokemon_burned change:pokemon_poisoned change:pokemon_paralyzed change:pokemon_frozen change:pokemon_asleep change:pokemon_confused change:pokemon_flinched', function(eventInfo) {
+    getAttrs(['pokemon_burned', 'pokemon_poisoned', 'pokemon_paralyzed', 'pokemon_frozen', 'pokemon_asleep', 'pokemon_confused', 'pokemon_flinched'], function(values) {
+        const updates = {};
+
+        // Burned - Red marker (flame icon)
+        updates['status_red'] = values.pokemon_burned === '1' ? true : false;
+
+        // Poisoned - Skull marker
+        updates['status_death-zone'] = values.pokemon_poisoned === '1' ? true : false;
+
+        // Paralyzed - Yellow marker (lightning)
+        updates['status_yellow'] = values.pokemon_paralyzed === '1' ? true : false;
+
+        // Frozen - Blue marker (snowflake)
+        updates['status_blue'] = values.pokemon_frozen === '1' ? true : false;
+
+        // Asleep - Sleepy marker
+        updates['status_sleepy'] = values.pokemon_asleep === '1' ? true : false;
+
+        // Confused - Purple marker (swirl)
+        updates['status_purple'] = values.pokemon_confused === '1' ? true : false;
+
+        // Flinched - Broken shield marker
+        updates['status_broken-shield'] = values.pokemon_flinched === '1' ? true : false;
+
+        setAttrs(updates);
     });
 });
 
