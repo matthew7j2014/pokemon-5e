@@ -917,9 +917,65 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- Conditions and Weaknesses Side by Side -->
+    <div style="display: flex; gap: 15px; margin: 15px 0;">
+        <!-- Conditions Tracker (Left 50%) -->
+        <div class="sheet-conditions-container" style="background: #F0F2F8; border: 2px solid #3B3F58; border-radius: 8px; padding: 15px; flex: 1;">
+            <h4 style="font-size: 12px; font-weight: bold; color: #3B3F58; text-transform: uppercase; margin: 0 0 15px 0; text-align: center; letter-spacing: 1px;">Conditions</h4>
+
+            <!-- Confused Condition -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <input type="checkbox" name="attr_pokemon_confused" value="1" />
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Half speed, no reactions">Confused</label>
+                <input type="hidden" name="attr_pokemon_confused_rounds" value="3" />
+
+                <!-- Show when confused is active -->
+                <div style="display: none; align-items: center; gap: 5px;">
+                    <span style="font-size: 12px;">Rounds:</span>
+                    <span name="attr_pokemon_confused_rounds" style="font-weight: bold; font-size: 14px;">3</span>
+                    <button type="action" name="act_pokemon_confusion_check" style="padding: 2px 8px; font-size: 11px; font-weight: bold;" title="Roll d20 - Check if hurt/cured">
+                        Check
+                    </button>
+                </div>
+            </div>
+
+            <!-- Burned Condition -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <input type="checkbox" name="attr_pokemon_burned" value="1" />
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Damage rolls: roll twice, take lower. Takes prof bonus damage at start of turn. Fire types immune.">Burned</label>
+
+                <!-- Show when burned is active -->
+                <div style="display: none; align-items: center; gap: 5px;">
+                    <button type="action" name="act_pokemon_burn_damage" style="padding: 2px 8px; font-size: 11px; font-weight: bold;" title="Apply burn damage at start of turn">
+                        Dmg
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pokemon Weaknesses (Right 50%) -->
+        <div class="sheet-weaknesses-container" style="background: #F0F2F8; border: 2px solid #3B3F58; border-radius: 8px; padding: 15px; flex: 1;">
+            <h4 style="font-size: 12px; font-weight: bold; color: #3B3F58; text-transform: uppercase; margin: 0 0 15px 0; text-align: center; letter-spacing: 1px;">Pokemon Weaknesses</h4>
+
+            <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; font-size: 13px;">
+                <div style="font-weight: bold; color: #dc3545; text-align: center;">4x:</div>
+                <input type="text" name="attr_pokemon_double_vulnerabilities" placeholder="e.g., Rock" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+
+                <div style="font-weight: bold; color: #dc3545; text-align: center;">2x:</div>
+                <input type="text" name="attr_pokemon_vulnerabilities" placeholder="e.g., Fire, Electric, Ice" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+
+                <div style="font-weight: bold; color: #28a745; text-align: center;">½x:</div>
+                <input type="text" name="attr_pokemon_resistances" placeholder="e.g., Bug, Grass" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+
+                <div style="font-weight: bold; color: #6c757d; text-align: center;">0x:</div>
+                <input type="text" name="attr_pokemon_immunities" placeholder="e.g., Ground" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white; text-align: center;" />
+            </div>
+        </div>
+    </div>
+
     <!-- Three Column Layout -->
-    <div class="sheet-main-layout"> 
+    <div class="sheet-main-layout">
         <!-- Column 1: Combat Stats & Pokemon Details -->
         <div class="sheet-column">
             <div class="sheet-middle-container">
@@ -1070,30 +1126,8 @@
             </div>
         </div>
 
-        <!-- Column 2: Pokemon Weaknesses & Moves -->
+        <!-- Column 2: Pokemon Moves -->
         <div class="sheet-column">
-            <!-- Pokemon Weaknesses -->
-            <div class="sheet-weaknesses-container" style="margin-bottom: 20px;">
-                <div class="sheet-weaknesses-header">
-                    <h4>Pokemon Weaknesses</h4>
-                </div>
-                <div style="background: #f8f9fa; border: 2px solid #3B3F58; border-radius: 8px; padding: 15px;">
-                    <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; font-size: 13px;">
-                        <div style="font-weight: bold; color: #dc3545;">4x:</div>
-                        <input type="text" name="attr_pokemon_double_vulnerabilities" placeholder="e.g., Rock" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
-
-                        <div style="font-weight: bold; color: #dc3545;">2x:</div>
-                        <input type="text" name="attr_pokemon_vulnerabilities" placeholder="e.g., Fire, Electric, Ice" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
-
-                        <div style="font-weight: bold; color: #28a745;">½x:</div>
-                        <input type="text" name="attr_pokemon_resistances" placeholder="e.g., Bug, Grass" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
-
-                        <div style="font-weight: bold; color: #6c757d;">0x:</div>
-                        <input type="text" name="attr_pokemon_immunities" placeholder="e.g., Ground" readonly style="border: 1px solid #ddd; padding: 4px 8px; border-radius: 4px; font-size: 12px; background: white;" />
-                    </div>
-                </div>
-            </div>
-
             <!-- Pokemon Moves -->
             <div class="sheet-moves-container">
                 <div class="sheet-moves-header">
@@ -9196,6 +9230,7 @@ function rollPokemonMove(moveSlot) {
         'pokemon_type2',
         'pokemon_loyalty',
         'pokemon_loyalty_value',
+        'pokemon_burned',
         // Get all ability modifiers for dual stat calculation
         'pokemon_strength_mod',
         'pokemon_dexterity_mod',
@@ -9306,13 +9341,16 @@ function rollPokemonMove(moveSlot) {
         // Calculate total attack and damage bonuses
         const totalAttackBonus = bestMod + profBonus + aceBonus;
         const totalDamageBonus = bestMod + aceBonus + stabDamageBonus;
-        
+
         // Create STAB indicator for display
         const stabIndicator = getsSTAB ? ` + ${stabBonus} STAB` : '';
-        
+
+        // Check if Pokemon is burned
+        const isBurned = values.pokemon_burned === '1';
+
         // FIXED: Better status move detection
         const isStatusMove = damage === '0' || damage === '' || !damage;
-        
+
         if (isStatusMove) {
             // Status move - no damage, just show effect
             if (power && power !== '') {
@@ -9323,8 +9361,19 @@ function rollPokemonMove(moveSlot) {
                 rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Damage=None}} {{Effect=Status/Utility Move}} {{Range=${range}}} {{Type=${moveType}}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}`;
             }
         } else {
-            // Damage move
-            rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=[[1d20+${totalAttackBonus}]]}} {{Damage=[[${damage}+${totalDamageBonus}]]}} {{Stat Used=${statInfo}}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}`;
+            // Damage move - check if burned
+            let damageRoll;
+            let burnedNote = '';
+            if (isBurned) {
+                // Roll damage twice and take lower (burned effect)
+                damageRoll = `[[{${damage}+${totalDamageBonus}, ${damage}+${totalDamageBonus}}kl1]]`;
+                burnedNote = ' {{Burned=Rolling damage twice, taking lower}}';
+            } else {
+                // Normal damage roll
+                damageRoll = `[[${damage}+${totalDamageBonus}]]`;
+            }
+
+            rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=[[1d20+${totalAttackBonus}]]}} {{Damage=${damageRoll}}} {{Stat Used=${statInfo}}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${burnedNote}`;
         }
         
         console.log('Roll template:', rollTemplate);
@@ -10268,6 +10317,110 @@ on('clicked:pokemon_long_rest', function() {
         // Output to chat
         const restMessage = `&{template:default} {{name=${pokemonName} Long Rest}} {{HP Restored=Full HP restored!}} {{Hit Dice=${currentLevel} hit dice restored}} {{PP Reset=All PP restored!}}`;
         startRoll(restMessage, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Pokemon Confused Condition - Reset rounds when checked
+on('change:pokemon_confused', function() {
+    getAttrs(['pokemon_confused'], function(values) {
+        if (values.pokemon_confused === '1') {
+            // Reset rounds to 3 when confused is applied
+            setAttrs({
+                pokemon_confused_rounds: 3
+            });
+        }
+    });
+});
+
+// Pokemon Confusion Check - Roll d20 to check effects
+on('clicked:pokemon_confusion_check', function() {
+    getAttrs(['pokemon_confused_rounds', 'pokemon_proficiency_bonus', 'pokemon_name', 'pokemon_hp'], function(values) {
+        const roundsRemaining = parseInt(values.pokemon_confused_rounds) || 0;
+        const profBonus = parseInt(values.pokemon_proficiency_bonus) || 2;
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const currentHP = parseInt(values.pokemon_hp) || 0;
+
+        if (roundsRemaining <= 0) {
+            // Confusion has ended
+            setAttrs({
+                pokemon_confused: '0',
+                pokemon_confused_rounds: 0
+            });
+
+            const endMessage = `&{template:default} {{name=${pokemonName}}} {{status=Confusion Ended}} {{info=No longer confused}}`;
+            startRoll(endMessage, function(results) {
+                finishRoll(results.rollId);
+            });
+            return;
+        }
+
+        // Roll d20 for confusion check
+        const rollFormula = `&{template:default} {{name=${pokemonName} Confusion Check}} {{Round=${roundsRemaining} remaining}} {{Roll=[[1d20]]}}`;
+
+        startRoll(rollFormula, function(results) {
+            const rollResult = results.results.Roll.result;
+            let newRounds = roundsRemaining - 1;
+            let newHP = currentHP;
+            let resultMessage = '';
+
+            finishRoll(results.rollId);
+
+            if (rollResult <= 10) {
+                // Hurts itself
+                newHP = currentHP - profBonus;
+                resultMessage = `&{template:default} {{name=${pokemonName} Hurts Itself!}} {{Damage=${profBonus} typeless damage}} {{Result=Lost action and bonus action}} {{Rounds Left=${newRounds}}}`;
+            } else if (rollResult >= 16) {
+                // Cured!
+                newRounds = 0;
+                resultMessage = `&{template:default} {{name=${pokemonName} Snaps Out!}} {{Result=Confusion ended!}}`;
+                setAttrs({
+                    pokemon_confused: '0'
+                });
+            } else {
+                // No effect, just decrement
+                resultMessage = `&{template:default} {{name=${pokemonName}}} {{Result=Acts normally this turn}} {{Rounds Left=${newRounds}}}`;
+            }
+
+            // Update rounds and HP
+            setAttrs({
+                pokemon_confused_rounds: newRounds,
+                pokemon_hp: Math.max(0, newHP)
+            });
+
+            // Output result message
+            startRoll(resultMessage, function(r) {
+                finishRoll(r.rollId);
+            });
+
+            // Auto-clear if rounds reach 0
+            if (newRounds <= 0) {
+                setAttrs({
+                    pokemon_confused: '0'
+                });
+            }
+        });
+    });
+});
+
+// Pokemon Burn Damage - Apply burn damage at start of turn
+on('clicked:pokemon_burn_damage', function() {
+    getAttrs(['pokemon_proficiency_bonus', 'pokemon_name', 'pokemon_hp'], function(values) {
+        const profBonus = parseInt(values.pokemon_proficiency_bonus) || 2;
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const currentHP = parseInt(values.pokemon_hp) || 0;
+
+        // Apply burn damage (prof bonus)
+        const newHP = Math.max(0, currentHP - profBonus);
+
+        setAttrs({
+            pokemon_hp: newHP
+        });
+
+        // Output burn damage message
+        const burnMessage = `&{template:default} {{name=${pokemonName} Burn Damage}} {{Damage=${profBonus} typeless damage}} {{Remaining HP=${newHP}}}`;
+        startRoll(burnMessage, function(results) {
             finishRoll(results.rollId);
         });
     });

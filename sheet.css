@@ -3119,3 +3119,32 @@ textarea.sheet-effectiveness-types {
 .sheet-type-icon.dark { background-color: #705848; }
 .sheet-type-icon.steel { background-color: #B8B8D0; color: #000; }
 .sheet-type-icon.fairy { background-color: #EE99AC; color: #000; }
+
+/* Conditions Tracker */
+/* Show condition details when confused checkbox is checked */
+input[name="attr_pokemon_confused"]:checked ~ div {
+    display: flex !important;
+}
+
+input[name="attr_pokemon_confused"]:checked ~ span {
+    display: inline !important;
+}
+
+/* Hide details when not checked */
+input[name="attr_pokemon_confused"]:not(:checked) ~ div {
+    display: none !important;
+}
+
+input[name="attr_pokemon_confused"]:not(:checked) ~ span {
+    display: none !important;
+}
+
+/* Show condition details when burned checkbox is checked */
+input[name="attr_pokemon_burned"]:checked ~ div {
+    display: flex !important;
+}
+
+/* Hide details when not checked */
+input[name="attr_pokemon_burned"]:not(:checked) ~ div {
+    display: none !important;
+}
