@@ -3148,3 +3148,13 @@ input[name="attr_pokemon_burned"]:checked ~ div {
 input[name="attr_pokemon_burned"]:not(:checked) ~ div {
     display: none !important;
 }
+
+/* Show condition details when poisoned checkbox is checked */
+input[name="attr_pokemon_poisoned"]:checked ~ div {
+    display: flex !important;
+}
+
+/* Hide details when not checked */
+input[name="attr_pokemon_poisoned"]:not(:checked) ~ div {
+    display: none !important;
+}

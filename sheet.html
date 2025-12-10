@@ -952,6 +952,19 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Poisoned Condition -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <input type="checkbox" name="attr_pokemon_poisoned" value="1" />
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Disadvantage on ability checks and attack rolls. Takes prof bonus damage at end of turn. Poison and Steel types immune.">Poisoned</label>
+
+                <!-- Show when poisoned is active -->
+                <div style="display: none; align-items: center; gap: 5px;">
+                    <button type="action" name="act_pokemon_poison_damage" style="padding: 2px 8px; font-size: 11px; font-weight: bold;" title="Apply poison damage at end of turn">
+                        Dmg
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- Pokemon Weaknesses (Right 50%) -->
@@ -1465,11 +1478,11 @@
                     </span>
                     <span class="sheet-skill-name">Acrobatics</span>
                     <span class="sheet-skill-stat">(Dex)</span>
-                    <button type="roll" name="roll_pokemon_acrobatics" value="&{template:default} {{name=@{pokemon_name} Acrobatics}} {{roll=[[1d20+@{pokemon_acrobatics_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_acrobatics" class="sheet-skill-button">
                         <span name="attr_pokemon_acrobatics_total">+0</span>
                     </button>
                 </div>
-                
+
                 <div class="sheet-skill-item">
                     <span class="sheet-skill-toggle">
                         <input type="radio" name="attr_pokemon_animal_handling_prof" value="none" checked>
@@ -1481,11 +1494,11 @@
                     </span>
                     <span class="sheet-skill-name">Animal Handling</span>
                     <span class="sheet-skill-stat">(Wis)</span>
-                    <button type="roll" name="roll_pokemon_animal_handling" value="&{template:default} {{name=@{pokemon_name} Animal Handling}} {{roll=[[1d20+@{pokemon_animal_handling_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_animal_handling" class="sheet-skill-button">
                         <span name="attr_pokemon_animal_handling_total">+0</span>
                     </button>
                 </div>
-                
+
                 <div class="sheet-skill-item">
                     <span class="sheet-skill-toggle">
                         <input type="radio" name="attr_pokemon_arcana_prof" value="none" checked>
@@ -1497,11 +1510,11 @@
                     </span>
                     <span class="sheet-skill-name">Arcana</span>
                     <span class="sheet-skill-stat">(Int)</span>
-                    <button type="roll" name="roll_pokemon_arcana" value="&{template:default} {{name=@{pokemon_name} Arcana}} {{roll=[[1d20+@{pokemon_arcana_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_arcana" class="sheet-skill-button">
                         <span name="attr_pokemon_arcana_total">+0</span>
                     </button>
                 </div>
-                
+
                 <div class="sheet-skill-item">
                     <span class="sheet-skill-toggle">
                         <input type="radio" name="attr_pokemon_athletics_prof" value="none" checked>
@@ -1513,11 +1526,11 @@
                     </span>
                     <span class="sheet-skill-name">Athletics</span>
                     <span class="sheet-skill-stat">(Str)</span>
-                    <button type="roll" name="roll_pokemon_athletics" value="&{template:default} {{name=@{pokemon_name} Athletics}} {{roll=[[1d20+@{pokemon_athletics_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_athletics" class="sheet-skill-button">
                         <span name="attr_pokemon_athletics_total">+0</span>
                     </button>
                 </div>
-                
+
                 <div class="sheet-skill-item">
                     <span class="sheet-skill-toggle">
                         <input type="radio" name="attr_pokemon_deception_prof" value="none" checked>
@@ -1529,11 +1542,11 @@
                     </span>
                     <span class="sheet-skill-name">Deception</span>
                     <span class="sheet-skill-stat">(Cha)</span>
-                    <button type="roll" name="roll_pokemon_deception" value="&{template:default} {{name=@{pokemon_name} Deception}} {{roll=[[1d20+@{pokemon_deception_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_deception" class="sheet-skill-button">
                         <span name="attr_pokemon_deception_total">+0</span>
                     </button>
                 </div>
-                
+
                 <div class="sheet-skill-item">
                     <span class="sheet-skill-toggle">
                         <input type="radio" name="attr_pokemon_history_prof" value="none" checked>
@@ -1545,7 +1558,7 @@
                     </span>
                     <span class="sheet-skill-name">History</span>
                     <span class="sheet-skill-stat">(Int)</span>
-                    <button type="roll" name="roll_pokemon_history" value="&{template:default} {{name=@{pokemon_name} History}} {{roll=[[1d20+@{pokemon_history_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_history" class="sheet-skill-button">
                         <span name="attr_pokemon_history_total">+0</span>
                     </button>
                 </div>
@@ -1561,7 +1574,7 @@
                     </span>
                     <span class="sheet-skill-name">Insight</span>
                     <span class="sheet-skill-stat">(Wis)</span>
-                    <button type="roll" name="roll_pokemon_insight" value="&{template:default} {{name=@{pokemon_name} Insight}} {{roll=[[1d20+@{pokemon_insight_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_insight" class="sheet-skill-button">
                         <span name="attr_pokemon_insight_total">+0</span>
                     </button>
                 </div>
@@ -1577,7 +1590,7 @@
                     </span>
                     <span class="sheet-skill-name">Intimidation</span>
                     <span class="sheet-skill-stat">(Cha)</span>
-                    <button type="roll" name="roll_pokemon_intimidation" value="&{template:default} {{name=@{pokemon_name} Intimidation}} {{roll=[[1d20+@{pokemon_intimidation_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_intimidation" class="sheet-skill-button">
                         <span name="attr_pokemon_intimidation_total">+0</span>
                     </button>
                 </div>
@@ -1593,7 +1606,7 @@
                     </span>
                     <span class="sheet-skill-name">Investigation</span>
                     <span class="sheet-skill-stat">(Int)</span>
-                    <button type="roll" name="roll_pokemon_investigation" value="&{template:default} {{name=@{pokemon_name} Investigation}} {{roll=[[1d20+@{pokemon_investigation_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_investigation" class="sheet-skill-button">
                         <span name="attr_pokemon_investigation_total">+0</span>
                     </button>
                 </div>
@@ -1609,7 +1622,7 @@
                     </span>
                     <span class="sheet-skill-name">Medicine</span>
                     <span class="sheet-skill-stat">(Wis)</span>
-                    <button type="roll" name="roll_pokemon_medicine" value="&{template:default} {{name=@{pokemon_name} Medicine}} {{roll=[[1d20+@{pokemon_medicine_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_medicine" class="sheet-skill-button">
                         <span name="attr_pokemon_medicine_total">+0</span>
                     </button>
                 </div>
@@ -1625,7 +1638,7 @@
                     </span>
                     <span class="sheet-skill-name">Nature</span>
                     <span class="sheet-skill-stat">(Int)</span>
-                    <button type="roll" name="roll_pokemon_nature" value="&{template:default} {{name=@{pokemon_name} Nature}} {{roll=[[1d20+@{pokemon_nature_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_nature" class="sheet-skill-button">
                         <span name="attr_pokemon_nature_total">+0</span>
                     </button>
                 </div>
@@ -1641,7 +1654,7 @@
                     </span>
                     <span class="sheet-skill-name">Perception</span>
                     <span class="sheet-skill-stat">(Wis)</span>
-                    <button type="roll" name="roll_pokemon_perception" value="&{template:default} {{name=@{pokemon_name} Perception}} {{roll=[[1d20+@{pokemon_perception_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_perception" class="sheet-skill-button">
                         <span name="attr_pokemon_perception_total">+0</span>
                     </button>
                 </div>
@@ -1657,7 +1670,7 @@
                     </span>
                     <span class="sheet-skill-name">Performance</span>
                     <span class="sheet-skill-stat">(Cha)</span>
-                    <button type="roll" name="roll_pokemon_performance" value="&{template:default} {{name=@{pokemon_name} Performance}} {{roll=[[1d20+@{pokemon_performance_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_performance" class="sheet-skill-button">
                         <span name="attr_pokemon_performance_total">+0</span>
                     </button>
                 </div>
@@ -1673,7 +1686,7 @@
                     </span>
                     <span class="sheet-skill-name">Persuasion</span>
                     <span class="sheet-skill-stat">(Cha)</span>
-                    <button type="roll" name="roll_pokemon_persuasion" value="&{template:default} {{name=@{pokemon_name} Persuasion}} {{roll=[[1d20+@{pokemon_persuasion_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_persuasion" class="sheet-skill-button">
                         <span name="attr_pokemon_persuasion_total">+0</span>
                     </button>
                 </div>
@@ -1689,7 +1702,7 @@
                     </span>
                     <span class="sheet-skill-name">Religion</span>
                     <span class="sheet-skill-stat">(Int)</span>
-                    <button type="roll" name="roll_pokemon_religion" value="&{template:default} {{name=@{pokemon_name} Religion}} {{roll=[[1d20+@{pokemon_religion_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_religion" class="sheet-skill-button">
                         <span name="attr_pokemon_religion_total">+0</span>
                     </button>
                 </div>
@@ -1705,7 +1718,7 @@
                     </span>
                     <span class="sheet-skill-name">Sleight of Hand</span>
                     <span class="sheet-skill-stat">(Dex)</span>
-                    <button type="roll" name="roll_pokemon_sleight_of_hand" value="&{template:default} {{name=@{pokemon_name} Sleight of Hand}} {{roll=[[1d20+@{pokemon_sleight_of_hand_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_sleight_of_hand" class="sheet-skill-button">
                         <span name="attr_pokemon_sleight_of_hand_total">+0</span>
                     </button>
                 </div>
@@ -1721,7 +1734,7 @@
                     </span>
                     <span class="sheet-skill-name">Stealth</span>
                     <span class="sheet-skill-stat">(Dex)</span>
-                    <button type="roll" name="roll_pokemon_stealth" value="&{template:default} {{name=@{pokemon_name} Stealth}} {{roll=[[1d20+@{pokemon_stealth_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_stealth" class="sheet-skill-button">
                         <span name="attr_pokemon_stealth_total">+0</span>
                     </button>
                 </div>
@@ -1737,7 +1750,7 @@
                     </span>
                     <span class="sheet-skill-name">Survival</span>
                     <span class="sheet-skill-stat">(Wis)</span>
-                    <button type="roll" name="roll_pokemon_survival" value="&{template:default} {{name=@{pokemon_name} Survival}} {{roll=[[1d20+@{pokemon_survival_mod}]]}}" class="sheet-skill-button">
+                    <button type="action" name="act_roll_pokemon_survival" class="sheet-skill-button">
                         <span name="attr_pokemon_survival_total">+0</span>
                     </button>
                 </div>
@@ -9231,6 +9244,7 @@ function rollPokemonMove(moveSlot) {
         'pokemon_loyalty',
         'pokemon_loyalty_value',
         'pokemon_burned',
+        'pokemon_poisoned',
         // Get all ability modifiers for dual stat calculation
         'pokemon_strength_mod',
         'pokemon_dexterity_mod',
@@ -9345,8 +9359,19 @@ function rollPokemonMove(moveSlot) {
         // Create STAB indicator for display
         const stabIndicator = getsSTAB ? ` + ${stabBonus} STAB` : '';
 
-        // Check if Pokemon is burned
+        // Check if Pokemon is burned or poisoned
         const isBurned = values.pokemon_burned === '1';
+        const isPoisoned = values.pokemon_poisoned === '1';
+
+        // Create attack roll with disadvantage if poisoned
+        let attackRoll;
+        let poisonedNote = '';
+        if (isPoisoned) {
+            attackRoll = `[[{1d20+${totalAttackBonus}, 1d20+${totalAttackBonus}}kl1]]`;
+            poisonedNote = ' {{Poisoned=Attack with disadvantage}}';
+        } else {
+            attackRoll = `[[1d20+${totalAttackBonus}]]`;
+        }
 
         // FIXED: Better status move detection
         const isStatusMove = damage === '0' || damage === '' || !damage;
@@ -9355,7 +9380,7 @@ function rollPokemonMove(moveSlot) {
             // Status move - no damage, just show effect
             if (power && power !== '') {
                 // Has a power stat for DC calculation
-                rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=[[1d20+${totalAttackBonus}]]}} {{Damage=None}} {{Stat Used=${statInfo}}} {{Effect=Status Move}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}`;
+                rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=${attackRoll}}} {{Damage=None}} {{Stat Used=${statInfo}}} {{Effect=Status Move}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${poisonedNote}`;
             } else {
                 // No power stat - pure utility move
                 rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Damage=None}} {{Effect=Status/Utility Move}} {{Range=${range}}} {{Type=${moveType}}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}`;
@@ -9373,7 +9398,7 @@ function rollPokemonMove(moveSlot) {
                 damageRoll = `[[${damage}+${totalDamageBonus}]]`;
             }
 
-            rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=[[1d20+${totalAttackBonus}]]}} {{Damage=${damageRoll}}} {{Stat Used=${statInfo}}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${burnedNote}`;
+            rollTemplate = `&{template:default} {{name=${pokemonName} uses ${moveName}!}} {{Attack=${attackRoll}}} {{Damage=${damageRoll}}} {{Stat Used=${statInfo}}} {{Range=${range}}} {{Type=${moveType}${stabIndicator}}} {{DC=[[8+${bestMod}+${profBonus}]]}} {{Description=${description}}} {{Loyalty=${loyalty} (${loyaltyValue})}}${poisonedNote}${burnedNote}`;
         }
         
         console.log('Roll template:', rollTemplate);
@@ -10425,6 +10450,72 @@ on('clicked:pokemon_burn_damage', function() {
         });
     });
 });
+
+// Pokemon Poison Damage - Apply poison damage at end of turn
+on('clicked:pokemon_poison_damage', function() {
+    getAttrs(['pokemon_proficiency_bonus', 'pokemon_name', 'pokemon_hp'], function(values) {
+        const profBonus = parseInt(values.pokemon_proficiency_bonus) || 2;
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const currentHP = parseInt(values.pokemon_hp) || 0;
+
+        // Apply poison damage (prof bonus)
+        const newHP = Math.max(0, currentHP - profBonus);
+
+        setAttrs({
+            pokemon_hp: newHP
+        });
+
+        // Output poison damage message
+        const poisonMessage = `&{template:default} {{name=${pokemonName} Poison Damage}} {{Damage=${profBonus} typeless damage}} {{Remaining HP=${newHP}}}`;
+        startRoll(poisonMessage, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Generic Pokemon Skill/Ability Check Function with Poisoned Disadvantage
+function rollPokemonSkill(skillName, modAttr) {
+    getAttrs(['pokemon_name', modAttr, 'pokemon_poisoned'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const skillMod = parseInt(values[modAttr]) || 0;
+        const isPoisoned = values.pokemon_poisoned === '1';
+
+        let rollFormula;
+        let poisonedNote = '';
+
+        if (isPoisoned) {
+            // Roll with disadvantage
+            rollFormula = `&{template:default} {{name=${pokemonName} ${skillName}}} {{roll=[[{1d20+${skillMod}, 1d20+${skillMod}}kl1]]}} {{Poisoned=Disadvantage on ability checks}}`;
+        } else {
+            // Normal roll
+            rollFormula = `&{template:default} {{name=${pokemonName} ${skillName}}} {{roll=[[1d20+${skillMod}]]}}`;
+        }
+
+        startRoll(rollFormula, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+}
+
+// Pokemon Skill Check Event Listeners
+on('clicked:roll_pokemon_acrobatics', function() { rollPokemonSkill('Acrobatics', 'pokemon_acrobatics_mod'); });
+on('clicked:roll_pokemon_animal_handling', function() { rollPokemonSkill('Animal Handling', 'pokemon_animal_handling_mod'); });
+on('clicked:roll_pokemon_arcana', function() { rollPokemonSkill('Arcana', 'pokemon_arcana_mod'); });
+on('clicked:roll_pokemon_athletics', function() { rollPokemonSkill('Athletics', 'pokemon_athletics_mod'); });
+on('clicked:roll_pokemon_deception', function() { rollPokemonSkill('Deception', 'pokemon_deception_mod'); });
+on('clicked:roll_pokemon_history', function() { rollPokemonSkill('History', 'pokemon_history_mod'); });
+on('clicked:roll_pokemon_insight', function() { rollPokemonSkill('Insight', 'pokemon_insight_mod'); });
+on('clicked:roll_pokemon_intimidation', function() { rollPokemonSkill('Intimidation', 'pokemon_intimidation_mod'); });
+on('clicked:roll_pokemon_investigation', function() { rollPokemonSkill('Investigation', 'pokemon_investigation_mod'); });
+on('clicked:roll_pokemon_medicine', function() { rollPokemonSkill('Medicine', 'pokemon_medicine_mod'); });
+on('clicked:roll_pokemon_nature', function() { rollPokemonSkill('Nature', 'pokemon_nature_mod'); });
+on('clicked:roll_pokemon_perception', function() { rollPokemonSkill('Perception', 'pokemon_perception_mod'); });
+on('clicked:roll_pokemon_performance', function() { rollPokemonSkill('Performance', 'pokemon_performance_mod'); });
+on('clicked:roll_pokemon_persuasion', function() { rollPokemonSkill('Persuasion', 'pokemon_persuasion_mod'); });
+on('clicked:roll_pokemon_religion', function() { rollPokemonSkill('Religion', 'pokemon_religion_mod'); });
+on('clicked:roll_pokemon_sleight_of_hand', function() { rollPokemonSkill('Sleight of Hand', 'pokemon_sleight_of_hand_mod'); });
+on('clicked:roll_pokemon_stealth', function() { rollPokemonSkill('Stealth', 'pokemon_stealth_mod'); });
+on('clicked:roll_pokemon_survival', function() { rollPokemonSkill('Survival', 'pokemon_survival_mod'); });
 
 // Pokemon Level Up - Automatic
 on('clicked:pokemon_levelup', function() {
