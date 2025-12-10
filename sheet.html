@@ -835,12 +835,12 @@
                 </div>
                 <div class="sheet-saving-throw">
                     <input type="checkbox" name="attr_pokemon_strength_save_prof" />
-                    <button type="roll" name="roll_pokemon_strength_save" value="&{template:default} {{name=@{pokemon_name} Strength Save}} {{roll=[[1d20+@{pokemon_strength_save_mod}]]}}">
+                    <button type="action" name="act_roll_pokemon_strength_save">
                         <span name="attr_pokemon_strength_save_total">+0</span>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Dexterity -->
             <div class="sheet-stat-block">
                 <div class="sheet-stat-name">Dexterity</div>
@@ -850,7 +850,7 @@
                 </div>
                 <div class="sheet-saving-throw">
                     <input type="checkbox" name="attr_pokemon_dexterity_save_prof" />
-                    <button type="roll" name="roll_pokemon_dexterity_save" value="&{template:default} {{name=@{pokemon_name} Dexterity Save}} {{roll=[[1d20+@{pokemon_dexterity_save_mod}]]}}">
+                    <button type="action" name="act_roll_pokemon_dexterity_save">
                         <span name="attr_pokemon_dexterity_save_total">+0</span>
                     </button>
                 </div>
@@ -964,6 +964,35 @@
                         Dmg
                     </button>
                 </div>
+            </div>
+
+            <!-- Frozen Condition -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <input type="checkbox" name="attr_pokemon_frozen" value="1" />
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Incapacitated and restrained. STR save DC 10 + prof at end of turn to break free. Lasts 1 hour outside combat. Ice types immune.">Frozen</label>
+
+                <!-- Show when frozen is active -->
+                <div style="display: none; align-items: center; gap: 5px;">
+                    <span style="font-size: 11px;">DC:</span>
+                    <input type="number" name="attr_pokemon_frozen_dc" value="12" style="width: 40px; padding: 2px 4px; font-size: 11px; text-align: center;" title="Save DC (10 + enemy prof bonus)" />
+                    <button type="action" name="act_pokemon_frozen_save" style="padding: 2px 8px; font-size: 11px; font-weight: bold;" title="Roll STR save to break free">
+                        Save
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paralyzed Condition -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <input type="checkbox" name="attr_pokemon_paralyzed" value="1" />
+                <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help;" title="Disadvantage on STR/DEX saves. Half speed. Roll d4 at start of turn: 1 = incapacitated/restrained. Electric types immune.">Paralyzed</label>
+
+                <!-- Show when paralyzed is active -->
+                <div style="display: none; align-items: center; gap: 5px;">
+                    <button type="action" name="act_pokemon_paralysis_check" style="padding: 2px 8px; font-size: 11px; font-weight: bold;" title="Roll d4 - On 1, incapacitated until next turn">
+                        d4
+                    </button>
+                </div>
+                <span style="font-size: 10px; color: #666; font-style: italic; display: none;">Half speed</span>
             </div>
         </div>
 
@@ -10468,6 +10497,107 @@ on('clicked:pokemon_poison_damage', function() {
         // Output poison damage message
         const poisonMessage = `&{template:default} {{name=${pokemonName} Poison Damage}} {{Damage=${profBonus} typeless damage}} {{Remaining HP=${newHP}}}`;
         startRoll(poisonMessage, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Pokemon Frozen Save - Roll STR save to break free
+on('clicked:pokemon_frozen_save', function() {
+    getAttrs(['pokemon_name', 'pokemon_strength_save_mod', 'pokemon_frozen_dc'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const strSaveMod = parseInt(values.pokemon_strength_save_mod) || 0;
+        const saveDC = parseInt(values.pokemon_frozen_dc) || 12;
+
+        // Roll STR save
+        const rollFormula = `&{template:default} {{name=${pokemonName} Frozen Save}} {{DC=${saveDC}}} {{STR Save=[[1d20+${strSaveMod}]]}}`;
+
+        startRoll(rollFormula, function(results) {
+            const saveRoll = results.results['STR Save'].result;
+            finishRoll(results.rollId);
+
+            let resultMessage;
+            if (saveRoll >= saveDC) {
+                // Success - break free!
+                resultMessage = `&{template:default} {{name=${pokemonName} Breaks Free!}} {{Result=No longer frozen!}}`;
+                setAttrs({
+                    pokemon_frozen: '0'
+                });
+            } else {
+                // Failed - still frozen
+                resultMessage = `&{template:default} {{name=${pokemonName}}} {{Result=Still frozen (${saveRoll} < ${saveDC})}}`;
+            }
+
+            startRoll(resultMessage, function(r) {
+                finishRoll(r.rollId);
+            });
+        });
+    });
+});
+
+// Pokemon Paralysis Check - Roll d4 at start of turn
+on('clicked:pokemon_paralysis_check', function() {
+    getAttrs(['pokemon_name'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+
+        // Roll d4
+        const rollFormula = `&{template:default} {{name=${pokemonName} Paralysis Check}} {{Roll=[[1d4]]}}`;
+
+        startRoll(rollFormula, function(results) {
+            const rollResult = results.results.Roll.result;
+            finishRoll(results.rollId);
+
+            let resultMessage;
+            if (rollResult === 1) {
+                // Failed - incapacitated and restrained
+                resultMessage = `&{template:default} {{name=${pokemonName} Paralyzed!}} {{Result=Incapacitated and restrained until next turn}} {{Effect=Forfeit action and bonus action}}`;
+            } else {
+                // Success - can act normally
+                resultMessage = `&{template:default} {{name=${pokemonName}}} {{Result=Can act normally this turn}}`;
+            }
+
+            startRoll(resultMessage, function(r) {
+                finishRoll(r.rollId);
+            });
+        });
+    });
+});
+
+// Pokemon STR Save - with disadvantage if paralyzed
+on('clicked:roll_pokemon_strength_save', function() {
+    getAttrs(['pokemon_name', 'pokemon_strength_save_mod', 'pokemon_paralyzed'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const saveMod = parseInt(values.pokemon_strength_save_mod) || 0;
+        const isParalyzed = values.pokemon_paralyzed === '1';
+
+        let rollFormula;
+        if (isParalyzed) {
+            rollFormula = `&{template:default} {{name=${pokemonName} Strength Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Paralyzed=Disadvantage}}`;
+        } else {
+            rollFormula = `&{template:default} {{name=${pokemonName} Strength Save}} {{roll=[[1d20+${saveMod}]]}}`;
+        }
+
+        startRoll(rollFormula, function(results) {
+            finishRoll(results.rollId);
+        });
+    });
+});
+
+// Pokemon DEX Save - with disadvantage if paralyzed
+on('clicked:roll_pokemon_dexterity_save', function() {
+    getAttrs(['pokemon_name', 'pokemon_dexterity_save_mod', 'pokemon_paralyzed'], function(values) {
+        const pokemonName = values.pokemon_name || 'Pokemon';
+        const saveMod = parseInt(values.pokemon_dexterity_save_mod) || 0;
+        const isParalyzed = values.pokemon_paralyzed === '1';
+
+        let rollFormula;
+        if (isParalyzed) {
+            rollFormula = `&{template:default} {{name=${pokemonName} Dexterity Save}} {{roll=[[{1d20+${saveMod}, 1d20+${saveMod}}kl1]]}} {{Paralyzed=Disadvantage}}`;
+        } else {
+            rollFormula = `&{template:default} {{name=${pokemonName} Dexterity Save}} {{roll=[[1d20+${saveMod}]]}}`;
+        }
+
+        startRoll(rollFormula, function(results) {
             finishRoll(results.rollId);
         });
     });

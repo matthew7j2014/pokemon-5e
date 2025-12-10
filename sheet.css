@@ -3158,3 +3158,31 @@ input[name="attr_pokemon_poisoned"]:checked ~ div {
 input[name="attr_pokemon_poisoned"]:not(:checked) ~ div {
     display: none !important;
 }
+
+/* Show condition details when frozen checkbox is checked */
+input[name="attr_pokemon_frozen"]:checked ~ div {
+    display: flex !important;
+}
+
+/* Hide details when not checked */
+input[name="attr_pokemon_frozen"]:not(:checked) ~ div {
+    display: none !important;
+}
+
+/* Show condition details when paralyzed checkbox is checked */
+input[name="attr_pokemon_paralyzed"]:checked ~ div {
+    display: flex !important;
+}
+
+input[name="attr_pokemon_paralyzed"]:checked ~ span {
+    display: inline !important;
+}
+
+/* Hide details when not checked */
+input[name="attr_pokemon_paralyzed"]:not(:checked) ~ div {
+    display: none !important;
+}
+
+input[name="attr_pokemon_paralyzed"]:not(:checked) ~ span {
+    display: none !important;
+}
