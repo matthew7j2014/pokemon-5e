@@ -1018,6 +1018,15 @@
                 <input type="checkbox" name="attr_pokemon_flinched" value="1" />
                 <label style="font-weight: 500; margin: 0 0 0 8px; color: #3B3F58; cursor: help; font-size: 12px;" title="Disadvantage on attack rolls, skill checks, and saves until end of next turn. Targets have advantage on saves vs your moves.">Flinched</label>
             </div>
+
+            <!-- Hidden status marker fields for token markers -->
+            <input type="hidden" name="attr_status_red" value="0" />
+            <input type="hidden" name="attr_status_skull" value="0" />
+            <input type="hidden" name="attr_status_yellow" value="0" />
+            <input type="hidden" name="attr_status_blue" value="0" />
+            <input type="hidden" name="attr_status_sleepy" value="0" />
+            <input type="hidden" name="attr_status_purple" value="0" />
+            <input type="hidden" name="attr_status_brown" value="0" />
         </div>
 
         <!-- Pokemon Weaknesses (Right 50%) -->
@@ -10964,30 +10973,35 @@ on('clicked:pokemon_levelup', function() {
 
 // Status Marker System - Add visual indicators to tokens
 on('change:pokemon_burned change:pokemon_poisoned change:pokemon_paralyzed change:pokemon_frozen change:pokemon_asleep change:pokemon_confused change:pokemon_flinched', function(eventInfo) {
+    console.log('Status condition changed:', eventInfo.sourceAttribute);
+
     getAttrs(['pokemon_burned', 'pokemon_poisoned', 'pokemon_paralyzed', 'pokemon_frozen', 'pokemon_asleep', 'pokemon_confused', 'pokemon_flinched'], function(values) {
+        console.log('Current status values:', values);
+
         const updates = {};
 
-        // Burned - Red marker (flame icon)
-        updates['status_red'] = values.pokemon_burned === '1' ? true : false;
+        // Burned - Red marker
+        updates['status_red'] = values.pokemon_burned === '1' ? '1' : '0';
 
         // Poisoned - Skull marker
-        updates['status_death-zone'] = values.pokemon_poisoned === '1' ? true : false;
+        updates['status_skull'] = values.pokemon_poisoned === '1' ? '1' : '0';
 
-        // Paralyzed - Yellow marker (lightning)
-        updates['status_yellow'] = values.pokemon_paralyzed === '1' ? true : false;
+        // Paralyzed - Yellow marker (lightning bolt)
+        updates['status_yellow'] = values.pokemon_paralyzed === '1' ? '1' : '0';
 
         // Frozen - Blue marker (snowflake)
-        updates['status_blue'] = values.pokemon_frozen === '1' ? true : false;
+        updates['status_blue'] = values.pokemon_frozen === '1' ? '1' : '0';
 
-        // Asleep - Sleepy marker
-        updates['status_sleepy'] = values.pokemon_asleep === '1' ? true : false;
+        // Asleep - Sleepy marker (Zzz)
+        updates['status_sleepy'] = values.pokemon_asleep === '1' ? '1' : '0';
 
-        // Confused - Purple marker (swirl)
-        updates['status_purple'] = values.pokemon_confused === '1' ? true : false;
+        // Confused - Purple marker
+        updates['status_purple'] = values.pokemon_confused === '1' ? '1' : '0';
 
-        // Flinched - Broken shield marker
-        updates['status_broken-shield'] = values.pokemon_flinched === '1' ? true : false;
+        // Flinched - Brown marker
+        updates['status_brown'] = values.pokemon_flinched === '1' ? '1' : '0';
 
+        console.log('Setting status markers:', updates);
         setAttrs(updates);
     });
 });
